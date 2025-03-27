@@ -76,6 +76,7 @@ def process_csv(
     try:
         # Read CSV file
         df = pd.read_csv(csv_path)
+        df['actual'] = df['answer']
         
         # If test mode, limit to 8 examples
         if test_mode:
@@ -95,7 +96,11 @@ def process_csv(
                 row['option 2'],
                 row['option 3']
             ]
-            actual = row['actual']
+            try:
+                actual = row['actual']
+            except KeyError:
+                print("Warning: 'actual' column not found in CSV. Assuming first option as actual.")
+                actual = options[0]
             
             # Format the prompt
             prompt = format_prompt(evidence, question, options)
