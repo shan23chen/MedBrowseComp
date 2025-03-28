@@ -5,8 +5,8 @@ from concurrent.futures import ThreadPoolExecutor
 from typing import Dict, List, Optional, Union, Generator
 from tqdm import tqdm
 from dotenv import load_dotenv
-from google import genai
-from google.genai import types
+import google.generativeai as genai
+from google.generativeai.types import HarmCategory, HarmBlockThreshold
 
 # Load environment variables from .env file
 load_dotenv()
@@ -19,6 +19,7 @@ GEMINI_MODELS = {
     "gemini-1.5-flash": "gemini-1.5-flash",
     "gemini-2.0-pro": "gemini-2.0-pro",
     "gemini-2.0-flash": "gemini-2.0-flash",
+    "gemini-2.5-pro-exp-03-25": "gemini-2.5-pro-exp-03-25",
 }
 
 class GeminiInference:
@@ -33,13 +34,15 @@ class GeminiInference:
         if not self.api_key:
             raise ValueError("GEMINI_API_KEY environment variable not set. Please add it to .env file.")
         
-        self.client = genai.Client(api_key=self.api_key)
+        # Configure the API
+        genai.configure(api_key=self.api_key)
         
         if model_name not in GEMINI_MODELS:
             available_models = ", ".join(GEMINI_MODELS.keys())
             raise ValueError(f"Invalid model name: {model_name}. Available models: {available_models}")
             
         self.model_name = GEMINI_MODELS[model_name]
+        self.model = genai.GenerativeModel(self.model_name)
     
     def generate_response(self, 
                           input_text: str, 
@@ -56,49 +59,83 @@ class GeminiInference:
         Returns:
             Model response as string or generator if streaming
         """
-        contents = [
-            types.Content(
-                role="user",
-                parts=[types.Part.from_text(text=input_text)],
-            ),
-        ]
-        
-        generate_content_config = types.GenerateContentConfig(
-            response_mime_type="text/plain",
-        )
-        
-        if use_tools:
-            generate_content_config.tools = [types.Tool(google_search=types.GoogleSearch())]
+        generation_config = {
+            "temperature": 0.7,
+            "top_p": 0.95,
+            "top_k": 40,
+            "max_output_tokens": 2048,
+        }
+
+        safety_settings = {
+            HarmCategory.HARM_CATEGORY_HARASSMENT: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE,
+            HarmCategory.HARM_CATEGORY_HATE_SPEECH: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE,
+            HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE,
+            HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE,
+        }
         
         try:
-            if stream:
-                return self._stream_response(contents, generate_content_config)
+            if use_tools:
+                # Enable Google Search
+                tools = [
+                    {
+                        "function_declarations": [
+                            {
+                                "name": "google_search",
+                                "description": "Search Google for relevant information",
+                                "parameters": {
+                                    "type": "object",
+                                    "properties": {
+                                        "query": {
+                                            "type": "string",
+                                            "description": "The search query"
+                                        }
+                                    },
+                                    "required": ["query"]
+                                }
+                            }
+                        ]
+                    }
+                ]
+                self.model = genai.GenerativeModel(
+                    model_name=self.model_name,
+                    generation_config=generation_config,
+                    safety_settings=safety_settings,
+                    tools=tools
+                )
             else:
-                return self._get_response(contents, generate_content_config)
+                self.model = genai.GenerativeModel(
+                    model_name=self.model_name,
+                    generation_config=generation_config,
+                    safety_settings=safety_settings
+                )
+            
+            if stream:
+                return self._stream_response(input_text)
+            else:
+                return self._get_response(input_text)
         except Exception as e:
             return f"Error generating response: {str(e)}"
     
-    def _get_response(self, contents, config) -> str:
+    def _get_response(self, input_text) -> str:
         """Get complete response at once"""
-        response = self.client.models.generate_content(
-            model=self.model_name,
-            contents=contents,
-            config=config,
-        )
+        response = self.model.generate_content(input_text)
         
-        return response.text
+        if hasattr(response, 'text'):
+            return response.text
+        elif hasattr(response, 'parts'):
+            return response.parts[0].text
+        else:
+            return str(response)
     
-    def _stream_response(self, contents, config) -> Generator:
+    def _stream_response(self, input_text) -> Generator:
         """Stream response chunks"""
-        response_stream = self.client.models.generate_content_stream(
-            model=self.model_name,
-            contents=contents,
-            config=config,
-        )
+        response_stream = self.model.generate_content(input_text, stream=True)
         
         for chunk in response_stream:
-            if chunk.text:
+            if hasattr(chunk, 'text'):
                 yield chunk.text
+            elif hasattr(chunk, 'parts') and chunk.parts:
+                yield chunk.parts[0].text
 
 def run_inference_multithread(
     model_name: str,

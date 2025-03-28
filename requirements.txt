@@ -1,0 +1,4 @@
+pandas
+regex
+argparse
+google-generativeai
