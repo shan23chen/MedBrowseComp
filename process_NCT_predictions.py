@@ -3,9 +3,22 @@ import os
 import re
 import pandas as pd
 import argparse
-from typing import Dict, List, Tuple
+import logging
+import traceback
+from typing import Dict, List, Tuple, Optional, Union
 from tqdm import tqdm
 from gemini_inference_v2 import GeminiInference, run_inference_multithread, GEMINI_MODELS
+
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler("nct_debug.log"),
+        logging.StreamHandler()
+    ]
+)
+logger = logging.getLogger("NCTProcessor")
 
 def extract_nct_from_response(response: str) -> str:
     """
@@ -65,21 +78,22 @@ def process_nct_csv(
     """
     try:
         # Read CSV file
+        logger.info(f"Reading CSV file: {csv_path}")
         df = pd.read_csv(csv_path)
         
         # If test mode, limit to 8 examples
         if test_mode:
             df = df.head(8)
-            print("TEST MODE: Limited to 8 examples")
+            logger.info("TEST MODE: Limited to 8 examples")
         elif n is not None:
             df = df.head(n)
-            print(f"Processing first {n} examples")
+            logger.info(f"Processing first {n} examples")
         
         # Create list of inputs
         inputs = []
         rows = []
         
-        print("Preparing input data...")
+        logger.info("Preparing input data...")
         for _, row in tqdm(df.iterrows(), total=len(df), desc="Preparing inputs"):
             evidence = row['evidence']
             correct_nct = row['NCT']
@@ -90,57 +104,89 @@ def process_nct_csv(
             rows.append(row)
         
         # Run inference in parallel
-        print(f"Processing {len(inputs)} examples using {model_name}" + 
+        logger.info(f"Processing {len(inputs)} examples using {model_name}" + 
               f" {'with' if use_tools else 'without'} tools" +
               f" using {max_workers} threads...")
         
+        # CRITICAL CHANGE: explicitly set save_search_results to False
         results = run_inference_multithread(
             model_name=model_name,
             input_list=inputs,
             use_tools=use_tools,
+            save_search_results=False,  # Key fix to avoid tuple returns
             max_workers=max_workers
         )
+        
+        # Add debug for results
+        logger.info(f"Received {len(results)} results")
+        logger.info(f"First result type: {type(results[0]) if results else 'No results'}")
+        if results and isinstance(results[0], tuple):
+            logger.warning("Results contain tuples, which may cause issues in processing")
         
         # Process results
         processed_results = []
         correct_count = 0
-        print("Processing results...")
-        for result, row in tqdm(zip(results, rows), total=len(results), desc="Processing results"):
-            # Extract NCT from response
-            extracted_nct = extract_nct_from_response(result)
-            
-            # Check if the extracted NCT is in the correct NCT (which might have multiple NCT numbers)
-            is_correct = False
-            nct_list = [nct.strip() for nct in row['NCT'].split(',')]
-            if extracted_nct in nct_list:
-                is_correct = True
-                correct_count += 1
-            
-            # Create result dictionary
-            result_dict = {
-                'evidence': row['evidence'],
-                'correct_nct': row['NCT'],
-                'model_output': result,
-                'extracted_nct': extracted_nct,
-                'correct': is_correct
-            }
-            processed_results.append(result_dict)
+        logger.info("Processing results...")
+        for i, (result, row) in enumerate(tqdm(zip(results, rows), total=len(results), desc="Processing results")):
+            try:
+                # Add debug info
+                logger.info(f"Processing result {i}, type: {type(result)}")
+                
+                # Handle tuple result (shouldn't happen with save_search_results=False)
+                if isinstance(result, tuple):
+                    logger.warning(f"Result {i} is a tuple, extracting first element")
+                    response_text = result[0]
+                else:
+                    response_text = result
+                
+                # Extract NCT from response
+                extracted_nct = extract_nct_from_response(response_text)
+                
+                # Check if the extracted NCT is in the correct NCT (which might have multiple NCT numbers)
+                is_correct = False
+                nct_list = [nct.strip() for nct in row['NCT'].split(',')]
+                if extracted_nct in nct_list:
+                    is_correct = True
+                    correct_count += 1
+                
+                # Create result dictionary
+                result_dict = {
+                    'evidence': row['evidence'],
+                    'correct_nct': row['NCT'],
+                    'model_output': response_text,
+                    'extracted_nct': extracted_nct,
+                    'correct': is_correct
+                }
+                processed_results.append(result_dict)
+                
+            except Exception as e:
+                logger.error(f"Error processing result {i}: {str(e)}")
+                logger.error(traceback.format_exc())
+                # Add a placeholder result with error information
+                processed_results.append({
+                    'evidence': row['evidence'] if 'evidence' in row else 'Unknown',
+                    'correct_nct': row['NCT'] if 'NCT' in row else 'Unknown',
+                    'model_output': f"ERROR: {str(e)}",
+                    'extracted_nct': '',
+                    'correct': False
+                })
         
         # Calculate accuracy
         accuracy = correct_count / len(processed_results) if processed_results else 0
-        print(f"Accuracy: {correct_count}/{len(processed_results)} ({accuracy:.2%})")
+        logger.info(f"Accuracy: {correct_count}/{len(processed_results)} ({accuracy:.2%})")
         
         # Save results to CSV if output path provided
         if output_path:
-            print(f"Saving results to {output_path}...")
+            logger.info(f"Saving results to {output_path}...")
             output_df = pd.DataFrame(processed_results)
             output_df.to_csv(output_path, index=False)
-            print(f"Results saved to {output_path}")
+            logger.info(f"Results saved to {output_path}")
         
         return processed_results
         
     except Exception as e:
-        print(f"Error processing CSV: {str(e)}")
+        logger.error(f"Error processing CSV: {str(e)}")
+        logger.error(traceback.format_exc())
         return []
 
 def main():
@@ -157,11 +203,11 @@ def main():
     args = parser.parse_args()
     
     if args.model not in GEMINI_MODELS:
-        print(f"Invalid model name: {args.model}")
-        print(f"Available models: {', '.join(GEMINI_MODELS.keys())}")
+        logger.error(f"Invalid model name: {args.model}")
+        logger.error(f"Available models: {', '.join(GEMINI_MODELS.keys())}")
         return
     
-    print(f"Processing {args.csv_path} with {args.model}")
+    logger.info(f"Processing {args.csv_path} with {args.model}")
     process_nct_csv(
         csv_path=args.csv_path,
         model_name=args.model,
