@@ -57,7 +57,8 @@ def process_csv(
     use_tools: bool = False,
     max_workers: int = 4,
     output_path: str = None,
-    test_mode: bool = False
+    test_mode: bool = False,
+    include_evidence: bool = False
 ) -> List[Dict]:
     """
     Process CSV file with predictions
@@ -76,6 +77,7 @@ def process_csv(
     try:
         # Read CSV file
         df = pd.read_csv(csv_path)
+        df['actual'] = df['answer']
         
         # If test mode, limit to 8 examples
         if test_mode:
@@ -95,7 +97,11 @@ def process_csv(
                 row['option 2'],
                 row['option 3']
             ]
-            actual = row['actual']
+            try:
+                actual = row['actual']
+            except KeyError:
+                print("Warning: 'actual' column not found in CSV. Assuming first option as actual.")
+                actual = options[0]
             
             # Format the prompt
             prompt = format_prompt(evidence, question, options)
@@ -121,16 +127,22 @@ def process_csv(
             # Extract answer from response
             extracted_answer = extract_answer(result)
             
-            # Create result dictionary - excluding evidence from input to save space
+            # Create result dictionary
+            input_dict = {
+                'question': row['question 1'],
+                'options': [
+                    row['option 1'],
+                    row['option 2'],
+                    row['option 3']
+                ]
+            }
+            
+            # Include evidence if requested
+            if include_evidence:
+                input_dict['evidence'] = row['evidence']
+                
             result_dict = {
-                'input': {
-                    'question': row['question 1'],
-                    'options': [
-                        row['option 1'],
-                        row['option 2'],
-                        row['option 3']
-                    ]
-                },
+                'input': input_dict,
                 'model_output': result,
                 'extracted_answer': extracted_answer,
                 'actual_option': f"Option {row['actual']}",
@@ -165,6 +177,7 @@ def main():
     parser.add_argument("--threads", type=int, default=4, help="Number of threads for parallel processing")
     parser.add_argument("--output", help="Output CSV path (optional)")
     parser.add_argument("--test", action="store_true", help="Test mode: process only 8 examples")
+    parser.add_argument("--include-evidence", action="store_true", help="Include evidence text in output results")
     
     args = parser.parse_args()
     
@@ -180,7 +193,8 @@ def main():
         use_tools=args.use_tools,
         max_workers=args.threads,
         output_path=args.output,
-        test_mode=args.test
+        test_mode=args.test,
+        include_evidence=args.include_evidence
     )
 
 if __name__ == "__main__":
