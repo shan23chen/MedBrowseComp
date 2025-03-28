@@ -5,7 +5,7 @@ import pandas as pd
 import argparse
 from typing import Dict, List, Tuple
 from tqdm import tqdm
-from gemini_inference import GeminiInference, run_inference_multithread, GEMINI_MODELS
+from gemini_inference_v2 import GeminiInference, run_inference_multithread, GEMINI_MODELS
 
 def extract_nct_from_response(response: str) -> str:
     """

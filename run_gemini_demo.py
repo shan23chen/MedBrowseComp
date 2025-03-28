@@ -5,7 +5,7 @@ Demo script for Gemini inference on HemOnc predictions
 import os
 import argparse
 from dotenv import load_dotenv
-from gemini_inference import GeminiInference, GEMINI_MODELS
+from gemini_inference_v2 import GeminiInference, GEMINI_MODELS
 from process_predictions import process_csv
 
 # Load environment variables from .env file

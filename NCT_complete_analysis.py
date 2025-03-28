@@ -6,7 +6,7 @@ import argparse
 from typing import Dict, List, Tuple
 import json
 from datetime import datetime
-from gemini_inference import GEMINI_MODELS
+from gemini_inference_v2 import GEMINI_MODELS
 from process_NCT_predictions import process_nct_csv  
 
 def run_model_comparisons(
