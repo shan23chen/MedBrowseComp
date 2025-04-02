@@ -1,0 +1,10 @@
+NCT Number,Study Title,Study URL,Acronym,Study Status,Brief Summary,Study Results,Conditions,Interventions,Primary Outcome Measures,Secondary Outcome Measures,Other Outcome Measures,Sponsor,Collaborators,Sex,Age,Phases,Enrollment,Funder Type,Study Type,Study Design,Other IDs,Start Date,Primary Completion Date,Completion Date,First Posted,Results First Posted,Last Update Posted,Locations,Study Documents
+NCT01038661,Tax First-line Chemotherapy With Different Doses and Then Maintenance Therapy,https://clinicaltrials.gov/study/NCT01038661,TFINE,COMPLETED,"The Primary Objective is to evaluate the progression-free survival (PFS).
+
+The secondary objectives are:
+
+* To compare the disease control rates of different doses of Docetaxel+Cisplatin as first-line treatment according to Response Evaluation Criteria In Solid Tumors (RECIST) criteria;
+* To evaluate the overall response rate (ORR);
+* To evaluate the time to disease progression (TTP);
+* To evaluate the overall survival (OS);
+* To evaluate the toxicity.",NO,Lung Neoplasms,DRUG: Docetaxel|DRUG: Cisplatin|OTHER: Best supportive care (BSC),"Progression-free survival (PFS) during the maintenance treatment phase, From 2nd randomization to progression or death of any cause (every 2 cycles (6 weeks) during study treatment, and then every 8 weeks during follow-up period)","Disease control rate (DCR) during the first line treatment phase, Every 2 cycles (6 weeks)|Overall response rate (ORR) during the first line treatment phase, Every 2 cycles (6 weeks)|Time to disease progression (TTP) during the maintenance treatment phase, From 2nd randomization up to disease progression (every 2 cycles (6 weeks))|Overall survival (OS), From 1st randomization to death of any cause (every 2 cycles (6 weeks) during study treatment, and then every 8 weeks during follow-up period)",,Sanofi,,ALL,"ADULT, OLDER_ADULT",PHASE3,375,INDUSTRY,INTERVENTIONAL,Allocation: RANDOMIZED|Intervention Model: PARALLEL|Masking: NONE|Primary Purpose: TREATMENT,DOCET_L_04827,2009-11,2012-08,2012-08,2009-12-24,,2014-02-28,"Sanofi-Aventis Administrative Office, Shanghai, China",
