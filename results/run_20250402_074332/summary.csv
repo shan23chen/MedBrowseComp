@@ -1,0 +1,3 @@
+Model,Search,Avg_Accuracy,Std_Dev,Runs
+gemini-2.0-flash,No,0.3778947368421053,0,1
+gemini-2.0-flash,Yes,0.94,0,1

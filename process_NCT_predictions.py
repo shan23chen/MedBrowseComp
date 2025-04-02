@@ -7,7 +7,7 @@ import logging
 import traceback
 from typing import Dict, List, Tuple, Optional, Union
 from tqdm import tqdm
-from gemini_inference_v2 import GeminiInference, run_inference_multithread, GEMINI_MODELS
+from gemini_inference import GeminiInference, run_inference_multithread, GEMINI_MODELS
 
 # Configure logging
 logging.basicConfig(
@@ -46,7 +46,7 @@ def format_nct_prompt(evidence: str) -> str:
     Returns:
         Formatted prompt
     """
-    prompt = f"""Give me the clinical trial id that showed this, start with NCT: {evidence}
+    prompt = f"""Search on the web the clinical trial id that showed this, start with NCT: {evidence}
     
 Output it in the format NCT<Number>
 """
@@ -80,6 +80,10 @@ def process_nct_csv(
         # Read CSV file
         logger.info(f"Reading CSV file: {csv_path}")
         df = pd.read_csv(csv_path)
+
+        debug_dir = "debug_search_results"
+        if use_tools:
+            os.makedirs(debug_dir, exist_ok=True)
         
         # If test mode, limit to 8 examples
         if test_mode:
@@ -108,36 +112,43 @@ def process_nct_csv(
               f" {'with' if use_tools else 'without'} tools" +
               f" using {max_workers} threads...")
         
-        # CRITICAL CHANGE: explicitly set save_search_results to False
         results = run_inference_multithread(
             model_name=model_name,
             input_list=inputs,
             use_tools=use_tools,
-            save_search_results=False,  # Key fix to avoid tuple returns
             max_workers=max_workers
         )
         
         # Add debug for results
         logger.info(f"Received {len(results)} results")
         logger.info(f"First result type: {type(results[0]) if results else 'No results'}")
-        if results and isinstance(results[0], tuple):
-            logger.warning("Results contain tuples, which may cause issues in processing")
         
         # Process results
         processed_results = []
         correct_count = 0
         logger.info("Processing results...")
+
         for i, (result, row) in enumerate(tqdm(zip(results, rows), total=len(results), desc="Processing results")):
+            if use_tools and i < 5:  # Save first 5 responses for debugging
+                try:
+                    import json
+                    with open(f"{debug_dir}/raw_response_{i}.json", 'w') as f:
+                        json.dump({
+                            "response": result,
+                        }, f, indent=2, default=str)
+                except Exception as e:
+                    logger.error(f"Error saving debug data: {str(e)}")
             try:
                 # Add debug info
                 logger.info(f"Processing result {i}, type: {type(result)}")
                 
-                # Handle tuple result (shouldn't happen with save_search_results=False)
-                if isinstance(result, tuple):
-                    logger.warning(f"Result {i} is a tuple, extracting first element")
-                    response_text = result[0]
+                # Extract response text and URLs based on the new response format
+                if isinstance(result, dict) and 'text' in result and 'citations' in result:
+                    response_text = result['text']
+                    urls = result['citations']
                 else:
                     response_text = result
+                    urls = []
                 
                 # Extract NCT from response
                 extracted_nct = extract_nct_from_response(response_text)
@@ -149,13 +160,14 @@ def process_nct_csv(
                     is_correct = True
                     correct_count += 1
                 
-                # Create result dictionary
+                # Create result dictionary with URLs
                 result_dict = {
                     'evidence': row['evidence'],
                     'correct_nct': row['NCT'],
                     'model_output': response_text,
                     'extracted_nct': extracted_nct,
-                    'correct': is_correct
+                    'correct': is_correct,
+                    'urls': ', '.join(urls) if urls else ''
                 }
                 processed_results.append(result_dict)
                 
@@ -168,9 +180,10 @@ def process_nct_csv(
                     'correct_nct': row['NCT'] if 'NCT' in row else 'Unknown',
                     'model_output': f"ERROR: {str(e)}",
                     'extracted_nct': '',
-                    'correct': False
+                    'correct': False,
+                    'urls': ''  # Empty URLs for error cases
                 })
-        
+
         # Calculate accuracy
         accuracy = correct_count / len(processed_results) if processed_results else 0
         logger.info(f"Accuracy: {correct_count}/{len(processed_results)} ({accuracy:.2%})")
@@ -199,6 +212,7 @@ def main():
     parser.add_argument("--output", help="Output CSV path (optional)")
     parser.add_argument("--test", action="store_true", help="Test mode: process only 8 examples")
     parser.add_argument("-n", type=int, help="Process only the first n rows (for testing)")
+    parser.add_argument("--debug", action="store_true", help="Save debug information")
     
     args = parser.parse_args()
     
