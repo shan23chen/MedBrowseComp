@@ -1,0 +1,44 @@
+{
+    "gemini-2.0-flash_without_tools": {
+        "model": "gemini-2.0-flash",
+        "use_tools": false,
+        "accuracy": 0.15473684210526314,
+        "accuracy_std_dev": 0,
+        "runs": 1,
+        "individual_runs": [
+            {
+                "run": 1,
+                "model": "gemini-2.0-flash",
+                "use_tools": false,
+                "accuracy": 0.15473684210526314,
+                "correct_count": 147,
+                "total_count": 950,
+                "output_csv": "results/run_20250402_165716/gemini-2.0-flash_no_search.csv"
+            }
+        ],
+        "all_accuracies": [
+            0.15473684210526314
+        ]
+    },
+    "gemini-2.0-flash_with_tools": {
+        "model": "gemini-2.0-flash",
+        "use_tools": true,
+        "accuracy": 0.5768421052631579,
+        "accuracy_std_dev": 0,
+        "runs": 1,
+        "individual_runs": [
+            {
+                "run": 1,
+                "model": "gemini-2.0-flash",
+                "use_tools": true,
+                "accuracy": 0.5768421052631579,
+                "correct_count": 548,
+                "total_count": 950,
+                "output_csv": "results/run_20250402_165716/gemini-2.0-flash_with_search.csv"
+            }
+        ],
+        "all_accuracies": [
+            0.5768421052631579
+        ]
+    }
+}

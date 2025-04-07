@@ -36,17 +36,17 @@ def extract_nct_from_response(response: str) -> str:
         return match.group(0)
     return ""
 
-def format_nct_prompt(evidence: str) -> str:
+def format_nct_prompt(question: str) -> str:
     """
     Format the prompt for the model to extract NCT number
     
     Args:
-        evidence: The evidence text
+        question: The question text
         
     Returns:
         Formatted prompt
     """
-    prompt = f"""Search on the web the clinical trial id that showed this, start with NCT: {evidence}
+    prompt = f"""Search on the web the clinical trial id that showed this, start with NCT: {question}
     
 Output it in the format NCT<Number>
 """
@@ -65,7 +65,7 @@ def process_nct_csv(
     Process CSV file with NCT predictions
     
     Args:
-        csv_path: Path to CSV file with evidence and NCT columns
+        csv_path: Path to CSV file with question 1 and NCT columns
         model_name: Gemini model to use
         use_tools: Whether to use Google Search tool
         max_workers: Number of parallel threads
@@ -99,11 +99,12 @@ def process_nct_csv(
         
         logger.info("Preparing input data...")
         for _, row in tqdm(df.iterrows(), total=len(df), desc="Preparing inputs"):
-            evidence = row['evidence']
+            # Use question 1 instead of evidence
+            question = row['question 1']
             correct_nct = row['NCT']
             
             # Format the prompt
-            prompt = format_nct_prompt(evidence)
+            prompt = format_nct_prompt(question)
             inputs.append(prompt)
             rows.append(row)
         
@@ -162,7 +163,7 @@ def process_nct_csv(
                 
                 # Create result dictionary with URLs
                 result_dict = {
-                    'evidence': row['evidence'],
+                    'question': row['question 1'],  # Changed from 'evidence' to 'question 1'
                     'correct_nct': row['NCT'],
                     'model_output': response_text,
                     'extracted_nct': extracted_nct,
@@ -176,7 +177,7 @@ def process_nct_csv(
                 logger.error(traceback.format_exc())
                 # Add a placeholder result with error information
                 processed_results.append({
-                    'evidence': row['evidence'] if 'evidence' in row else 'Unknown',
+                    'question': row['question 1'] if 'question 1' in row else 'Unknown',  # Changed
                     'correct_nct': row['NCT'] if 'NCT' in row else 'Unknown',
                     'model_output': f"ERROR: {str(e)}",
                     'extracted_nct': '',
@@ -204,7 +205,7 @@ def process_nct_csv(
 
 def main():
     parser = argparse.ArgumentParser(description="Evaluate model's ability to extract NCT numbers")
-    parser.add_argument("csv_path", help="Path to CSV file with evidence and NCT columns")
+    parser.add_argument("csv_path", help="Path to CSV file with question 1 and NCT columns")
     parser.add_argument("--model", default="gemini-2.0-flash", choices=list(GEMINI_MODELS.keys()), 
                         help="Gemini model to use")
     parser.add_argument("--use_tools", action="store_true", help="Use Google Search tool")
