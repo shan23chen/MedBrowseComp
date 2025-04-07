@@ -1,0 +1,32 @@
+NCT Number,Study Title,Study URL,Acronym,Study Status,Brief Summary,Study Results,Conditions,Interventions,Primary Outcome Measures,Secondary Outcome Measures,Other Outcome Measures,Sponsor,Collaborators,Sex,Age,Phases,Enrollment,Funder Type,Study Type,Study Design,Other IDs,Start Date,Primary Completion Date,Completion Date,First Posted,Results First Posted,Last Update Posted,Locations,Study Documents
+NCT01277016,A Trial for Systemic Light-chain (AL) Amyloidosis,https://clinicaltrials.gov/study/NCT01277016,EMN-03,COMPLETED,"In this multi-center phase III trial, untreated patients diagnosed with AL who are not candidates for stem cell transplant with melphalan 200 mg/m2 are the target population. Stage I and II patients will be eligible. Stage III patients will be enrolled in an ancillary phase II study. Eligible patients will be stratified as cardiac stage I or stage II and then randomized to receive MDex or BMDex.
+
+Primary objective is to compare hematologic(clonal) response i.e. the rate of complete response (CR) + partial response (PR) defined according to the criteria of the International Society for Amyloidosis consensus.",NO,AL Amyloidosis,DRUG: BMDex,"Number of Patients in CR and PR measured by level of serum light chain monoclonal protein, As defined by the International Society for Amyloidosis consensus.
+
+Complete response:
+
+* serum and urine IF negative,
+* normal FLC ratio,
+* bone marrow PC \<5%
+
+Partial response if:
+
+* serum monoclonal \>0.5 g/dL, a 50% reduction,
+* FLC in urine visible and \>100 mg/day and 50% reduction,
+* FLC \>2 times upper normal and 50% reduction.
+
+Progressive disease
+
+* from CR, abnormal FLC ratio
+* from PR or stable disease, 50% increase in monoclonal protein to \>0.5 g/dL, or 50% increase in urine to \>200 mg/day, or FLC increase of 50% to \>100 mg/L.
+
+Stable disease: no CR, no PR, no progression., 3 cycles of therapy","Compare haematology response, To compare in patients treated with MDex or BMDex:
+
+* complete hematologic response rate after 3 cycles and after completion of therapy;
+* hematologic response rate at completion of therapy;
+* organ response rates at 3, 6, 9 and 12 months;
+* treatment-related mortality;
+* toxicity;
+* overall and progression-free survival;
+* time to hematologic and organ response;
+* quality of life., 2 years",,European Myeloma Network B.V.,,ALL,"ADULT, OLDER_ADULT",PHASE3,110,NETWORK,INTERVENTIONAL,Allocation: RANDOMIZED|Intervention Model: PARALLEL|Masking: NONE|Primary Purpose: TREATMENT,EMN-03|2010-022395-31,2011-01,2016-02,2016-07-31,2011-01-14,,2017-03-10,"Amyloidosis Research and Treatment Center, Pavia, Italy",
