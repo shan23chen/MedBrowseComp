@@ -20,7 +20,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger("NCTProcessor")
 
-def extract_nct_from_response(response: str) -> str:
+def extract_from_response(response: str, task: str = "track_trial_ids") -> str:
     """
     Extract the NCT number from model response
     
@@ -30,27 +30,28 @@ def extract_nct_from_response(response: str) -> str:
     Returns:
         Extracted NCT number or empty string if not found
     """
-    # Look for the pattern NCT followed by 8 digits
-    match = re.search(r'NCT\d{8}', response)
-    if match:
-        return match.group(0)
-    return ""
+    if task == "track_trial_ids":
+        # Look for the pattern NCT followed by 8 digits
+        match = re.search(r'NCT\d{8}', response)
+        if match:
+            return match.group(0)
+        return ""
+    elif task == "track_second_authors":
+        # Look for the pattern SA followed by any text
+        match = re.search(r'(?i)SA[:\s]*[<]?([^>]+)[>]?', response)
+        if match:
+            return match.group(1)
+        return ""
+    elif task == "track_pmids":
+        # Look for the pattern pmid followed by any text
+        match = re.search(r'(?i)pmid[:\s]*(\d+)', response)
+        if match:
+            return match.group(1)
+        return ""
+    else:
+        logger.error(f"Unknown task: {task}")
+        return ""
 
-def format_nct_prompt(question: str) -> str:
-    """
-    Format the prompt for the model to extract NCT number
-    
-    Args:
-        question: The question text
-        
-    Returns:
-        Formatted prompt
-    """
-    prompt = f"""Search on the web the clinical trial id that showed this, start with NCT: {question}
-    
-Output it in the format NCT<Number>
-"""
-    return prompt
 
 def process_nct_csv(
     csv_path: str,
@@ -59,7 +60,8 @@ def process_nct_csv(
     max_workers: int = 4,
     output_path: str = None,
     test_mode: bool = False,
-    n: int = None
+    n: int = None,
+    task: str =  None
 ) -> List[Dict]:
     """
     Process CSV file with NCT predictions
@@ -96,16 +98,27 @@ def process_nct_csv(
         # Create list of inputs
         inputs = []
         rows = []
-        
+        answers = []
+
         logger.info("Preparing input data...")
         for _, row in tqdm(df.iterrows(), total=len(df), desc="Preparing inputs"):
-            # Use question 1 instead of evidence
-            question = row['question 1']
-            correct_nct = row['NCT']
+            if task == "track_trial_ids":
+                # track trial ids
+                question = "Find/search the clinical trial id " + row['question 1'].split('Choose an option')[1] + '\nOutput it in the format NCT<Number>'
+                correct_nct = row['NCT']
+            elif task == "track_second_authors":
+                # track second authors
+                question = "Find/search the second author of the paper " + row['question 1'].split('Choose an option')[1] + '\nOutput it in the format SA<Second Author>'
+                correct_nct = row['authors'].split('|')[1]
+            else:
+                # track pmids
+                question = "Find/search the pubmed id of the paper " + row['question 1'].split('Choose an option')[1] + '\nOutput it in the format pmid<pubmed id>'
+                correct_nct = row['pmid']
             
             # Format the prompt
-            prompt = format_nct_prompt(question)
+            prompt = question
             inputs.append(prompt)
+            answers.append(correct_nct)
             rows.append(row)
         
         # Run inference in parallel
@@ -129,7 +142,7 @@ def process_nct_csv(
         correct_count = 0
         logger.info("Processing results...")
 
-        for i, (result, row) in enumerate(tqdm(zip(results, rows), total=len(results), desc="Processing results")):
+        for i, (result, answer, prompt) in enumerate(tqdm(zip(results, answers, inputs), total=len(results), desc="Processing results")):
             if use_tools and i < 5:  # Save first 5 responses for debugging
                 try:
                     import json
@@ -152,19 +165,25 @@ def process_nct_csv(
                     urls = []
                 
                 # Extract NCT from response
-                extracted_nct = extract_nct_from_response(response_text)
+                extracted_nct = extract_from_response(response_text, task=task)
                 
                 # Check if the extracted NCT is in the correct NCT (which might have multiple NCT numbers)
                 is_correct = False
-                nct_list = [nct.strip() for nct in row['NCT'].split(',')]
-                if extracted_nct in nct_list:
+                if task == "track_trial_ids":
+                    nct_list = [nct.strip() for nct in row['NCT'].split(',')]
+                elif task == "track_second_authors":
+                    nct_list = [str(answer)]
+                elif task == "track_pmids":
+                    nct_list = [str(answer)]
+            
+                if str(extracted_nct) in nct_list:
                     is_correct = True
                     correct_count += 1
                 
                 # Create result dictionary with URLs
                 result_dict = {
-                    'question': row['question 1'],  # Changed from 'evidence' to 'question 1'
-                    'correct_nct': row['NCT'],
+                    'question': prompt,  # Changed from 'evidence' to 'question 1'
+                    'correct_nct': answer,
                     'model_output': response_text,
                     'extracted_nct': extracted_nct,
                     'correct': is_correct,
@@ -214,6 +233,8 @@ def main():
     parser.add_argument("--test", action="store_true", help="Test mode: process only 8 examples")
     parser.add_argument("-n", type=int, help="Process only the first n rows (for testing)")
     parser.add_argument("--debug", action="store_true", help="Save debug information")
+    parser.add_argument("--task", choices=["track_trial_ids", "track_second_authors", "track_pmids"], default="track_trial_ids",
+                        help="Task to perform")
     
     args = parser.parse_args()
     
@@ -230,7 +251,8 @@ def main():
         max_workers=args.threads,
         output_path=args.output,
         test_mode=args.test,
-        n=args.n
+        n=args.n,
+        task=args.task
     )
 
 if __name__ == "__main__":
