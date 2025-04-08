@@ -107,13 +107,14 @@ def process_nct_csv(
                 question = "Find/search the clinical trial id " + row['question 1'].split('Choose an option')[1] + '\nOutput it in the format NCT<Number>'
                 correct_nct = row['NCT']
             elif task == "track_second_authors":
+                # TODO: this need to be re-created for all the dataset because on work can have multiple pubmed papers, but works for data/merged_study_ref_with_pubmed.csv
                 # track second authors
                 question = "Find/search the second author of the paper " + row['question 1'].split('Choose an option')[1] + '\nOutput it in the format SA<Second Author>'
                 correct_nct = row['authors'].split('|')[1]
             else:
                 # track pmids
                 question = "Find/search the pubmed id of the paper " + row['question 1'].split('Choose an option')[1] + '\nOutput it in the format pmid<pubmed id>'
-                correct_nct = row['pmid']
+                correct_nct = row['pmids']
             
             # Format the prompt
             prompt = question
@@ -174,7 +175,7 @@ def process_nct_csv(
                 elif task == "track_second_authors":
                     nct_list = [str(answer)]
                 elif task == "track_pmids":
-                    nct_list = [str(answer)]
+                    nct_list = [str(int(pmid)) for pmid in row['pmids'].split(',')]
             
                 if str(extracted_nct) in nct_list:
                     is_correct = True
