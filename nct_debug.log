@@ -355,3 +355,101 @@ Primary outcomes: Yes
 2025-04-13 15:14:14,739 - NCTProcessor - INFO - Accuracy: 5/5 (100.00%)
 2025-04-13 15:14:14,739 - NCTProcessor - INFO - Saving results to results_primary_outcomes.csv...
 2025-04-13 15:14:14,741 - NCTProcessor - INFO - Results saved to results_primary_outcomes.csv
+2025-04-13 15:20:44,757 - NCTProcessor - INFO - Processing data/Hemonc_new_with_all.csv with gemini-2.0-flash
+2025-04-13 15:20:44,758 - NCTProcessor - INFO - Reading CSV file: data/Hemonc_new_with_all.csv
+2025-04-13 15:20:44,760 - NCTProcessor - INFO - Preparing input data...
+2025-04-13 15:20:44,772 - NCTProcessor - ERROR - Error processing CSV: 'drug_routes'
+2025-04-13 15:20:44,775 - NCTProcessor - ERROR - Traceback (most recent call last):
+  File "/Users/pedro/Desktop/hemonc_bench/.venv/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'drug_routes'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/pedro/Desktop/hemonc_bench/process_NCT_predictions.py", line 395, in process_nct_csv
+    correct_answer = row['drug_routes']
+                     ~~~^^^^^^^^^^^^^^^
+  File "/Users/pedro/Desktop/hemonc_bench/.venv/lib/python3.12/site-packages/pandas/core/series.py", line 1121, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pedro/Desktop/hemonc_bench/.venv/lib/python3.12/site-packages/pandas/core/series.py", line 1237, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pedro/Desktop/hemonc_bench/.venv/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'drug_routes'
+
+2025-04-13 15:22:38,727 - NCTProcessor - INFO - Processing data/Hemonc_new_with_all.csv with gemini-2.0-flash
+2025-04-13 15:22:38,728 - NCTProcessor - INFO - Reading CSV file: data/Hemonc_new_with_all.csv
+2025-04-13 15:22:38,730 - NCTProcessor - INFO - Preparing input data...
+2025-04-13 15:22:38,741 - NCTProcessor - INFO - Processing 5 examples using gemini-2.0-flash with tools using 8 threads...
+2025-04-13 15:22:38,742 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-13 15:22:38,742 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-13 15:22:38,743 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-13 15:22:38,744 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-13 15:22:38,745 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-13 15:22:40,637 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-04-13 15:22:40,734 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-04-13 15:22:40,908 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-04-13 15:22:41,532 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-04-13 15:22:41,595 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-04-13 15:22:41,595 - NCTProcessor - INFO - Processing results...
+2025-04-13 15:22:41,596 - NCTProcessor - INFO - Extracting info from response (task: track_drug_route):
+Drug route: Intravenous
+...
+2025-04-13 15:22:41,597 - NCTProcessor - INFO - Extracting info from response (task: track_drug_route):
+Drug route: Intravenous and Oral
+...
+2025-04-13 15:22:41,597 - NCTProcessor - INFO - Extracting info from response (task: track_drug_route):
+Based on the search results, particularly [1], [2], [3], [4], and [8], Thalidomide is administered orally. Interferon alfa-2b is administered via subcutaneous or intramuscular injection, as indicated in [5], [6], [7], [11] and [12].
+
+Drug route: Oral and subcutaneous
+...
+2025-04-13 15:22:41,597 - NCTProcessor - INFO - Extracting info from response (task: track_drug_route):
+Drug route: Subcutaneous
+...
+2025-04-13 15:22:41,597 - NCTProcessor - INFO - Extracting info from response (task: track_drug_route):
+Drug route: Oral
+...
+2025-04-13 15:22:41,598 - NCTProcessor - INFO - Accuracy: 1/5 (20.00%)
+2025-04-13 15:22:41,598 - NCTProcessor - INFO - Saving results to results_drug_route.csv...
+2025-04-13 15:22:41,601 - NCTProcessor - INFO - Results saved to results_drug_route.csv
+2025-04-13 15:23:00,471 - NCTProcessor - INFO - Processing data/Hemonc_new_with_all.csv with gemini-2.0-flash
+2025-04-13 15:23:00,471 - NCTProcessor - INFO - Reading CSV file: data/Hemonc_new_with_all.csv
+2025-04-13 15:23:00,474 - NCTProcessor - INFO - Preparing input data...
+2025-04-13 15:23:00,485 - NCTProcessor - INFO - Processing 5 examples using gemini-2.0-flash with tools using 8 threads...
+2025-04-13 15:23:00,486 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-13 15:23:00,487 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-13 15:23:00,488 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-13 15:23:00,488 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-13 15:23:00,488 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-13 15:23:03,034 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-04-13 15:23:03,039 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-04-13 15:23:03,216 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-04-13 15:23:03,322 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-04-13 15:23:04,536 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-04-13 15:23:04,538 - NCTProcessor - INFO - Processing results...
+2025-04-13 15:23:04,539 - NCTProcessor - INFO - Extracting info from response (task: track_drug_class):
+Drug class: Chemotherapy and Vasodilator/Anticonvulsant (Epigenetic Therapy)
+...
+2025-04-13 15:23:04,540 - NCTProcessor - INFO - Extracting info from response (task: track_drug_class):
+Drug class: Antineoplastic Agents
+...
+2025-04-13 15:23:04,540 - NCTProcessor - INFO - Extracting info from response (task: track_drug_class):
+Drug class: Immunomodulatory agents
+...
+2025-04-13 15:23:04,540 - NCTProcessor - INFO - Extracting info from response (task: track_drug_class):
+Drug class: Antineoplastic interferons
+...
+2025-04-13 15:23:04,541 - NCTProcessor - INFO - Extracting info from response (task: track_drug_class):
+Drug class: Antiangiogenic and Immunomodulatory agent
+...
+2025-04-13 15:23:04,541 - NCTProcessor - INFO - Accuracy: 0/5 (0.00%)
+2025-04-13 15:23:04,541 - NCTProcessor - INFO - Saving results to results_drug_class.csv...
+2025-04-13 15:23:04,546 - NCTProcessor - INFO - Results saved to results_drug_class.csv

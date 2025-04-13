@@ -219,6 +219,60 @@ def extract_from_response(response: str, task: str = "track_trial_ids") -> str:
             
         logger.warning("Failed to extract secondary outcomes information.")
         return ""
+    elif task == "track_drug_route":
+        # Look for exact "Drug route: X" format first
+        direct_pattern = r'(?i)drug\s*route:?\s*([a-z0-9\s]+)'
+        match = re.search(direct_pattern, response)
+        if match:
+            return match.group(1).strip()
+        
+        # Alternative patterns
+        route_patterns = [
+            r'(?i)(?:administration|administered|given)(?:\s+via|\s+by|\s+through)?:?\s*([a-z0-9\s]+\b)',
+            r'(?i)route\s*(?:of|for)?\s*(?:administration|delivery)?:?\s*([a-z0-9\s]+\b)',
+            r'(?i)route:?\s*([a-z0-9\s]+\b)'
+        ]
+        
+        for pattern in route_patterns:
+            match = re.search(pattern, response)
+            if match:
+                route = match.group(1).strip().lower()
+                # Filter for common route terms
+                common_routes = ["oral", "intravenous", "iv", "subcutaneous", "topical", 
+                                "intramuscular", "im", "inhaled", "intranasal", "unknown"]
+                
+                # Check if any common route is in the extracted text
+                for common_route in common_routes:
+                    if common_route in route:
+                        return common_route.capitalize()
+                
+                # If no common route found, return the extracted text
+                return route.capitalize()
+        
+        logger.warning("Failed to extract drug route.")
+        return ""
+        
+    elif task == "track_drug_class":
+        # Look for exact "Drug class: X" format first
+        direct_pattern = r'(?i)drug\s*class(?:es)?:?\s*([a-z0-9\s\-]+)'
+        match = re.search(direct_pattern, response)
+        if match:
+            return match.group(1).strip()
+        
+        # Alternative patterns
+        class_patterns = [
+            r'(?i)class(?:es)?\s*(?:of|for)?\s*(?:medication|drug|therapy|treatment)?:?\s*([a-z0-9\s\-]+\b)',
+            r'(?i)(?:medication|drug)\s*(?:is\s*a|belongs\s*to)\s*([a-z0-9\s\-]+\b)',
+            r'(?i)class:?\s*([a-z0-9\s\-]+\b)'
+        ]
+        
+        for pattern in class_patterns:
+            match = re.search(pattern, response)
+            if match:
+                return match.group(1).strip()
+        
+        logger.warning("Failed to extract drug class.")
+        return ""
     else:
         logger.error(f"Unknown task: {task}")
         return ""
@@ -335,7 +389,14 @@ def process_nct_csv(
                 # Track whether the trial has secondary outcomes with stricter format
                 question = "Determine if the clinical trial " + row['question 1'].split('Choose an option')[1] + ' has secondary outcomes.\n\nIMPORTANT: Respond with ONLY "Secondary outcomes: Yes" or "Secondary outcomes: No". Do not include any other text in your response.'
                 correct_answer = row['has_secondary_outcome']
-            # In process_nct_csv function where task handling occurs:
+            elif task == "track_drug_route":
+                # Track drug route
+                question = "Find/search the route of administration for the drug used in the clinical trial " + row['question 1'].split('Choose an option')[1] + '\n\nIMPORTANT: Respond with ONLY the format "Drug route: X" where X is the route (oral, intravenous, etc). If unknown, respond with "Drug route: Unknown". Do not include any other text in your response.'
+                correct_answer = row['drug_routes']
+            elif task == "track_drug_class":
+                # Track drug class
+                question = "Find/search the drug class used in the clinical trial " + row['question 1'].split('Choose an option')[1] + '\n\nIMPORTANT: Respond with ONLY the format "Drug class: X" where X is the class (antibiotics, chemotherapy, etc). Do not include any other text in your response.'
+                correct_answer = row['drug_classes']
             elif task == "track_second_authors_multiple_pmids":
                 # Format: model needs to determine both PMID and second author
                 question = "Find/search the pubmed ID and second author of the paper referenced in " + row['question 1'].split('Choose an option')[1] + '\nOutput it in the format PMID<pubmed id> SA<Second Author>'
@@ -520,6 +581,56 @@ def process_nct_csv(
                 elif task in ["track_primary_outcomes", "track_secondary_outcomes"]:
                     # Simple yes/no comparison, case-insensitive
                     is_correct = extracted_info.strip().lower() == answer.strip().lower()
+                elif task == "track_drug_route":
+                    # For drug route, normalize to handle variations
+                    extracted_route = extracted_info.strip().lower()
+                    expected_route = answer.strip().lower()
+                    
+                    # Direct match first
+                    if extracted_route == expected_route:
+                        is_correct = True
+                    else:
+                        # Check for variations and common abbreviations
+                        route_mapping = {
+                            "intravenous": ["iv", "i.v.", "i.v", "intra-venous"],
+                            "intramuscular": ["im", "i.m.", "i.m", "intra-muscular"],
+                            "subcutaneous": ["sc", "s.c.", "s.c", "sub-cutaneous", "subcut"],
+                            "oral": ["by mouth", "p.o.", "po", "per os"],
+                            "unknown": ["not specified", "not reported", "not stated", "unclear"]
+                        }
+                        
+                        # Check if expected route has any known variations
+                        for main_route, variations in route_mapping.items():
+                            if expected_route == main_route:
+                                # If expected is a main route, check if extracted is a variation
+                                is_correct = extracted_route in variations
+                                break
+                            elif expected_route in variations:
+                                # If expected is a variation, check if extracted is the main route or another variation
+                                is_correct = extracted_route == main_route or extracted_route in variations
+                                break
+                        else:
+                            # If no match found in mappings, fall back to direct comparison
+                            is_correct = False
+
+                elif task == "track_drug_class":
+                    # For drug class, use basic case-insensitive comparison
+                    extracted_class = extracted_info.strip().lower()
+                    expected_class = answer.strip().lower()
+                    
+                    # Direct match first
+                    if extracted_class == expected_class:
+                        is_correct = True
+                    else:
+                        # Check for partial matches for compound drug classes
+                        expected_classes = [cls.strip() for cls in expected_class.split('|')]
+                        
+                        # Check if the extracted class contains any of the expected classes
+                        is_correct = any(exp_cls in extracted_class for exp_cls in expected_classes)
+                        
+                        # Also check if expected class contains the extracted class
+                        if not is_correct:
+                            is_correct = any(extracted_class in exp_cls for exp_cls in expected_classes)
                 if is_correct:
                     correct_count += 1
                 
@@ -581,8 +692,8 @@ def main():
                                 "track_second_authors_multiple_pmids", 
                                 "track_second_authors_multiple_pmids_any",
                                 "track_start_date",
-                                "track_primary_outcomes",
-                                "track_secondary_outcomes"], 
+                                "track_primary_outcomes", "track_secondary_outcomes", 
+                                "track_drug_route", "track_drug_class"], 
                         default="track_trial_ids",
                         help="Task to perform",
                         )

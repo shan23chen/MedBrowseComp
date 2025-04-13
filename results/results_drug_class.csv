@@ -1,0 +1,21 @@
+question,correct_answer,model_output,extracted_info,correct,urls
+"Find/search the drug class used in the clinical trial  that best describes the efficacy of Cisplatin and Topotecan compared to Cisplatin, Topotecan, Hydralazine, Valproate when used to treat Cervical cancer.
+
+IMPORTANT: Respond with ONLY the format ""Drug class: X"" where X is the class (antibiotics, chemotherapy, etc). Do not include any other text in your response.",Platinum-based Chemotherapy,"Drug class: Chemotherapy and Vasodilator/Anticonvulsant (Epigenetic Therapy)
+",Chemotherapy and Vasodilator,False,
+"Find/search the drug class used in the clinical trial  that best describes the efficacy of Cisplatin, Topotecan, Hydralazine, Valproate compared to Cisplatin and Topotecan when used to treat Cervical cancer.
+
+IMPORTANT: Respond with ONLY the format ""Drug class: X"" where X is the class (antibiotics, chemotherapy, etc). Do not include any other text in your response.",Platinum-based Chemotherapy,"Drug class: Antineoplastic Agents
+",Antineoplastic Agents,False,
+"Find/search the drug class used in the clinical trial  that best describes the efficacy of Interferon alfa-2b and Thalidomide compared to Interferon alfa-2b monotherapy when used to treat Multiple myeloma.
+
+IMPORTANT: Respond with ONLY the format ""Drug class: X"" where X is the class (antibiotics, chemotherapy, etc). Do not include any other text in your response.",Immunomodulatory Drugs,"Drug class: Immunomodulatory agents
+",Immunomodulatory agents,False,
+"Find/search the drug class used in the clinical trial  that best describes the efficacy of Interferon alfa-2b monotherapy compared to Interferon alfa-2b and Thalidomide when used to treat Multiple myeloma.
+
+IMPORTANT: Respond with ONLY the format ""Drug class: X"" where X is the class (antibiotics, chemotherapy, etc). Do not include any other text in your response.",Immunomodulatory Drugs,"Drug class: Antineoplastic interferons
+",Antineoplastic interferons,False,
+"Find/search the drug class used in the clinical trial  that best describes the efficacy of Tasquinimod monotherapy compared to Placebo when used to treat Prostate cancer.
+
+IMPORTANT: Respond with ONLY the format ""Drug class: X"" where X is the class (antibiotics, chemotherapy, etc). Do not include any other text in your response.",Chemotherapy,"Drug class: Antiangiogenic and Immunomodulatory agent
+",Antiangiogenic and Immunomodulatory agent,False,
