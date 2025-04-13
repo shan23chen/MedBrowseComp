@@ -2,6 +2,7 @@ import csv
 import os
 import re
 import pandas as pd
+import json
 import argparse
 import logging
 import traceback
@@ -22,14 +23,18 @@ logger = logging.getLogger("NCTProcessor")
 
 def extract_from_response(response: str, task: str = "track_trial_ids") -> str:
     """
-    Extract the NCT number from model response
+    Extract the relevant information from model response based on task
     
     Args:
         response: Model response text
+        task: Task name to determine extraction pattern
         
     Returns:
-        Extracted NCT number or empty string if not found
+        Extracted information or empty string if not found
     """
+    # Add debugging - log the response
+    #logger.debug(f"Extracting info from response (task: {task}):\n{response[:500]}...")
+    logger.info(f"Extracting info from response (task: {task}):\n{response[:800]}...")
     if task == "track_trial_ids":
         # Look for the pattern NCT followed by 8 digits
         match = re.search(r'NCT\d{8}', response)
@@ -40,7 +45,7 @@ def extract_from_response(response: str, task: str = "track_trial_ids") -> str:
         # Look for the pattern SA followed by any text
         match = re.search(r'(?i)SA[:\s]*[<]?([^>]+)[>]?', response)
         if match:
-            return match.group(1)
+            return match.group(1).strip()
         return ""
     elif task == "track_pmids":
         # Look for the pattern pmid followed by any text
@@ -48,10 +53,140 @@ def extract_from_response(response: str, task: str = "track_trial_ids") -> str:
         if match:
             return match.group(1)
         return ""
+    elif task == "track_second_authors_multiple_pmids":
+        # Try more flexible pattern matching for PMID and second author
+        
+        # Various ways the model might output a PMID
+        pmid_patterns = [
+            r'(?i)\*\*\s*pmid\s*:\s*\*\*\s*(\d+)',  # **PMID:** 12345
+            r'(?i)pmid[:\s]*(\d+)',                           # PMID: 12345
+            r'(?i)pubmed\s+id[:\s]*(\d+)',                    # PubMed ID: 12345
+            r'(?i)pubmed\s+identifier[:\s]*(\d+)',            # PubMed Identifier: 12345
+            r'(?i)\bpmid\b[^0-9]*(\d+)',                      # PMID 12345
+            r'(?i)\[(\d+)\]',                                 # [12345]
+            r'(?i)pubmed[:\s]*(\d+)'                          # PubMed: 12345
+        ]
+        
+        # Various ways the model might output a second author
+        author_patterns = [
+            r'(?i)\*\*\s*SA\s*:\s*\*\*\s*([A-Za-z\s\.,\-\']+?)(?:$|\n|\.|,)',  # **SA:** Smith, J.
+            r'(?i)second\s+author[:\s]*([A-Za-z\s\.,\-\']+?)(?:$|\n|\.|,)',   # Second author: Smith, J.
+            r'(?i)SA[:\s]*([A-Za-z\s\.,\-\']+?)(?:$|\n|\.|,)',                # SA: Smith, J.
+            r'(?i)2nd\s+author[:\s]*([A-Za-z\s\.,\-\']+?)(?:$|\n|\.|,)',      # 2nd author: Smith, J.
+            r'(?i)author\s*#?\s*2[:\s]*([A-Za-z\s\.,\-\']+?)(?:$|\n|\.|,)',   # Author #2: Smith, J.
+            r'(?i)second\s+author\s+is\s+([A-Za-z\s\.,\-\']+?)(?:$|\n|\.|,)'  # Second author is Smith, J.
+        ]
+        
+        # Try each PMID pattern
+        pmid = None
+        for pattern in pmid_patterns:
+            match = re.search(pattern, response)
+            if match:
+                pmid = match.group(1).strip()
+                logger.debug(f"Found PMID using pattern {pattern}: {pmid}")
+                break
+        
+        # Try each author pattern
+        author = None
+        for pattern in author_patterns:
+            match = re.search(pattern, response)
+            if match:
+                author = match.group(1).strip()
+                logger.debug(f"Found author using pattern {pattern}: {author}")
+                break
+        
+        # If we found both PMID and author, return them
+        if pmid and author:
+            logger.info(f"Successfully extracted PMID: {pmid} and Author: {author}")
+            return f"{pmid}|{author}"
+        else:
+            # If not found using patterns, try a more general approach
+            # Just try to find any PMID-like number and any name-like text after "second author" or similar
+            general_pmid_match = re.search(r'(?i)(?:pmid|pubmed)[^0-9]*(\d+)', response)
+            general_author_match = re.search(r'(?i)(?:second author|2nd author|author 2)(?:[:\s]*)([A-Za-z][A-Za-z\s\.,\-\']{2,})', response)
+            
+            if general_pmid_match and general_author_match:
+                pmid = general_pmid_match.group(1).strip()
+                author = general_author_match.group(1).strip()
+                logger.info(f"Extracted using general patterns - PMID: {pmid}, Author: {author}")
+                return f"{pmid}|{author}"
+            
+            # Still not found, log the failure
+            logger.warning(f"Failed to extract PMID and author. PMID found: {pmid is not None}, Author found: {author is not None}")
+            
+            # Extra debugging to understand the model's output format
+            logger.debug(f"Model output for failed extraction:\n{response[:1000]}")
+            return ""
+
+    elif task == "track_second_authors_multiple_pmids_any":
+        # Just extract the second author, any PMID is fine
+        # Similar improvements as above
+        author_patterns = [
+            r'(?i)\*\*\s*SA\s*:\s*\*\*\s*([A-Za-z\s\.,\-\']+?)(?:$|\n|\.|,)',  # **SA:** Smith, J.
+            r'(?i)second\s+author[:\s]*([A-Za-z\s\.,\-\']+?)(?:$|\n|\.|,)',   # Second author: Smith, J.
+            r'(?i)SA[:\s]*([A-Za-z\s\.,\-\']+?)(?:$|\n|\.|,)',                # SA: Smith, J.
+            r'(?i)2nd\s+author[:\s]*([A-Za-z\s\.,\-\']+?)(?:$|\n|\.|,)',      # 2nd author: Smith, J.
+            r'(?i)author\s*#?\s*2[:\s]*([A-Za-z\s\.,\-\']+?)(?:$|\n|\.|,)',   # Author #2: Smith, J.
+            r'(?i)second\s+author\s+is\s+([A-Za-z\s\.,\-\']+?)(?:$|\n|\.|,)'  # Second author is Smith, J.
+        ]
+        
+        for pattern in author_patterns:
+            match = re.search(pattern, response)
+            if match:
+                author = match.group(1).strip()
+                logger.debug(f"Found author using pattern {pattern}: {author}")
+                return author
+        
+        # General fallback
+        general_match = re.search(r'(?i)(?:second author|2nd author|author 2)(?:[:\s]*)([A-Za-z][A-Za-z\s\.,\-\']{2,})', response)
+        if general_match:
+            author = general_match.group(1).strip()
+            logger.debug(f"Found author using general pattern: {author}")
+            return author
+            
+        logger.warning(f"Failed to extract any author.")
+        return ""
     else:
         logger.error(f"Unknown task: {task}")
         return ""
-
+    
+def get_second_author(authors_json: str, pmid: str = None) -> Union[str, Dict[str, str]]:
+    """
+    Get the second author for a specific PMID or all second authors
+    
+    Args:
+        authors_json: JSON string with PMID to authors mapping
+        pmid: Optional specific PMID to get second author for
+        
+    Returns:
+        Second author string if pmid is specified, otherwise dictionary of PMID to second author
+    """
+    try:
+        # Parse the JSON string
+        import json
+        authors_dict = json.loads(authors_json)
+        
+        if pmid:
+            # Get second author for specific PMID
+            if pmid in authors_dict:
+                authors_list = authors_dict[pmid].split('|')
+                if len(authors_list) >= 2:
+                    return authors_list[1]
+                else:
+                    return "NO_SECOND_AUTHOR"
+            else:
+                return "PMID_NOT_FOUND"
+        else:
+            # Get all second authors
+            second_authors = {}
+            for pid, authors in authors_dict.items():
+                authors_list = authors.split('|')
+                if len(authors_list) >= 2:
+                    second_authors[pid] = authors_list[1]
+            return second_authors
+    except Exception as e:
+        logger.error(f"Error parsing authors JSON: {str(e)}")
+        return {} if pmid is None else "ERROR"
 
 def process_nct_csv(
     csv_path: str,
@@ -61,19 +196,20 @@ def process_nct_csv(
     output_path: str = None,
     test_mode: bool = False,
     n: int = None,
-    task: str =  None
+    task: str = None
 ) -> List[Dict]:
     """
     Process CSV file with NCT predictions
     
     Args:
-        csv_path: Path to CSV file with question 1 and NCT columns
+        csv_path: Path to CSV file
         model_name: Gemini model to use
         use_tools: Whether to use Google Search tool
         max_workers: Number of parallel threads
         output_path: Optional path for saving results CSV
         test_mode: Whether to run in test mode (only 8 examples)
         n: Number of rows to process (for testing)
+        task: Task to perform
         
     Returns:
         List of result dictionaries
@@ -105,21 +241,52 @@ def process_nct_csv(
             if task == "track_trial_ids":
                 # track trial ids
                 question = "Find/search the clinical trial id " + row['question 1'].split('Choose an option')[1] + '\nOutput it in the format NCT<Number>'
-                correct_nct = row['NCT']
+                correct_answer = row['NCT']
             elif task == "track_second_authors":
-                # TODO: this need to be re-created for all the dataset because on work can have multiple pubmed papers, but works for data/merged_study_ref_with_pubmed.csv
-                # track second authors
+                # track second authors (old format)
                 question = "Find/search the second author of the paper " + row['question 1'].split('Choose an option')[1] + '\nOutput it in the format SA<Second Author>'
-                correct_nct = row['authors'].split('|')[1]
-            else:
+                correct_answer = row['authors'].split('|')[1] if '|' in row['authors'] else ""
+            elif task == "track_pmids":
                 # track pmids
                 question = "Find/search the pubmed id of the paper " + row['question 1'].split('Choose an option')[1] + '\nOutput it in the format pmid<pubmed id>'
-                correct_nct = row['pmids']
+                correct_answer = row['pmids']
+            # In process_nct_csv function where task handling occurs:
+            elif task == "track_second_authors_multiple_pmids":
+                # Format: model needs to determine both PMID and second author
+                question = "Find/search the pubmed ID and second author of the paper referenced in " + row['question 1'].split('Choose an option')[1] + '\nOutput it in the format PMID<pubmed id> SA<Second Author>'
+                
+                # For validation, we'll need all valid PMID-second author pairs
+                pmid_author_pairs = {}
+                try:
+                    import json
+                    authors_dict = json.loads(row['authors'])
+                    for pmid, authors_str in authors_dict.items():
+                        authors_list = authors_str.split('|')
+                        if len(authors_list) >= 2:
+                            pmid_author_pairs[pmid] = authors_list[1]
+                except Exception as e:
+                    logger.error(f"Error parsing authors JSON: {str(e)}")
+                    
+                # Create a simpler format for validation
+                correct_pairs = []
+                for pmid, author in pmid_author_pairs.items():
+                    correct_pairs.append(f"{pmid}|{author}")
+                correct_answer = "||".join(correct_pairs)
+            elif task == "track_second_authors_multiple_pmids_any":
+                # Format: find any second author from any of the PMIDs
+                question = "Find/search the second author of any of the papers referenced in " + row['question 1'].split('Choose an option')[1] + '\nOutput it in the format SA<Second Author>'
+                # Get all second authors
+                second_authors_dict = get_second_author(row['authors'])
+                # Join all second authors with a delimiter
+                correct_answer = "|".join(second_authors_dict.values())
+            else:
+                logger.error(f"Unknown task: {task}")
+                continue
             
             # Format the prompt
             prompt = question
             inputs.append(prompt)
-            answers.append(correct_nct)
+            answers.append(correct_answer)
             rows.append(row)
         
         # Run inference in parallel
@@ -134,16 +301,12 @@ def process_nct_csv(
             max_workers=max_workers
         )
         
-        # Add debug for results
-        logger.info(f"Received {len(results)} results")
-        logger.info(f"First result type: {type(results[0]) if results else 'No results'}")
-        
         # Process results
         processed_results = []
         correct_count = 0
         logger.info("Processing results...")
 
-        for i, (result, answer, prompt) in enumerate(tqdm(zip(results, answers, inputs), total=len(results), desc="Processing results")):
+        for i, (result, answer, prompt, row) in enumerate(tqdm(zip(results, answers, inputs, rows), total=len(results), desc="Processing results")):
             if use_tools and i < 5:  # Save first 5 responses for debugging
                 try:
                     import json
@@ -153,11 +316,9 @@ def process_nct_csv(
                         }, f, indent=2, default=str)
                 except Exception as e:
                     logger.error(f"Error saving debug data: {str(e)}")
+            
             try:
-                # Add debug info
-                logger.info(f"Processing result {i}, type: {type(result)}")
-                
-                # Extract response text and URLs based on the new response format
+                # Extract response text and URLs based on the response format
                 if isinstance(result, dict) and 'text' in result and 'citations' in result:
                     response_text = result['text']
                     urls = result['citations']
@@ -165,28 +326,55 @@ def process_nct_csv(
                     response_text = result
                     urls = []
                 
-                # Extract NCT from response
-                extracted_nct = extract_from_response(response_text, task=task)
+                # Extract information from response based on task
+                extracted_info = extract_from_response(response_text, task=task)
                 
-                # Check if the extracted NCT is in the correct NCT (which might have multiple NCT numbers)
+                # Check if the extracted information is correct
                 is_correct = False
+                
                 if task == "track_trial_ids":
                     nct_list = [nct.strip() for nct in row['NCT'].split(',')]
+                    is_correct = extracted_info in nct_list
                 elif task == "track_second_authors":
-                    nct_list = [str(answer)]
+                    # Old format - direct comparison
+                    is_correct = extracted_info.strip().lower() == answer.strip().lower()
                 elif task == "track_pmids":
-                    nct_list = [str(int(pmid)) for pmid in row['pmids'].split(',')]
-            
-                if str(extracted_nct) in nct_list:
-                    is_correct = True
+                    pmid_list = [str(int(pmid)) for pmid in row['pmids'].split(',')]
+                    is_correct = extracted_info in pmid_list
+                elif task == "track_second_authors_multiple_pmids":
+                    # Get all valid PMID|author pairs from the answer
+                    valid_pairs = answer.split("||")
+                    
+                    # Format: PMID|SecondAuthor
+                    if extracted_info and '|' in extracted_info:
+                        extracted_pmid, extracted_author = extracted_info.split('|', 1)
+                        extracted_pmid = extracted_pmid.strip()
+                        extracted_author = extracted_author.strip().lower()
+                        
+                        # Check if any valid pair matches the extracted pair
+                        is_correct = False
+                        for pair in valid_pairs:
+                            if '|' in pair:
+                                valid_pmid, valid_author = pair.split('|', 1)
+                                if extracted_pmid == valid_pmid.strip() and extracted_author == valid_author.strip().lower():
+                                    is_correct = True
+                                    break
+                    else:
+                        is_correct = False
+                elif task == "track_second_authors_multiple_pmids_any":
+                    # Check if extracted author matches any of the valid second authors
+                    valid_authors = [author.strip().lower() for author in answer.split('|')]
+                    is_correct = extracted_info.strip().lower() in valid_authors
+                
+                if is_correct:
                     correct_count += 1
                 
-                # Create result dictionary with URLs
+                # Create result dictionary
                 result_dict = {
-                    'question': prompt,  # Changed from 'evidence' to 'question 1'
-                    'correct_nct': answer,
+                    'question': prompt,
+                    'correct_answer': answer,
                     'model_output': response_text,
-                    'extracted_nct': extracted_nct,
+                    'extracted_info': extracted_info,
                     'correct': is_correct,
                     'urls': ', '.join(urls) if urls else ''
                 }
@@ -197,12 +385,12 @@ def process_nct_csv(
                 logger.error(traceback.format_exc())
                 # Add a placeholder result with error information
                 processed_results.append({
-                    'question': row['question 1'] if 'question 1' in row else 'Unknown',  # Changed
-                    'correct_nct': row['NCT'] if 'NCT' in row else 'Unknown',
+                    'question': prompt,
+                    'correct_answer': answer,
                     'model_output': f"ERROR: {str(e)}",
-                    'extracted_nct': '',
+                    'extracted_info': '',
                     'correct': False,
-                    'urls': ''  # Empty URLs for error cases
+                    'urls': ''
                 })
 
         # Calculate accuracy
@@ -224,8 +412,8 @@ def process_nct_csv(
         return []
 
 def main():
-    parser = argparse.ArgumentParser(description="Evaluate model's ability to extract NCT numbers")
-    parser.add_argument("csv_path", help="Path to CSV file with question 1 and NCT columns")
+    parser = argparse.ArgumentParser(description="Evaluate model's ability to extract various information")
+    parser.add_argument("csv_path", help="Path to CSV file with required columns")
     parser.add_argument("--model", default="gemini-2.0-flash", choices=list(GEMINI_MODELS.keys()), 
                         help="Gemini model to use")
     parser.add_argument("--use_tools", action="store_true", help="Use Google Search tool")
@@ -234,7 +422,11 @@ def main():
     parser.add_argument("--test", action="store_true", help="Test mode: process only 8 examples")
     parser.add_argument("-n", type=int, help="Process only the first n rows (for testing)")
     parser.add_argument("--debug", action="store_true", help="Save debug information")
-    parser.add_argument("--task", choices=["track_trial_ids", "track_second_authors", "track_pmids"], default="track_trial_ids",
+    parser.add_argument("--task", 
+                        choices=["track_trial_ids", "track_second_authors", "track_pmids",
+                                "track_second_authors_multiple_pmids", 
+                                "track_second_authors_multiple_pmids_any"], 
+                        default="track_trial_ids",
                         help="Task to perform")
     
     args = parser.parse_args()
