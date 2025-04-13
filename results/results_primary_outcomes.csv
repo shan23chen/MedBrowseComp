@@ -1,0 +1,21 @@
+question,correct_answer,model_output,extracted_info,correct,urls
+"Determine if the clinical trial  that best describes the efficacy of Cisplatin and Topotecan compared to Cisplatin, Topotecan, Hydralazine, Valproate when used to treat Cervical cancer. has primary outcomes.
+
+IMPORTANT: Respond with ONLY ""Primary outcomes: Yes"" or ""Primary outcomes: No"". Do not include any other text in your response.",Yes,"Primary outcomes: Yes
+",Yes,True,
+"Determine if the clinical trial  that best describes the efficacy of Cisplatin, Topotecan, Hydralazine, Valproate compared to Cisplatin and Topotecan when used to treat Cervical cancer. has primary outcomes.
+
+IMPORTANT: Respond with ONLY ""Primary outcomes: Yes"" or ""Primary outcomes: No"". Do not include any other text in your response.",Yes,"Primary outcomes: Yes
+",Yes,True,
+"Determine if the clinical trial  that best describes the efficacy of Interferon alfa-2b and Thalidomide compared to Interferon alfa-2b monotherapy when used to treat Multiple myeloma. has primary outcomes.
+
+IMPORTANT: Respond with ONLY ""Primary outcomes: Yes"" or ""Primary outcomes: No"". Do not include any other text in your response.",Yes,"Primary outcomes: Yes
+",Yes,True,
+"Determine if the clinical trial  that best describes the efficacy of Interferon alfa-2b monotherapy compared to Interferon alfa-2b and Thalidomide when used to treat Multiple myeloma. has primary outcomes.
+
+IMPORTANT: Respond with ONLY ""Primary outcomes: Yes"" or ""Primary outcomes: No"". Do not include any other text in your response.",Yes,"Primary outcomes: Yes
+",Yes,True,
+"Determine if the clinical trial  that best describes the efficacy of Tasquinimod monotherapy compared to Placebo when used to treat Prostate cancer. has primary outcomes.
+
+IMPORTANT: Respond with ONLY ""Primary outcomes: Yes"" or ""Primary outcomes: No"". Do not include any other text in your response.",Yes,"Primary outcomes: Yes
+",Yes,True,

@@ -146,6 +146,79 @@ def extract_from_response(response: str, task: str = "track_trial_ids") -> str:
             
         logger.warning(f"Failed to extract any author.")
         return ""
+    
+    elif task == "track_start_date":
+        # Single pattern to match "Start date: YYYY-MM" format
+        direct_pattern = r'(?i)start\s*date:?\s*((?:\d{4}-\d{2})|(?:[A-Za-z]+\s+\d{4}))'
+        match = re.search(direct_pattern, response)
+        if match:
+            return match.group(1).strip()
+        
+        # More general patterns if the specific format wasn't found
+        general_patterns = [
+            r'(?i)(?:start|begin|commence)(?:\w*)?\s*(?:date|on):?\s*((?:\d{4}-\d{2})|(?:[A-Za-z]+\s+\d{4})|\d{4})',
+            r'(?i)date:?\s*((?:\d{4}-\d{2})|(?:[A-Za-z]+\s+\d{4})|\d{4})',
+            r'(?i)(\d{4}-\d{2})',  # Just look for YYYY-MM format anywhere
+            r'(?i)((?:January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{4})'
+        ]
+        
+        for pattern in general_patterns:
+            match = re.search(pattern, response)
+            if match:
+                return match.group(1).strip()
+                
+        logger.warning("Failed to extract start date.")
+        return ""
+        
+    elif task == "track_primary_outcomes":
+        # Look for exact "Primary outcomes: Yes/No" format first
+        direct_pattern = r'(?i)primary\s*outcomes?:?\s*(yes|no)\b'
+        match = re.search(direct_pattern, response)
+        if match:
+            return match.group(1).capitalize()
+        
+        # Alternative formats
+        yes_pattern = r'(?i)(?:has|with|contains)\s+primary\s+outcomes?:?\s*(?:yes|true|present)'
+        no_pattern = r'(?i)(?:no|without|lacks)\s+primary\s+outcomes?'
+        
+        if re.search(yes_pattern, response):
+            return "Yes"
+        if re.search(no_pattern, response):
+            return "No"
+        
+        # Fall back to simple Yes/No search
+        if re.search(r'(?i)\byes\b', response):
+            return "Yes"
+        if re.search(r'(?i)\bno\b', response):
+            return "No"
+            
+        logger.warning("Failed to extract primary outcomes information.")
+        return ""
+        
+    elif task == "track_secondary_outcomes":
+        # Look for exact "Secondary outcomes: Yes/No" format first
+        direct_pattern = r'(?i)secondary\s*outcomes?:?\s*(yes|no)\b'
+        match = re.search(direct_pattern, response)
+        if match:
+            return match.group(1).capitalize()
+        
+        # Alternative formats
+        yes_pattern = r'(?i)(?:has|with|contains)\s+secondary\s+outcomes?:?\s*(?:yes|true|present)'
+        no_pattern = r'(?i)(?:no|without|lacks)\s+secondary\s+outcomes?'
+        
+        if re.search(yes_pattern, response):
+            return "Yes"
+        if re.search(no_pattern, response):
+            return "No"
+        
+        # Fall back to simple Yes/No search
+        if re.search(r'(?i)\byes\b', response):
+            return "Yes"
+        if re.search(r'(?i)\bno\b', response):
+            return "No"
+            
+        logger.warning("Failed to extract secondary outcomes information.")
+        return ""
     else:
         logger.error(f"Unknown task: {task}")
         return ""
@@ -250,6 +323,18 @@ def process_nct_csv(
                 # track pmids
                 question = "Find/search the pubmed id of the paper " + row['question 1'].split('Choose an option')[1] + '\nOutput it in the format pmid<pubmed id>'
                 correct_answer = row['pmids']
+            elif task == "track_start_date":
+                # Track start date of the clinical trial with stricter format instructions
+                question = "Find/search the start date of the clinical trial " + row['question 1'].split('Choose an option')[1] + '\n\nIMPORTANT: Respond with ONLY the format "Start date: YYYY-MM" or "Start date: Month YYYY". Do not include any other text in your response.'
+                correct_answer = row['start_date']
+            elif task == "track_primary_outcomes":
+                # Track whether the trial has primary outcomes with stricter format
+                question = "Determine if the clinical trial " + row['question 1'].split('Choose an option')[1] + ' has primary outcomes.\n\nIMPORTANT: Respond with ONLY "Primary outcomes: Yes" or "Primary outcomes: No". Do not include any other text in your response.'
+                correct_answer = row['has_primary_outcome']
+            elif task == "track_secondary_outcomes":
+                # Track whether the trial has secondary outcomes with stricter format
+                question = "Determine if the clinical trial " + row['question 1'].split('Choose an option')[1] + ' has secondary outcomes.\n\nIMPORTANT: Respond with ONLY "Secondary outcomes: Yes" or "Secondary outcomes: No". Do not include any other text in your response.'
+                correct_answer = row['has_secondary_outcome']
             # In process_nct_csv function where task handling occurs:
             elif task == "track_second_authors_multiple_pmids":
                 # Format: model needs to determine both PMID and second author
@@ -365,7 +450,76 @@ def process_nct_csv(
                     # Check if extracted author matches any of the valid second authors
                     valid_authors = [author.strip().lower() for author in answer.split('|')]
                     is_correct = extracted_info.strip().lower() in valid_authors
-                
+                elif task == "track_start_date":
+                    # Simpler date normalization
+                    extracted_date = extracted_info.strip()
+                    expected_date = answer.strip()
+                    
+                    # First try direct comparison
+                    if extracted_date.lower() == expected_date.lower():
+                        is_correct = True
+                    else:
+                        # Try to normalize formats
+                        try:
+                            # Extract year and month from both strings
+                            expected_year = re.search(r'(\d{4})', expected_date).group(1) if re.search(r'(\d{4})', expected_date) else None
+                            extracted_year = re.search(r'(\d{4})', extracted_date).group(1) if re.search(r'(\d{4})', extracted_date) else None
+                            
+                            # If we can extract years from both, compare them first
+                            if expected_year and extracted_year and expected_year == extracted_year:
+                                # If only checking year, consider it correct if no month info in expected
+                                if re.match(r'^\d{4}$', expected_date):
+                                    is_correct = True
+                                else:
+                                    # Check month matching
+                                    month_map = {
+                                        '01': ['jan', 'january'],
+                                        '02': ['feb', 'february'],
+                                        '03': ['mar', 'march'],
+                                        '04': ['apr', 'april'],
+                                        '05': ['may'],
+                                        '06': ['jun', 'june'],
+                                        '07': ['jul', 'july'],
+                                        '08': ['aug', 'august'],
+                                        '09': ['sep', 'september'],
+                                        '10': ['oct', 'october'],
+                                        '11': ['nov', 'november'],
+                                        '12': ['dec', 'december']
+                                    }
+                                    
+                                    # Extract month from expected date
+                                    expected_month = None
+                                    if re.search(r'-(\d{2})', expected_date):
+                                        expected_month = re.search(r'-(\d{2})', expected_date).group(1)
+                                    else:
+                                        for num, names in month_map.items():
+                                            if any(name in expected_date.lower() for name in names):
+                                                expected_month = num
+                                                break
+                                    
+                                    # Extract month from extracted date
+                                    extracted_month = None
+                                    if re.search(r'-(\d{2})', extracted_date):
+                                        extracted_month = re.search(r'-(\d{2})', extracted_date).group(1)
+                                    else:
+                                        for num, names in month_map.items():
+                                            if any(name in extracted_date.lower() for name in names):
+                                                extracted_month = num
+                                                break
+                                    
+                                    # Compare months if both are found
+                                    is_correct = expected_month and extracted_month and expected_month == extracted_month
+                            else:
+                                is_correct = False
+                                
+                        except Exception as e:
+                            logger.error(f"Error comparing dates: {str(e)}")
+                            # Fallback to basic comparison
+                            is_correct = extracted_date.lower() == expected_date.lower()
+
+                elif task in ["track_primary_outcomes", "track_secondary_outcomes"]:
+                    # Simple yes/no comparison, case-insensitive
+                    is_correct = extracted_info.strip().lower() == answer.strip().lower()
                 if is_correct:
                     correct_count += 1
                 
@@ -425,9 +579,13 @@ def main():
     parser.add_argument("--task", 
                         choices=["track_trial_ids", "track_second_authors", "track_pmids",
                                 "track_second_authors_multiple_pmids", 
-                                "track_second_authors_multiple_pmids_any"], 
+                                "track_second_authors_multiple_pmids_any",
+                                "track_start_date",
+                                "track_primary_outcomes",
+                                "track_secondary_outcomes"], 
                         default="track_trial_ids",
-                        help="Task to perform")
+                        help="Task to perform",
+                        )
     
     args = parser.parse_args()
     

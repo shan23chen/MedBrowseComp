@@ -194,3 +194,164 @@ Based on the search results, here's the information you requested, focusing on s
 2025-04-11 15:56:23,748 - NCTProcessor - INFO - Accuracy: 0/5 (0.00%)
 2025-04-11 15:56:23,748 - NCTProcessor - INFO - Saving results to results_second_authors_multiple_pmids_any.csv...
 2025-04-11 15:56:23,750 - NCTProcessor - INFO - Results saved to results_second_authors_multiple_pmids_any.csv
+2025-04-13 15:11:24,173 - NCTProcessor - INFO - Processing data/Hemonc_new_with_all.csv with gemini-2.0-flash
+2025-04-13 15:11:24,174 - NCTProcessor - INFO - Reading CSV file: data/Hemonc_new_with_all.csv
+2025-04-13 15:11:24,177 - NCTProcessor - INFO - Preparing input data...
+2025-04-13 15:11:24,193 - NCTProcessor - INFO - Processing 5 examples using gemini-2.0-flash with tools using 8 threads...
+2025-04-13 15:11:24,194 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-13 15:11:24,194 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-13 15:11:24,195 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-13 15:11:24,195 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-13 15:11:24,195 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-13 15:11:26,403 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-04-13 15:11:26,404 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-04-13 15:11:26,405 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-04-13 15:11:26,406 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-04-13 15:11:26,406 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-04-13 15:11:26,407 - NCTProcessor - INFO - Processing results...
+2025-04-13 15:11:26,409 - NCTProcessor - INFO - Extracting info from response (task: track_start_date):
+Start date: October 2010
+...
+2025-04-13 15:11:26,410 - NCTProcessor - INFO - Extracting info from response (task: track_start_date):
+Start date: 2011
+...
+2025-04-13 15:11:26,412 - NCTProcessor - INFO - Extracting info from response (task: track_start_date):
+Start date: March 2001
+...
+2025-04-13 15:11:26,412 - NCTProcessor - INFO - Extracting info from response (task: track_start_date):
+Start date: March 2001
+...
+2025-04-13 15:11:26,413 - NCTProcessor - INFO - Extracting info from response (task: track_start_date):
+Start date: March 2011
+...
+2025-04-13 15:11:26,413 - NCTProcessor - INFO - Accuracy: 1/5 (20.00%)
+2025-04-13 15:11:26,413 - NCTProcessor - INFO - Saving results to results_start_date.csv...
+2025-04-13 15:11:26,418 - NCTProcessor - INFO - Results saved to results_start_date.csv
+2025-04-13 15:12:46,130 - NCTProcessor - INFO - Processing data/Hemonc_new_with_all.csv with gemini-2.0-flash
+2025-04-13 15:12:46,130 - NCTProcessor - INFO - Reading CSV file: data/Hemonc_new_with_all.csv
+2025-04-13 15:12:46,132 - NCTProcessor - INFO - Preparing input data...
+2025-04-13 15:12:46,143 - NCTProcessor - INFO - Processing 5 examples using gemini-2.0-flash without tools using 4 threads...
+2025-04-13 15:12:46,144 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-13 15:12:46,144 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-13 15:12:46,145 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-13 15:12:46,145 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-13 15:12:47,349 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-04-13 15:12:47,350 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-04-13 15:12:47,350 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-13 15:12:47,351 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-04-13 15:12:47,369 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-04-13 15:12:48,272 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-04-13 15:12:48,273 - NCTProcessor - INFO - Processing results...
+2025-04-13 15:12:48,274 - NCTProcessor - INFO - Extracting info from response (task: track_primary_outcomes):
+Primary outcomes: Yes
+...
+2025-04-13 15:12:48,274 - NCTProcessor - INFO - Extracting info from response (task: track_primary_outcomes):
+Primary outcomes: Yes
+...
+2025-04-13 15:12:48,274 - NCTProcessor - INFO - Extracting info from response (task: track_primary_outcomes):
+Primary outcomes: Yes
+...
+2025-04-13 15:12:48,274 - NCTProcessor - INFO - Extracting info from response (task: track_primary_outcomes):
+Primary outcomes: Yes
+...
+2025-04-13 15:12:48,275 - NCTProcessor - INFO - Extracting info from response (task: track_primary_outcomes):
+Primary outcomes: Yes
+...
+2025-04-13 15:12:48,275 - NCTProcessor - INFO - Accuracy: 5/5 (100.00%)
+2025-04-13 15:13:08,239 - NCTProcessor - INFO - Processing data/Hemonc_new_with_all.csv with gemini-2.0-flash
+2025-04-13 15:13:08,239 - NCTProcessor - INFO - Reading CSV file: data/Hemonc_new_with_all.csv
+2025-04-13 15:13:08,241 - NCTProcessor - INFO - Preparing input data...
+2025-04-13 15:13:08,252 - NCTProcessor - INFO - Processing 5 examples using gemini-2.0-flash without tools using 4 threads...
+2025-04-13 15:13:08,253 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-13 15:13:08,253 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-13 15:13:08,254 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-13 15:13:08,255 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-13 15:13:09,162 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-04-13 15:13:09,162 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-13 15:13:09,209 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-04-13 15:13:09,251 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-04-13 15:13:09,257 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-04-13 15:13:09,696 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-04-13 15:13:09,698 - NCTProcessor - INFO - Processing results...
+2025-04-13 15:13:09,699 - NCTProcessor - INFO - Extracting info from response (task: track_secondary_outcomes):
+Secondary outcomes: Yes
+...
+2025-04-13 15:13:09,699 - NCTProcessor - INFO - Extracting info from response (task: track_secondary_outcomes):
+Secondary outcomes: Yes
+...
+2025-04-13 15:13:09,699 - NCTProcessor - INFO - Extracting info from response (task: track_secondary_outcomes):
+Secondary outcomes: Yes
+...
+2025-04-13 15:13:09,699 - NCTProcessor - INFO - Extracting info from response (task: track_secondary_outcomes):
+Secondary outcomes: Yes
+...
+2025-04-13 15:13:09,699 - NCTProcessor - INFO - Extracting info from response (task: track_secondary_outcomes):
+Secondary outcomes: Yes
+...
+2025-04-13 15:13:09,700 - NCTProcessor - INFO - Accuracy: 4/5 (80.00%)
+2025-04-13 15:13:49,400 - NCTProcessor - INFO - Processing data/Hemonc_new_with_all.csv with gemini-2.0-flash
+2025-04-13 15:13:49,400 - NCTProcessor - INFO - Reading CSV file: data/Hemonc_new_with_all.csv
+2025-04-13 15:13:49,402 - NCTProcessor - INFO - Preparing input data...
+2025-04-13 15:13:49,415 - NCTProcessor - INFO - Processing 5 examples using gemini-2.0-flash with tools using 8 threads...
+2025-04-13 15:13:49,415 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-13 15:13:49,415 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-13 15:13:49,416 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-13 15:13:49,417 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-13 15:13:49,417 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-13 15:13:51,717 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-04-13 15:13:51,718 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-04-13 15:13:51,718 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-04-13 15:13:51,719 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-04-13 15:13:51,720 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-04-13 15:13:51,722 - NCTProcessor - INFO - Processing results...
+2025-04-13 15:13:51,723 - NCTProcessor - INFO - Extracting info from response (task: track_secondary_outcomes):
+Secondary outcomes: Yes
+...
+2025-04-13 15:13:51,723 - NCTProcessor - INFO - Extracting info from response (task: track_secondary_outcomes):
+Secondary outcomes: Yes
+...
+2025-04-13 15:13:51,724 - NCTProcessor - INFO - Extracting info from response (task: track_secondary_outcomes):
+Secondary outcomes: Yes
+...
+2025-04-13 15:13:51,724 - NCTProcessor - INFO - Extracting info from response (task: track_secondary_outcomes):
+Secondary outcomes: Yes
+...
+2025-04-13 15:13:51,725 - NCTProcessor - INFO - Extracting info from response (task: track_secondary_outcomes):
+Secondary outcomes: Yes
+...
+2025-04-13 15:13:51,725 - NCTProcessor - INFO - Accuracy: 4/5 (80.00%)
+2025-04-13 15:13:51,725 - NCTProcessor - INFO - Saving results to results_secondary_outcomes.csv...
+2025-04-13 15:13:51,728 - NCTProcessor - INFO - Results saved to results_secondary_outcomes.csv
+2025-04-13 15:14:12,977 - NCTProcessor - INFO - Processing data/Hemonc_new_with_all.csv with gemini-2.0-flash
+2025-04-13 15:14:12,977 - NCTProcessor - INFO - Reading CSV file: data/Hemonc_new_with_all.csv
+2025-04-13 15:14:12,979 - NCTProcessor - INFO - Preparing input data...
+2025-04-13 15:14:12,988 - NCTProcessor - INFO - Processing 5 examples using gemini-2.0-flash with tools using 8 threads...
+2025-04-13 15:14:12,988 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-13 15:14:12,989 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-13 15:14:12,990 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-13 15:14:12,990 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-13 15:14:12,990 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2025-04-13 15:14:14,736 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-04-13 15:14:14,736 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-04-13 15:14:14,737 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-04-13 15:14:14,737 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-04-13 15:14:14,738 - google_genai.models - INFO - AFC remote call 1 is done.
+2025-04-13 15:14:14,738 - NCTProcessor - INFO - Processing results...
+2025-04-13 15:14:14,739 - NCTProcessor - INFO - Extracting info from response (task: track_primary_outcomes):
+Primary outcomes: Yes
+...
+2025-04-13 15:14:14,739 - NCTProcessor - INFO - Extracting info from response (task: track_primary_outcomes):
+Primary outcomes: Yes
+...
+2025-04-13 15:14:14,739 - NCTProcessor - INFO - Extracting info from response (task: track_primary_outcomes):
+Primary outcomes: Yes
+...
+2025-04-13 15:14:14,739 - NCTProcessor - INFO - Extracting info from response (task: track_primary_outcomes):
+Primary outcomes: Yes
+...
+2025-04-13 15:14:14,739 - NCTProcessor - INFO - Extracting info from response (task: track_primary_outcomes):
+Primary outcomes: Yes
+...
+2025-04-13 15:14:14,739 - NCTProcessor - INFO - Accuracy: 5/5 (100.00%)
+2025-04-13 15:14:14,739 - NCTProcessor - INFO - Saving results to results_primary_outcomes.csv...
+2025-04-13 15:14:14,741 - NCTProcessor - INFO - Results saved to results_primary_outcomes.csv
