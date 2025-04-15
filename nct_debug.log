@@ -453,3 +453,106 @@ Drug class: Antiangiogenic and Immunomodulatory agent
 2025-04-13 15:23:04,541 - NCTProcessor - INFO - Accuracy: 0/5 (0.00%)
 2025-04-13 15:23:04,541 - NCTProcessor - INFO - Saving results to results_drug_class.csv...
 2025-04-13 15:23:04,546 - NCTProcessor - INFO - Results saved to results_drug_class.csv
+2025-04-14 20:41:22,342 - NCTProcessor - INFO - Processing data/Hemonc_new_with_all_test.csv with gpt-4o-search-preview
+2025-04-14 20:41:22,342 - NCTProcessor - INFO - Reading CSV file: data/Hemonc_new_with_all_test.csv
+2025-04-14 20:41:22,346 - NCTProcessor - INFO - Processing first 5 examples
+2025-04-14 20:41:22,346 - NCTProcessor - INFO - Preparing input data...
+2025-04-14 20:41:22,358 - NCTProcessor - INFO - Processing 5 examples using gpt-4o-search-preview without tools using 4 threads...
+2025-04-14 20:41:26,456 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-14 20:41:26,979 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-14 20:41:28,039 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-14 20:41:28,806 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-14 20:41:29,985 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-14 20:41:29,988 - NCTProcessor - INFO - Processing results...
+2025-04-14 20:41:29,989 - NCTProcessor - ERROR - Error processing result 0: 'ChatCompletion' object is not subscriptable
+2025-04-14 20:41:29,992 - NCTProcessor - ERROR - Traceback (most recent call last):
+  File "/Users/db164/Documents/GitHub/hemonc_bench/process_NCT_predictions.py", line 496, in process_nct_csv
+    extracted_info = extract_from_response(response_text, task=task)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/db164/Documents/GitHub/hemonc_bench/process_NCT_predictions.py", line 44, in extract_from_response
+    logger.info(f"Extracting info from response (task: {task}):\n{response[:800]}...")
+                                                                  ~~~~~~~~^^^^^^
+TypeError: 'ChatCompletion' object is not subscriptable
+
+2025-04-14 20:41:29,993 - NCTProcessor - ERROR - Error processing result 1: 'ChatCompletion' object is not subscriptable
+2025-04-14 20:41:29,993 - NCTProcessor - ERROR - Traceback (most recent call last):
+  File "/Users/db164/Documents/GitHub/hemonc_bench/process_NCT_predictions.py", line 496, in process_nct_csv
+    extracted_info = extract_from_response(response_text, task=task)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/db164/Documents/GitHub/hemonc_bench/process_NCT_predictions.py", line 44, in extract_from_response
+    logger.info(f"Extracting info from response (task: {task}):\n{response[:800]}...")
+                                                                  ~~~~~~~~^^^^^^
+TypeError: 'ChatCompletion' object is not subscriptable
+
+2025-04-14 20:41:29,994 - NCTProcessor - ERROR - Error processing result 2: 'ChatCompletion' object is not subscriptable
+2025-04-14 20:41:29,994 - NCTProcessor - ERROR - Traceback (most recent call last):
+  File "/Users/db164/Documents/GitHub/hemonc_bench/process_NCT_predictions.py", line 496, in process_nct_csv
+    extracted_info = extract_from_response(response_text, task=task)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/db164/Documents/GitHub/hemonc_bench/process_NCT_predictions.py", line 44, in extract_from_response
+    logger.info(f"Extracting info from response (task: {task}):\n{response[:800]}...")
+                                                                  ~~~~~~~~^^^^^^
+TypeError: 'ChatCompletion' object is not subscriptable
+
+2025-04-14 20:41:29,994 - NCTProcessor - ERROR - Error processing result 3: 'ChatCompletion' object is not subscriptable
+2025-04-14 20:41:29,995 - NCTProcessor - ERROR - Traceback (most recent call last):
+  File "/Users/db164/Documents/GitHub/hemonc_bench/process_NCT_predictions.py", line 496, in process_nct_csv
+    extracted_info = extract_from_response(response_text, task=task)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/db164/Documents/GitHub/hemonc_bench/process_NCT_predictions.py", line 44, in extract_from_response
+    logger.info(f"Extracting info from response (task: {task}):\n{response[:800]}...")
+                                                                  ~~~~~~~~^^^^^^
+TypeError: 'ChatCompletion' object is not subscriptable
+
+2025-04-14 20:41:29,995 - NCTProcessor - ERROR - Error processing result 4: 'ChatCompletion' object is not subscriptable
+2025-04-14 20:41:29,996 - NCTProcessor - ERROR - Traceback (most recent call last):
+  File "/Users/db164/Documents/GitHub/hemonc_bench/process_NCT_predictions.py", line 496, in process_nct_csv
+    extracted_info = extract_from_response(response_text, task=task)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/db164/Documents/GitHub/hemonc_bench/process_NCT_predictions.py", line 44, in extract_from_response
+    logger.info(f"Extracting info from response (task: {task}):\n{response[:800]}...")
+                                                                  ~~~~~~~~^^^^^^
+TypeError: 'ChatCompletion' object is not subscriptable
+
+2025-04-14 20:41:29,996 - NCTProcessor - INFO - Accuracy: 0/5 (0.00%)
+2025-04-14 20:42:01,847 - NCTProcessor - INFO - Processing data/Hemonc_new_with_all_test.csv with gpt-4o-search-preview
+2025-04-14 20:42:01,847 - NCTProcessor - INFO - Reading CSV file: data/Hemonc_new_with_all_test.csv
+2025-04-14 20:42:01,849 - NCTProcessor - INFO - Processing first 5 examples
+2025-04-14 20:42:01,849 - NCTProcessor - INFO - Preparing input data...
+2025-04-14 20:42:01,861 - NCTProcessor - INFO - Processing 5 examples using gpt-4o-search-preview without tools using 4 threads...
+2025-04-14 20:42:05,021 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-14 20:42:06,900 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-14 20:42:07,601 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-14 20:42:07,692 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-14 20:42:14,086 - NCTProcessor - INFO - Processing data/Hemonc_new_with_all_test.csv with gpt-4o-search-preview
+2025-04-14 20:42:14,086 - NCTProcessor - INFO - Reading CSV file: data/Hemonc_new_with_all_test.csv
+2025-04-14 20:42:14,088 - NCTProcessor - INFO - Processing first 5 examples
+2025-04-14 20:42:14,088 - NCTProcessor - INFO - Preparing input data...
+2025-04-14 20:42:14,100 - NCTProcessor - INFO - Processing 5 examples using gpt-4o-search-preview without tools using 4 threads...
+2025-04-14 20:42:17,759 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-14 20:42:18,479 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-14 20:42:19,831 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-14 20:42:20,050 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-14 20:42:21,503 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-14 20:42:21,505 - NCTProcessor - INFO - Processing results...
+2025-04-14 20:42:21,505 - NCTProcessor - INFO - Extracting info from response (task: track_trial_ids):
+The clinical trial that best describes the efficacy of Cisplatin and Topotecan compared to Cisplatin, Topotecan, Hydralazine, and Valproate in treating cervical cancer is identified by the ClinicalTrials.gov identifier NCT00532818. ([ichgcp.net](https://ichgcp.net/clinical-trials-registry/NCT00532818?utm_source=openai))
+
+This randomized, double-blind, Phase III trial aimed to determine the superiority of adding hydralazine and magnesium valproate to the standard chemotherapy regimen of cisplatin and topotecan in patients with recurrent, persistent, or metastatic cervical cancer. The primary objective was to assess progression-free survival. ([ichgcp.net](https://ichgcp.net/clinical-trials-registry/NCT00532818?utm_source=openai))
+
+Preliminary results from this study indicated that the addit...
+2025-04-14 20:42:21,505 - NCTProcessor - INFO - Extracting info from response (task: track_trial_ids):
+The clinical trial that best describes the efficacy of Cisplatin, Topotecan, Hydralazine, and Valproate compared to Cisplatin and Topotecan in treating cervical cancer is registered under the identifier NCT00532818. ([ichgcp.net](https://ichgcp.net/clinical-trials-registry/NCT00532818?utm_source=openai))
+
+This randomized, double-blind, Phase III trial aimed to determine the superiority of epigenetic therapy with hydralazine and valproate plus standard cisplatin and topotecan against placebo plus cisplatin and topotecan in recurrent and metastatic cervical cancer. The study's objective was to assess progression-free survival, with a hypothesis that the addition of hydralazine and valproate would increase progression-free survival from 4.6 to 7.6 months compared to chemotherapy plus placebo....
+2025-04-14 20:42:21,505 - NCTProcessor - INFO - Extracting info from response (task: track_trial_ids):
+The clinical trial that best describes the efficacy of Interferon alfa-2b combined with Thalidomide compared to Interferon alfa-2b monotherapy in treating Multiple Myeloma is registered under the identifier NCT00633542. ([ichgcp.net](https://ichgcp.net/clinical-trials-registry/NCT00633542?utm_source=openai)) ...
+2025-04-14 20:42:21,505 - NCTProcessor - INFO - Extracting info from response (task: track_trial_ids):
+I couldn't locate a clinical trial with an NCT number that directly compares the efficacy of Interferon alfa-2b monotherapy to the combination of Interferon alfa-2b and Thalidomide in treating multiple myeloma. However, there are related studies that might be of interest:
+
+1. **Thalidomide-Dexamethasone vs. Interferon-α-Dexamethasone as Maintenance Treatment**: This randomized study evaluated Thalidomide-Dexamethasone against Interferon-α-Dexamethasone as maintenance therapy following ThaDD induction in multiple myeloma patients. ([ashpublications.org](https://ashpublications.org/blood/article/110/11/532/81743/Thalidomide-Dexamethasone-vs-Interferon?utm_source=openai))
+
+2. **Thalidomide-Interferon vs. Interferon Maintenance Therapy**: This study compared Thalidomide plus Interferon α2b to ...
+2025-04-14 20:42:21,506 - NCTProcessor - INFO - Extracting info from response (task: track_trial_ids):
+The clinical trial that best describes the efficacy of tasquinimod monotherapy compared to placebo in treating prostate cancer is identified by the ClinicalTrials.gov identifier NCT00560482. ([ascopubs.org](https://ascopubs.org/doi/full/10.1200/JCO.2011.35.6295?utm_source=openai)) ...
+2025-04-14 20:42:21,506 - NCTProcessor - INFO - Accuracy: 2/5 (40.00%)

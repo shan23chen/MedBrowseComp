@@ -8,7 +8,14 @@ import logging
 import traceback
 from typing import Dict, List, Tuple, Optional, Union
 from tqdm import tqdm
-from gemini_inference import GeminiInference, run_inference_multithread, GEMINI_MODELS
+from gemini_inference import GeminiInference, run_inference_multithread as gemini_run_inference_multithread, GEMINI_MODELS
+from sonar_inference import SonarInference, run_inference_multithread as sonar_run_inference_multithread, SONAR_MODELS
+from openai_search_inference import OpenAISearchInference, run_inference_multithread as openai_search_run_inference_multithread, OPENAI_SEARCH_MODELS
+
+ALL_MODELS = {}
+ALL_MODELS.update(GEMINI_MODELS)
+ALL_MODELS.update(SONAR_MODELS)
+ALL_MODELS.update(OPENAI_SEARCH_MODELS)
 
 # Configure logging
 logging.basicConfig(
@@ -323,7 +330,9 @@ def process_nct_csv(
     output_path: str = None,
     test_mode: bool = False,
     n: int = None,
-    task: str = None
+    task: str = None,
+    run_inference=None,
+    inference_kwargs=None
 ) -> List[Dict]:
     """
     Process CSV file with NCT predictions
@@ -439,12 +448,23 @@ def process_nct_csv(
         logger.info(f"Processing {len(inputs)} examples using {model_name}" + 
               f" {'with' if use_tools else 'without'} tools" +
               f" using {max_workers} threads...")
-        
-        results = run_inference_multithread(
-            model_name=model_name,
+
+        if run_inference is None:
+            # Fallback to Gemini for backward compatibility
+            from gemini_inference import run_inference_multithread as gemini_run_inference_multithread
+            run_inference = gemini_run_inference_multithread
+            inference_kwargs = {"model_name": model_name}
+        if inference_kwargs is None:
+            inference_kwargs = {"model_name": model_name}
+        inference_kwargs = dict(inference_kwargs)
+        # Add use_tools/max_workers if supported by the backend
+        if "use_tools" in run_inference.__code__.co_varnames:
+            inference_kwargs["use_tools"] = use_tools
+        if "max_workers" in run_inference.__code__.co_varnames:
+            inference_kwargs["max_workers"] = max_workers
+        results = run_inference(
             input_list=inputs,
-            use_tools=use_tools,
-            max_workers=max_workers
+            **inference_kwargs
         )
         
         # Process results
@@ -679,8 +699,8 @@ def process_nct_csv(
 def main():
     parser = argparse.ArgumentParser(description="Evaluate model's ability to extract various information")
     parser.add_argument("csv_path", help="Path to CSV file with required columns")
-    parser.add_argument("--model", default="gemini-2.0-flash", choices=list(GEMINI_MODELS.keys()), 
-                        help="Gemini model to use")
+    parser.add_argument("--model", default="gemini-2.0-flash", choices=list(ALL_MODELS.keys()), 
+                        help="Model to use (Gemini, Sonar, or OpenAI Search)")
     parser.add_argument("--use_tools", action="store_true", help="Use Google Search tool")
     parser.add_argument("--threads", type=int, default=4, help="Number of threads for parallel processing")
     parser.add_argument("--output", help="Output CSV path (optional)")
@@ -700,11 +720,25 @@ def main():
     
     args = parser.parse_args()
     
-    if args.model not in GEMINI_MODELS:
+    if args.model not in ALL_MODELS:
         logger.error(f"Invalid model name: {args.model}")
-        logger.error(f"Available models: {', '.join(GEMINI_MODELS.keys())}")
+        logger.error(f"Available models: {', '.join(ALL_MODELS.keys())}")
         return
     
+    # Select the correct inference backend
+    if args.model in GEMINI_MODELS:
+        run_inference = gemini_run_inference_multithread
+        inference_kwargs = {"model_name": args.model}
+    elif args.model in SONAR_MODELS:
+        run_inference = sonar_run_inference_multithread
+        inference_kwargs = {"model_name": args.model}
+    elif args.model in OPENAI_SEARCH_MODELS:
+        run_inference = openai_search_run_inference_multithread
+        inference_kwargs = {"model_name": args.model}
+    else:
+        logger.error(f"Model {args.model} not recognized.")
+        return
+
     logger.info(f"Processing {args.csv_path} with {args.model}")
     process_nct_csv(
         csv_path=args.csv_path,
@@ -714,7 +748,9 @@ def main():
         output_path=args.output,
         test_mode=args.test,
         n=args.n,
-        task=args.task
+        task=args.task,
+        run_inference=run_inference,
+        inference_kwargs=inference_kwargs
     )
 
 if __name__ == "__main__":
