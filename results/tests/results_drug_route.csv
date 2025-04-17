@@ -1,0 +1,23 @@
+question,correct_answer,model_output,extracted_info,correct,urls
+"Find/search the route of administration for the drug used in the clinical trial  that best describes the efficacy of Cisplatin and Topotecan compared to Cisplatin, Topotecan, Hydralazine, Valproate when used to treat Cervical cancer.
+
+IMPORTANT: Respond with ONLY the format ""Drug route: X"" where X is the route (oral, intravenous, etc). If unknown, respond with ""Drug route: Unknown"". Do not include any other text in your response.",Unknown,"Drug route: Intravenous
+",Intravenous,False,
+"Find/search the route of administration for the drug used in the clinical trial  that best describes the efficacy of Cisplatin, Topotecan, Hydralazine, Valproate compared to Cisplatin and Topotecan when used to treat Cervical cancer.
+
+IMPORTANT: Respond with ONLY the format ""Drug route: X"" where X is the route (oral, intravenous, etc). If unknown, respond with ""Drug route: Unknown"". Do not include any other text in your response.",Unknown,"Drug route: Intravenous and Oral
+",Intravenous and Oral,False,
+"Find/search the route of administration for the drug used in the clinical trial  that best describes the efficacy of Interferon alfa-2b and Thalidomide compared to Interferon alfa-2b monotherapy when used to treat Multiple myeloma.
+
+IMPORTANT: Respond with ONLY the format ""Drug route: X"" where X is the route (oral, intravenous, etc). If unknown, respond with ""Drug route: Unknown"". Do not include any other text in your response.",Oral,"Based on the search results, particularly [1], [2], [3], [4], and [8], Thalidomide is administered orally. Interferon alfa-2b is administered via subcutaneous or intramuscular injection, as indicated in [5], [6], [7], [11] and [12].
+
+Drug route: Oral and subcutaneous
+",Oral and subcutaneous,False,
+"Find/search the route of administration for the drug used in the clinical trial  that best describes the efficacy of Interferon alfa-2b monotherapy compared to Interferon alfa-2b and Thalidomide when used to treat Multiple myeloma.
+
+IMPORTANT: Respond with ONLY the format ""Drug route: X"" where X is the route (oral, intravenous, etc). If unknown, respond with ""Drug route: Unknown"". Do not include any other text in your response.",Oral,"Drug route: Subcutaneous
+",Subcutaneous,False,
+"Find/search the route of administration for the drug used in the clinical trial  that best describes the efficacy of Tasquinimod monotherapy compared to Placebo when used to treat Prostate cancer.
+
+IMPORTANT: Respond with ONLY the format ""Drug route: X"" where X is the route (oral, intravenous, etc). If unknown, respond with ""Drug route: Unknown"". Do not include any other text in your response.",Oral,"Drug route: Oral
+",Oral,True,

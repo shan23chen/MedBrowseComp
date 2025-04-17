@@ -1,6 +1,7 @@
 import os
 from typing import List, Union, Dict, Generator
 from concurrent.futures import ThreadPoolExecutor
+from tqdm import tqdm
 from openai import OpenAI
 from dotenv import load_dotenv
 
@@ -48,5 +49,8 @@ def run_inference_multithread(model_name: str, input_list: List[str], max_worker
     def _inference(input_text):
         return inference.generate_response(input_text)
     with ThreadPoolExecutor(max_workers=max_workers) as executor:
-        results = list(executor.map(_inference, input_list))
+        futures = [executor.submit(_inference, text) for text in input_list]
+        results = []
+        for f in tqdm(futures, total=len(futures), desc="Model inference"):
+            results.append(f.result())
     return results

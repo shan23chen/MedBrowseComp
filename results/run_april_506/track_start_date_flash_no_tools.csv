@@ -1,0 +1,2024 @@
+question,correct_answer,model_output,extracted_info,correct,urls
+"Find/search the start date of the clinical trial  that best describes the efficacy of Tasquinimod monotherapy compared to Placebo when used to treat Prostate cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2011-03,"Start date: September 2009
+",September 2009,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Panitumumab monotherapy compared to Best supportive care when used to treat Colorectal cancer (Metastatic).
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2004-01-01,"Start date: 2013-09
+",2013-09,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Capecitabine monotherapy compared to Observation when used to treat Nasopharyngeal carcinoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2017-01,"Error generating response: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Max retries exceeded with url: /v1beta/models/gemini-2.0-flash:generateContent (Caused by NameResolutionError(""<urllib3.connection.HTTPSConnection object at 0x162d61c10>: Failed to resolve 'generativelanguage.googleapis.com' ([Errno 8] nodename nor servname provided, or not known)""))",,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Cisplatin and Fluorouracil (CF) compared to Cisplatin and Gemcitabine (GC) when used to treat Nasopharyngeal carcinoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2017-10-30,"Start date: 2016-03
+",2016-03,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Goserelin monotherapy compared to Degarelix monotherapy when used to treat Prostate cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2013-08-13,"Start date: December 2010
+",December 2010,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Enzalutamide monotherapy compared to Placebo when used to treat Prostate cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2014-04-23,"Start date: July 2010
+",July 2010,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Carboplatin and Paclitaxel (CP) and Figitumumab compared to Carboplatin and Paclitaxel (CP) when used to treat Non-small cell lung cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2008-04,"Start date: March 2009
+",March 2009,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Capecitabine and Sunitinib compared to Capecitabine monotherapy when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2007-02,"Start date: January 2012
+",January 2012,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Erlotinib monotherapy compared to Dacomitinib monotherapy when used to treat Non-small cell lung cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2008-11,"Start date: May 2014
+",May 2014,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Sunitinib monotherapy compared to Masitinib monotherapy when used to treat Gastrointestinal stromal tumor.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2008-10,"Start date: November 2015
+",November 2015,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Gemcitabine monotherapy compared to Cisplatin and Gemcitabine (GC) when used to treat Cholangiocarcinoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2005-05,"Start date: 2017-08
+",2017-08,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of CMF compared to Goserelin and Tamoxifen when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1990-12,"Start date: January 2003
+",January 2003,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Anastrozole monotherapy compared to Observation when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1996-01,"Start date: January 2016
+",January 2016,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Abiraterone monotherapy compared to Prednisone monotherapy when used to treat Prostate cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2012-03-27,"Start date: January 2011
+",January 2011,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Cisplatin and Fluorouracil (CF) compared to Esophagectomy when used to treat Esophageal adenocarcinoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1996-10,"Start date: 2011-01
+",2011-01,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Abiraterone and Apalutamide compared to Abiraterone monotherapy when used to treat Prostate cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2014-11-26,"Start date: 2018-08
+",2018-08,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Tegafur, Uracil, Folinic acid compared to S-1 monotherapy when used to treat Colon cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2008-04,"Start date: June 2013
+",June 2013,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Efgartigimod monotherapy compared to Placebo when used to treat Immune thrombocytopenia.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2019-12-16,"Start date: December 2018
+",December 2018,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Apixaban monotherapy compared to Enoxaparin monotherapy when used to treat Venous thromboembolism.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2007-06,"Start date: March 2017
+",March 2017,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Apixaban monotherapy compared to Enoxaparin monotherapy when used to treat Venous thromboembolism.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2007-03,"Start date: 2013-03
+",2013-03,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Carboplatin and Pemetrexed|Cisplatin and Pemetrexed compared to Cisplatin, Pemetrexed, Durvalumab when used to treat Non-small cell lung cancer nonsquamous.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2018-12-06,"Start date: January 2018
+",January 2018,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Enzalutamide monotherapy compared to Placebo when used to treat Prostate cancer (Metastatic).
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2009-09-30,"Start date: 2010-07
+",2010-07,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of FOLFIRI compared to FOLFIRI and Ziv-aflibercept when used to treat Colorectal cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2012-07,"Start date: 2007-07
+",2007-07,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Dacarbazine and Oblimersen compared to Dacarbazine monotherapy when used to treat Melanoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2007-07,"Start date: July 2003
+",July 2003,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Rituximab monotherapy compared to Observation when used to treat Chronic lymphocytic leukemia.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2009-12,"Start date: April 2003
+",April 2003,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Carboplatin and Gemcitabine (GCb) and Bevacizumab compared to Carboplatin, Pegylated liposomal doxorubicin, Bevacizumab when used to treat Ovarian cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2013-05,"Start date: October 2014
+",October 2014,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Carboplatin monotherapy compared to Carboplatin and Gemcitabine (GCb) when used to treat Ovarian cancer (Advanced).
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1999-09,"Start date: 2014-04
+",2014-04,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Fluoropyrimidine and Bevacizumab compared to Bevacizumab monotherapy when used to treat Colorectal cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2009-08,"Start date: August 2012
+",August 2012,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Carboplatin and Paclitaxel (CP) compared to Carboplatin and Paclitaxel (CP) and Penpulimab when used to treat Non-small cell lung cancer squamous (Locally Advanced or Metastatic).
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2018-12-20,"Start date: 2021-08
+",2021-08,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Alectinib monotherapy compared to Crizotinib monotherapy when used to treat Non-small cell lung cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2016-08-03,"Start date: 2013-03
+",2013-03,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Cytarabine and Daunorubicin compared to 4d plus 7 when used to treat Acute myeloid leukemia.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1999-11,"Start date: July 2017
+",July 2017,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of HiDAC and G-CSF compared to CLARA when used to treat Acute myeloid leukemia.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2009-03,"Start date: January 2023
+",January 2023,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of iceMFP compared to Doxifluridine and Mitomycin when used to treat Gastric cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2001-10,"Start date: March 2013
+",March 2013,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Apixaban monotherapy compared to Warfarin monotherapy when used to treat Venous thromboembolism.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2008-07,"Start date: 2013-09
+",2013-09,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Anagrelide monotherapy compared to Aspirin and Hydroxyurea when used to treat Essential thrombocythemia.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2002-09,"Start date: 2005-03
+",2005-03,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Placebo compared to Apatinib monotherapy when used to treat Gastric cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2017-03-14,"Start date: August 2014
+",August 2014,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Cisplatin and Vinorelbine (CVb) compared to Observation when used to treat Non-small cell lung cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2007-06,"Start date: June 2005
+",June 2005,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Gemcitabine monotherapy compared to Durvalumab and Tremelimumab when used to treat Non-small cell lung cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2015-01-13,"Start date: August 20, 2018
+",,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Rucaparib monotherapy compared to Standard-of-care chemotherapy when used to treat Ovarian cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2017-03-01,"Start date: 2015-07
+",2015-07,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Erlotinib and Bevacizumab compared to Erlotinib monotherapy when used to treat Non-small cell lung cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2016-04-01,"Start date: December 2006
+",December 2006,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of S-1 monotherapy compared to SOX when used to treat Gastric cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2013-02-06,"Start date: 2013-03
+",2013-03,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of IFL compared to IFL and Bevacizumab when used to treat Colorectal cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2007-07,"Start date: February 2000
+",February 2000,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Cetuximab and RT compared to Cisplatin and RT when used to treat Head and neck cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2013-11,"Start date: August 2006
+",August 2006,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Sunitinib monotherapy compared to Everolimus monotherapy when used to treat Non-clear cell renal cell carcinoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2010-09,"Start date: 2013-09
+",2013-09,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Canfosfamide monotherapy compared to Pegylated liposomal doxorubicin monotherapy when used to treat Ovarian cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2003-06,"Start date: December 2010
+",December 2010,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of R-CVP (rituximab-rixa) compared to R-CVP when used to treat Follicular lymphoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2011-12-01,"Start date: 2004-09
+",2004-09,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Carboplatin and Etoposide (CE) compared to Carboplatin and Etoposide (CE) and Serplulimab when used to treat Small cell lung cancer (Extensive Stage).
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2019-09-12,"Start date: March 2020
+",March 2020,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Carboplatin, Pegylated liposomal doxorubicin, Bevacizumab compared to Carboplatin and Gemcitabine (GCb), Atezolizumab, Bevacizumab|Carboplatin and Paclitaxel (CP), Atezolizumab, Bevacizumab|Carboplatin, Pegylated liposomal doxorubicin, Atezolizumab, Bevacizumab when used to treat Ovarian cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2016-09-22,"Start date: 2020-11
+",2020-11,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Tranexamic acid monotherapy compared to Placebo when used to treat Hereditary hemorrhagic telangiectasia.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2006-09,"Start date: April 2014
+",April 2014,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Observation compared to ATG (Rabbit) monotherapy when used to treat Graft versus host disease.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2006-10,"Start date: January 2014
+",January 2014,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Bevacizumab monotherapy compared to Erlotinib and Bevacizumab when used to treat Non-small cell lung cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2006-01,"Start date: January 2011
+",January 2011,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Carboplatin and Pemetrexed compared to ABCP when used to treat Non-small cell lung cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2019-08-27,"Start date: May 2014
+",May 2014,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Nivolumab monotherapy compared to Docetaxel monotherapy when used to treat Esophageal squamous cell carcinoma (Unresectable Advanced or Recurrent or Metastatic).
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2015-12-14,"Start date: August 2014
+",August 2014,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Lenalidomide and Rituximab (R2) compared to Rituximab monotherapy when used to treat Follicular lymphoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2013-11-21,"Start date: 2014-03
+",2014-03,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Docetaxel monotherapy compared to Docetaxel and Bevacizumab when used to treat Breast cancer (Not Applicable).
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2006-03,"Start date: March 2006
+",March 2006,True,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Carboplatin and Paclitaxel (CP) and Bevacizumab-equi compared to Carboplatin and Paclitaxel (CP) and Bevacizumab when used to treat Non-small cell lung cancer nonsquamous.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2016-09-07,"Start date: November 2018
+",November 2018,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Docetaxel and Trastuzumab (TH) compared to BTH (Docetaxel) when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2006-09,"Start date: January 2013
+",January 2013,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of FOLFIRI|FOLFIRI and Bevacizumab compared to CAPIRI-Bev when used to treat Colorectal cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2013-12-02,"Start date: January 2007
+",January 2007,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Low-dose Cytarabine monotherapy (LoDAC) compared to Azacitidine monotherapy when used to treat Acute myeloid leukemia.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2003-11-01,"Start date: October 2013
+",October 2013,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Placebo compared to Azacitidine oral monotherapy when used to treat Myelodysplastic syndrome.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2013-04-26,"Start date: May 2020
+",May 2020,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Enzalutamide monotherapy compared to Abiraterone and Enzalutamide when used to treat Prostate cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2014-01-22,"Start date: 2018-06
+",2018-06,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of ECX and Rilotumumab compared to ECX when used to treat Esophageal adenocarcinoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2009-02,"Start date: March 2013
+",March 2013,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Blinatumomab monotherapy compared to Standard salvage consolidation chemotherapy when used to treat B-cell acute lymphoblastic leukemia pediatric.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2015-11-10,"Start date: 2014-04
+",2014-04,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Observation compared to Cyclophosphamide and TBI, then auto HSCT when used to treat Chronic lymphocytic leukemia.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2001-04,"Start date: March 16, 2016
+",,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Observation compared to FOLFOX-HAIC when used to treat Hepatocellular carcinoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2017-07-01,"Start date: 2019-08
+",2019-08,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Carboplatin and Paclitaxel (CP) and Bevacizumab-aveg compared to Carboplatin and Paclitaxel (CP) and Bevacizumab when used to treat Non-small cell lung cancer nonsquamous.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2012-10,"Start date: May 2018
+",May 2018,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Paclitaxel and Trastuzumab (TH) compared to Paclitaxel and Trastuzumab (TH) (trastuzumab-hert) when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2012-10,"Start date: 2018-06
+",2018-06,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Carboplatin and Paclitaxel (CP) and Bevacizumab compared to Carboplatin and Paclitaxel (CP) when used to treat Melanoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2013-12,"Start date: July 2011
+",July 2011,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of AC-TH (Docetaxel) compared to AC-D when used to treat Breast cancer (Node Positive).
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2001-04,"Start date: July 2006
+",July 2006,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Etirinotecan pegol monotherapy compared to Eribulin monotherapy when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2011-12,"Start date: December 2013
+",December 2013,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of FOLFIRI and Bevacizumab compared to FOLFIRI when used to treat Colorectal cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2008-06,"Start date: 2004-07
+",2004-07,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of mFOLFOX6-B compared to mFOLFOX6 when used to treat Colorectal cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2013-10,"Start date: November 2010
+",November 2010,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Placebo compared to Luspatercept monotherapy when used to treat Beta thalassemia.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2016-05-02,"Start date: 2016-05
+",2016-05,True,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Bortezomib and Dexamethasone (Vd) compared to Bortezomib and Dexamethasone (Vd) and Venetoclax when used to treat Multiple myeloma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2016-07-11,"Start date: April 2018
+",April 2018,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Paclitaxel monotherapy compared to Buparlisib and Paclitaxel when used to treat Head and neck cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2013-10-01,"Start date: July 2016
+",July 2016,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of FOLFIRI and Bevacizumab (BE1040V) compared to FOLFIRI and Bevacizumab when used to treat Colorectal cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2016-10-04,"Start date: 2007-03
+",2007-03,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Carboplatin and Paclitaxel (CP) and Bevacizumab compared to Carboplatin and Paclitaxel (CP) when used to treat Non-small cell lung cancer nonsquamous.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2011-05-23,"Start date: 2014-02
+",2014-02,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Low-dose Cytarabine monotherapy (LoDAC) compared to LoDAC and Volasertib when used to treat Acute myeloid leukemia.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2008-11-27,"Start date: February 2017
+",February 2017,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Busulfan and Fludarabine, then allo HSCT|Fludarabine and Melphalan, then allo HSCT compared to Busulfan and Cyclophosphamide, then allo HSCT when used to treat Acute myeloid leukemia.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2011-06,"Start date: May 2016
+",May 2016,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Bortezomib and Dexamethasone (Vd) compared to SVd when used to treat Multiple myeloma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2017-05-24,"Start date: June 2016
+",June 2016,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of A-AVD compared to ABVD when used to treat Classical Hodgkin lymphoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2015-03,"Start date: 2011-09
+",2011-09,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Placebo compared to Vemurafenib monotherapy when used to treat Melanoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2012-09-24,"Start date: June 2010
+",June 2010,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Patient-specific tumor-derived antigen compared to Observation when used to treat Follicular lymphoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2000-01,"Start date: November 2023
+",November 2023,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of ATRA, Mercaptopurine, Methotrexate compared to ATRA monotherapy when used to treat Acute promyelocytic leukemia.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1999-06,"Start date: October 1999
+",October 1999,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Paclitaxel monotherapy compared to nab-Paclitaxel monotherapy when used to treat Breast cancer (Metastatic).
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2001-06,"Start date: January 2013
+",January 2013,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Carboplatin and nab-Paclitaxel compared to Carboplatin and Paclitaxel (CP) when used to treat Non-small cell lung cancer (Locally Advanced or Metastatic).
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2007-11-01,"Start date: October 2018
+",October 2018,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Carboplatin and Paclitaxel (CP) and Ipilimumab compared to Carboplatin and Paclitaxel (CP) when used to treat Non-small cell lung cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2008-02,"Start date: August 2018
+",August 2018,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Elo-Vd compared to Bortezomib and Dexamethasone (Vd) when used to treat Multiple myeloma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2011-11-30,"Start date: February 2018
+",February 2018,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Observation compared to Sunitinib monotherapy when used to treat Small cell lung cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2007-03-15,"Start date: June 1, 2010
+",,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Sunitinib monotherapy compared to Placebo when used to treat Non-small cell lung cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2008-06-15,"Start date: 2005-12
+",2005-12,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Paclitaxel, nanoparticle albumin-bound and Bevacizumab compared to Paclitaxel and Bevacizumab when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2008-10-13,"Start date: January 2010
+",January 2010,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Letrozole monotherapy compared to Letrozole and Bevacizumab when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2008-09-24,"Start date: January 2010
+",January 2010,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of T-ddAC compared to T-ddAC and Bevacizumab when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2009-05-15,"Start date: 2016-05
+",2016-05,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Lenalidomide monotherapy compared to Lenalidomide and Rituximab (R2) when used to treat Follicular lymphoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2006-03,"Start date: 2014-09
+",2014-09,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Cisplatin and Gemcitabine (GC) and Bevacizumab compared to Cisplatin and Gemcitabine (GC) when used to treat Urothelial carcinoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2009-07-15,"Start date: December 2017
+",December 2017,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of FULV compared to Hepatic arterial chemotherapy when used to treat Colorectal cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1996-01,"Start date: 2016-06
+",2016-06,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of ddAC-ddT compared to A-T-C when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1997-09,"Start date: January 2015
+",January 2015,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of No neoadjuvant therapy compared to Cisplatin and Fluorouracil (CF) and RT when used to treat Esophageal cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1997-10,"Start date: 2011-08
+",2011-08,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Gemcitabine monotherapy compared to Cisplatin and Gemcitabine (GC) when used to treat Non-small cell lung cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2007-11,"Start date: 2002-08
+",2002-08,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Docetaxel and Epirubicin (DE) compared to Docetaxel and Epirubicin (DE) and Endostatin when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2011-10,"Start date: March 2005
+",March 2005,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of TX-CEX compared to D-FEC when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2012-06,"Start date: July 2017
+",July 2017,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Cyclosporine, Methotrexate, ATG compared to Cyclosporine and Methotrexate when used to treat Graft versus host disease.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2010-04,"Start date: February 2017
+",February 2017,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Pomalidomide and Dexamethasone (Pd) compared to Pomalidomide monotherapy when used to treat Multiple myeloma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2008-06,"Start date: February 2013
+",February 2013,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Eculizumab monotherapy compared to Ravulizumab monotherapy when used to treat Paroxysmal nocturnal hemoglobinuria.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2017-05-17,"Start date: July 2017
+",July 2017,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Cisplatin and Gemcitabine (GC) compared to No neoadjuvant therapy when used to treat Non-small cell lung cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2000-09,"Start date: December 2011
+",December 2011,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Copanlisib and Rituximab compared to Rituximab monotherapy when used to treat Follicular lymphoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2015-08-03,"Start date: 2017-08
+",2017-08,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Carboplatin and Paclitaxel (CP) and Bevacizumab-byva compared to Carboplatin and Paclitaxel (CP) and Bevacizumab when used to treat Non-small cell lung cancer nonsquamous.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2016-11-28,"Start date: 2014-03
+",2014-03,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Lanreotide Depot/Autogel monotherapy compared to Placebo when used to treat Pancreatic NET.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2006-06,"Start date: 2005-02
+",2005-02,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Rituximab monotherapy compared to Observation when used to treat Chronic lymphocytic leukemia.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2007-12,"Start date: May 2003
+",May 2003,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of CPX-351 monotherapy compared to 7 plus 3d when used to treat Acute myeloid leukemia.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2008-10,"Start date: December 2011
+",December 2011,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Allo HSCT (no specific conditioning regimen) compared to Hydroxyurea and Interferon alfa-2a when used to treat Chronic myeloid leukemia.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1995-01,"Start date: January 2002
+",January 2002,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Mercaptopurine, Methotrexate, Vincristine compared to Mercaptopurine, Methotrexate, Pegaspargase, Vincristine when used to treat B-cell acute lymphoblastic leukemia pediatric.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2003-12-29,"Start date: January 2008
+",January 2008,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Blinatumomab monotherapy compared to Standard salvage consolidation chemotherapy when used to treat B-cell acute lymphoblastic leukemia.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2014-12-17,"Start date: 2016-05
+",2016-05,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of ADE (standard-dose Ara-C) compared to ADE and GO when used to treat Acute myeloid leukemia pediatric.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2006-08,"Start date: June 2010
+",June 2010,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of COG ANBL0532 Regimen A compared to COG ANBL0532 Regimen B when used to treat Neuroblastoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2007-11-05,"Start date: September 2007
+",September 2007,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Mercaptopurine, Methotrexate, Vincristine, Dexamethasone compared to Methotrexate and Vincristine when used to treat B-cell acute lymphoblastic leukemia pediatric.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2000-06,"Start date: August 2000
+",August 2000,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Belotecan and Cisplatin compared to Cisplatin and Etoposide (EP) when used to treat Small cell lung cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2009-01,"Start date: November 2010
+",November 2010,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of O-FC compared to FC when used to treat Chronic lymphocytic leukemia.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2009-03-12,"Start date: April 2014
+",April 2014,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Placebo compared to Regorafenib monotherapy when used to treat Colorectal cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2012-04,"Start date: July 2013
+",July 2013,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Nivolumab monotherapy compared to Placebo when used to treat Malignant pleural mesothelioma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2017-03-28,"Start date: January 2015
+",January 2015,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Icotinib monotherapy compared to Cisplatin and Pemetrexed when used to treat Non-small cell lung cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2012-12,"Start date: June 2008
+",June 2008,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Busulfan and Fludarabine, then allo HSCT compared to Busulfan and Cyclophosphamide, then allo HSCT when used to treat Acute myeloid leukemia.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2002-05,"Start date: June 2011
+",June 2011,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Best supportive care compared to Docetaxel monotherapy when used to treat Esophageal adenocarcinoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2008-04,"Start date: February 2010
+",February 2010,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Doxorubicin monotherapy compared to Doxorubicin and Olaratumab when used to treat Soft tissue sarcoma (Not Amenable to Curative Treatment).
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2010-10,"Start date: February 2014
+",February 2014,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of VAD (Pegylated liposomal doxorubicin substituted) compared to VAD when used to treat Multiple myeloma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2000-10,"Start date: December 2002
+",December 2002,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Rituximab monotherapy compared to Ibrutinib monotherapy when used to treat Chronic lymphocytic leukemia.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2013-10-28,"Start date: April 2014
+",April 2014,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Capecitabine and Gemcitabine compared to Gemcitabine monotherapy when used to treat Pancreatic cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2002-04,"Start date: 2008-03
+",2008-03,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Rituximab monotherapy compared to Watchful waiting when used to treat Follicular lymphoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2004-09,"Start date: 2003-02
+",2003-02,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Rituximab monotherapy compared to Rituximab-abbs monotherapy when used to treat Follicular lymphoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2015-11-09,"Start date: August 2018
+",August 2018,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Nivolumab-Ipilimumab compared to Ipilimumab-Nivolumab when used to treat Melanoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2013-04-30,"Start date: August 2015
+",August 2015,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Sorafenib monotherapy compared to Nivolumab monotherapy when used to treat Hepatocellular carcinoma (Not Applicable).
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2015-12-07,"Start date: July 2017
+",July 2017,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Cisplatin and Pemetrexed compared to Carboplatin, Pemetrexed, Nivolumab|Cisplatin, Pemetrexed, Nivolumab when used to treat Non-small cell lung cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2017-03-17,"Start date: January 2019
+",January 2019,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Carboplatin and Pemetrexed|Cisplatin and Pemetrexed|Carboplatin and Paclitaxel .28CP compared to Cisplatin, Pemetrexed, Nivolumab when used to treat Non-small cell lung cancer nonsquamous.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2019-11-05,"Start date: February 10, 2020
+",,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Cisplatin and Docetaxel (DC) and Nivolumab compared to Carboplatin and Paclitaxel (CP)|Cisplatin and Vinorelbine (CVb)|Cisplatin and Docetaxel (DC) when used to treat Non-small cell lung cancer (Resectable).
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2017-03-04,"Start date: January 17, 2023
+",,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Best supportive care compared to Decitabine monotherapy when used to treat Myelodysplastic syndrome.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2001-04,"Start date: 2013-09
+",2013-09,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Sipuleucel-T monotherapy compared to Placebo when used to treat Prostate cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1999-11,"Start date: 2000-03
+",2000-03,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Durvalumab and Tremelimumab compared to Cisplatin and Gemcitabine (GC) when used to treat Urothelial carcinoma (Not Applicable).
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2015-11-02,"Start date: January 2018
+",January 2018,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Trastuzumab deruxtecan monotherapy compared to Paclitaxel monotherapy when used to treat Gastric cancer (Locally Advanced or Metastatic).
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2017-11-02,"Start date: 2018-08
+",2018-08,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Etoposide monotherapy compared to Lenalidomide monotherapy when used to treat Diffuse large B-cell lymphoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2010-09-02,"Start date: February 2016
+",February 2016,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of mDCF compared to Cisplatin and Fluorouracil (CF) when used to treat Gastric cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2008-11,"Start date: 2012-03
+",2012-03,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Docetaxel and Pegylated liposomal doxorubicin compared to Docetaxel monotherapy when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2004-09,"Start date: 2010-12
+",2010-12,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Lenvatinib monotherapy compared to Placebo when used to treat Thyroid cancer differentiated.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2017-01-11,"Start date: March 2011
+",March 2011,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Rituximab monotherapy compared to Observation when used to treat Follicular lymphoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1999-10,"Start date: January 2014
+",January 2014,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Rituximab monotherapy compared to Observation when used to treat Chronic lymphocytic leukemia.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1998-03,"Start date: January 2003
+",January 2003,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Ipilimumab and Sargramostim compared to Ipilimumab monotherapy when used to treat Melanoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2010-12-28,"Start date: November 2011
+",November 2011,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Epoetin monotherapy compared to Best supportive care when used to treat Myelodysplastic syndrome.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1998-03-04,"Start date: 2010-08
+",2010-08,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Dexamethasone monotherapy compared to Thalidomide and Dexamethasone (TD) when used to treat Multiple myeloma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2002-04,"Start date: 2013-08
+",2013-08,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of VAD and Valspodar compared to VAD when used to treat Multiple myeloma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1997-06-30,"Start date: June 1996
+",June 1996,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Tipifarnib monotherapy compared to Observation when used to treat Acute myeloid leukemia.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2004-08-18,"Start date: June 2021
+",June 2021,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Lenalidomide monotherapy compared to Erythropoetin beta and Lenalidomide when used to treat Myelodysplastic syndrome.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2009-01-29,"Start date: January 2006
+",January 2006,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of FOLFOX4 compared to FOLFOX4 and Bevacizumab when used to treat Colorectal cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2001-09,"Start date: September 2004
+",September 2004,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of CVD (Vinblastine) compared to CVD, IL-2, IFN alfa-2b - sequential biochemotherapy when used to treat Melanoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1997-11-13,"Start date: November 2007
+",November 2007,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Gemcitabine monotherapy compared to Gemcitabine and RT when used to treat Pancreatic cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2003-08-29,"Start date: 2007-09
+",2007-09,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of CHOP compared to R-CHOP when used to treat Diffuse large B-cell lymphoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1997-12,"Start date: March 2003
+",March 2003,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of AT-CMF compared to A-CMF when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1996-10,"Start date: January 2014
+",January 2014,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Carboplatin and Gemcitabine (GCb) compared to Carboplatin and Gemcitabine (GCb) and Iniparib when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2009-07,"Start date: January 2009
+",January 2009,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Irinotecan monotherapy compared to IROX when used to treat Colorectal cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2000-12,"Start date: June 2008
+",June 2008,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Paclitaxel monotherapy compared to Lapatinib and Paclitaxel (TL) when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2006-01-02,"Start date: 2011-05
+",2011-05,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Warfarin monotherapy compared to Rivaroxaban monotherapy when used to treat Venous thromboembolism.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2007-03,"Start date: 2014-02
+",2014-02,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Prednisone monotherapy compared to Orteronel and Prednisone when used to treat Prostate cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2010-10-01,"Start date: November 2013
+",November 2013,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Tandem melphalan compared to CRd when used to treat Multiple myeloma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2009-07,"Start date: 2015-08
+",2015-08,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of CPR compared to MPR when used to treat Multiple myeloma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2009-10,"Start date: January 2014
+",January 2014,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Imatinib monotherapy compared to Nilotinib monotherapy when used to treat Chronic myeloid leukemia.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2011-04,"Start date: November 2007
+",November 2007,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Cisplatin monotherapy compared to Cisplatin and Raltitrexed when used to treat Malignant pleural mesothelioma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1999-11,"Start date: February 2006
+",February 2006,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Observation compared to Whole brain irradiation when used to treat Small cell lung cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2001-02,"Start date: March 2009
+",March 2009,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of BEP compared to T-BEP when used to treat Testicular cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1998-10,"Start date: 2007-05
+",2007-05,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of PGC compared to Cisplatin and Gemcitabine (GC) when used to treat Urothelial carcinoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2001-05,"Start date: 2023-03
+",2023-03,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of FULV compared to FOLFIRI when used to treat Colorectal cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1999-07,"Start date: November 2009
+",November 2009,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of MOPP-ABV, then Radiation therapy compared to Radiation therapy when used to treat Classical Hodgkin lymphoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1993-09-01,"Start date: February 2008
+",February 2008,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Radiation therapy compared to Observation when used to treat Classical Hodgkin lymphoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1998-10,"Start date: October 2013
+",October 2013,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of ADE (standard-dose Ara-C) compared to ADE (high-dose Ara-C) when used to treat Acute myeloid leukemia.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1999-09,"Start date: February 2005
+",February 2005,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Gemtuzumab ozogamicin monotherapy, then MEC compared to MEC when used to treat Acute myeloid leukemia.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2002-09,"Start date: February 2010
+",February 2010,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Best supportive care compared to Gemtuzumab ozogamicin monotherapy when used to treat Acute myeloid leukemia.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2004-06,"Start date: July 2010
+",July 2010,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Aspirin monotherapy compared to Rivaroxaban monotherapy when used to treat Venous thromboembolism.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2013-02-24,"Start date: January 2017
+",January 2017,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Ponatinib monotherapy compared to Imatinib monotherapy when used to treat Chronic myeloid leukemia.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2012-06,"Start date: December 2018
+",December 2018,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Placebo compared to Erythropoietin alfa monotherapy when used to treat Myelodysplastic syndrome.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2011-10,"Start date: February 2018
+",February 2018,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Camrelizumab monotherapy compared to Irinotecan monotherapy when used to treat Esophageal squamous cell carcinoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2017-05-05,"Start date: June 2020
+",June 2020,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of IRIS compared to S-1 monotherapy when used to treat Esophageal cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2014-12,"Start date: 2022-08
+",2022-08,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Erlotinib monotherapy compared to Cisplatin and Docetaxel (DC) when used to treat Non-small cell lung cancer (Metastatic).
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2007-02-15,"Start date: October 2005
+",October 2005,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Enoxaparin monotherapy compared to Placebo when used to treat Venous thromboembolism.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2002-02,"Start date: July 2017
+",July 2017,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of CapeOx compared to EOX when used to treat Gastric cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2015-03,"Start date: December 2013
+",December 2013,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Cisplatin and Gemcitabine/Erlotinib compared to Carboplatin and Gemcitabine (GCb)|Cisplatin and Gemcitabine (GC) when used to treat Non-small cell lung cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2009-04,"Start date: April 2010
+",April 2010,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Bicalutamide and Goserelin compared to Degarelix monotherapy when used to treat Prostate cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2009-04,"Start date: February 2015
+",February 2015,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Gemcitabine monotherapy compared to Cisplatin and Fluorouracil (CF), then Gemcitabine monotherapy when used to treat Pancreatic cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2000-03,"Start date: December 2004
+",December 2004,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Cyclosporine and Mycophenolate mofetil compared to Cyclosporine, Mycophenolate mofetil, Sirolimus when used to treat Graft versus host disease.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2010-11,"Start date: 2013-08
+",2013-08,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Fludarabine and TBI compared to Low-dose TBI when used to treat Allogeneic HSCT.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2003-10,"Start date: January 2009
+",January 2009,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Enoxaparin monotherapy compared to Dalteparin monotherapy when used to treat Venous thromboembolism.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1998-09,"Start date: 2017-10
+",2017-10,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Rituximab and hyaluronidase monotherapy compared to Rituximab monotherapy when used to treat Follicular lymphoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2015-02-02,"Start date: February 2019
+",February 2019,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of FLAG compared to Azacitidine monotherapy when used to treat Acute myeloid leukemia.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2014-10,"Start date: June 2013
+",June 2013,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of R-CHOP (Prednisolone) compared to R-CHOP when used to treat Diffuse large B-cell lymphoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2005-11,"Start date: November 2005
+",November 2005,True,
+"Find/search the start date of the clinical trial  that best describes the efficacy of PCDE compared to Cisplatin and Etoposide (EP) when used to treat Small cell lung cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1996-03,"Start date: June 2017
+",June 2017,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Radiation therapy compared to Cisplatin and Fluorouracil (CF) and RT when used to treat Head and neck cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1998-10,"Start date: 2010-09
+",2010-09,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of SOX compared to mFOLFOX6 when used to treat Gastric cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2011-06,"Start date: 2015-03
+",2015-03,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Sorafenib monotherapy compared to HAI FOLFOX when used to treat Hepatocellular carcinoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2017-03-01,"Start date: March 2014
+",March 2014,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Response-adapted strategy compared to Rituximab monotherapy when used to treat Follicular lymphoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2012-07,"Start date: January 2014
+",January 2014,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Lenalidomide monotherapy compared to Carfilzomib and Lenalidomide (KR) when used to treat Multiple myeloma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2015-02,"Start date: 2015-05
+",2015-05,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Fuzuloparib monotherapy compared to Placebo when used to treat Ovarian cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2019-04-30,"Start date: 2022-03
+",2022-03,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of FOLFIRI|mFOLFOX6 compared to mFOLFOX6 and Cetuximab when used to treat Colorectal cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2006-09,"Start date: February 2013
+",February 2013,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Venetoclax and Obinutuzumab compared to Bendamustine and Rituximab (BR) when used to treat Chronic lymphocytic leukemia.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2016-12-13,"Start date: 2014-05
+",2014-05,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Cisplatin, Gefitinib, Pemetrexed|Gefitinib, Nedaplatin, Pemetrexed compared to Gefitinib monotherapy when used to treat Non-small cell lung cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2016-01,"Start date: March 2010
+",March 2010,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Obinutuzumab monotherapy compared to Rituximab monotherapy when used to treat Follicular lymphoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2008-01,"Start date: 2013-06
+",2013-06,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Dexamethasone monotherapy compared to Thalidomide and Dexamethasone (TD) when used to treat Multiple myeloma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2003-10,"Start date: February 2006
+",February 2006,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of CTD compared to MPT when used to treat Multiple myeloma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2007-01,"Start date: October 2012
+",October 2012,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Fludarabine monotherapy compared to Observation when used to treat Chronic lymphocytic leukemia.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1997-04,"Start date: October 2003
+",October 2003,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Observation compared to Lenalidomide monotherapy when used to treat Chronic lymphocytic leukemia.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2012-07-20,"Start date: 2014-06
+",2014-06,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Gemcitabine and Vinorelbine compared to Vinorelbine monotherapy when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2001-01-18,"Start date: December 2008
+",December 2008,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Breast cancer.23Pegylated liposomal doxorubicin monotherapy compared to Observation when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2002-10-28,"Start date: June 2016
+",June 2016,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of FAC compared to FAC-T when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2003-09-19,"Start date: May 2000
+",May 2000,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of ET-X compared to EC-D when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2004-02,"Start date: 2023-03
+",2023-03,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of EC-TH (Docetaxel) compared to EC-TL (Docetaxel) when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2009-02,"Start date: 2010-02
+",2010-02,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of TAC (Docetaxel) compared to FAC when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1999-07,"Start date: August 2006
+",August 2006,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of FEC-P compared to FEC when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1999-11,"Start date: January 2006
+",January 2006,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Ibrutinib monotherapy compared to Ibrutinib and Ublituximab when used to treat Chronic lymphocytic leukemia.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2015-01-27,"Start date: February 2018
+",February 2018,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Lenalidomide monotherapy compared to Erythropoetin beta and Lenalidomide when used to treat Myelodysplastic syndrome.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2010-07,"Start date: April 2005
+",April 2005,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Melphalan monotherapy, then auto HSCT compared to Tandem melphalan when used to treat Multiple myeloma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2002-02,"Start date: August 2013
+",August 2013,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Temozolomide and RT, then Temozolomide monotherapy compared to Bevacizumab and RT when used to treat Glioblastoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2010-06,"Start date: March 2009
+",March 2009,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Cisplatin and RT compared to Radiation therapy when used to treat Nasopharyngeal carcinoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2015-03,"Start date: 2010-03
+",2010-03,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Methotrexate monotherapy compared to Dactinomycin monotherapy when used to treat Gestational trophoblastic neoplasia.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1999-06,"Start date: 2015-03
+",2015-03,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Whole abdominal radiation (WAI) compared to Cisplatin and Ifosfamide when used to treat Endometrial cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1993-12,"Start date: January 2017
+",January 2017,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Ifosfamide and Paclitaxel compared to Ifosfamide monotherapy when used to treat Endometrial cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1997-11,"Start date: February 2016
+",February 2016,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Cisplatin and RT compared to Fluorouracil and RT when used to treat Cervical cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1997-10,"Start date: June 1999
+",June 1999,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Cisplatin, Doxorubicin, Paclitaxel compared to Cisplatin and Doxorubicin when used to treat Endometrial cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1998-12,"Start date: December 2014
+",December 2014,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Cisplatin monotherapy compared to Cisplatin and Topotecan when used to treat Cervical cancer (Stage IV-B or recurrent or persistent).
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1999-06,"Start date: August 2013
+",August 2013,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Cisplatin and Paclitaxel compared to Cisplatin and Gemcitabine (GC) when used to treat Cervical cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2003-05,"Start date: 2011-08
+",2011-08,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Paclitaxel monotherapy compared to Olaparib and Paclitaxel when used to treat Gastric cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2013-09-03,"Start date: 2023-03
+",2023-03,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of FOLFIRINOX compared to FOLFIRI when used to treat Colorectal cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2001-11,"Start date: January 2010
+",January 2010,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Carboplatin, Fluorouracil, Cetuximab, RT compared to Cetuximab and RT when used to treat Head and neck cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2008-02-15,"Start date: March 2010
+",March 2010,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Radiation therapy compared to Carboplatin, Fluorouracil, RT when used to treat Head and neck cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2000-03,"Start date: March 20, 2014
+",,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Paclitaxel polymeric micelle formulation monotherapy compared to Paclitaxel monotherapy when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2008-12,"Start date: January 2013
+",January 2013,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Topotecan monotherapy compared to Docetaxel monotherapy when used to treat Non-small cell lung cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2001-10,"Start date: April 2002
+",April 2002,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Cisplatin and Etoposide (EP) compared to Cisplatin and Topotecan when used to treat Small cell lung cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2001-04,"Start date: 2015-06
+",2015-06,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Cisplatin and Etoposide (EP) compared to Cisplatin and Topotecan when used to treat Small cell lung cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2002-08,"Start date: 2015-03
+",2015-03,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Best supportive care compared to Topotecan monotherapy when used to treat Small cell lung cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2000-11,"Start date: 2009-06
+",2009-06,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of ABVD compared to eBEACOPP-BEACOPP when used to treat Classical Hodgkin lymphoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2000-03,"Start date: 2003-09
+",2003-09,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of No induction compared to DCF when used to treat Head and neck cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2008-03,"Start date: June 2013
+",June 2013,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of EC-D and Bevacizumab compared to EC-D when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2007-10,"Start date: June 2010
+",June 2010,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Observation compared to Emicizumab monotherapy when used to treat Inherited coagulopathy.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2016-09-27,"Start date: February 12, 2018
+",,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of FOLFOX-HAIC compared to TACE monotherapy when used to treat Hepatocellular carcinoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2016-10-01,"Start date: 2018-07
+",2018-07,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Pembrolizumab monotherapy compared to Placebo when used to treat Urothelial carcinoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2015-11-11,"Start date: 2013-09
+",2013-09,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Rituximab monotherapy compared to Observation when used to treat Diffuse large B-cell lymphoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2002-07,"Start date: January 2003
+",January 2003,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Placebo compared to Apatinib monotherapy when used to treat Esophageal adenocarcinoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2011-01,"Start date: January 2017
+",January 2017,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Plasma exchange compared to Caplacizumab and Plasma exchange when used to treat Acquired thrombotic thrombocytopenic purpura.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2015-11,"Start date: October 2020
+",October 2020,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Docetaxel and Trastuzumab (TH) compared to Docetaxel and Trastuzumab-strf (TH) when used to treat Breast cancer (Metastatic).
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2016-11,"Start date: January 2017
+",January 2017,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Letrozole and OFS compared to Tamoxifen and OFS when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2004-03,"Start date: 2003-12
+",2003-12,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Docetaxel and Epirubicin compared to E-D when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2001-06,"Start date: 2004-05
+",2004-05,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Docetaxel monotherapy compared to Vinorelbine monotherapy when used to treat Non-small cell lung cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2003-01,"Start date: November 2000
+",November 2000,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of CapeOx and Cediranib|FOLFOX4 and Cediranib|mFOLFOX6 and Cediranib compared to FOLFOX4 when used to treat Colorectal cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2006-11,"Start date: September 2010
+",September 2010,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of R-DHAP/R-VIM compared to DHAP/VIM when used to treat Diffuse large B-cell lymphoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2000-09,"Start date: 2012-09
+",2012-09,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Busulfan and Melphalan compared to Carboplatin, Etoposide, Melphalan, then auto HSCT when used to treat Neuroblastoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2002-02,"Start date: March 2011
+",March 2011,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of FLAG compared to FLAG-DNX when used to treat Acute myeloid leukemia pediatric.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2002-03,"Start date: April 2013
+",April 2013,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Neratinib and Paclitaxel, then ddAC compared to TH-AC (Paclitaxel)|TH-ddAC (Paclitaxel) when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2010-03-01,"Start date: January 2018
+",January 2018,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Melphalan monotherapy compared to Melphalan and Dexamethasone when used to treat Light-chain (AL) amyloidosis.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2000-01,"Start date: February 2011
+",February 2011,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Carboplatin monotherapy compared to Carboplatin and Paclitaxel (CP)|Cisplatin and Paclitaxel when used to treat Ovarian cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1996-03,"Start date: January 2002
+",January 2002,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Gemcitabine monotherapy compared to Carboplatin and Paclitaxel (CP) when used to treat Non-small cell lung cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2006-03,"Start date: November 2001
+",November 2001,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Erlotinib monotherapy compared to Observation when used to treat Non-small cell lung cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2006-06,"Start date: October 2004
+",October 2004,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Melphalan and Prednisone (MP) compared to MPT when used to treat Multiple myeloma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2002-04,"Start date: 2002-03
+",2002-03,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Placebo compared to Lenalidomide monotherapy when used to treat Multiple myeloma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2006-06,"Start date: July 2007
+",July 2007,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of VTD compared to Bortezomib and Dexamethasone (Vd) when used to treat Multiple myeloma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2008-03,"Start date: 2009-01
+",2009-01,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Melphalan monotherapy, then auto HSCT compared to RVD when used to treat Multiple myeloma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2010-10,"Start date: March 2014
+",March 2014,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of VDC compared to VTD when used to treat Multiple myeloma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2013-10,"Start date: 2011-05
+",2011-05,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Melphalan and Prednisone (MP) compared to MPT when used to treat Multiple myeloma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2000-05,"Start date: May 2003
+",May 2003,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Observation compared to Adoptive immunotherapy when used to treat Hepatocellular carcinoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2008-07,"Start date: 2017-07
+",2017-07,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Bevacizumab monotherapy compared to Capecitabine and Bevacizumab when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2009-07,"Start date: 2010-04
+",2010-04,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Carboplatin, Pemetrexed, Atezolizumab compared to Carboplatin and Pemetrexed|Cisplatin and Pemetrexed when used to treat Non-small cell lung cancer nonsquamous.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2016-04-30,"Start date: 2018-05
+",2018-05,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Carboplatin and Pemetrexed compared to Pemetrexed monotherapy when used to treat Non-small cell lung cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2008-04,"Start date: August 2006
+",August 2006,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Gefitinib monotherapy compared to Placebo when used to treat Non-small cell lung cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2003-07,"Start date: December 2004
+",December 2004,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Docetaxel monotherapy compared to Gefitinib monotherapy when used to treat Non-small cell lung cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2005-09,"Start date: 2009-04
+",2009-04,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Prednisone monotherapy compared to Dexamethasone monotherapy when used to treat Immune thrombocytopenia.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2010-09,"Start date: 2021-08
+",2021-08,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of COPADM compared to R-COPADM when used to treat Non-Hodgkin lymphoma pediatric (Advanced).
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2011-12,"Start date: December 2010
+",December 2010,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Docetaxel monotherapy compared to Docetaxel and Ramucirumab when used to treat Urothelial carcinoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2011-04,"Start date: February 2016
+",February 2016,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of CHOP-14 compared to mLSG15 when used to treat Adult T-cell leukemia-lymphoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1998-08,"Start date: June 2017
+",June 2017,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of FULV (L-Leucovorin) compared to Tegafur, Uracil, Folinic acid when used to treat Colorectal cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2003-02,"Start date: January 2014
+",January 2014,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Carboplatin and RT compared to Radiation therapy when used to treat Non-small cell lung cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2003-07,"Start date: 2007-03
+",2007-03,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Cisplatin and Paclitaxel compared to Carboplatin and Paclitaxel (CP) when used to treat Cervical cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2006-02,"Start date: January 2006
+",January 2006,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Tivantinib monotherapy compared to Placebo when used to treat Hepatocellular carcinoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2014-01,"Start date: 2011-02
+",2011-02,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Pemetrexed monotherapy compared to Best supportive care when used to treat Malignant pleural mesothelioma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2001-10,"Start date: November 2017
+",November 2017,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Carboplatin and Etoposide (CE) compared to Carboplatin and Pemetrexed when used to treat Small cell lung cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2006-08,"Start date: February 2018
+",February 2018,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Gefitinib and Pemetrexed compared to Gefitinib monotherapy when used to treat Non-small cell lung cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2012-02,"Start date: October 2011
+",October 2011,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Cisplatin, Paclitaxel, Toripalimab compared to Cisplatin and Paclitaxel when used to treat Esophageal squamous cell carcinoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2019-01-31,"Start date: 2021-08
+",2021-08,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Gemcitabine and RT compared to No neoadjuvant therapy when used to treat Pancreatic cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2011-11,"Start date: February 2017
+",February 2017,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Pemetrexed monotherapy compared to Gefitinib monotherapy when used to treat Non-small cell lung cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2008-05,"Start date: 2014-09
+",2014-09,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Carboplatin and Pemetrexed compared to Carboplatin, Pemetrexed, Pembrolizumab when used to treat Non-small cell lung cancer nonsquamous.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2014-02-21,"Start date: 2018-08
+",2018-08,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Pembrolizumab monotherapy compared to Carboplatin and Paclitaxel (CP)|Carboplatin and Pemetrexed when used to treat Non-small cell lung cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2016-08-01,"Start date: 2015-04
+",2015-04,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Pembrolizumab monotherapy compared to Paclitaxel monotherapy when used to treat Gastric cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2017-02-16,"Start date: 2017-03
+",2017-03,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Cisplatin and Gemcitabine (GC) compared to Cisplatin and Gemcitabine (GC) and Pembrolizumab|Carboplatin and Gemcitabine (GCb) and Pembrolizumab when used to treat Urothelial carcinoma (Locally Advanced or Metastatic).
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2016-09-15,"Start date: December 2017
+",December 2017,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Carboplatin, nab-Paclitaxel, Pembrolizumab compared to Carboplatin and Paclitaxel (CP)|Carboplatin and nab-Paclitaxel when used to treat Non-small cell lung cancer squamous.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2017-04-21,"Start date: 2018-09
+",2018-09,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Cisplatin and RT compared to Cisplatin, Pembrolizumab, RT when used to treat Head and neck cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2017-04-05,"Start date: 2019-07
+",2019-07,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Capecitabine and Cisplatin (CX) compared to Capecitabine and Cisplatin (CX) and Pembrolizumab|Cisplatin and Fluorouracil (CF) and Pembrolizumab when used to treat Gastric cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2017-10-09,"Start date: 2019-03
+",2019-03,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Cisplatin and Pemetrexed compared to Cisplatin, Pemetrexed, Pembrolizumab when used to treat Non-small cell lung cancer nonsquamous.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2018-04-24,"Start date: 2018-08
+",2018-08,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Denileukin diftitox monotherapy compared to Placebo when used to treat Cutaneous T-cell lymphoma (Persistent or Recurrent).
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1995-06,"Start date: November 2004
+",November 2004,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of ICL compared to 7 plus 3i when used to treat Acute myeloid leukemia.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2008-02,"Start date: June 1, 2022
+",,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Lenvatinib and TACE compared to Lenvatinib monotherapy when used to treat Hepatocellular carcinoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2019-06-16,"Start date: April 2018
+",April 2018,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of FOLFIRI and Regorafenib compared to FOLFIRI when used to treat Colorectal cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2011-04-07,"Start date: October 2016
+",October 2016,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Observation compared to TACE monotherapy when used to treat Hepatocellular carcinoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2011-08,"Start date: August 2014
+",August 2014,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Dara-Vd compared to Bortezomib and Dexamethasone (Vd) when used to treat Multiple myeloma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2017-11-30,"Start date: 2013-05
+",2013-05,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of COPADM compared to R-COPADM when used to treat Burkitt lymphoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2004-10,"Start date: March 10, 2011
+",,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Rituximab monotherapy compared to Observation when used to treat Diffuse large B-cell lymphoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1999-10,"Start date: January 2003
+",January 2003,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Ipatasertib and Paclitaxel compared to Paclitaxel monotherapy when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2014-08-19,"Start date: June 2013
+",June 2013,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Nintedanib and Pemetrexed compared to Pemetrexed monotherapy when used to treat Non-small cell lung cancer nonsquamous.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2008-12,"Start date: 2018-06
+",2018-06,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Methotrexate monotherapy compared to Afatinib monotherapy when used to treat Head and neck cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2012-01-05,"Start date: January 2016
+",January 2016,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Methotrexate monotherapy compared to Afatinib monotherapy when used to treat Head and neck cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2013-06-07,"Start date: January 2016
+",January 2016,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Gefitinib monotherapy compared to Afatinib monotherapy when used to treat Non-small cell lung cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2011-12-13,"Start date: 2013-05
+",2013-05,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Bendamustine and Rituximab (BR) compared to Chlorambucil and Rituximab (RClb) when used to treat Chronic lymphocytic leukemia.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2010-03,"Start date: March 2007
+",March 2007,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Cetuximab monotherapy compared to mFOLFOX6 and Cetuximab when used to treat Colorectal cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2010-08,"Start date: 2010-05
+",2010-05,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Enoxaparin monotherapy compared to Rivaroxaban monotherapy when used to treat Venous thromboembolism.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2007-12,"Start date: March 2014
+",March 2014,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of ECF compared to Gastrectomy when used to treat Esophageal adenocarcinoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1994-06,"Start date: 2008-12
+",2008-12,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Carboplatin and Pemetrexed compared to Carboplatin, Pemetrexed, Amivantamab when used to treat Non-small cell lung cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2021-11-17,"Start date: 2023-05
+",2023-05,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of PaCE compared to Carboplatin and Etoposide (CE) when used to treat Small cell lung cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2012-05,"Start date: October 1, 2020
+",,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Azacitidine monotherapy compared to Decitabine monotherapy when used to treat Myelodysplastic syndrome.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2012-11-06,"Start date: March 2013
+",March 2013,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Clofarabine monotherapy compared to Clofarabine and LoDAC when used to treat Acute myeloid leukemia.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2004-07,"Start date: January 2017
+",January 2017,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of R-Hyper-CVAD/R-MA compared to R-CHOP when used to treat Diffuse large B-cell lymphoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2005-08-01,"Start date: 2005-03
+",2005-03,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Nivolumab and RT compared to Radiation therapy when used to treat Non-small cell lung cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2017-06-26,"Start date: August 2017
+",August 2017,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Placebo compared to Lenalidomide monotherapy when used to treat Myelodysplastic syndrome.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2010-01-26,"Start date: 2004-09
+",2004-09,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Carboplatin, Pegylated liposomal doxorubicin, Bevacizumab|Carboplatin and Gemcitabine (GCb) and Bevacizumab|Carboplatin and Paclitaxel (CP) and Bevacizumab compared to Carboplatin and Gemcitabine (GCb) when used to treat Ovarian cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2013-11,"Start date: July 2014
+",July 2014,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Capecitabine and Cisplatin (CX) compared to Cisplatin and Fluorouracil (CF) when used to treat Gastric cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2003-04,"Start date: June 2007
+",June 2007,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Second-line chemotherapy and Bevacizumab (see note) compared to FOLFIRI when used to treat Colorectal cancer (Metastatic).
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2006-02,"Start date: June 2011
+",June 2011,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Placebo compared to Lenalidomide monotherapy when used to treat Multiple myeloma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2007-01,"Start date: October 2006
+",October 2006,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Thalidomide and Dexamethasone (TD) compared to VTD when used to treat Multiple myeloma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2005-07,"Start date: April 2009
+",April 2009,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Observation compared to Lenalidomide monotherapy when used to treat Multiple myeloma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2007-06,"Start date: January 2012
+",January 2012,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of FLA compared to ADE (standard-dose Ara-C) when used to treat Acute myeloid leukemia.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1998-08,"Start date: December 2010
+",December 2010,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Radiation therapy compared to Fluorouracil and RT when used to treat Rectal cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1998-01,"Start date: December 2015
+",December 2015,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of FULV compared to CapeOx when used to treat Colorectal cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2003-09,"Start date: 2015-03
+",2015-03,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of ICE-V compared to CDE when used to treat Small cell lung cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1996-03,"Start date: February 1995
+",February 1995,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of ABCM compared to Melphalan and Methylprednisolone when used to treat Multiple myeloma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1994-09,"Start date: 2014-09
+",2014-09,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Vinorelbine monotherapy compared to Best supportive care when used to treat Malignant pleural mesothelioma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2003-09,"Start date: January 2011
+",January 2011,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Carboplatin and Paclitaxel (CP) compared to Durvalumab monotherapy when used to treat Non-small cell lung cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2015-07-21,"Start date: August 2018
+",August 2018,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of R-CHOP (SC Rituximab) compared to R-CHOP|R-CHOP-14 when used to treat Diffuse large B-cell lymphoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2012-08-24,"Start date: June 2011
+",June 2011,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of mFOLFOX6 and Cetuximab compared to mFOLFOX6 when used to treat Colon cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2004-02,"Start date: 2004-09
+",2004-09,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of ABC compared to Temozolomide and Bevacizumab when used to treat Melanoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2008-08,"Start date: 2023-04
+",2023-04,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Irinotecan monotherapy compared to FOLFOX4 when used to treat Colorectal cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1999-11,"Start date: July 2005
+",July 2005,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Carboplatin and Paclitaxel (CP) and Nivolumab compared to Carboplatin and Paclitaxel (CP) when used to treat Non-small cell lung cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2019-05-15,"Start date: August 2018
+",August 2018,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Anastrozole, Goserelin, Ribociclib compared to Anastrozole and Goserelin|Letrozole and Goserelin when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2018-12-07,"Start date: December 2018
+",December 2018,True,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Gemcitabine and Vinorelbine compared to Cisplatin and Vinorelbine (CVb) when used to treat Non-small cell lung cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1998-11,"Start date: August 2000
+",August 2000,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Erlotinib monotherapy compared to Placebo when used to treat Non-small cell lung cancer (Locally Advanced or Metastatic).
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2001-11-01,"Start date: February 2004
+",February 2004,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Temozolomide and low-dose RT compared to Radiation therapy when used to treat Glioblastoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2007-11-14,"Start date: August 2012
+",August 2012,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of DHAP compared to GDP when used to treat Anaplastic large cell lymphoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2003-08-27,"Start date: January 2018
+",January 2018,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Tamoxifen monotherapy compared to Placebo when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1993-07-20,"Start date: January 1971
+",January 1971,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of ddEC-T compared to AC-T when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2000-12-04,"Start date: 2013-08
+",2013-08,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Docetaxel and Lapatinib (TL)|Lapatinib and Paclitaxel compared to Paclitaxel and Trastuzumab (TH) when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2008-10-07,"Start date: July 2010
+",July 2010,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Gemcitabine monotherapy compared to Erlotinib and Gemcitabine when used to treat Pancreatic cancer (Locally Advanced or Unresectable or Metastatic).
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2001-10-29,"Start date: January 2009
+",January 2009,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of ADT compared to ADT and RT when used to treat Prostate cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1995-02-08,"Start date: March 2008
+",March 2008,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of ADT compared to Intermittent ADT when used to treat Prostate cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1999-01-05,"Start date: 2009-03
+",2009-03,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of CMF compared to Observation when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1993-06,"Start date: 1975-04
+",1975-04,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of CHOP (Prednisolone) compared to BCHOP when used to treat Mantle cell lymphoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2006-06,"Start date: February 2007
+",February 2007,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Platinum doublet compared to Durvalumab and Tremelimumab when used to treat Non-small cell lung cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2015-11-03,"Start date: January 2019
+",January 2019,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of R-CEOP90 compared to R-CEOP70 when used to treat Diffuse large B-cell lymphoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2013-05,"Start date: December 2006
+",December 2006,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of ATG (Horse) and Cyclosporine compared to ATG (Rabbit) and Cyclosporine when used to treat Aplastic anemia.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2005-11-28,"Start date: November 2014
+",November 2014,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Placebo compared to Benralizumab monotherapy when used to treat Hypereosinophilic syndrome.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1997-04-21,"Start date: 2023-05
+",2023-05,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Ipilimumab and Nivolumab compared to Fotemustine monotherapy when used to treat CNS melanoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2012-12,"Start date: October 2017
+",October 2017,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of FULV compared to FULV and nanoliposomal Irinotecan when used to treat Cholangiocarcinoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2018-09-04,"Start date: July 2023
+",July 2023,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of No induction compared to Bortezomib and Dexamethasone (Vd) when used to treat Light-chain (AL) amyloidosis.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2007-12,"Start date: 2015-06
+",2015-06,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Tamoxifen monotherapy compared to Placebo when used to treat Hepatocellular carcinoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1997-04,"Start date: 2002-03
+",2002-03,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Bortezomib monotherapy compared to Observation when used to treat Multiple myeloma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2005-12,"Start date: May 2018
+",May 2018,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of CapeOx compared to FOLFOX4 when used to treat Colorectal cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2003-07,"Start date: November 2004
+",November 2004,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Radiation therapy compared to Temozolomide monotherapy when used to treat Anaplastic glioma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2005-01,"Start date: January 2005
+",January 2005,True,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Placebo compared to Niraparib monotherapy when used to treat Ovarian cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2017-06-08,"Start date: 2017-04
+",2017-04,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of TAC (Docetaxel) compared to AC-D when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1999-03,"Start date: August 2013
+",August 2013,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Exemestane monotherapy compared to Placebo when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2001-05,"Start date: 2004-03
+",2004-03,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of AC-TH (Paclitaxel) compared to AC-THL (Paclitaxel) when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2007-07,"Start date: June 2016
+",June 2016,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Letrozole monotherapy compared to Placebo when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2006-08,"Start date: 2003-12
+",2003-12,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of UFT monotherapy compared to Observation when used to treat Rectal cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1996-10,"Start date: December 2003
+",December 2003,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of UFT monotherapy compared to Observation when used to treat Gastric cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1997-06,"Start date: 2005-03
+",2005-03,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Observation compared to Prophylactic cranial irradiation when used to treat Non-small cell lung cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2009-01,"Start date: January 2017
+",January 2017,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Docetaxel and Erlotinib compared to Docetaxel monotherapy when used to treat Non-small cell lung cancer nonsquamous.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2016-10-14,"Start date: January 2006
+",January 2006,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of AC-D compared to FEC-D when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2012-11,"Start date: November 2011
+",November 2011,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of EC-ddT compared to ddT-EC when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2005-01,"Start date: January 2015
+",January 2015,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Fludarabine monotherapy compared to Temsirolimus monotherapy when used to treat Mantle cell lymphoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2005-05,"Start date: 2011-12
+",2011-12,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Docetaxel monotherapy compared to Sintilimab monotherapy when used to treat Non-small cell lung cancer squamous.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2017-09-01,"Start date: 2021-10
+",2021-10,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Placebo compared to Olaparib monotherapy when used to treat Ovarian cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2017-06-08,"Start date: 2011-12
+",2011-12,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Tamoxifen monotherapy compared to Paclitaxel monotherapy when used to treat Ovarian cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2002-03,"Start date: December 2003
+",December 2003,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of mFOLFOX6-B compared to mFOLFOX6, Bevacizumab, Panitumumab when used to treat Colorectal cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2005-06-01,"Start date: 2014-06
+",2014-06,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Exemestane and Palbociclib compared to Fulvestrant and Palbociclib when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2017-03-22,"Start date: 2018-01
+",2018-01,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Rituximab monotherapy compared to Observation when used to treat Chronic lymphocytic leukemia.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2009-07-21,"Start date: June 2003
+",June 2003,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Letrozole and Palbociclib compared to Letrozole monotherapy when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2008-09-15,"Start date: 2012-11
+",2012-11,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Carboplatin, Pemetrexed, Amivantamab compared to Carboplatin and Pemetrexed when used to treat Non-small cell lung cancer (Locally Advanced or Metastatic).
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2020-10-13,"Start date: December 20, 2021
+",,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of FEC-D compared to Carboplatin and Paclitaxel (CP) when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2011-01-01,"Start date: March 2014
+",March 2014,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Radiation therapy compared to ADT and RT when used to treat Prostate cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2000-12,"Start date: March 2015
+",March 2015,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Trastuzumab and hyaluronidase monotherapy compared to Trastuzumab monotherapy when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2007-10,"Start date: 2019-07
+",2019-07,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of RVD compared to Dara-RVd (SC daratumumab) when used to treat Multiple myeloma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2018-12-14,"Start date: August 2019
+",August 2019,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Pacritinib monotherapy compared to Best available therapy when used to treat Myelofibrosis.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2014-02,"Start date: 2013-05
+",2013-05,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Placebo compared to Eltrombopag monotherapy when used to treat Immune thrombocytopenia.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2012-03,"Start date: March 2009
+",March 2009,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Docetaxel and Trastuzumab (TH) and Pyrotinib compared to Docetaxel and Trastuzumab (TH) when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2018-07-24,"Start date: 2022-09
+",2022-09,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Gemcitabine monotherapy compared to Adavosertib and Gemcitabine when used to treat Ovarian cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2014-07-21,"Start date: June 2020
+",June 2020,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Pomalidomide and Dexamethasone (Pd) compared to PCD when used to treat Multiple myeloma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2011-11,"Start date: August 2015
+",August 2015,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of R-CHOP compared to Pola-R-CHP when used to treat Diffuse large B-cell lymphoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2017-11-16,"Start date: 2019-07
+",2019-07,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Carboplatin, nab-Paclitaxel, Durvalumab compared to Carboplatin and nab-Paclitaxel when used to treat Non-small cell lung cancer (Metastatic).
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2017-06-01,"Start date: 2018-08
+",2018-08,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Docetaxel, Enzalutamide, Prednisolone compared to Docetaxel and Prednisolone when used to treat Prostate cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2014-12-01,"Start date: May 2014
+",May 2014,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of ADT compared to ADT, Abiraterone, Apalutamide when used to treat Prostate cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2017-03-06,"Start date: 2018-08
+",2018-08,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Aspirin monotherapy compared to Enoxaparin monotherapy when used to treat Venous thromboembolism.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2017-04-24,"Start date: October 2017
+",October 2017,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Placebo compared to Niraparib monotherapy when used to treat Ovarian cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2018-06-30,"Start date: 2017-04
+",2017-04,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of No neoadjuvant therapy compared to DOS when used to treat Gastric cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2011-12-30,"Start date: 2011-08
+",2011-08,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Crizotinib monotherapy compared to Carboplatin and Pemetrexed when used to treat Non-small cell lung cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2012-09-29,"Start date: March 2013
+",March 2013,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Octreotide LAR monotherapy compared to Placebo when used to treat Pancreatic NET.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2001-09,"Start date: 2004-09
+",2004-09,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of CHUT compared to Observation when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1994-12,"Start date: 2013-02
+",2013-02,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of FULV and Levamisole compared to FULV (L-Leucovorin) when used to treat Colorectal cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1997-10,"Start date: 2007-08
+",2007-08,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Observation compared to Azacitidine oral monotherapy when used to treat Acute myeloid leukemia.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2013-04-24,"Start date: January 2019
+",January 2019,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Busulfan and Melphalan compared to VAI when used to treat Ewing sarcoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2001-02,"Start date: August 2013
+",August 2013,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Paclitaxel and Ramucirumab compared to Paclitaxel monotherapy when used to treat Gastric cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2017-03-02,"Start date: 2013-05
+",2013-05,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of 7 plus 3d and Midostaurin compared to 7 plus 3d when used to treat Acute myeloid leukemia.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2008-04,"Start date: July 2013
+",July 2013,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of FCR compared to Cyclophosphamide and Fludarabine (FC) when used to treat Chronic lymphocytic leukemia.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2003-07-31,"Start date: 2003-11
+",2003-11,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Rivaroxaban monotherapy compared to Enoxaparin monotherapy when used to treat Venous thromboembolism.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2006-02,"Start date: 2017-01
+",2017-01,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Rivaroxaban monotherapy compared to Enoxaparin monotherapy when used to treat Venous thromboembolism.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2006-02,"Start date: 2014-02
+",2014-02,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Rivaroxaban monotherapy compared to Enoxaparin monotherapy when used to treat Venous thromboembolism.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2006-02,"Start date: 2014-02
+",2014-02,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Rivaroxaban monotherapy compared to Enoxaparin monotherapy when used to treat Venous thromboembolism.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2006-06,"Start date: 2017-03
+",2017-03,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Sorafenib monotherapy compared to Lenvatinib monotherapy when used to treat Hepatocellular carcinoma (Unresectable).
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2013-03-01,"Start date: August 2014
+",August 2014,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of TCH (Docetaxel) (trastuzumab-qyyp) compared to TCH (Docetaxel) when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2014-09-23,"Start date: June 2018
+",June 2018,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Rituximab monotherapy compared to Rituximab-pvvr monotherapy when used to treat Follicular lymphoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2014-09-30,"Start date: 2022-08
+",2022-08,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Carboplatin and Paclitaxel (CP) and Bevacizumab compared to Carboplatin and Paclitaxel (CP) and Bevacizumab-bvcr when used to treat Non-small cell lung cancer nonsquamous.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2015-04,"Start date: June 2021
+",June 2021,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Placebo compared to Lenalidomide monotherapy when used to treat Diffuse large B-cell lymphoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2009-04,"Start date: June 2010
+",June 2010,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Docetaxel monotherapy compared to Docetaxel and Ramucirumab when used to treat Non-small cell lung cancer (Metastatic).
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2010-12,"Start date: December 2011
+",December 2011,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Cyclophosphamide and Doxorubicin (AC) and Bevacizumab|Capecitabine and Bevacizumab|Docetaxel and Bevacizumab|Cyclophosphamide and Epirubicin (EC) and Bevacizumab|FAC and Bevacizumab|FEC and Bevacizumab|Paclitaxel, nanoparticle albumin-bound and Bevacizumab compared to nab-Paclitaxel monotherapy when used to treat Breast cancer (Not Applicable).
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2005-12,"Start date: 2010-05
+",2010-05,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Gemcitabine monotherapy compared to Capecitabine and Bevacizumab|Docetaxel and Bevacizumab|Gemcitabine and Bevacizumab|Paclitaxel and Bevacizumab|Paclitaxel, nanoparticle albumin-bound and Bevacizumab|Vinorelbine and Bevacizumab when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2006-02,"Start date: 2010-02
+",2010-02,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Busulfan and Cyclophosphamide, then allo HSCT compared to Busulfan and Fludarabine when used to treat Myelodysplastic syndrome.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2004-05,"Start date: 2013-03
+",2013-03,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of R-CHOP-14 compared to CHOP-14 when used to treat Diffuse large B-cell lymphoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2001-01,"Start date: January 2003
+",January 2003,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of ECX and Rilotumumab compared to ECX when used to treat Gastric cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2012-10,"Start date: 2009-09
+",2009-09,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Docetaxel monotherapy compared to Docetaxel and Ramucirumab when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2008-08-06,"Start date: 2014-07
+",2014-07,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Flutamide, Leuprolide, RT compared to Radiation therapy when used to treat Prostate cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1994-10,"Start date: October 1985
+",October 1985,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Cisplatin and Vinblastine, then Radiation therapy compared to Cisplatin, Etoposide, RT when used to treat Non-small cell lung cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1994-07,"Start date: 1994-08
+",1994-08,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Cisplatin, Cetuximab, RT compared to Cisplatin and RT when used to treat Head and neck cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2004-04,"Start date: 2006-04
+",2006-04,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Capecitabine and RT compared to Fluorouracil and RT when used to treat Rectal cancer (Locally Advanced).
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2002-03,"Start date: July 2007
+",July 2007,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Rituximab and hyaluronidase monotherapy compared to Rituximab monotherapy when used to treat Follicular lymphoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2011-02-15,"Start date: August 2019
+",August 2019,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of ATG (Horse) and Cyclosporine compared to Best supportive care when used to treat Myelodysplastic syndrome.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2000-08,"Start date: February 2016
+",February 2016,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Lenalidomide and Rituximab (R2) compared to Rituximab monotherapy when used to treat Follicular lymphoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2011-02-09,"Start date: 2014-03
+",2014-03,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Cisplatin and Etoposide (EP) compared to Carboplatin and Etoposide (CE) and Bevacizumab|Cisplatin and Etoposide (EP) and Bevacizumab when used to treat Small cell lung cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2007-03,"Start date: January 2014
+",January 2014,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Fulvestrant monotherapy compared to Taselisib and Fulvestrant when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2015-04-09,"Start date: November 2014
+",November 2014,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Surufatinib monotherapy compared to Placebo when used to treat Neuroendocrine tumor.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2015-12-07,"Start date: January 2016
+",January 2016,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Placebo compared to Regorafenib monotherapy when used to treat Osteosarcoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2014-07,"Start date: July 2021
+",July 2021,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Observation compared to API when used to treat Leiomyosarcoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2001-09,"Start date: July 2016
+",July 2016,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Erlotinib monotherapy compared to Placebo when used to treat Non-small cell lung cancer (Locally Advanced or Metastatic).
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2006-01,"Start date: 2004-09
+",2004-09,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of TH-FEC and H (Docetaxel) compared to TH-FEC and H (Docetaxel) (trastuzumab-dttb) when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2014-04,"Start date: July 2022
+",July 2022,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Melphalan isolated hepatic perfusion compared to Investigator's choice of therapy when used to treat Uveal melanoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2013-06-15,"Start date: December 2017
+",December 2017,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of CapeOx|mFOLFOX6 compared to mFOLFOX6 (L-Leucovorin) when used to treat Colorectal cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2008-03,"Start date: 2007-02
+",2007-02,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of CMF compared to CMF and RT|E-CMF and RT|A-CMF and RT|MMM and RT when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1998-07,"Start date: January 1980
+",January 1980,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of ADT compared to Intermittent ADT when used to treat Prostate cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2003-01,"Start date: 2008-03
+",2008-03,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of M-EI compared to MA when used to treat Osteosarcoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1994-06,"Start date: 2019-04
+",2019-04,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of BEAM, then auto HSCT compared to Z-BEAM, then auto HSCT when used to treat Diffuse large B-cell lymphoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2007-06,"Start date: July 2021
+",July 2021,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Bendamustine and Rituximab (BR) compared to Bendamustine and Rituximab (BR) and Ibrutinib when used to treat Chronic lymphocytic leukemia.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2013-05-16,"Start date: January 2014
+",January 2014,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Bendamustine monotherapy compared to Chlorambucil monotherapy when used to treat Chronic lymphocytic leukemia.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2010-03,"Start date: January 2007
+",January 2007,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Prolonged chemotherapy compared to Dactinomycin and Vincristine when used to treat Wilms tumor.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1993-07,"Start date: May 2012
+",May 2012,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Dactinomycin, Doxorubicin, Vincristine compared to Dactinomycin and Vincristine when used to treat Wilms tumor.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2001-01,"Start date: March 2014
+",March 2014,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Observation compared to RBC transfusions when used to treat Sickle cell anemia.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2004-12,"Start date: May 2016
+",May 2016,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Best supportive care compared to Irinotecan monotherapy when used to treat Gastric cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2008-09,"Start date: 2005-07
+",2005-07,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of GemOx and Erlotinib compared to GemOx when used to treat Cholangiocarcinoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2009-01,"Start date: February 2017
+",February 2017,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Cisplatin and S-1 compared to Oxaliplatin and TAS-118 when used to treat Gastric cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2014-12,"Start date: 2013-08
+",2013-08,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Cisplatin and S-1 compared to SOX when used to treat Gastric cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2012-12,"Start date: 2018-03
+",2018-03,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of 7 plus 3d compared to 7 plus 3d and Sorafenib when used to treat Acute myeloid leukemia.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2009-03,"Start date: August 2015
+",August 2015,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Docetaxel monotherapy compared to Observation when used to treat Prostate cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2005-10,"Start date: May 2005
+",May 2005,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of EP-T compared to EC-T when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2009-12,"Start date: November 2018
+",November 2018,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of S-1 monotherapy compared to Cisplatin and S-1 when used to treat Gastric cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2002-03,"Start date: 2013-07
+",2013-07,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Radiation therapy compared to ADT and RT when used to treat Prostate cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2008-02,"Start date: December 2015
+",December 2015,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Intraperitoneal 5-FU compared to mFOLFOX6 when used to treat Colorectal cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2003-06,"Start date: November 2012
+",November 2012,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Anastrozole and Goserelin compared to Goserelin and Tamoxifen when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2007-10,"Start date: 2008-03
+",2008-03,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Cisplatin and Paclitaxel compared to Radiation therapy when used to treat Cervical cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2008-02-25,"Start date: 2011-01
+",2011-01,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Docetaxel and S-1 compared to S-1 monotherapy when used to treat Gastric cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2006-03,"Start date: January 2011
+",January 2011,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Carboplatin and Paclitaxel (CP) and Bevacizumab-maly compared to Carboplatin and Paclitaxel (CP) and Bevacizumab when used to treat Non-small cell lung cancer nonsquamous.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2018-02-06,"Start date: July 2014
+",July 2014,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Interferon alfa-2b monotherapy compared to CVD, IL-2, IFN alfa-2b - sequential biochemotherapy when used to treat Melanoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2000-08,"Start date: June 2002
+",June 2002,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Placebo compared to Gefitinib monotherapy when used to treat Non-small cell lung cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2001-06,"Start date: 2004-12
+",2004-12,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Placebo compared to Gemcitabine monotherapy when used to treat Bladder cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2007-09,"Start date: 2015-01
+",2015-01,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Doxorubicin and Vinblastine compared to Radiation therapy when used to treat Classical Hodgkin lymphoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1992-09,"Start date: August 2005
+",August 2005,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Docetaxel and Estramustine compared to Mitoxantrone and Prednisone when used to treat Prostate cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1999-10,"Start date: October 2000
+",October 2000,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Capecitabine monotherapy compared to Observation when used to treat Nasopharyngeal carcinoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2015-04,"Start date: 2017-11
+",2017-11,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Cisplatin and RT compared to Radiation therapy when used to treat Nasopharyngeal carcinoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2015-11,"Start date: 2011-03
+",2011-03,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Capecitabine monotherapy compared to Observation when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2010-04-23,"Start date: December 2008
+",December 2008,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Docetaxel and Trastuzumab (TH) compared to Anastrozole and Trastuzumab|Exemestane and Trastuzumab|Letrozole and Trastuzumab|Tamoxifen and Trastuzumab|Toremifene and Trastuzumab when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2013-09-16,"Start date: 2011-03
+",2011-03,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Observation compared to TACE monotherapy when used to treat Hepatocellular carcinoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2009-06,"Start date: November 2011
+",November 2011,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of R-CHOP compared to Bendamustine and Rituximab (BR) when used to treat Follicular lymphoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2004-01,"Start date: 2011-11
+",2011-11,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of CapeOx and Bevacizumab compared to Capecitabine and Bevacizumab when used to treat Colorectal cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2008-03,"Start date: January 2013
+",January 2013,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of G-CSF monotherapy compared to Plerixafor and G-CSF when used to treat Stem cell mobilization regimens.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2005-01,"Start date: 2013-04
+",2013-04,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Best supportive care compared to Trabectedin monotherapy when used to treat Soft tissue sarcoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2015-01-22,"Start date: July 2011
+",July 2011,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Observation compared to TAC (Docetaxel) when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2006-04-07,"Start date: 2006-03
+",2006-03,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Everolimus and Tamoxifen compared to Tamoxifen monotherapy when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2008-03,"Start date: November 2011
+",November 2011,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Carboplatin and Paclitaxel (CP), Bevacizumab, Nivolumab compared to Carboplatin and Paclitaxel (CP) and Bevacizumab when used to treat Non-small cell lung cancer nonsquamous.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2017-06-13,"Start date: December 2017
+",December 2017,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Docetaxel monotherapy compared to Paclitaxel monotherapy when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1994-08,"Start date: 2004-08
+",2004-08,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Anastrozole and Trastuzumab compared to Anastrozole monotherapy when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2001-01,"Start date: 2006-01
+",2006-01,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of No induction compared to MEPFL when used to treat Nasopharyngeal carcinoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2003-08,"Start date: 2019-06
+",2019-06,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Placebo compared to Lapatinib monotherapy when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2006-08,"Start date: May 2007
+",May 2007,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Placebo compared to Trifluridine and tipiracil monotherapy when used to treat Colorectal cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2013-09,"Start date: December 2016
+",December 2016,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Observation compared to Docetaxel monotherapy when used to treat Non-small cell lung cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2009-11,"Start date: January 2008
+",January 2008,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Dexamethasone monotherapy compared to Thalidomide and Dexamethasone (TD) when used to treat Multiple myeloma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2003-02,"Start date: January 2006
+",January 2006,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Sorafenib monotherapy compared to Tivozanib monotherapy when used to treat Clear cell renal cell carcinoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2009-12,"Start date: January 2013
+",January 2013,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Melphalan and Prednisone (MP) compared to MPT when used to treat Multiple myeloma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2006-03,"Start date: 2009-09
+",2009-09,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of nab-Paclitaxel monotherapy compared to nab-Paclitaxel and Toripalimab when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2018-12-21,"Start date: 2022-03
+",2022-03,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Lenalidomide and Dexamethasone (Rd) compared to IRd when used to treat Multiple myeloma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2012-08-01,"Start date: 2015-02
+",2015-02,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Lenalidomide and Dexamethasone (Rd) compared to IRd when used to treat Multiple myeloma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2013-04-29,"Start date: 2015-02
+",2015-02,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Placebo compared to Eltrombopag monotherapy when used to treat Immune thrombocytopenia.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2005-02,"Start date: August 2009
+",August 2009,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Docetaxel and Trastuzumab (TH)|Paclitaxel and Trastuzumab (TH) compared to Vinorelbine and Trastuzumab (VH) when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2001-08,"Start date: February 2010
+",February 2010,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Observation compared to CVP when used to treat Follicular lymphoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2000-02,"Start date: 2014-08
+",2014-08,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of UFT and Tamoxifen compared to CMFT when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1996-07,"Start date: June 1999
+",June 1999,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Cisplatin and RT compared to Nedaplatin and RT when used to treat Nasopharyngeal carcinoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2012-02,"Start date: 2010-03
+",2010-03,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Best supportive care compared to Irinotecan monotherapy when used to treat Gastric cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2002-10,"Start date: 2006-05
+",2006-05,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Cisplatin and Fluorouracil (CF) and Trastuzumab|Capecitabine and Cisplatin (CX) and Trastuzumab compared to Cisplatin and Fluorouracil (CF) when used to treat Gastric cancer (Metastatic).
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2005-09,"Start date: 2013-07
+",2013-07,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of CTD compared to KRdc when used to treat Multiple myeloma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2010-05,"Start date: 2023-08
+",2023-08,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Azacitidine monotherapy compared to Azacitidine and Venetoclax when used to treat Acute myeloid leukemia.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2017-02-02,"Start date: January 2020
+",January 2020,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of FOLFIRINOX and Bevacizumab compared to mFOLFOX6-B when used to treat Colorectal cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2012-07,"Start date: November 2014
+",November 2014,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Observation compared to Defibrotide monotherapy when used to treat Hepatic veno-occlusive disease.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2005-12,"Start date: January 2015
+",January 2015,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of FOLFOXIRI and Panitumumab compared to FOLFIRINOX when used to treat Colorectal cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2011-04,"Start date: March 2015
+",March 2015,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Placebo compared to Aspirin monotherapy when used to treat Venous thromboembolism.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2004-05,"Start date: December 2018
+",December 2018,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of T-DM1 and ET compared to Trastuzumab and ET when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2014-03,"Start date: January 2014
+",January 2014,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Chlorambucil monotherapy compared to Fludarabine monotherapy when used to treat Marginal zone lymphoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2001-06,"Start date: April 2003
+",April 2003,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of VAD compared to Z-Dex when used to treat Multiple myeloma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",1996-10,"Start date: January 2002
+",January 2002,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of ddT-ddEC compared to nP-ddEC when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2012-05,"Start date: July 2019
+",July 2019,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Carboplatin and nab-Paclitaxel compared to Gemcitabine and nab-Paclitaxel when used to treat Breast cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2013-06,"Start date: 2022-03
+",2022-03,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of ADT and Zoledronic acid compared to ADT when used to treat Prostate cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2008-05,"Start date: March 2009
+",March 2009,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Doxorubicin monotherapy compared to Nolatrexed monotherapy when used to treat Hepatocellular carcinoma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2000-09,"Start date: April 2002
+",April 2002,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of S-1 and RT compared to Radiation therapy when used to treat Esophageal cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2016-06,"Start date: 2013-03
+",2013-03,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Cisplatin and Irinotecan (IC) compared to Cisplatin and Etoposide (EP) when used to treat Small cell lung cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2002-06,"Start date: February 2015
+",February 2015,False,

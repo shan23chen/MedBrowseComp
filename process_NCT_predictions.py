@@ -376,15 +376,15 @@ def process_nct_csv(
         for _, row in tqdm(df.iterrows(), total=len(df), desc="Preparing inputs"):
             if task == "track_trial_ids":
                 # track trial ids
-                question = "Find/search the clinical trial id " + row['question 1'].split('Choose an option')[1] + '\nOutput it in the format NCT<Number>'
+                question = "Find/search the clinical trial id" + row['question 1'].split('Choose an option')[1] + '\nOutput it in the format NCT<Number>'
                 correct_answer = row['NCT']
             elif task == "track_second_authors":
                 # track second authors (old format)
-                question = "Find/search the second author of the paper " + row['question 1'].split('Choose an option')[1] + '\nOutput it in the format SA<Second Author>'
+                question = "Find/search the second author of the paper" + row['question 1'].split('Choose an option')[1] + '\nOutput it in the format SA<Second Author>'
                 correct_answer = row['authors'].split('|')[1] if '|' in row['authors'] else ""
             elif task == "track_pmids":
                 # track pmids
-                question = "Find/search the pubmed id of the paper " + row['question 1'].split('Choose an option')[1] + '\nOutput it in the format pmid<pubmed id>'
+                question = "Find/search the pubmed id of the paper" + row['question 1'].split('Choose an option')[1] + '\nOutput it in the format pmid<pubmed id>'
                 correct_answer = row['pmids']
             elif task == "track_start_date":
                 # Track start date of the clinical trial with stricter format instructions
@@ -505,8 +505,9 @@ def process_nct_csv(
                     # Old format - direct comparison
                     is_correct = extracted_info.strip().lower() == answer.strip().lower()
                 elif task == "track_pmids":
-                    pmid_list = [str(int(pmid)) for pmid in row['pmids'].split(',')]
-                    is_correct = extracted_info in pmid_list
+                    # pmid_list = [str(int(pmid)) for pmid in row['pmids'].split(',')]
+                    # is_correct = extracted_info in pmid_list
+                    is_correct = str(extracted_info).strip() == str(answer).strip()
                 elif task == "track_second_authors_multiple_pmids":
                     # Get all valid PMID|author pairs from the answer
                     valid_pairs = answer.split("||")

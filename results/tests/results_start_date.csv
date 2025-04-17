@@ -1,0 +1,21 @@
+question,correct_answer,model_output,extracted_info,correct,urls
+"Find/search the start date of the clinical trial  that best describes the efficacy of Cisplatin and Topotecan compared to Cisplatin, Topotecan, Hydralazine, Valproate when used to treat Cervical cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2007-07,"Start date: October 2010
+",October 2010,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Cisplatin, Topotecan, Hydralazine, Valproate compared to Cisplatin and Topotecan when used to treat Cervical cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2007-07,"Start date: 2011
+",2011,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Interferon alfa-2b and Thalidomide compared to Interferon alfa-2b monotherapy when used to treat Multiple myeloma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2001-08,"Start date: March 2001
+",March 2001,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Interferon alfa-2b monotherapy compared to Interferon alfa-2b and Thalidomide when used to treat Multiple myeloma.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2001-08,"Start date: March 2001
+",March 2001,False,
+"Find/search the start date of the clinical trial  that best describes the efficacy of Tasquinimod monotherapy compared to Placebo when used to treat Prostate cancer.
+
+IMPORTANT: Respond with ONLY the format ""Start date: YYYY-MM"" or ""Start date: Month YYYY"". Do not include any other text in your response.",2011-03,"Start date: March 2011
+",March 2011,True,

@@ -15,3 +15,4 @@ google-generativeai==0.8.3
 google-resumable-media==2.7.2
 googleapis-common-protos==1.66.0
 tqdm # Added for progress bar
+openai
