@@ -5,7 +5,7 @@ import sys
 from tqdm import tqdm # Import tqdm
 
 # Define input file and output directory
-input_csv_path = 'results/og_runs/NCT_predictions.csv'
+input_csv_path = '/Users/db164/Documents/GitHub/hemonc_bench/data/nct_876_drop.csv'
 output_dir = 'nct_csv_data'
 api_base_url = "https://clinicaltrials.gov/api/v2/studies/"
 
@@ -21,11 +21,11 @@ print("Pre-scanning CSV to collect NCT IDs...")
 try:
     with open(input_csv_path, 'r', newline='', encoding='utf-8') as infile:
         reader = csv.DictReader(infile)
-        if 'correct_nct' not in reader.fieldnames:
-             print(f"Error: Column 'correct_nct' not found in {input_csv_path}", file=sys.stderr)
+        if 'NCT' not in reader.fieldnames:
+             print(f"Error: Column 'NCT' not found in {input_csv_path}", file=sys.stderr)
              sys.exit(1)
         for row in reader:
-            nct_id_string = row.get('correct_nct', '').strip()
+            nct_id_string = row.get('NCT', '').strip()
             if nct_id_string:
                 ids_in_row = [nid.strip() for nid in nct_id_string.split(',') if nid.strip()]
                 all_nct_ids.extend(ids_in_row)

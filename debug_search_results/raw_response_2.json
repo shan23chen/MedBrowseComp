@@ -1,6 +1,3 @@
 {
-  "response": {
-    "text": "Start date: May 2014\n",
-    "citations": []
-  }
+  "response": "The clinical trial that best describes the efficacy of gemcitabine monotherapy compared to the combination of cisplatin and gemcitabine in treating cholangiocarcinoma is identified by the ClinicalTrials.gov identifier NCT00262769. This study demonstrated that the combination therapy significantly improved overall survival compared to gemcitabine alone. ([nejm.org](https://www.nejm.org/doi/full/10.1056/NEJMoa0908721?utm_source=openai)) "
 }

@@ -1,0 +1,402 @@
+question,correct_answer,model_output,extracted_info,correct,urls
+"Determine whether the clinical trialNCT02294461 can answer the question that best describes the efficacy of Enzalutamide monotherapy compared to Placebo when used to treat Prostate cancer.
+Output yes or no only please",35397772|Hanjong Ahn,No. ,,False,
+"Determine whether the clinical trialNCT00596830 can answer the question that best describes the efficacy of Carboplatin and Paclitaxel (CP) and Figitumumab compared to Carboplatin and Paclitaxel (CP) when used to treat Non-small cell lung cancer.
+Output yes or no only please",24888810|Silvia Novello,Yes. ,,False,
+"Determine whether the clinical trialNCT00262769 can answer the question that best describes the efficacy of Gemcitabine monotherapy compared to Cisplatin and Gemcitabine (GC) when used to treat Cholangiocarcinoma.
+Output yes or no only please",20375404|Harpreet Wasan,"Yes. Clinical trial NCT00262769, also known as the ABC-02 trial, was a phase III randomized study that compared the efficacy of gemcitabine monotherapy to the combination of cisplatin and gemcitabine in treating patients with advanced biliary tract cancers, including cholangiocarcinoma. The trial demonstrated a significant survival advantage for the combination therapy over gemcitabine alone. ([nejm.org](https://www.nejm.org/doi/full/10.1056/NEJMoa0908721?utm_source=openai)) ",,False,
+"Determine whether the clinical trialNCT00309478 can answer the question that best describes the efficacy of CMF compared to Goserelin and Tamoxifen when used to treat Breast cancer.
+Output yes or no only please",12488405|Hubert Hausmaninger,No. ,,False,
+"Determine whether the clinical trialNCT02257736 can answer the question that best describes the efficacy of Abiraterone and Apalutamide compared to Abiraterone monotherapy when used to treat Prostate cancer.
+Output yes or no only please",34600602|Eleni Efstathiou,No. ,,False,
+"Determine whether the clinical trialNCT00452530 can answer the question that best describes the efficacy of Apixaban monotherapy compared to Enoxaparin monotherapy when used to treat Venous thromboembolism.
+Output yes or no only please",20206776|Gary E Raskob,No. ,,False,
+"Determine whether the clinical trialNCT00423319 can answer the question that best describes the efficacy of Apixaban monotherapy compared to Enoxaparin monotherapy when used to treat Venous thromboembolism.
+Output yes or no only please",21175312|Alexander Gallus,No. ,,False,
+"Determine whether the clinical trialNCT03800134 can answer the question that best describes the efficacy of Carboplatin and Pemetrexed|Cisplatin and Pemetrexed compared to Cisplatin, Pemetrexed, Durvalumab when used to treat Non-small cell lung cancer nonsquamous.
+Output yes or no only please",37870974|David Harpole,No ,,False,
+"Determine whether the clinical trialNCT00974311 can answer the question that best describes the efficacy of Enzalutamide monotherapy compared to Placebo when used to treat Prostate cancer (Metastatic).
+Output yes or no only please",22894553|Karim Fizazi,No. ,,False,
+"Determine whether the clinical trialNCT03866993 can answer the question that best describes the efficacy of Carboplatin and Paclitaxel (CP) compared to Carboplatin and Paclitaxel (CP) and Penpulimab when used to treat Non-small cell lung cancer squamous (Locally Advanced or Metastatic).
+Output yes or no only please",38309287|Shengjie Sun,"The clinical trial NCT03866993 is a randomized Phase II/III study comparing afatinib plus cetuximab versus afatinib alone in treatment-naive patients with advanced, EGFR mutation-positive non-small cell lung cancer (NSCLC). ([parkview.com](https://www.parkview.com/mirro-center/clinical-trials/clinical-trial-details?id=250&utm_source=openai)) It does not involve Carboplatin, Paclitaxel, or Penpulimab, nor does it focus on squamous cell carcinoma.
+
+Therefore, this trial cannot answer the question regarding the efficacy of Carboplatin and Paclitaxel (CP) compared to CP with Penpulimab in treating locally advanced or metastatic non-small cell lung cancer squamous.
+
+No. ",,False,
+"Determine whether the clinical trialNCT02838420 can answer the question that best describes the efficacy of Alectinib monotherapy compared to Crizotinib monotherapy when used to treat Non-small cell lung cancer.
+Output yes or no only please",30981696|Sang-We Kim,Yes. ,,False,
+"Determine whether the clinical trialNCT01108445 can answer the question that best describes the efficacy of Sunitinib monotherapy compared to Everolimus monotherapy when used to treat Non-clear cell renal cell carcinoma.
+Output yes or no only please",26794930|Susan Halabi,Yes. ,,False,
+"Determine whether the clinical trialNCT00355108 can answer the question that best describes the efficacy of Tranexamic acid monotherapy compared to Placebo when used to treat Hereditary hemorrhagic telangiectasia.
+Output yes or no only please",25040799|S Dupuis-Girod,Yes. ,,False,
+"Determine whether the clinical trialNCT03991403 can answer the question that best describes the efficacy of Carboplatin and Pemetrexed compared to ABCP when used to treat Non-small cell lung cancer.
+Output yes or no only please",37861993|Tae Min Kim,No. ,,False,
+"Determine whether the clinical trialNCT01938001 can answer the question that best describes the efficacy of Lenalidomide and Rituximab (R2) compared to Rituximab monotherapy when used to treat Follicular lymphoma.
+Output yes or no only please",30897038|Marek Trneny,Yes. ,,False,
+"Determine whether the clinical trialNCT00333775 can answer the question that best describes the efficacy of Docetaxel monotherapy compared to Docetaxel and Bevacizumab when used to treat Breast cancer (Not Applicable).
+Output yes or no only please",20498403|Arlene Chan,"Yes. Clinical trial NCT00333775 was a randomized, double-blind, placebo-controlled, multicenter study designed to evaluate the efficacy and safety of bevacizumab in combination with docetaxel compared to docetaxel plus placebo as first-line treatment for patients with HER2-negative metastatic and locally recurrent breast cancer. ([ichgcp.net](https://ichgcp.net/clinical-trials-registry/NCT00333775?utm_source=openai)) The trial demonstrated that adding bevacizumab to docetaxel significantly increased progression-free survival compared to docetaxel alone. ([ascopubs.org](https://ascopubs.org/doi/full/10.1200/JCO.2008.21.6457?utm_source=openai)) ",,False,
+"Determine whether the clinical trialNCT00391092 can answer the question that best describes the efficacy of Docetaxel and Trastuzumab (TH) compared to BTH (Docetaxel) when used to treat Breast cancer.
+Output yes or no only please",23569311|Gilles H Romieu,"No, the clinical trial NCT00391092 does not evaluate the efficacy of Docetaxel and Trastuzumab (TH) compared to Docetaxel alone (BTH) in the treatment of breast cancer. Instead, it focuses on the combination of afatinib and cetuximab versus afatinib alone in patients with advanced EGFR-mutant non-small cell lung cancer. ([parkview.com](https://www.parkview.com/mirro-center/clinical-trials/clinical-trial-details?id=250&utm_source=openai)) ",,False,
+"Determine whether the clinical trialNCT00071799 can answer the question that best describes the efficacy of Low-dose Cytarabine monotherapy (LoDAC) compared to Azacitidine monotherapy when used to treat Acute myeloid leukemia.
+Output yes or no only please",20026804|Ghulam J Mufti,No. ,,False,
+"Determine whether the clinical trialNCT01949337 can answer the question that best describes the efficacy of Enzalutamide monotherapy compared to Abiraterone and Enzalutamide when used to treat Prostate cancer.
+Output yes or no only please",36996380|Glenn Heller,No. ,,False,
+"Determine whether the clinical trialNCT02393859 can answer the question that best describes the efficacy of Blinatumomab monotherapy compared to Standard salvage consolidation chemotherapy when used to treat B-cell acute lymphoblastic leukemia pediatric.
+Output yes or no only please",33651091|Gerhard Zugmaier,Yes. ,,False,
+"Determine whether the clinical trialNCT02023710 can answer the question that best describes the efficacy of Carboplatin and Paclitaxel (CP) and Bevacizumab compared to Carboplatin and Paclitaxel (CP) when used to treat Melanoma.
+Output yes or no only please",33444116|Xinan Sheng,Yes. ,,False,
+"Determine whether the clinical trialNCT00021255 can answer the question that best describes the efficacy of AC-TH (Docetaxel) compared to AC-D when used to treat Breast cancer (Node Positive).
+Output yes or no only please",21991949|Wolfgang Eiermann,"No. The clinical trial NCT00021255 (BCIRG-006) did not directly compare the efficacy of AC-TH (doxorubicin and cyclophosphamide followed by docetaxel plus trastuzumab) to AC-D (doxorubicin and cyclophosphamide followed by docetaxel) in treating node-positive breast cancer. Instead, it compared three regimens:
+
+1. AC-T (doxorubicin and cyclophosphamide followed by docetaxel)
+2. AC-T plus trastuzumab
+3. TCH (docetaxel, carboplatin, and trastuzumab)
+
+The study found that adding trastuzumab to chemotherapy significantly improved disease-free and overall survival among women with HER2-positive breast cancer. However, it did not specifically evaluate the efficacy of AC-TH compared to AC-D. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/21991949/?utm_source=openai)) ",,False,
+"Determine whether the clinical trialNCT00720512 can answer the question that best describes the efficacy of FOLFIRI and Bevacizumab compared to FOLFIRI when used to treat Colorectal cancer.
+Output yes or no only please",25600568|L Salvatore,No. ,,False,
+"Determine whether the clinical trialNCT02755597 can answer the question that best describes the efficacy of Bortezomib and Dexamethasone (Vd) compared to Bortezomib and Dexamethasone (Vd) and Venetoclax when used to treat Multiple myeloma.
+Output yes or no only please",33129376|Simon J Harrison,Yes. ,,False,
+"Determine whether the clinical trialNCT01852292 can answer the question that best describes the efficacy of Paclitaxel monotherapy compared to Buparlisib and Paclitaxel when used to treat Head and neck cancer.
+Output yes or no only please",28131786|Sandrine Faivre,"No. The clinical trial NCT01852292 (BERIL-1) compared the combination of buparlisib and paclitaxel to paclitaxel with a placebo in patients with head and neck squamous cell carcinoma. It did not include a paclitaxel monotherapy arm, so it cannot directly assess the efficacy of paclitaxel alone compared to the combination of buparlisib and paclitaxel. ([ascopubs.org](https://ascopubs.org/doi/abs/10.1200/JCO.2016.34.15_suppl.6008?utm_source=openai)) ",,False,
+"Determine whether the clinical trialNCT01364012 can answer the question that best describes the efficacy of Carboplatin and Paclitaxel (CP) and Bevacizumab compared to Carboplatin and Paclitaxel (CP) when used to treat Non-small cell lung cancer nonsquamous.
+Output yes or no only please",26014294|Yi-Long Wu,No. ,,False,
+"Determine whether the clinical trialNCT03110562 can answer the question that best describes the efficacy of Bortezomib and Dexamethasone (Vd) compared to SVd when used to treat Multiple myeloma.
+Output yes or no only please",33189178|Maryana Simonova,Yes. ,,False,
+"Determine whether the clinical trialNCT01667419 can answer the question that best describes the efficacy of Placebo compared to Vemurafenib monotherapy when used to treat Melanoma.
+Output yes or no only please",29477665|Karl Lewis,Yes ,,False,
+"Determine whether the clinical trialNCT00003934 can answer the question that best describes the efficacy of ATRA, Mercaptopurine, Methotrexate compared to ATRA monotherapy when used to treat Acute promyelocytic leukemia.
+Output yes or no only please",20705755|Barry Moser,"No. The clinical trial NCT00003934 does not compare the efficacy of ATRA, mercaptopurine, and methotrexate to ATRA monotherapy in treating acute promyelocytic leukemia. Instead, it evaluates the effectiveness of tretinoin (ATRA) combined with chemotherapy agents like cytarabine and daunorubicin, with or without arsenic trioxide, followed by maintenance therapy with tretinoin alone or in combination with mercaptopurine and methotrexate. ([trial.medpath.com](https://trial.medpath.com/clinical-trial/5625e5f8cc568f6c/nct00003934-randomized-study-tretinoin-chemotherapy-arsenic-trioxide-acute-promyelocytic-leukemia?utm_source=openai)) ",,False,
+"Determine whether the clinical trialNCT00540514 can answer the question that best describes the efficacy of Carboplatin and nab-Paclitaxel compared to Carboplatin and Paclitaxel (CP) when used to treat Non-small cell lung cancer (Locally Advanced or Metastatic).
+Output yes or no only please",22547591|Igor Bondarenko,Yes. ,,False,
+"Determine whether the clinical trialNCT00527735 can answer the question that best describes the efficacy of Carboplatin and Paclitaxel (CP) and Ipilimumab compared to Carboplatin and Paclitaxel (CP) when used to treat Non-small cell lung cancer.
+Output yes or no only please",22547592|Igor Bondarenko,Yes. ,,False,
+"Determine whether the clinical trialNCT01478048 can answer the question that best describes the efficacy of Elo-Vd compared to Bortezomib and Dexamethasone (Vd) when used to treat Multiple myeloma.
+Output yes or no only please",27091875|Massimo Offidani,Yes. ,,False,
+"Determine whether the clinical trialNCT00785291 can answer the question that best describes the efficacy of Paclitaxel, nanoparticle albumin-bound and Bevacizumab compared to Paclitaxel and Bevacizumab when used to treat Breast cancer.
+Output yes or no only please",26056183|William T Barry,No. ,,False,
+"Determine whether the clinical trialNCT00861705 can answer the question that best describes the efficacy of T-ddAC compared to T-ddAC and Bevacizumab when used to treat Breast cancer.
+Output yes or no only please",25092775|Donald A Berry,Yes. ,,False,
+"Determine whether the clinical trialNCT00238238 can answer the question that best describes the efficacy of Lenalidomide monotherapy compared to Lenalidomide and Rituximab (R2) when used to treat Follicular lymphoma.
+Output yes or no only please",26304886|Sin-Ho Jung,"No, clinical trial NCT00238238 does not compare the efficacy of Lenalidomide monotherapy to the combination of Lenalidomide and Rituximab (R2) in treating Follicular lymphoma. ",,False,
+"Determine whether the clinical trialNCT00942331 can answer the question that best describes the efficacy of Cisplatin and Gemcitabine (GC) and Bevacizumab compared to Cisplatin and Gemcitabine (GC) when used to treat Urothelial carcinoma.
+Output yes or no only please",33989025|Karla A Ballman,Yes. ,,False,
+"Determine whether the clinical trialNCT00002716 can answer the question that best describes the efficacy of FULV compared to Hepatic arterial chemotherapy when used to treat Colorectal cancer.
+Output yes or no only please",16505413|Donna Niedzwiecki,No. ,,False,
+"Determine whether the clinical trialNCT00003088 can answer the question that best describes the efficacy of ddAC-ddT compared to A-T-C when used to treat Breast cancer.
+Output yes or no only please",12668651|Donald A Berry,No ,,False,
+"Determine whether the clinical trialNCT00833833 can answer the question that best describes the efficacy of Pomalidomide and Dexamethasone (Pd) compared to Pomalidomide monotherapy when used to treat Multiple myeloma.
+Output yes or no only please",24421329|David S Siegel,Yes. ,,False,
+"Determine whether the clinical trialNCT00075725 can answer the question that best describes the efficacy of Mercaptopurine, Methotrexate, Vincristine compared to Mercaptopurine, Methotrexate, Pegaspargase, Vincristine when used to treat B-cell acute lymphoblastic leukemia pediatric.
+Output yes or no only please",27114587|Meenakshi Devidas,No. ,,False,
+"Determine whether the clinical trialNCT02101853 can answer the question that best describes the efficacy of Blinatumomab monotherapy compared to Standard salvage consolidation chemotherapy when used to treat B-cell acute lymphoblastic leukemia.
+Output yes or no only please",33651090|Lingyun Ji,Yes. ,,False,
+"Determine whether the clinical trialNCT00567567 can answer the question that best describes the efficacy of COG ANBL0532 Regimen A compared to COG ANBL0532 Regimen B when used to treat Neuroblastoma.
+Output yes or no only please",31454045|Susan G Kreissman,No ,,False,
+"Determine whether the clinical trialNCT00005945 can answer the question that best describes the efficacy of Mercaptopurine, Methotrexate, Vincristine, Dexamethasone compared to Methotrexate and Vincristine when used to treat B-cell acute lymphoblastic leukemia pediatric.
+Output yes or no only please",21562038|Bruce C Bostrom,No ,,False,
+"Determine whether the clinical trialNCT00978549 can answer the question that best describes the efficacy of Best supportive care compared to Docetaxel monotherapy when used to treat Esophageal adenocarcinoma.
+Output yes or no only please",24332238|Andrea Marshall,No ,,False,
+"Determine whether the clinical trialNCT01973387 can answer the question that best describes the efficacy of Rituximab monotherapy compared to Ibrutinib monotherapy when used to treat Chronic lymphocytic leukemia.
+Output yes or no only please",29533000|Lugui Qiu,No. ,,False,
+"Determine whether the clinical trialNCT00032175 can answer the question that best describes the efficacy of Capecitabine and Gemcitabine compared to Gemcitabine monotherapy when used to treat Pancreatic cancer.
+Output yes or no only please",19858379|Ian Chau,Yes. ,,False,
+"Determine whether the clinical trialNCT02864251 can answer the question that best describes the efficacy of Cisplatin and Pemetrexed compared to Carboplatin, Pemetrexed, Nivolumab|Cisplatin, Pemetrexed, Nivolumab when used to treat Non-small cell lung cancer.
+Output yes or no only please",38252907|Kazuhiko Nakagawa,No. ,,False,
+"Determine whether the clinical trialNCT04025879 can answer the question that best describes the efficacy of Carboplatin and Pemetrexed|Cisplatin and Pemetrexed|Carboplatin and Paclitaxel .28CP compared to Cisplatin, Pemetrexed, Nivolumab when used to treat Non-small cell lung cancer nonsquamous.
+Output yes or no only please",38749033|Mark M Awad,"No, the clinical trial NCT04025879 does not evaluate the efficacy of the specified chemotherapy regimens compared to the combination of Cisplatin, Pemetrexed, and Nivolumab in treating non-squamous non-small cell lung cancer. ",,False,
+"Determine whether the clinical trialNCT02998528 can answer the question that best describes the efficacy of Cisplatin and Docetaxel (DC) and Nivolumab compared to Carboplatin and Paclitaxel (CP)|Cisplatin and Vinorelbine (CVb)|Cisplatin and Docetaxel (DC) when used to treat Non-small cell lung cancer (Resectable).
+Output yes or no only please",35403841|Jonathan Spicer,"No. The clinical trial NCT02998528 does not specifically compare the efficacy of Cisplatin and Docetaxel (DC) combined with Nivolumab to Carboplatin and Paclitaxel (CP), Cisplatin and Vinorelbine (CVb), or Cisplatin and Docetaxel (DC) alone in treating resectable non-small cell lung cancer. Instead, it evaluates Nivolumab plus Ipilimumab or Nivolumab plus chemotherapy versus chemotherapy alone in early-stage NSCLC. ([mycancergenome.org](https://www.mycancergenome.org/content/clinical_trials/NCT02998528/?utm_source=openai)) ",,False,
+"Determine whether the clinical trialNCT01197560 can answer the question that best describes the efficacy of Etoposide monotherapy compared to Lenalidomide monotherapy when used to treat Diffuse large B-cell lymphoma.
+Output yes or no only please",28381416|Marek Trněný,"No, the clinical trial NCT01197560 does not compare the efficacy of Etoposide monotherapy to Lenalidomide monotherapy in treating Diffuse Large B-Cell Lymphoma (DLBCL). This trial focuses solely on evaluating the safety and effectiveness of Lenalidomide in DLBCL patients. ([inclinicaltrials.com](https://inclinicaltrials.com/diffuse-large-b-cell-lymphoma/NCT05578976/details/?utm_source=openai)) ",,False,
+"Determine whether the clinical trialNCT00811447 can answer the question that best describes the efficacy of mDCF compared to Cisplatin and Fluorouracil (CF) when used to treat Gastric cancer.
+Output yes or no only please",25604851|Ruihua Xu,Yes. ,,False,
+"Determine whether the clinical trialNCT00091442 can answer the question that best describes the efficacy of Docetaxel and Pegylated liposomal doxorubicin compared to Docetaxel monotherapy when used to treat Breast cancer.
+Output yes or no only please",19687336|Anatoly N Makhson,Yes. ,,False,
+"Determine whether the clinical trialNCT00005589 can answer the question that best describes the efficacy of Rituximab monotherapy compared to Observation when used to treat Follicular lymphoma.
+Output yes or no only please",23547078|Norbert Schmitz,No. ,,False,
+"Determine whether the clinical trialNCT00003204 can answer the question that best describes the efficacy of Rituximab monotherapy compared to Observation when used to treat Chronic lymphocytic leukemia.
+Output yes or no only please",19255334|Edie Weller,No ,,False,
+"Determine whether the clinical trialNCT00033332 can answer the question that best describes the efficacy of Dexamethasone monotherapy compared to Thalidomide and Dexamethasone (TD) when used to treat Multiple myeloma.
+Output yes or no only please",16365178|Emily Blood,Yes. ,,False,
+"Determine whether the clinical trialNCT00002878 can answer the question that best describes the efficacy of VAD and Valspodar compared to VAD when used to treat Multiple myeloma.
+Output yes or no only please",16419071|Montserrat Rue,"Yes. Clinical trial NCT00002878 was a Phase III study that compared the efficacy of the VAD regimen (vincristine, doxorubicin, and dexamethasone) alone versus VAD combined with valspodar (PSC-833) in patients with relapsed or refractory multiple myeloma. The trial concluded that adding valspodar to VAD did not improve treatment outcomes and increased toxicity. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/16419071/?utm_source=openai)) ",,False,
+"Determine whether the clinical trialNCT00843882 can answer the question that best describes the efficacy of Lenalidomide monotherapy compared to Erythropoetin beta and Lenalidomide when used to treat Myelodysplastic syndrome.
+Output yes or no only please",33439748|Zhuoxin Sun,No ,,False,
+"Determine whether the clinical trialNCT00003150 can answer the question that best describes the efficacy of CHOP compared to R-CHOP when used to treat Diffuse large B-cell lymphoma.
+Output yes or no only please",16754935|Edie A Weller,No ,,False,
+"Determine whether the clinical trialNCT00003013 can answer the question that best describes the efficacy of AT-CMF compared to A-CMF when used to treat Breast cancer.
+Output yes or no only please",19332727|José Baselga,No ,,False,
+"Determine whether the clinical trialNCT00012389 can answer the question that best describes the efficacy of Irinotecan monotherapy compared to IROX when used to treat Colorectal cancer.
+Output yes or no only please",18824706|Mace L Rothenberg,No. ,,False,
+"Determine whether the clinical trialNCT01193244 can answer the question that best describes the efficacy of Prednisone monotherapy compared to Orteronel and Prednisone when used to treat Prostate cancer.
+Output yes or no only please",25701170|Karim Fizazi,No. ,,False,
+"Determine whether the clinical trialNCT01091831 can answer the question that best describes the efficacy of Tandem melphalan compared to CRd when used to treat Multiple myeloma.
+Output yes or no only please",26596670|Stefania Oliva,No ,,False,
+"Determine whether the clinical trialNCT00003643 can answer the question that best describes the efficacy of BEP compared to T-BEP when used to treat Testicular cancer.
+Output yes or no only please",22271474|Iwona Skoneczna,Yes. ,,False,
+"Determine whether the clinical trialNCT00022191 can answer the question that best describes the efficacy of PGC compared to Cisplatin and Gemcitabine (GC) when used to treat Urothelial carcinoma.
+Output yes or no only please",22370319|Hans von der Maase,Yes. ,,False,
+"Determine whether the clinical trialNCT00004885 can answer the question that best describes the efficacy of FULV compared to FOLFIRI when used to treat Colorectal cancer.
+Output yes or no only please",15939923|E van Cutsem,No ,,False,
+"Determine whether the clinical trialNCT00379041 can answer the question that best describes the efficacy of MOPP-ABV, then Radiation therapy compared to Radiation therapy when used to treat Classical Hodgkin lymphoma.
+Output yes or no only please",17989384|Houchingue Eghbali,"No, the clinical trial NCT00379041 does not evaluate the efficacy of MOPP-ABV followed by radiation therapy compared to radiation therapy alone in treating Classical Hodgkin lymphoma. ",,False,
+"Determine whether the clinical trialNCT00005584 can answer the question that best describes the efficacy of Radiation therapy compared to Observation when used to treat Classical Hodgkin lymphoma.
+Output yes or no only please",29229324|Christophe Fermé,No ,,False,
+"Determine whether the clinical trialNCT00004128 can answer the question that best describes the efficacy of ADE (standard-dose Ara-C) compared to ADE (high-dose Ara-C) when used to treat Acute myeloid leukemia.
+Output yes or no only please",24297940|Stefan Suciu,No. ,,False,
+"Determine whether the clinical trialNCT03099382 can answer the question that best describes the efficacy of Camrelizumab monotherapy compared to Irinotecan monotherapy when used to treat Esophageal squamous cell carcinoma.
+Output yes or no only please",32416073|Jianming Xu,No. ,,False,
+"Determine whether the clinical trialNCT00446225 can answer the question that best describes the efficacy of Erlotinib monotherapy compared to Cisplatin and Docetaxel (DC) when used to treat Non-small cell lung cancer (Metastatic).
+Output yes or no only please",22285168|Enric Carcereny,No. ,,False,
+"Determine whether the clinical trialNCT00416507 can answer the question that best describes the efficacy of Gemcitabine monotherapy compared to Cisplatin and Fluorouracil (CF), then Gemcitabine monotherapy when used to treat Pancreatic cancer.
+Output yes or no only please",18467316|F Mornex,No ,,False,
+"Determine whether the clinical trialNCT01231412 can answer the question that best describes the efficacy of Cyclosporine and Mycophenolate mofetil compared to Cyclosporine, Mycophenolate mofetil, Sirolimus when used to treat Graft versus host disease.
+Output yes or no only please",31248843|Brian Kornblit,"Yes. The clinical trial NCT01231412 is a randomized phase III study that compares the efficacy of two graft-versus-host disease (GVHD) prophylaxis regimens in patients undergoing unrelated donor peripheral blood stem cell transplantation. One regimen includes cyclosporine and mycophenolate mofetil, while the other includes cyclosporine, mycophenolate mofetil, and sirolimus. Therefore, this trial is designed to answer the question regarding the efficacy of these specific drug combinations in treating GVHD. ([mycancergenome.org](https://www.mycancergenome.org/content/clinical_trials/NCT01231412/?utm_source=openai)) ",,False,
+"Determine whether the clinical trialNCT00075478 can answer the question that best describes the efficacy of Fludarabine and TBI compared to Low-dose TBI when used to treat Allogeneic HSCT.
+Output yes or no only please",23769990|David G Maloney,"I'm unable to locate specific details about clinical trial NCT00075478 in the provided sources. Therefore, I cannot determine if this trial addresses the efficacy of Fludarabine and TBI compared to Low-dose TBI in Allogeneic HSCT. ",,False,
+"Determine whether the clinical trialNCT00003606 can answer the question that best describes the efficacy of PCDE compared to Cisplatin and Etoposide (EP) when used to treat Small cell lung cancer.
+Output yes or no only please",11181777|J P Daurès,No. ,,False,
+"Determine whether the clinical trialNCT02203643 can answer the question that best describes the efficacy of Lenalidomide monotherapy compared to Carfilzomib and Lenalidomide (KR) when used to treat Multiple myeloma.
+Output yes or no only please",34774221|Pellegrino Musto,No ,,False,
+"Determine whether the clinical trialNCT02950051 can answer the question that best describes the efficacy of Venetoclax and Obinutuzumab compared to Bendamustine and Rituximab (BR) when used to treat Chronic lymphocytic leukemia.
+Output yes or no only please",37163621|Carsten U Niemann,Yes. ,,False,
+"Determine whether the clinical trialNCT01296503 can answer the question that best describes the efficacy of Dexamethasone monotherapy compared to Thalidomide and Dexamethasone (TD) when used to treat Multiple myeloma.
+Output yes or no only please",22730113|Vania T M Hungria,No. ,,False,
+"Determine whether the clinical trialNCT01556776 can answer the question that best describes the efficacy of Observation compared to Lenalidomide monotherapy when used to treat Chronic lymphocytic leukemia.
+Output yes or no only please",28916311|Jasmin Bahlo,No. ,,False,
+"Determine whether the clinical trialNCT00129389 can answer the question that best describes the efficacy of FAC compared to FAC-T when used to treat Breast cancer.
+Output yes or no only please",23733779|Amparo Ruiz,No ,,False,
+"Determine whether the clinical trialNCT00129935 can answer the question that best describes the efficacy of ET-X compared to EC-D when used to treat Breast cancer.
+Output yes or no only please",26416999|Amparo Ruiz Simón,No ,,False,
+"Determine whether the clinical trialNCT00841828 can answer the question that best describes the efficacy of EC-TH (Docetaxel) compared to EC-TL (Docetaxel) when used to treat Breast cancer.
+Output yes or no only please",24457911|J Albanell,No ,,False,
+"Determine whether the clinical trialNCT00121992 can answer the question that best describes the efficacy of TAC (Docetaxel) compared to FAC when used to treat Breast cancer.
+Output yes or no only please",21121833|Miguel A Seguí,Yes. ,,False,
+"Determine whether the clinical trialNCT00129922 can answer the question that best describes the efficacy of FEC-P compared to FEC when used to treat Breast cancer.
+Output yes or no only please",18505968|Alvaro Rodríguez-Lescure,Yes. ,,False,
+"Determine whether the clinical trialNCT02301156 can answer the question that best describes the efficacy of Ibrutinib monotherapy compared to Ibrutinib and Ublituximab when used to treat Chronic lymphocytic leukemia.
+Output yes or no only please",33631112|Danielle M Brander,Yes. ,,False,
+"Determine whether the clinical trialNCT01718379 can answer the question that best describes the efficacy of Lenalidomide monotherapy compared to Erythropoetin beta and Lenalidomide when used to treat Myelodysplastic syndrome.
+Output yes or no only please",26500139|O Kosmider,Yes. ,,False,
+"Determine whether the clinical trialNCT00003702 can answer the question that best describes the efficacy of Methotrexate monotherapy compared to Dactinomycin monotherapy when used to treat Gestational trophoblastic neoplasia.
+Output yes or no only please",21263100|Virginia Filiaci,Yes. ,,False,
+"Determine whether the clinical trialNCT00003128 can answer the question that best describes the efficacy of Ifosfamide and Paclitaxel compared to Ifosfamide monotherapy when used to treat Endometrial cancer.
+Output yes or no only please",17290061|Virginia Filiaci,No. ,,False,
+"Determine whether the clinical trialNCT00003691 can answer the question that best describes the efficacy of Cisplatin, Doxorubicin, Paclitaxel compared to Cisplatin and Doxorubicin when used to treat Endometrial cancer.
+Output yes or no only please",15169803|Virginia L Brunetto,"No, the clinical trial NCT00003691 does not evaluate the efficacy of Cisplatin, Doxorubicin, and Paclitaxel compared to Cisplatin and Doxorubicin in treating endometrial cancer. ",,False,
+"Determine whether the clinical trialNCT00064077 can answer the question that best describes the efficacy of Cisplatin and Paclitaxel compared to Cisplatin and Gemcitabine (GC) when used to treat Cervical cancer.
+Output yes or no only please",19720909|Michael W Sill,"I couldn't find specific information about clinical trial NCT00064077 in the provided search results. Therefore, I cannot determine whether this trial compares the efficacy of Cisplatin and Paclitaxel versus Cisplatin and Gemcitabine in treating cervical cancer. ",,False,
+"Determine whether the clinical trialNCT01924533 can answer the question that best describes the efficacy of Paclitaxel monotherapy compared to Olaparib and Paclitaxel when used to treat Gastric cancer.
+Output yes or no only please",29103871|Rui-Hua Xu,No. ,,False,
+"Determine whether the clinical trialNCT01251107 can answer the question that best describes the efficacy of ABVD compared to eBEACOPP-BEACOPP when used to treat Classical Hodgkin lymphoma.
+Output yes or no only please",21774708|Pier Luigi Zinzani,Yes. ,,False,
+"Determine whether the clinical trialNCT00567554 can answer the question that best describes the efficacy of EC-D and Bevacizumab compared to EC-D when used to treat Breast cancer.
+Output yes or no only please",22276820|Holger Eidtmann,No. ,,False,
+"Determine whether the clinical trialNCT00412022 can answer the question that best describes the efficacy of Letrozole and OFS compared to Tamoxifen and OFS when used to treat Breast cancer.
+Output yes or no only please",31164265|Michelino De Laurentiis,No. ,,False,
+"Determine whether the clinical trialNCT00424606 can answer the question that best describes the efficacy of Docetaxel and Epirubicin compared to E-D when used to treat Breast cancer.
+Output yes or no only please",28641315|Emmanouil Saloustros,"No. The clinical trial NCT00424606 compares the efficacy of two treatment regimens:
+
+1. Epirubicin followed by docetaxel (E/T)
+2. Epirubicin and docetaxel combination (ET)
+
+It does not compare docetaxel and epirubicin to E-D. ([ichgcp.net](https://ichgcp.net/clinical-trials-registry/NCT00424606?utm_source=openai)) ",,False,
+"Determine whether the clinical trialNCT00441922 can answer the question that best describes the efficacy of Docetaxel monotherapy compared to Vinorelbine monotherapy when used to treat Non-small cell lung cancer.
+Output yes or no only please",21663857|Lambros Vamvakas,"No. The clinical trial NCT00441922 was a randomized phase II study comparing docetaxel versus vinorelbine as first-line treatment in elderly patients with advanced non-small-cell lung cancer (NSCLC). The trial was closed prematurely due to low accrual, limiting the strength of its conclusions. ([ichgcp.net](https://ichgcp.net/clinical-trials-registry/NCT00441922?utm_source=openai)) ",,False,
+"Determine whether the clinical trialNCT00012051 can answer the question that best describes the efficacy of R-DHAP/R-VIM compared to DHAP/VIM when used to treat Diffuse large B-cell lymphoma.
+Output yes or no only please",17971487|Wim L J van Putten,Yes. ,,False,
+"Determine whether the clinical trialNCT01704716 can answer the question that best describes the efficacy of Busulfan and Melphalan compared to Carboplatin, Etoposide, Melphalan, then auto HSCT when used to treat Neuroblastoma.
+Output yes or no only please",28259608|Ulrike Pötschger,No. ,,False,
+"Determine whether the clinical trialNCT00344526 can answer the question that best describes the efficacy of Melphalan monotherapy compared to Melphalan and Dexamethasone when used to treat Light-chain (AL) amyloidosis.
+Output yes or no only please",17855669|Philippe Moreau,No. ,,False,
+"Determine whether the clinical trialNCT00002894 can answer the question that best describes the efficacy of Carboplatin monotherapy compared to Carboplatin and Paclitaxel (CP)|Cisplatin and Paclitaxel when used to treat Ovarian cancer.
+Output yes or no only please",12826431|J A Ledermann,No ,,False,
+"Determine whether the clinical trialNCT00430365 can answer the question that best describes the efficacy of Placebo compared to Lenalidomide monotherapy when used to treat Multiple myeloma.
+Output yes or no only please",22571202|Valerie Lauwers-Cances,No. ,,False,
+"Determine whether the clinical trialNCT01971658 can answer the question that best describes the efficacy of VDC compared to VTD when used to treat Multiple myeloma.
+Output yes or no only please",27002117|Cyrille Hulin,No. ,,False,
+"Determine whether the clinical trialNCT02657434 can answer the question that best describes the efficacy of Carboplatin, Pemetrexed, Atezolizumab compared to Carboplatin and Pemetrexed|Cisplatin and Pemetrexed when used to treat Non-small cell lung cancer nonsquamous.
+Output yes or no only please",33333328|Fabrice Barlesi,Yes. ,,False,
+"Determine whether the clinical trialNCT01836575 can answer the question that best describes the efficacy of Carboplatin and Pemetrexed compared to Pemetrexed monotherapy when used to treat Non-small cell lung cancer.
+Output yes or no only please",23775961|Carlos H Barrios,No. ,,False,
+"Determine whether the clinical trialNCT00478049 can answer the question that best describes the efficacy of Docetaxel monotherapy compared to Gefitinib monotherapy when used to treat Non-small cell lung cancer.
+Output yes or no only please",20145166|Keunchil Park,Yes. ,,False,
+"Determine whether the clinical trialNCT01356511 can answer the question that best describes the efficacy of Prednisone monotherapy compared to Dexamethasone monotherapy when used to treat Immune thrombocytopenia.
+Output yes or no only please",26480931|Xue-bin Ji,No. ,,False,
+"Determine whether the clinical trialNCT01282463 can answer the question that best describes the efficacy of Docetaxel monotherapy compared to Docetaxel and Ramucirumab when used to treat Urothelial carcinoma.
+Output yes or no only please",26926681|Scott T Tagawa,Yes. ,,False,
+"Determine whether the clinical trialNCT00190762 can answer the question that best describes the efficacy of Pemetrexed monotherapy compared to Best supportive care when used to treat Malignant pleural mesothelioma.
+Output yes or no only please",18375898|Rodryg Ramlau,No. ,,False,
+"Determine whether the clinical trialNCT00363415 can answer the question that best describes the efficacy of Carboplatin and Etoposide (CE) compared to Carboplatin and Pemetrexed when used to treat Small cell lung cancer.
+Output yes or no only please",19720897|Egbert F Smit,Yes. ,,False,
+"Determine whether the clinical trialNCT01469000 can answer the question that best describes the efficacy of Gefitinib and Pemetrexed compared to Gefitinib monotherapy when used to treat Non-small cell lung cancer.
+Output yes or no only please",27507876|Haruyasu Murakami,Yes. ,,False,
+"Determine whether the clinical trialNCT02039674 can answer the question that best describes the efficacy of Carboplatin and Pemetrexed compared to Carboplatin, Pemetrexed, Pembrolizumab when used to treat Non-small cell lung cancer nonsquamous.
+Output yes or no only please",27745820|Shirish M Gadgeel,No ,,False,
+"Determine whether the clinical trialNCT03850444 can answer the question that best describes the efficacy of Pembrolizumab monotherapy compared to Carboplatin and Paclitaxel (CP)|Carboplatin and Pemetrexed when used to treat Non-small cell lung cancer.
+Output yes or no only please",33231285|Li Zhang,"No, the clinical trial NCT03850444 does not compare the efficacy of pembrolizumab monotherapy to carboplatin and paclitaxel or carboplatin and pemetrexed in treating non-small cell lung cancer. ",,False,
+"Determine whether the clinical trialNCT03019588 can answer the question that best describes the efficacy of Pembrolizumab monotherapy compared to Paclitaxel monotherapy when used to treat Gastric cancer.
+Output yes or no only please",34878659|Yoon-Koo Kang,No ,,False,
+"Determine whether the clinical trialNCT03875092 can answer the question that best describes the efficacy of Carboplatin, nab-Paclitaxel, Pembrolizumab compared to Carboplatin and Paclitaxel (CP)|Carboplatin and nab-Paclitaxel when used to treat Non-small cell lung cancer squamous.
+Output yes or no only please",34661177|Li Zhang,No. ,,False,
+"Determine whether the clinical trialNCT03221426 can answer the question that best describes the efficacy of Capecitabine and Cisplatin (CX) compared to Capecitabine and Cisplatin (CX) and Pembrolizumab|Cisplatin and Fluorouracil (CF) and Pembrolizumab when used to treat Gastric cancer.
+Output yes or no only please",38134948|Sun Young Rha,"No, the clinical trial NCT03221426 does not evaluate the efficacy of Capecitabine and Cisplatin (CX) compared to Capecitabine and Cisplatin (CX) with Pembrolizumab, or Cisplatin and Fluorouracil (CF) with Pembrolizumab in the treatment of gastric cancer. ",,False,
+"Determine whether the clinical trialNCT03425643 can answer the question that best describes the efficacy of Cisplatin and Pemetrexed compared to Cisplatin, Pemetrexed, Pembrolizumab when used to treat Non-small cell lung cancer nonsquamous.
+Output yes or no only please",37272513|Moishe Liberman,Yes. ,,False,
+"Determine whether the clinical trialNCT03234972 can answer the question that best describes the efficacy of Dara-Vd compared to Bortezomib and Dexamethasone (Vd) when used to treat Multiple myeloma.
+Output yes or no only please",34108127|Weijun Fu,Yes. ,,False,
+"Determine whether the clinical trialNCT02162719 can answer the question that best describes the efficacy of Ipatasertib and Paclitaxel compared to Paclitaxel monotherapy when used to treat Breast cancer.
+Output yes or no only please",28800861|Rebecca Dent,Yes. ,,False,
+"Determine whether the clinical trialNCT00806819 can answer the question that best describes the efficacy of Nintedanib and Pemetrexed compared to Pemetrexed monotherapy when used to treat Non-small cell lung cancer nonsquamous.
+Output yes or no only please",27987591|Rolf Kaiser,No ,,False,
+"Determine whether the clinical trialNCT01345682 can answer the question that best describes the efficacy of Methotrexate monotherapy compared to Afatinib monotherapy when used to treat Head and neck cancer.
+Output yes or no only please",25892145|Robert I Haddad,"No, the clinical trial NCT01345682 does not compare the efficacy of Methotrexate monotherapy to Afatinib monotherapy in treating head and neck cancer. ",,False,
+"Determine whether the clinical trialNCT01856478 can answer the question that best describes the efficacy of Methotrexate monotherapy compared to Afatinib monotherapy when used to treat Head and neck cancer.
+Output yes or no only please",31501887|M-J Ahn,Yes. ,,False,
+"Determine whether the clinical trialNCT04988295 can answer the question that best describes the efficacy of Carboplatin and Pemetrexed compared to Carboplatin, Pemetrexed, Amivantamab when used to treat Non-small cell lung cancer.
+Output yes or no only please",37879444|J Wang,No. ,,False,
+"Determine whether the clinical trialNCT01720225 can answer the question that best describes the efficacy of Azacitidine monotherapy compared to Decitabine monotherapy when used to treat Myelodysplastic syndrome.
+Output yes or no only please",28774880|Nicholas J Short,Yes. ,,False,
+"Determine whether the clinical trialNCT00290498 can answer the question that best describes the efficacy of R-Hyper-CVAD/R-MA compared to R-CHOP when used to treat Diffuse large B-cell lymphoma.
+Output yes or no only please",24117234|Jason R Westin,Yes. ,,False,
+"Determine whether the clinical trialNCT01029262 can answer the question that best describes the efficacy of Placebo compared to Lenalidomide monotherapy when used to treat Myelodysplastic syndrome.
+Output yes or no only please",27354480|Antonio Almeida,Yes. ,,False,
+"Determine whether the clinical trialNCT01802749 can answer the question that best describes the efficacy of Carboplatin, Pegylated liposomal doxorubicin, Bevacizumab|Carboplatin and Gemcitabine (GCb) and Bevacizumab|Carboplatin and Paclitaxel (CP) and Bevacizumab compared to Carboplatin and Gemcitabine (GCb) when used to treat Ovarian cancer.
+Output yes or no only please",33539744|Domenica Lorusso,No. ,,False,
+"Determine whether the clinical trialNCT00405756 can answer the question that best describes the efficacy of Placebo compared to Lenalidomide monotherapy when used to treat Multiple myeloma.
+Output yes or no only please",22571200|Roman Hajek,No. ,,False,
+"Determine whether the clinical trialNCT00256776 can answer the question that best describes the efficacy of Thalidomide and Dexamethasone (TD) compared to VTD when used to treat Multiple myeloma.
+Output yes or no only please",22585692|Simona Iacobelli,No ,,False,
+"Determine whether the clinical trialNCT00551928 can answer the question that best describes the efficacy of Observation compared to Lenalidomide monotherapy when used to treat Multiple myeloma.
+Output yes or no only please",25184862|Federica Cavallo,No. ,,False,
+"Determine whether the clinical trialNCT00005863 can answer the question that best describes the efficacy of FLA compared to ADE (standard-dose Ara-C) when used to treat Acute myeloid leukemia.
+Output yes or no only please",16484584|Keith Wheatley,Yes. ,,False,
+"Determine whether the clinical trialNCT00002822 can answer the question that best describes the efficacy of ICE-V compared to CDE when used to treat Small cell lung cancer.
+Output yes or no only please",16293867|Wendi Qian,No ,,False,
+"Determine whether the clinical trialNCT00002599 can answer the question that best describes the efficacy of ABCM compared to Melphalan and Methylprednisolone when used to treat Multiple myeloma.
+Output yes or no only please",12736280|Gareth J Morgan,"I'm unable to locate specific details about the clinical trial NCT00002599 to determine if it evaluates the efficacy of ABCM compared to Melphalan and Methylprednisolone in treating Multiple Myeloma. Therefore, I cannot confirm whether this trial addresses your question. ",,False,
+"Determine whether the clinical trialNCT00079274 can answer the question that best describes the efficacy of mFOLFOX6 and Cetuximab compared to mFOLFOX6 when used to treat Colon cancer.
+Output yes or no only please",22474202|Daniel J Sargent,Yes. ,,False,
+"Determine whether the clinical trialNCT03838159 can answer the question that best describes the efficacy of Carboplatin and Paclitaxel (CP) and Nivolumab compared to Carboplatin and Paclitaxel (CP) when used to treat Non-small cell lung cancer.
+Output yes or no only please",37379158|Ernest Nadal,No. ,,False,
+"Determine whether the clinical trialNCT00004100 can answer the question that best describes the efficacy of Gemcitabine and Vinorelbine compared to Cisplatin and Vinorelbine (CVb) when used to treat Non-small cell lung cancer.
+Output yes or no only please",12837810|Ciro Gallo,No. ,,False,
+"Determine whether the clinical trialNCT00002542 can answer the question that best describes the efficacy of Tamoxifen monotherapy compared to Placebo when used to treat Breast cancer.
+Output yes or no only please",19628570|K I Pritchard,No. ,,False,
+"Determine whether the clinical trialNCT00014222 can answer the question that best describes the efficacy of ddEC-T compared to AC-T when used to treat Breast cancer.
+Output yes or no only please",19901117|Mark N Levine,No ,,False,
+"Determine whether the clinical trialNCT00667251 can answer the question that best describes the efficacy of Docetaxel and Lapatinib (TL)|Lapatinib and Paclitaxel compared to Paclitaxel and Trastuzumab (TH) when used to treat Breast cancer.
+Output yes or no only please",25779558|Frances M Boyle,No. ,,False,
+"Determine whether the clinical trialNCT00026338 can answer the question that best describes the efficacy of Gemcitabine monotherapy compared to Erlotinib and Gemcitabine when used to treat Pancreatic cancer (Locally Advanced or Unresectable or Metastatic).
+Output yes or no only please",17452677|David Goldstein,"Yes. The clinical trial NCT00026338 was a randomized, double-blind, placebo-controlled, multicenter study designed to compare the efficacy of gemcitabine monotherapy to the combination of erlotinib and gemcitabine in treating patients with unresectable locally advanced or metastatic pancreatic cancer. ([ichgcp.net](https://ichgcp.net/clinical-trials-registry/NCT00026338?utm_source=openai)) ",,False,
+"Determine whether the clinical trialNCT00002633 can answer the question that best describes the efficacy of ADT compared to ADT and RT when used to treat Prostate cancer.
+Output yes or no only please",22056152|Malcolm Mason,Yes. ,,False,
+"Determine whether the clinical trialNCT00002582 can answer the question that best describes the efficacy of CMF compared to Observation when used to treat Breast cancer.
+Output yes or no only please",,No ,,False,
+"Determine whether the clinical trialNCT00513955 can answer the question that best describes the efficacy of CHOP (Prednisolone) compared to BCHOP when used to treat Mantle cell lymphoma.
+Output yes or no only please",25146720|Rod Johnson,No. ,,False,
+"Determine whether the clinical trialNCT00260689 can answer the question that best describes the efficacy of ATG (Horse) and Cyclosporine compared to ATG (Rabbit) and Cyclosporine when used to treat Aplastic anemia.
+Output yes or no only please",21812672|Olga Nunez,Yes. ,,False,
+"Determine whether the clinical trialNCT01998503 can answer the question that best describes the efficacy of No induction compared to Bortezomib and Dexamethasone (Vd) when used to treat Light-chain (AL) amyloidosis.
+Output yes or no only please",24386911|Qingwen Wang,"No, clinical trial NCT01998503 does not evaluate the efficacy of no induction therapy compared to Bortezomib and Dexamethasone (Vd) in treating Light-chain (AL) amyloidosis. ",,False,
+"Determine whether the clinical trialNCT00417911 can answer the question that best describes the efficacy of Bortezomib monotherapy compared to Observation when used to treat Multiple myeloma.
+Output yes or no only please",23616624|Peter Gimsing,No. ,,False,
+"Determine whether the clinical trialNCT00003782 can answer the question that best describes the efficacy of TAC (Docetaxel) compared to AC-D when used to treat Breast cancer.
+Output yes or no only please",20519679|Jong-Hyeon Jeong,No ,,False,
+"Determine whether the clinical trialNCT00486668 can answer the question that best describes the efficacy of AC-TH (Paclitaxel) compared to AC-THL (Paclitaxel) when used to treat Breast cancer.
+Output yes or no only please",24095300|Gong Tang,"I couldn't find specific details about clinical trial NCT00486668 in the provided search results. Therefore, I cannot determine whether this trial addresses the efficacy of AC-TH (Paclitaxel) compared to AC-THL (Paclitaxel) in treating breast cancer. ",,False,
+"Determine whether the clinical trialNCT02775006 can answer the question that best describes the efficacy of Docetaxel and Erlotinib compared to Docetaxel monotherapy when used to treat Non-small cell lung cancer nonsquamous.
+Output yes or no only please",34403911|Robert Peric,No. ,,False,
+"Determine whether the clinical trialNCT00070278 can answer the question that best describes the efficacy of EC-ddT compared to ddT-EC when used to treat Breast cancer.
+Output yes or no only please",24360787|Anne-Laure Vallier,Yes. ,,False,
+"Determine whether the clinical trialNCT03150875 can answer the question that best describes the efficacy of Docetaxel monotherapy compared to Sintilimab monotherapy when used to treat Non-small cell lung cancer squamous.
+Output yes or no only please",36336841|Lin Wu,Yes. ,,False,
+"Determine whether the clinical trialNCT00718549 can answer the question that best describes the efficacy of Rituximab monotherapy compared to Observation when used to treat Chronic lymphocytic leukemia.
+Output yes or no only please",29427355|Jerzy Błoński,"I couldn't find specific details about clinical trial NCT00718549 in the provided sources. However, based on the information available, it appears that this trial does not compare Rituximab monotherapy to observation in the treatment of chronic lymphocytic leukemia. ",,False,
+"Determine whether the clinical trialNCT04538664 can answer the question that best describes the efficacy of Carboplatin, Pemetrexed, Amivantamab compared to Carboplatin and Pemetrexed when used to treat Non-small cell lung cancer (Locally Advanced or Metastatic).
+Output yes or no only please",37870976|Ke-Jing Tang,Yes. ,,False,
+"Determine whether the clinical trialNCT03710603 can answer the question that best describes the efficacy of RVD compared to Dara-RVd (SC daratumumab) when used to treat Multiple myeloma.
+Output yes or no only please",38084760|Meletios A Dimopoulos,Yes. ,,False,
+"Determine whether the clinical trialNCT03588091 can answer the question that best describes the efficacy of Docetaxel and Trastuzumab (TH) and Pyrotinib compared to Docetaxel and Trastuzumab (TH) when used to treat Breast cancer.
+Output yes or no only please",36575513|Zefei Jiang,Yes. ,,False,
+"Determine whether the clinical trialNCT02101775 can answer the question that best describes the efficacy of Gemcitabine monotherapy compared to Adavosertib and Gemcitabine when used to treat Ovarian cancer.
+Output yes or no only please",33485453|Mihaela C Cristea,"Yes. The clinical trial NCT02101775 is a randomized, placebo-controlled Phase II study comparing gemcitabine monotherapy to gemcitabine combined with AZD 1775 (MK 1775) in women with recurrent, platinum-resistant epithelial ovarian, primary peritoneal, or fallopian tube cancers. ([fdaaa.trialstracker.net](https://fdaaa.trialstracker.net/trial/NCT02101775/?utm_source=openai)) ",,False,
+"Determine whether the clinical trialNCT01432600 can answer the question that best describes the efficacy of Pomalidomide and Dexamethasone (Pd) compared to PCD when used to treat Multiple myeloma.
+Output yes or no only please",26932802|Thomas G Martin,No. ,,False,
+"Determine whether the clinical trialNCT03274492 can answer the question that best describes the efficacy of R-CHOP compared to Pola-R-CHP when used to treat Diffuse large B-cell lymphoma.
+Output yes or no only please",34904799|Franck Morschhauser,Yes. ,,False,
+"Determine whether the clinical trialNCT02288247 can answer the question that best describes the efficacy of Docetaxel, Enzalutamide, Prednisolone compared to Docetaxel and Prednisolone when used to treat Prostate cancer.
+Output yes or no only please",36265504|Gerhardt Attard,"No. The clinical trial NCT02288247 (PRESIDE) evaluated the efficacy of continuing enzalutamide in combination with docetaxel and prednisolone in patients with metastatic castration-resistant prostate cancer who had progressed on enzalutamide alone. It did not directly compare the combination of docetaxel, enzalutamide, and prednisolone to docetaxel and prednisolone without enzalutamide. ([ascopubs.org](https://ascopubs.org/doi/10.1200/JCO.2022.40.6_suppl.015?utm_source=openai)) ",,False,
+"Determine whether the clinical trialNCT03009981 can answer the question that best describes the efficacy of ADT compared to ADT, Abiraterone, Apalutamide when used to treat Prostate cancer.
+Output yes or no only please",38261983|Glenn Heller,Yes. ,,False,
+"Determine whether the clinical trialNCT01639001 can answer the question that best describes the efficacy of Crizotinib monotherapy compared to Carboplatin and Pemetrexed when used to treat Non-small cell lung cancer.
+Output yes or no only please",29966800|Shun Lu,"No, the clinical trial NCT01639001 does not compare the efficacy of Crizotinib monotherapy to Carboplatin and Pemetrexed in treating Non-small cell lung cancer. ",,False,
+"Determine whether the clinical trialNCT00002870 can answer the question that best describes the efficacy of CHUT compared to Observation when used to treat Breast cancer.
+Output yes or no only please",18037940|M Durand,No. ,,False,
+"Determine whether the clinical trialNCT02898077 can answer the question that best describes the efficacy of Paclitaxel and Ramucirumab compared to Paclitaxel monotherapy when used to treat Gastric cancer.
+Output yes or no only please",34626550|Yanqiao Zhang,"Yes. The clinical trial NCT02898077 is a randomized, multicenter, double-blind, placebo-controlled, Phase 3 study designed to evaluate the efficacy of weekly Paclitaxel with or without Ramucirumab in patients with advanced gastric or gastroesophageal junction adenocarcinoma who are refractory to or have progressed after first-line therapy with platinum and fluoropyrimidine. ([fdaaa.trialstracker.net](https://fdaaa.trialstracker.net/trial/NCT02898077/?utm_source=openai)) ",,False,
+"Determine whether the clinical trialNCT00651261 can answer the question that best describes the efficacy of 7 plus 3d and Midostaurin compared to 7 plus 3d when used to treat Acute myeloid leukemia.
+Output yes or no only please",28644114|Sumithra J Mandrekar,Yes. ,,False,
+"Determine whether the clinical trialNCT00090051 can answer the question that best describes the efficacy of FCR compared to Cyclophosphamide and Fludarabine (FC) when used to treat Chronic lymphocytic leukemia.
+Output yes or no only please",20194844|Anna Dmoszynska,Yes. ,,False,
+"Determine whether the clinical trialNCT01122472 can answer the question that best describes the efficacy of Placebo compared to Lenalidomide monotherapy when used to treat Diffuse large B-cell lymphoma.
+Output yes or no only please",28426350|Hervé Tilly,No ,,False,
+"Determine whether the clinical trialNCT01168973 can answer the question that best describes the efficacy of Docetaxel monotherapy compared to Docetaxel and Ramucirumab when used to treat Non-small cell lung cancer (Metastatic).
+Output yes or no only please",24933332|Tudor-Eliade Ciuleanu,No. ,,False,
+"Determine whether the clinical trialNCT00052936 can answer the question that best describes the efficacy of R-CHOP-14 compared to CHOP-14 when used to treat Diffuse large B-cell lymphoma.
+Output yes or no only please",18226581|Joerg Schubert,No. ,,False,
+"Determine whether the clinical trialNCT00703326 can answer the question that best describes the efficacy of Docetaxel monotherapy compared to Docetaxel and Ramucirumab when used to treat Breast cancer.
+Output yes or no only please",25185099|Manuel Ramos-Vazquez,Yes. ,,False,
+"Determine whether the clinical trialNCT00084318 can answer the question that best describes the efficacy of Cisplatin, Cetuximab, RT compared to Cisplatin and RT when used to treat Head and neck cancer.
+Output yes or no only please",25002723|Jonathan Harris,No. ,,False,
+"Determine whether the clinical trialNCT01307605 can answer the question that best describes the efficacy of Lenalidomide and Rituximab (R2) compared to Rituximab monotherapy when used to treat Follicular lymphoma.
+Output yes or no only please",31101627|Stephanie Rondeau,Yes. ,,False,
+"Determine whether the clinical trialNCT02340221 can answer the question that best describes the efficacy of Fulvestrant monotherapy compared to Taselisib and Fulvestrant when used to treat Breast cancer.
+Output yes or no only please",33186740|J Cortés,No ,,False,
+"Determine whether the clinical trialNCT02048371 can answer the question that best describes the efficacy of Placebo compared to Regorafenib monotherapy when used to treat Osteosarcoma.
+Output yes or no only please",31013172|Vanessa Bolejack,Yes. ,,False,
+"Determine whether the clinical trialNCT00003893 can answer the question that best describes the efficacy of CMF compared to CMF and RT|E-CMF and RT|A-CMF and RT|MMM and RT when used to treat Breast cancer.
+Output yes or no only please",31785830|Sarah J Bowden,"No, the clinical trial NCT00003893 does not provide information on the efficacy of CMF compared to CMF and RT, E-CMF and RT, A-CMF and RT, or MMM and RT in treating breast cancer. ",,False,
+"Determine whether the clinical trialNCT01776840 can answer the question that best describes the efficacy of Bendamustine and Rituximab (BR) compared to Bendamustine and Rituximab (BR) and Ibrutinib when used to treat Chronic lymphocytic leukemia.
+Output yes or no only please",35657079|Wojciech Jurczak,No. ,,False,
+"Determine whether the clinical trialNCT00376792 can answer the question that best describes the efficacy of Docetaxel monotherapy compared to Observation when used to treat Prostate cancer.
+Output yes or no only please",29395502|Per Flodgren,Yes. ,,False,
+"Determine whether the clinical trialNCT01026116 can answer the question that best describes the efficacy of EP-T compared to EC-T when used to treat Breast cancer.
+Output yes or no only please",33822134|Jing-Yu Ge,No. ,,False,
+"Determine whether the clinical trialNCT00020709 can answer the question that best describes the efficacy of Placebo compared to Gefitinib monotherapy when used to treat Non-small cell lung cancer.
+Output yes or no only please",18378568|Kari Chansky,No. The clinical trial NCT00020709 (S0023) was designed to assess the efficacy of maintenance therapy with gefitinib compared to placebo following induction chemoradiotherapy and consolidation chemotherapy in patients with unresectable stage III non-small cell lung cancer. It did not evaluate the efficacy of gefitinib monotherapy compared to placebo. ([ctv.veeva.com](https://ctv.veeva.com/study/combination-chemotherapy-and-radiation-therapy-with-or-without-gefitinib-in-treating-patients-with-s?utm_source=openai)) ,,False,
+"Determine whether the clinical trialNCT00445601 can answer the question that best describes the efficacy of Placebo compared to Gemcitabine monotherapy when used to treat Bladder cancer.
+Output yes or no only please",29801011|Catherine M Tangen,No. The clinical trial NCT00445601 compared the efficacy of immediate post-TURBT instillation of gemcitabine versus saline (placebo) in patients with newly diagnosed or occasionally recurring grade I/II superficial bladder cancer. It did not evaluate gemcitabine monotherapy. ([nctn-data-archive.nci.nih.gov](https://nctn-data-archive.nci.nih.gov/node/794?utm_source=openai)) ,,False,
+"Determine whether the clinical trialNCT00004001 can answer the question that best describes the efficacy of Docetaxel and Estramustine compared to Mitoxantrone and Prednisone when used to treat Prostate cancer.
+Output yes or no only please",15470214|Catherine M Tangen,Yes. ,,False,
+"Determine whether the clinical trialNCT02672527 can answer the question that best describes the efficacy of Best supportive care compared to Trabectedin monotherapy when used to treat Soft tissue sarcoma.
+Output yes or no only please",33932507|J-Y Blay,No. ,,False,
+"Determine whether the clinical trialNCT01298713 can answer the question that best describes the efficacy of Everolimus and Tamoxifen compared to Tamoxifen monotherapy when used to treat Breast cancer.
+Output yes or no only please",22565002|Céline Bourgier,Yes. ,,False,
+"Determine whether the clinical trialNCT03117049 can answer the question that best describes the efficacy of Carboplatin and Paclitaxel (CP), Bevacizumab, Nivolumab compared to Carboplatin and Paclitaxel (CP) and Bevacizumab when used to treat Non-small cell lung cancer nonsquamous.
+Output yes or no only please",34139272|J-S Lee,"Yes. The clinical trial NCT03117049 is designed to compare the efficacy and safety of ONO-4538 (Nivolumab) in combination with Carboplatin, Paclitaxel, and Bevacizumab against a placebo combined with Carboplatin, Paclitaxel, and Bevacizumab in chemotherapy-naïve subjects with stage IIIB/IV or recurrent non-squamous non-small cell lung cancer. ([mycancergenome.org](https://www.mycancergenome.org/content/clinical_trials/NCT03117049/?utm_source=openai)) ",,False,
+"Determine whether the clinical trialNCT00002662 can answer the question that best describes the efficacy of Docetaxel monotherapy compared to Paclitaxel monotherapy when used to treat Breast cancer.
+Output yes or no only please",16110015|J Erban,Yes. ,,False,
+"Determine whether the clinical trialNCT01038661 can answer the question that best describes the efficacy of Observation compared to Docetaxel monotherapy when used to treat Non-small cell lung cancer.
+Output yes or no only please",33708965|Shun Lu,No. ,,False,
+"Determine whether the clinical trialNCT01564537 can answer the question that best describes the efficacy of Lenalidomide and Dexamethasone (Rd) compared to IRd when used to treat Multiple myeloma.
+Output yes or no only please",28683766|Jie Jin,No. ,,False,
+"Determine whether the clinical trialNCT01850524 can answer the question that best describes the efficacy of Lenalidomide and Dexamethasone (Rd) compared to IRd when used to treat Multiple myeloma.
+Output yes or no only please",33763699|Christopher P Venner,No. ,,False,
+"Determine whether the clinical trialNCT00146549 can answer the question that best describes the efficacy of Docetaxel and Trastuzumab (TH)|Paclitaxel and Trastuzumab (TH) compared to Vinorelbine and Trastuzumab (VH) when used to treat Breast cancer.
+Output yes or no only please",17614302|Aparna Keshaviah,No. ,,False,
+"Determine whether the clinical trialNCT00115700 can answer the question that best describes the efficacy of Observation compared to CVP when used to treat Follicular lymphoma.
+Output yes or no only please",29975623|Richard Fisher,No ,,False,
+"Determine whether the clinical trialNCT02993523 can answer the question that best describes the efficacy of Azacitidine monotherapy compared to Azacitidine and Venetoclax when used to treat Acute myeloid leukemia.
+Output yes or no only please",32786187|Brian A Jonas,Yes. ,,False,
+"Determine whether the clinical trialNCT00222677 can answer the question that best describes the efficacy of Placebo compared to Aspirin monotherapy when used to treat Venous thromboembolism.
+Output yes or no only please",22621626|Giancarlo Agnelli,No ,,False,
+"Determine whether the clinical trialNCT01817452 can answer the question that best describes the efficacy of T-DM1 and ET compared to Trastuzumab and ET when used to treat Breast cancer.
+Output yes or no only please",28682681|Oleg Gluz,No. ,,False,
+"Determine whether the clinical trialNCT00006232 can answer the question that best describes the efficacy of VAD compared to Z-Dex when used to treat Multiple myeloma.
+Output yes or no only please",15352982|R E Clark,No ,,False,
+"Determine whether the clinical trialNCT01779206 can answer the question that best describes the efficacy of ddT-ddEC compared to nP-ddEC when used to treat Breast cancer.
+Output yes or no only please",37062416|S Kuemmel,No. ,,False,
+"Determine whether the clinical trialNCT00685646 can answer the question that best describes the efficacy of ADT and Zoledronic acid compared to ADT when used to treat Prostate cancer.
+Output yes or no only please",27614621|Toshiyuki Kamoto,Yes. ,,False,

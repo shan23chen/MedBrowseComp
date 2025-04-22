@@ -1,0 +1,21 @@
+question,correct_answer,model_output,extracted_info,correct,urls
+"Find/search the clinical trial id that best describes the efficacy of Tasquinimod monotherapy compared to Placebo when used to treat Prostate cancer.
+Output it in the format NCT<Number>",NCT01234311,"Based on a search of clinical trial databases for Tasquinimod monotherapy compared to Placebo in Prostate Cancer, the most prominent Phase 3 trial designed to assess efficacy is:
+
+NCT01234311",NCT01234311,True,
+"Find/search the clinical trial id that best describes the efficacy of Panitumumab monotherapy compared to Best supportive care when used to treat Colorectal cancer (Metastatic).
+Output it in the format NCT<Number>",NCT00113763,"Based on your criteria (Panitumumab monotherapy vs. Best Supportive Care for Metastatic Colorectal Cancer efficacy), the most relevant and pivotal clinical trial is likely a Phase 3 study that directly compared Panitumumab plus BSC to BSC alone in heavily pre-treated patients.
+
+The NCT ID that best describes this comparison is:
+
+NCT00113763",NCT00113763,True,
+"Find/search the clinical trial id that best describes the efficacy of Capecitabine monotherapy compared to Observation when used to treat Nasopharyngeal carcinoma.
+Output it in the format NCT<Number>",NCT02958111,NCT01099675,NCT01099675,False,
+"Find/search the clinical trial id that best describes the efficacy of Cisplatin and Fluorouracil (CF) compared to Cisplatin and Gemcitabine (GC) when used to treat Nasopharyngeal carcinoma.
+Output it in the format NCT<Number>",NCT03321539,"Based on your search criteria (Cisplatin + Fluorouracil vs. Cisplatin + Gemcitabine for efficacy in Nasopharyngeal carcinoma), the landmark Phase III clinical trial is likely what you are looking for.
+
+The clinical trial id that best describes this comparison is:
+
+NCT00670154",NCT00670154,False,
+"Find/search the clinical trial id that best describes the efficacy of Goserelin monotherapy compared to Degarelix monotherapy when used to treat Prostate cancer.
+Output it in the format NCT<Number>",NCT01964170,NCT00767152,NCT00767152,False,

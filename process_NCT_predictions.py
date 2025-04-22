@@ -408,7 +408,22 @@ def process_nct_csv(
                 correct_answer = row['drug_classes']
             elif task == "track_second_authors_multiple_pmids":
                 # Format: model needs to determine both PMID and second author
-                question = "Find/search the pubmed ID and second author of the paper referenced in " + row['question 1'].split('Choose an option')[1] + '\nOutput it in the format PMID<pubmed id> SA<Second Author>'
+                question = "Determine whether the clinical trial" + row['NCT'] + " can answer the question" + row['question 1'].split('Choose an option')[1] + '\nOutput yes or no only please'
+            elif task == "regime_drug_class":
+                question = "For clinical trial " + row['NCT'] + "Among the' + row['effecacy_group'] + 'effective regime ingredients; find which is the ingredient with the first letter start with " + row['Ingredient'][0] + "\n return only the name of the ingredient or unknown please"
+                correct_answer = row['Ingredient']
+            elif task == "latest_company_approval":
+                question = "First, for clinical trial " + row['NCT'] + " among the " + row['effecacy_group'] + " effective regime ingredients, identify which ingredient starts with the letter " + row['Ingredient'][0] + ".\n\nThen, find which company has the latest FDA approval date up till Dec, 2024 for this identified ingredient.\nReturn only the company name."
+                correct_answer = row['Applicant_Full_Name']
+            elif task == "company_headquarters":
+                question = "First, for clinical trial " + row['NCT'] + " among the " + row['effecacy_group'] + " effective regime ingredients, identify which ingredient starts with the letter " + row['Ingredient'][0] + ".\n\nSecond, find which company has the latest FDA approval date up till Dec, 2024 for this identified ingredient.\n\nFinally, determine where the headquarters of this company is located.\nReturn only the city and country."
+                correct_answer = row['Applicant']
+            elif task == "patent_expiration_date":
+                question = "First, for clinical trial " + row['NCT'] + " among the " + row['effecacy_group'] + " effective regime ingredients, identify which ingredient starts with the letter " + row['Ingredient'][0] + ".\n\nThen, for this identified ingredient that was last approved up till Dec, 2024, when is its patent expiration date?\nReturn only the date in YYYY-MM-DD format."
+                correct_answer = row['Patent_Expire_Date_Text']
+            elif task == "exclusivity_Date":
+                question = "For clinical trial " + row['NCT'] + " among the " + row['effecacy_group'] + " effective regime ingredients, identify which ingredient starts with the letter " + row['Ingredient'][0] + ".\n\nThen, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?\nReturn only the date in YYYY-MM-DD format."
+                correct_answer = row['Exclusivity_Date']
                 
                 # For validation, we'll need all valid PMID-second author pairs
                 pmid_author_pairs = {}
@@ -717,7 +732,9 @@ def main():
                                 "track_drug_route", "track_drug_class"], 
                         default="track_trial_ids",
                         help="Task to perform",
-                        )
+                        )   
+    parser.add_argument("--search_context_size", choices=["low", "medium", "high"], default="medium", 
+                        help="Search context size")
     
     args = parser.parse_args()
     
@@ -735,7 +752,7 @@ def main():
         inference_kwargs = {"model_name": args.model}
     elif args.model in OPENAI_SEARCH_MODELS:
         run_inference = openai_search_run_inference_multithread
-        inference_kwargs = {"model_name": args.model}
+        inference_kwargs = {"model_name": args.model, "web_search_options": {"search_context_size": args.search_context_size}}
     else:
         logger.error(f"Model {args.model} not recognized.")
         return

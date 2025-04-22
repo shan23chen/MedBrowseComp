@@ -24,6 +24,7 @@ class OpenAISearchInference:
             raise ValueError(f"Invalid model name: {model_name}. Available models: {', '.join(OPENAI_SEARCH_MODELS.keys())}")
         self.model_name = OPENAI_SEARCH_MODELS[model_name]
         self.client = OpenAI(api_key=self.api_key)
+        self.search_context_size = "medium"
 
     def generate_response(self, input_text: str, stream: bool = False, web_search_options: dict = None) -> Union[str, Dict]:
         """
@@ -36,7 +37,7 @@ class OpenAISearchInference:
             "user_location": {
                 "type": "approximate"
             },
-            "search_context_size": "medium"
+            "search_context_size": self.search_context_size
         }
         # Allow user to override tool config
         if web_search_options:
