@@ -54,6 +54,16 @@ def extract_from_response(response: str, task: str = "track_trial_ids") -> str:
         if match:
             return match.group(1).strip()
         return ""
+    elif task == "regime_drug_class":
+        match = re.search(r'(?i)INGREDIENT:([^>]+)', response)
+        if match:
+            return match.group(1).strip()
+        return ""
+    elif task == "latest_company_approval":
+        match = re.search(r'(?i)COMPANY:([^>]+)', response)
+        if match:
+            return match.group(1).strip()
+        return ""
     elif task == "track_pmids":
         # Look for the pattern pmid followed by any text
         match = re.search(r'(?i)pmid[:\s]*(\d+)', response)
@@ -154,7 +164,7 @@ def extract_from_response(response: str, task: str = "track_trial_ids") -> str:
         logger.warning(f"Failed to extract any author.")
         return ""
     
-    elif task == "track_start_date":
+    elif task == "track_start_date" or task == "patent_expiration_date" or task == "exclusivity_Date":
         # Single pattern to match "Start date: YYYY-MM" format
         direct_pattern = r'(?i)start\s*date:?\s*((?:\d{4}-\d{2})|(?:[A-Za-z]+\s+\d{4}))'
         match = re.search(direct_pattern, response)
@@ -408,40 +418,30 @@ def process_nct_csv(
                 correct_answer = row['drug_classes']
             elif task == "track_second_authors_multiple_pmids":
                 # Format: model needs to determine both PMID and second author
-                question = "Determine whether the clinical trial" + row['NCT'] + " can answer the question" + row['question 1'].split('Choose an option')[1] + '\nOutput yes or no only please'
+                question = "return the stock opening price of " + row['Applicant_Full_Name'] + " on the date of " + row['Approval_Date']
+                correct_answer = row['Applicant']
             elif task == "regime_drug_class":
-                question = "For clinical trial " + row['NCT'] + "Among the' + row['effecacy_group'] + 'effective regime ingredients; find which is the ingredient with the first letter start with " + row['Ingredient'][0] + "\n return only the name of the ingredient or unknown please"
-                correct_answer = row['Ingredient']
+                if row['Ingredient'] == 'APALUTAMIDE':
+                    question = "For clinical trial " + row['NCT'] + ". Among the " + row['effecacy_group'] + 'effective regime ingredients; find which is the ingredient with the first letter start with ' + 'AP' + "\n return only the name of the ingredient or unknown in all CAPS in the format of INGREDIENT: name"
+                    correct_answer = row['Ingredient']
+                else:
+                    question = "For clinical trial " + row['NCT'] + ". Among the " + row['effecacy_group'] + 'effective regime ingredients; find which is the ingredient with the first letter start with ' + row['Ingredient'][0] + "\n return only the name of the ingredient or unknown in all CAPS in the format of INGREDIENT: name"
+                    correct_answer = row['Ingredient']
             elif task == "latest_company_approval":
-                question = "First, for clinical trial " + row['NCT'] + " among the " + row['effecacy_group'] + " effective regime ingredients, identify which ingredient starts with the letter " + row['Ingredient'][0] + ".\n\nThen, find which company has the latest FDA approval date up till Dec, 2024 for this identified ingredient.\nReturn only the company name."
+                question = "First, for clinical trial " + row['NCT'] + " among the " + row['effecacy_group'] + " effective regime ingredients, identify which ingredient starts with the letter " + row['Ingredient'][0] + ".\n\nThen, find which company has the latest FDA approval date up till Dec, 2024 for this identified ingredient.\nReturn only the company name in format of COMPANY: name."
                 correct_answer = row['Applicant_Full_Name']
-            elif task == "company_headquarters":
-                question = "First, for clinical trial " + row['NCT'] + " among the " + row['effecacy_group'] + " effective regime ingredients, identify which ingredient starts with the letter " + row['Ingredient'][0] + ".\n\nSecond, find which company has the latest FDA approval date up till Dec, 2024 for this identified ingredient.\n\nFinally, determine where the headquarters of this company is located.\nReturn only the city and country."
+            elif task == "ceo_name":
+                question = "First, for clinical trial " + row['NCT'] + " among the " + row['effecacy_group'] + " effective regime ingredients, identify which ingredient starts with the letter " + row['Ingredient'][0] + ".\n\nSecond, find which company has the latest FDA approval date up till Dec, 2024 for this identified ingredient.\n\nFinally, determine the CEO of this company.\nReturn only the name of the CEO."
                 correct_answer = row['Applicant']
             elif task == "patent_expiration_date":
-                question = "First, for clinical trial " + row['NCT'] + " among the " + row['effecacy_group'] + " effective regime ingredients, identify which ingredient starts with the letter " + row['Ingredient'][0] + ".\n\nThen, for this identified ingredient that was last approved up till Dec, 2024, when is its patent expiration date?\nReturn only the date in YYYY-MM-DD format."
+                question = "First, for clinical trial " + row['NCT'] + " among the " + row['effecacy_group'] + " effective regime ingredients, identify which ingredient starts with the letter " + row['Ingredient'][0] + ".\n\nThen, for this identified ingredient that was last approved up till Dec, 2024, when is its patent expiration date?\nReturn only the date in YYYY-MM-DD format of date: YYYY-MM-DD."
                 correct_answer = row['Patent_Expire_Date_Text']
             elif task == "exclusivity_Date":
-                question = "For clinical trial " + row['NCT'] + " among the " + row['effecacy_group'] + " effective regime ingredients, identify which ingredient starts with the letter " + row['Ingredient'][0] + ".\n\nThen, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?\nReturn only the date in YYYY-MM-DD format."
-                correct_answer = row['Exclusivity_Date']
-                
-                # For validation, we'll need all valid PMID-second author pairs
-                pmid_author_pairs = {}
-                try:
-                    import json
-                    authors_dict = json.loads(row['authors'])
-                    for pmid, authors_str in authors_dict.items():
-                        authors_list = authors_str.split('|')
-                        if len(authors_list) >= 2:
-                            pmid_author_pairs[pmid] = authors_list[1]
-                except Exception as e:
-                    logger.error(f"Error parsing authors JSON: {str(e)}")
-                    
-                # Create a simpler format for validation
-                correct_pairs = []
-                for pmid, author in pmid_author_pairs.items():
-                    correct_pairs.append(f"{pmid}|{author}")
-                correct_answer = "||".join(correct_pairs)
+                if row['Exclusivity_Date'] is not None:
+                    question = "For clinical trial " + row['NCT'] + " among the " + row['effecacy_group'] + " effective regime ingredients, identify which ingredient starts with the letter " + row['Ingredient'][0] + ".\n\nThen, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?\nReturn only the date in MM-DD-YYYY format of date: MM-DD-YYYY."
+                    correct_answer = row['Exclusivity_Date']
+                else:
+                    continue
             elif task == "track_second_authors_multiple_pmids_any":
                 # Format: find any second author from any of the PMIDs
                 question = "Find/search the second author of any of the papers referenced in " + row['question 1'].split('Choose an option')[1] + '\nOutput it in the format SA<Second Author>'
@@ -547,7 +547,7 @@ def process_nct_csv(
                     # Check if extracted author matches any of the valid second authors
                     valid_authors = [author.strip().lower() for author in answer.split('|')]
                     is_correct = extracted_info.strip().lower() in valid_authors
-                elif task == "track_start_date":
+                elif task == "track_start_date" or task == "patent_expiration_date" or task == "exclusivity_Date":
                     # Simpler date normalization
                     extracted_date = extracted_info.strip()
                     expected_date = answer.strip()
@@ -667,6 +667,27 @@ def process_nct_csv(
                         # Also check if expected class contains the extracted class
                         if not is_correct:
                             is_correct = any(extracted_class in exp_cls for exp_cls in expected_classes)
+                elif task == "regime_drug_class" or task == "latest_company_approval":
+                    # For drug class, use basic case-insensitive comparison
+                    extracted_class = extracted_info.strip().lower()
+                    expected_class = answer.strip().lower()
+                    
+                    # Direct match first
+                    if extracted_class == "":
+                        is_correct = False
+                    else: 
+                        if extracted_class == expected_class:
+                            is_correct = True
+                        else:
+                            # Check for partial matches for compound drug classes
+                            expected_classes = [cls.strip() for cls in expected_class.split(' ')]
+                            
+                            # Check if the extracted class contains any of the expected classes
+                            is_correct = any(exp_cls in extracted_class for exp_cls in expected_classes)
+                            
+                            # Also check if expected class contains the extracted class
+                            if not is_correct:
+                                is_correct = any(extracted_class in exp_cls for exp_cls in expected_classes)
                 if is_correct:
                     correct_count += 1
                 
@@ -729,7 +750,7 @@ def main():
                                 "track_second_authors_multiple_pmids_any",
                                 "track_start_date",
                                 "track_primary_outcomes", "track_secondary_outcomes", 
-                                "track_drug_route", "track_drug_class"], 
+                                "track_drug_route", "track_drug_class", "regime_drug_class", "latest_company_approval", "ceo_name", "patent_expiration_date", "exclusivity_Date"], 
                         default="track_trial_ids",
                         help="Task to perform",
                         )   

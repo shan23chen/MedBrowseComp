@@ -1,0 +1,729 @@
+question,correct_answer,model_output,extracted_info,correct,urls
+"For clinical trial NCT02294461 among the more effective regime ingredients, identify which ingredient starts with the letter E.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.","Nov 17, 2026","Based on the clinical trial NCT02294461 and the provided search results:
+
+*   Among more effective regime ingredients, **Enzalutamide** is the ingredient that starts with the letter ""E"".
+
+*   Regarding the exclusivity date for Enzalutamide, the search results do not provide a specific exclusivity date for Enzalutamide that would have been in effect up to December 2024. However, Lupin received FDA approval for generic Emtricitabine and Tenofovir Alafenamide tablets on December 13, 2024, and secured 180 days of market exclusivity.
+",December 2024,False,
+"For clinical trial NCT00262769 among the more effective regime ingredients, identify which ingredient starts with the letter G.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT02257736 among the more effective regime ingredients, identify which ingredient starts with the letter A.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT03800134 among the more effective regime ingredients, identify which ingredient starts with the letter P.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT00974311 among the more effective regime ingredients, identify which ingredient starts with the letter E.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.","Nov 17, 2026","Based on the clinical trial NCT00974311, one of the more effective regime ingredients that starts with the letter ""E"" is **Enzalutamide** ([11], [12], [13]).
+
+I am unable to find an exclusivity date for Enzalutamide that would be before December 2024.
+",December 2024,False,
+"For clinical trial NCT02838420 among the more effective regime ingredients, identify which ingredient starts with the letter C.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.","Jul 14, 2025","Based on the clinical trial NCT02838420, one of the more effective regime ingredients starting with the letter ""C"" is **Crizotinib**.
+
+Based on the information available, determining a specific exclusivity date for Crizotinib that falls before December 2024 is challenging. Here's why:
+
+*   **Exclusivity vs. Patents:** It's important to distinguish between drug patents and regulatory exclusivities. Both can prevent generic versions from entering the market, but they operate differently. Patents are granted by the U.S. Patent and Trademark Office and typically last for 20 years from the filing date. Exclusivities are granted by the FDA upon drug approval and can range from 6 months to 7 years, depending on the circumstances.
+*   **Crizotinib Approval Date:** Crizotinib was approved by the FDA in 2011.
+*   **Exclusivity Information:** The exclusivity for Crizotinib likely expired well before December 2024, given the typical exclusivity periods. Patents for some drugs containing crizotinib may be applicable to consider.
+*   **Generic Availability:** Crizotinib is now available as a generic, meaning any exclusivities have expired.
+
+Therefore, it's not possible to provide an exclusivity date in ""MM-DD-YYYY"" format that falls before December 2024 for Crizotinib.
+",December 2024,False,
+"For clinical trial NCT01108445 among the more effective regime ingredients, identify which ingredient starts with the letter E.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT00355108 among the more effective regime ingredients, identify which ingredient starts with the letter T.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT01938001 among the more effective regime ingredients, identify which ingredient starts with the letter L.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.","May 28, 2026","Okay, let's break down this clinical trial and identify the requested information.
+
+**Part 1: Identifying the Ingredient Starting with ""L""**
+
+Clinical trial NCT01938001, also known as the AUGMENT trial, studied the combination of lenalidomide plus rituximab versus placebo plus rituximab in patients with relapsed/refractory indolent lymphoma. Therefore, among the more effective regime ingredients, the ingredient that starts with the letter ""L"" is **lenalidomide.**
+
+**Part 2: Determining the Exclusivity Date of Lenalidomide**
+
+Based on the information available up to December 2024, lenalidomide is not the ingredient, with **linaclotide** being the right ingredient.
+
+Linzess (linaclotide) had an exclusivity expiration date of **06-12-2026** for the treatment of functional constipation in pediatric patients aged 6 to 17 years.
+",December 2024,False,
+"For clinical trial NCT00333775 among the more effective regime ingredients, identify which ingredient starts with the letter D.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT00391092 among the more effective regime ingredients, identify which ingredient starts with the letter D.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT00071799 among the more effective regime ingredients, identify which ingredient starts with the letter A.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.","Sep 1, 2027","Based on the clinical trial NCT00071799, one of the more effective regime ingredients is **Azacitidine**, which starts with the letter ""A"".
+
+I am unable to determine the exclusivity date for Azacitidine up to December 2024.
+",December 2024,False,
+"For clinical trial NCT01949337 among the more effective regime ingredients, identify which ingredient starts with the letter E.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.","Nov 17, 2026","Clinical trial NCT01949337 investigates treatments for metastatic castration-resistant prostate cancer. One arm of the trial studied the effectiveness of enzalutamide with or without abiraterone and prednisone. Another trial arm, TALAPRO-3, studied talazoparib in combination with enzalutamide.
+
+The ingredient starting with the letter ""E"" is **enzalutamide**.
+
+Based on the provided information, I cannot determine the exclusivity date for enzalutamide. However, I did find that the key patent for Emtricitabine/Rilpivirine/Tenofovir Alafenamide is slated to expire on **February 15, 2033**.
+
+",,False,
+"For clinical trial NCT00021255 among the more effective regime ingredients, identify which ingredient starts with the letter D.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT00720512 among the more effective regime ingredients, identify which ingredient starts with the letter I.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.","Feb 13, 2031","Based on the search results, here's the answer:
+
+*   **Ingredient starting with the letter I:** From the clinical trial NCT00720512, one of the more effective regime ingredients is **Irinotecan** [2].
+
+*   **Exclusivity date:** Determining the exclusivity date for Irinotecan requires knowing its last approval date. However, the provided context lacks the last approval date and specific exclusivity information for Irinotecan approved up to December 2024.
+",December 2024,False,
+"For clinical trial NCT02755597 among the more effective regime ingredients, identify which ingredient starts with the letter V.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.","May 15, 2026","Based on the clinical trial NCT02755597, one of the more effective regime ingredients that starts with the letter ""V"" is **Venetoclax**. Another ingredient that begins with V is **Bortezomib** - also known as Velcade.
+
+To determine the exclusivity date for Venetoclax, it's important to understand that exclusivity is a right granted by the FDA that can run concurrently with a patent or not.
+I am unable to find the exclusivity date of Venetoclax using the available search results.
+
+However, for **Valacyclovir (Valtrex)**, multiple patents and exclusivities have expired. The basic ""composition of matter"" patent expired in **June 2009**. Additionally, all exclusivities for Valtrex expired by **March 02, 2012**.
+",June 2009,False,
+"For clinical trial NCT03110562 among the more effective regime ingredients, identify which ingredient starts with the letter S.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT01667419 among the more effective regime ingredients, identify which ingredient starts with the letter V.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT00003934 among the more effective regime ingredients, identify which ingredient starts with the letter M.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT01478048 among the more effective regime ingredients, identify which ingredient starts with the letter B.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT00238238 among the more effective regime ingredients, identify which ingredient starts with the letter L.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.","May 28, 2026","For clinical trial NCT00238238, based on the endTB clinical trial results, among the more effective regime ingredients, the ingredient that starts with the letter L is **Levofloxacin**.
+
+Levofloxacin was first approved by the FDA in **1996**.
+
+Based on the search results, it's difficult to pinpoint a specific exclusivity date for levofloxacin that definitively applies up to December 2024. However, here's what the search reveals:
+
+*   **Patent Expiration:** Patents for Levaquin (levofloxacin) had expired as of 2010.
+*   **Generic Availability:** Generic versions of levofloxacin have been available.
+*   **Exclusivity:** Teva was awarded 180 days of generic drug exclusivity for Levofloxacin Tablets, 750 mg, as the first ANDA applicant with a paragraph IV patent certification.
+*   **180-Day Exclusivity:** Levofloxacin, Injection, 5 mg/mL; 50 mL, 100 mL and 150 mL vials, LEVAQUIN IN DEXTROSE 5% IN PLASTIC CONTAINER, Prior to 12/8/2003, Tentative Approval(s) Granted. Levofloxacin, Injection, 25 mg/mL, LEVAQUIN, Prior to 12/8/2003, Tentative Approval(s) Granted. Levofloxacin, Ophthalmic Solution, 0.005, QUIXIN, Prior to 12/8/2003
+",December 2024,False,
+"For clinical trial NCT00833833 among the more effective regime ingredients, identify which ingredient starts with the letter D.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.","Oct 3, 2026","Clinical trial NCT00833833 lists **Dexamethasone** as an ingredient among the more effective regime.
+
+Daclizumab, not dexamethasone, is an ingredient that starts with the letter ""D"". Daclizumab was approved by the FDA for multiple sclerosis with the trade name Zinbryta on **May 27, 2016**. However, Zinbryta was voluntarily withdrawn from the market by Biogen and AbbVie in March 2018 due to safety concerns. Therefore, there is no exclusivity date available up to December 2024.
+",March 2018,False,
+"For clinical trial NCT00005945 among the more effective regime ingredients, identify which ingredient starts with the letter M.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT00978549 among the more effective regime ingredients, identify which ingredient starts with the letter D.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT01973387 among the more effective regime ingredients, identify which ingredient starts with the letter I.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.","Aug 24, 2029","The clinical trial NCT01973387 investigates the effectiveness of Ibrutinib versus Rituximab in patients with relapsed or refractory chronic lymphocytic leukemia/small lymphocytic lymphoma. The ingredient that starts with the letter ""I"" among the regime ingredients is **Ibrutinib**.
+
+Based on the search results, the FDA approved the first generic drug containing Liraglutide in December 2024. All relevant FDA exclusivity periods for Liraglutide have expired, with patent litigation against potential generic competitors starting in 2017.
+
+Therefore, since the active ingredient is Ibrutinib and not Liraglutide, the exclusivity date is not applicable here.
+",December 2024,False,https://pubchem.ncbi.nlm.nih.gov/patent/US10004746
+"For clinical trial NCT00032175 among the more effective regime ingredients, identify which ingredient starts with the letter G.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT02864251 among the more effective regime ingredients, identify which ingredient starts with the letter P.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT01197560 among the more effective regime ingredients, identify which ingredient starts with the letter L.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.","May 28, 2026","For clinical trial NCT01197560, one of the more effective regime ingredients that starts with the letter ""L"" is **Lenalidomide**.
+
+I am unable to find the exclusivity date of Lenalidomide up to Dec 2024.
+",,False,
+"For clinical trial NCT00091442 among the more effective regime ingredients, identify which ingredient starts with the letter D.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT00033332 among the more effective regime ingredients, identify which ingredient starts with the letter D.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.","Oct 3, 2026","Based on the search results:
+
+1.  In clinical trial NCT00033332, one of the more effective regime ingredients that starts with the letter ""D"" is **Doxorubicin**.
+
+2.  Regarding the exclusivity date for Doxorubicin, it depends on the specific formulation and context:
+
+*   A Doxorubicin-containing microneedle array (D-MNA) patch received Minor Use in Major Species Designation (“MUMS”) from the FDA on December 9, 2024, for treating external squamous cell carcinoma (SCC) in horses. This designation entitles the company to an extended 7-year period of exclusive marketing following approval or conditional approval, provided that the company meets all requirements for maintaining the designation. If approved, this could lead to exclusivity until approximately **12-09-2031**.
+",,False,
+"For clinical trial NCT00843882 among the more effective regime ingredients, identify which ingredient starts with the letter L.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.","May 28, 2026","The clinical trial NCT00843882 studies ""Lenalidomide With or Without Epoetin Alfa in Treating Patients With Myelodysplastic Syndrome and Anemia."" Among these ingredients, **Lenalidomide** starts with the letter L.
+
+Based on the search results, I cannot determine the exclusivity date for Lenalidomide up to December 2024.
+",December 2024,False,
+"For clinical trial NCT00003013 among the more effective regime ingredients, identify which ingredient starts with the letter M.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT00012389 among the more effective regime ingredients, identify which ingredient starts with the letter I.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.","Feb 13, 2031","Based on the available information, I cannot identify the specific ingredients used in clinical trial NCT00012389, nor determine which one starts with the letter ""I"". Therefore, I am unable to provide the exclusivity date for any such ingredient.
+",,False,
+"For clinical trial NCT01193244 among the more effective regime ingredients, identify which ingredient starts with the letter P.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT00003643 among the more effective regime ingredients, identify which ingredient starts with the letter P.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT00022191 among the more effective regime ingredients, identify which ingredient starts with the letter G.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT00379041 among the more effective regime ingredients, identify which ingredient starts with the letter M.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT00446225 among the more effective regime ingredients, identify which ingredient starts with the letter D.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT00416507 among the more effective regime ingredients, identify which ingredient starts with the letter G.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT01231412 among the more effective regime ingredients, identify which ingredient starts with the letter S.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.","Nov 22, 2028","Based on the search results, here's the information you requested:
+
+*   **Ingredient starting with ""S""**: Among the more effective regime ingredients, *simeprevir* starts with the letter S.
+
+*   **Simeprevir Exclusivity Date**: Simeprevir (Olysio) was first approved by the FDA on November 22, 2013. The standard exclusivity period for a new chemical entity is five years. Therefore, the exclusivity date would be approximately November 22, 2018.
+    So the answer is: 11-22-2018
+",,False,
+"For clinical trial NCT02203643 among the more effective regime ingredients, identify which ingredient starts with the letter C.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT02950051 among the more effective regime ingredients, identify which ingredient starts with the letter V.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.","May 15, 2026","Based on the clinical trial NCT02950051, one of the ingredients that starts with the letter 'V' is **Venetoclax**.
+
+Based on the search results, the drug Valtrex (Valacyclovir) had its composition of matter patent expire in **June 2009**. It also had three exclusivities that expired in **March 02, 2012**.
+
+Therefore, since the question asks for the exclusivity date of Venetoclax up till Dec, 2024, and the search results do not specify the exclusivity date of Venetoclax, I am unable to provide the answer.
+",June 2009,False,
+"For clinical trial NCT01296503 among the more effective regime ingredients, identify which ingredient starts with the letter D.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.","Oct 3, 2026","For clinical trial NCT01296503, after reviewing several sources, it's challenging to pinpoint the *exact* ingredients of the ""more effective regime"" within the trial using the available search results. The search results do not specify the ingredients that starts with the letter D within the clinical trial NCT01296503.
+
+However, I can provide information on **Daclizumab**, which is a drug starting with the letter ""D"" that has been used in the treatment of relapsing forms of multiple sclerosis.
+
+*   **Approval and Discontinuation:** Daclizumab (brand name Zinbryta) was approved by the FDA for multiple sclerosis on May 27, 2016, but it was voluntarily withdrawn from the market by Biogen and AbbVie in March 2018 due to safety concerns. It was previously approved in 1997 as Zenapax for the prevention of organ rejection in renal transplant patients, but this version was discontinued in 2009.
+
+*   **Exclusivity:** According to the FDA, Daclizumab (Zinbryta) was granted exclusivity. Reference Product Exclusivity Expiry Date indicates (1) the date that is 12 years from the date of first licensure as described in 351(k)(7).
+
+Given the FDA approval date of May 27, 2016, the exclusivity period would extend 12 years from this date. Therefore, the exclusivity date would be **05-27-2028**.
+",March 2018,False,http://www.fda.gov/Drugs/DevelopmentApprovalProcess/HowDrugsareDevelopedandApproved/ApprovalApplications/TherapeuticBiologicApplications/Biosimilars/ucm411424.htm
+"For clinical trial NCT01556776 among the more effective regime ingredients, identify which ingredient starts with the letter L.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.","May 28, 2026","Based on the search results, here's the answer to your question:
+
+1.  **Ingredient starting with the letter L in clinical trial NCT01556776:**
+
+While I don't have direct access to the ingredients used in the clinical trial NCT01556776, search results mention that **Lemborexant** is the active ingredient in Dayvigo, a medication for insomnia. It is possible that Lemborexant was being investigated in this trial.
+
+2.  **Exclusivity date for Lemborexant (Dayvigo) if approved before December 2024:**
+
+Lemborexant (Dayvigo) was approved by the FDA on April 7, 2020. Drugs.com states Dayvigo's New Chemical Entity exclusivity expires on **April 7, 2025**. Therefore, the exclusivity date is: **04-07-2025**
+",December 2024,False,
+"For clinical trial NCT00121992 among the more effective regime ingredients, identify which ingredient starts with the letter D.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT02301156 among the more effective regime ingredients, identify which ingredient starts with the letter I.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.","Aug 24, 2029","Based on the search results, let's break down the answer:
+
+**1. Identifying the Ingredient Starting with ""I""**
+
+While the specific ingredients for clinical trial NCT02301156 aren't listed directly in the search results, one drug starting with the letter ""I"" that is frequently mentioned and relevant to clinical trials and cancer treatment is **Ibrutinib**.
+
+**2. Ibrutinib FDA Approval and Exclusivity**
+
+*   Ibrutinib (brand name Imbruvica) was first approved by the FDA on **November 13, 2013**, for mantle cell lymphoma (MCL).
+*   It received accelerated approval on **February 12, 2014**, for chronic lymphocytic leukemia (CLL).
+*   **March 4, 2016,** Ibrutinib was approved as a first-line treatment for CLL.
+
+Regarding exclusivity, one source mentions a patent with Pediatric Exclusivity (PED) leading to a potential injunction against generic launch until **September 03, 2036**.
+
+Therefore, the exclusivity date of Ibrutinib is **09-03-2036**.
+",,False,
+"For clinical trial NCT01718379 among the more effective regime ingredients, identify which ingredient starts with the letter L.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.","May 28, 2026","Based on the search results, specifically from the provided clinical trial information ([2]), the more effective regime ingredients in clinical trial NCT01718379 include:
+
+*   Astragalus membranaceus root extract
+*   Palmitoyl tripeptide-38
+*   Standardized rosemary leaf extract (ursolic acid)
+*   Tetrahexyldecyl ascorbate (THD ascorbate)
+*   Ubiquinone (coenzyme Q10)
+
+From this list, the ingredient that starts with the letter ""L"" is **Lutikizumab.** However, Lutikizumab is not one of the ingredients in the anti-aging cream used in clinical trial NCT01718379. It is a targeted therapy being investigated in a separate clinical trial for Crohn's Disease [7]. There appear to be no ingredients with the letter ""L"" used in the referenced trial.
+
+Regarding exclusivity, it's important to understand how exclusivity works for ingredients in listed medicines. In Australia, a successful applicant for a *new* permitted ingredient may have exclusive use of that ingredient for a 2-year period [1, 3].
+
+If Lutikizumab were a new ingredient approved for use in listed medicines in Australia, and it was last approved before December 2024, its exclusivity date would be determined by adding 2 years to its approval date.
+
+The search results indicate that as of January 8, 2025, Lactogen 1 (with L. reuteri) had been approved [4]. And according to one source L-alpha-Glycerylphosphorylcholine was approved as of March 13, 2024 in China [5].
+
+Commission Implementing Regulation (EU) 2024/1023 of 8 April 2024 amending Implementing Regulation (EU) 2017/2470 as regards the conditions of use of the novel food lactitol [12].
+
+Therefore, considering that there are multiple possible ""L"" ingredient, the following exclusivity dates are possible.
+*Assuming Lactogen 1 (with L. reuteri) was last approved on 01-08-2025: 01-08-2027
+*Assuming L-alpha-Glycerylphosphorylcholine was last approved on 03-13-2024: 03-13-2026
+*Assuming Lactitol was last approved on 04-08-2024: 04-08-2026
+",December 2024,False,http://www.fratinivergano.eu/en/22-april-2024/
+"For clinical trial NCT00003702 among the more effective regime ingredients, identify which ingredient starts with the letter M.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT00003128 among the more effective regime ingredients, identify which ingredient starts with the letter P.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT00003691 among the more effective regime ingredients, identify which ingredient starts with the letter P.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT00064077 among the more effective regime ingredients, identify which ingredient starts with the letter P.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT01924533 among the more effective regime ingredients, identify which ingredient starts with the letter O.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT01251107 among the more effective regime ingredients, identify which ingredient starts with the letter P.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT00424606 among the more effective regime ingredients, identify which ingredient starts with the letter D.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT00441922 among the more effective regime ingredients, identify which ingredient starts with the letter D.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT00012051 among the more effective regime ingredients, identify which ingredient starts with the letter D.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.","Oct 3, 2026","Based on the search results, here's the information you requested:
+
+**1. Identifying the Ingredient:**
+
+While I don't have direct access to the full details of clinical trial NCT00012051, ""Doxorubicin"" appears to be a likely candidate for an effective regime ingredient starting with the letter ""D"".
+
+**2. Exclusivity Date:**
+
+Based on the search results, here's what I found regarding Doxorubicin and exclusivity:
+
+*   **Doxil Exclusivity Extension:** An orphan designation for Doxil (a liposomal form of doxorubicin) in combination with bortezomib for multiple myeloma resulted in an exclusivity extension to **May 17, 2014**
+*   **Generic Doxil Approval:** In February 2013, the FDA approved a generic version of Doxil, but the exclusivity agreement for multiple myeloma treatment remained in place until May 17, 2014.
+*   **AVA6000 Orphan Drug Designation:** In September 2022, AVA6000 (a pro-drug of doxorubicin) received orphan drug designation for soft tissue sarcoma, potentially granting 7 years of market exclusivity if approved.
+*   **Doxorubicin-Containing Microneedle Array (D-MNA) Patch:** In December 2024, Medicus Pharma Ltd. announced that its Doxorubicin-containing microneedle array (D-MNA) patch received Minor Use in Major Species Designation (MUMS) from the FDA for treating external squamous cell carcinoma (SCC) in horses, entitling the company to an extended 7-year period of exclusive marketing following approval or conditional approval.
+
+Therefore, if we consider the last exclusivity approval date up till December 2024, that would be related to Medicus Pharma Ltd.'s Doxorubicin-containing microneedle array (D-MNA) patch. And if the D-MNA patch receives final approval, that would mean 7 years of market exclusivity following that potential approval date. Since the final approval date is still not available as of now, the exclusivity date is also unavailable.
+",February 2013,False,
+"For clinical trial NCT00344526 among the more effective regime ingredients, identify which ingredient starts with the letter D.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.","Oct 3, 2026","I was unable to find the ingredients of clinical trial NCT00344526. However, I did find some drugs that start with the letter ""D"" that were approved up until Dec, 2024.
+
+Based on my search, here's the relevant information:
+
+*   **Deutetetrabenazine:** Found as an active ingredient in AUSTEDO.
+*   **Donanemab:** An anti-amyloid plaque antibody
+
+For **Methylene Blue**, the exclusivity expiration date for ""INFORMATION ADDED TO THE CLINICAL STUDIES SECTION TO FULFILL A POST-MARKETING REQUIREMENT"" is **01-08-2027**.
+For **Tirbanibulin**, the New Chemical Entity Exclusivity(NCE) expires on **12-14-2025**.
+",,False,
+"For clinical trial NCT00430365 among the more effective regime ingredients, identify which ingredient starts with the letter L.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.","May 28, 2026","Based on the clinical trial NCT00430365, one of the more effective regime ingredients that starts with the letter ""L"" is **Lenalidomide**.
+
+Based on the research conducted, it's challenging to pinpoint a specific exclusivity date for Lenalidomide ending in December 2024. Exclusivity periods can vary depending on the specific formulation, indication, and regulatory circumstances.
+",December 2024,False,
+"For clinical trial NCT00478049 among the more effective regime ingredients, identify which ingredient starts with the letter D.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT01356511 among the more effective regime ingredients, identify which ingredient starts with the letter D.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.","Oct 3, 2026","I am unable to determine the ingredients of the clinical trial NCT01356511 and therefore cannot identify any ingredient starting with the letter ""D."" Consequently, I cannot provide the exclusivity date.
+",,False,
+"For clinical trial NCT01282463 among the more effective regime ingredients, identify which ingredient starts with the letter D.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT00190762 among the more effective regime ingredients, identify which ingredient starts with the letter P.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT00363415 among the more effective regime ingredients, identify which ingredient starts with the letter P.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT01469000 among the more effective regime ingredients, identify which ingredient starts with the letter P.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT03019588 among the more effective regime ingredients, identify which ingredient starts with the letter P.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT03425643 among the more effective regime ingredients, identify which ingredient starts with the letter P.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT03234972 among the more effective regime ingredients, identify which ingredient starts with the letter D.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.","Oct 3, 2026","Clinical trial NCT03234972 investigates the combination of daratumumab, bortezomib, and dexamethasone for relapsed or refractory multiple myeloma. Therefore, the ingredient that starts with the letter D is **daratumumab** and **dexamethasone**.
+
+Based on the search results, daratumumab (Darzalex) has received multiple FDA approvals. One of the latest approvals was on July 30, 2024, for transplant-eligible patients when Darzalex Faspro (daratumumab and hyaluronidase-fihj) was given with bortezomib, lenalidomide, and dexamethasone.
+
+However, daratumumab has several exclusivity end dates associated with different indications. The exclusivity end date for Darzalex in combination with pomalidomide and dexamethasone for the treatment of patients with multiple myeloma who have received at least two prior therapies including lenalidomide and a proteasome inhibitor is **06-16-2024**.
+",,False,"https://www.pharmalive.com/company-of-the-year-2018-johnson-johnson-defining-the-future-of-healthcare/, https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-isatuximab-irfc-multiple-myeloma-0"
+"For clinical trial NCT02162719 among the more effective regime ingredients, identify which ingredient starts with the letter P.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT00806819 among the more effective regime ingredients, identify which ingredient starts with the letter P.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT01345682 among the more effective regime ingredients, identify which ingredient starts with the letter M.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT01856478 among the more effective regime ingredients, identify which ingredient starts with the letter M.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT04988295 among the more effective regime ingredients, identify which ingredient starts with the letter P.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT01720225 among the more effective regime ingredients, identify which ingredient starts with the letter A.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.","Sep 1, 2027","Based on the clinical trial NCT01720225, which compared low-dose decitabine versus low-dose azacitidine in lower-risk MDS and MDS/MPN, the ingredient that starts with the letter ""A"" is **Azacitidine**.
+
+Azacitidine has several FDA approvals. The drug ""Vidaza"" (azacitidine) was initially approved on May 19, 2004. More recently, ""Onureg"" (oral azacitidine) was approved on September 1, 2020, for continued treatment of adult patients with acute myeloid leukemia (AML).
+
+According to the search results, Onureg has an exclusivity end date of **09-01-2027** for the indication: continued treatment of adult patients with acute myeloid leukemia who achieved first complete remission (CR) or complete remission with incomplete blood count recovery (CRi) following intensive induction chemotherapy and are not able to complete intensive curative therapy.
+",,False,"https://www.onuregpro.com/about-acute-myeloid-leukemia, https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-onureg-azacitidine-tablets-acute-myeloid-leukemia"
+"For clinical trial NCT01029262 among the more effective regime ingredients, identify which ingredient starts with the letter L.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.","May 28, 2026","For clinical trial NCT01029262, one of the more effective regime ingredients that starts with the letter ""L"" is **Lenalidomide** (Source: [3], [7], [8], [10]).
+
+Regarding the exclusivity date for Linagliptin, which was last approved up to December 2024:
+
+Based on the search results, Linagliptin's molecule patent is set to expire in the US in **2025** (Source: [2]). However, in Europe, it will remain active until May 2033. Additionally, the formulation patent in the US is set to expire in November 2027. For Tradjenta (linagliptin), the exclusivity expiration dates are June 20, 2026 and December 20, 2026 (Source: [4]).
+
+Therefore, there are different patents and exclusivities expiring at different times. A simple exclusivity date cannot be given in MM-DD-YYYY format
+",December 2024,False,
+"For clinical trial NCT00256776 among the more effective regime ingredients, identify which ingredient starts with the letter D.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.","Oct 3, 2026","Based on the information available, it is not possible to determine the specific ingredients used in clinical trial NCT00256776, including those that start with the letter ""D."" Therefore, I cannot identify the relevant ingredient or its exclusivity date.
+",,False,
+"For clinical trial NCT00079274 among the more effective regime ingredients, identify which ingredient starts with the letter I.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.","Feb 13, 2031","For clinical trial NCT00079274, the regime ingredients include irinotecan hydrochloride, fluorouracil, leucovorin calcium, and oxaliplatin. Therefore, the ingredient that starts with the letter ""I"" is **Irinotecan**.
+
+Regarding the exclusivity date of Irinotecan:
+
+*   **Onivyde (liposomal irinotecan)**, used for pancreatic cancer, has orphan market exclusivity in the EU until **October 18, 2026** due to its authorization on October 14, 2016.
+*   **Irinotecan liposome injection** has an exclusivity end date of **10/22/2022**.
+
+Since you asked for the exclusivity date up to December 2024, the exclusivity end date for irinotecan liposome injection on **10/22/2022** falls within this period.
+
+Therefore, the answer is: **10-22-2022**
+",December 2024,False,
+"For clinical trial NCT03838159 among the more effective regime ingredients, identify which ingredient starts with the letter P.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT00004100 among the more effective regime ingredients, identify which ingredient starts with the letter G.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT00026338 among the more effective regime ingredients, identify which ingredient starts with the letter G.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT00002582 among the more effective regime ingredients, identify which ingredient starts with the letter C.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT00513955 among the more effective regime ingredients, identify which ingredient starts with the letter B.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT00260689 among the more effective regime ingredients, identify which ingredient starts with the letter C.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT01998503 among the more effective regime ingredients, identify which ingredient starts with the letter B.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT00417911 among the more effective regime ingredients, identify which ingredient starts with the letter B.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT00003782 among the more effective regime ingredients, identify which ingredient starts with the letter D.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT02775006 among the more effective regime ingredients, identify which ingredient starts with the letter D.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT03150875 among the more effective regime ingredients, identify which ingredient starts with the letter D.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT00718549 among the more effective regime ingredients, identify which ingredient starts with the letter C.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT04538664 among the more effective regime ingredients, identify which ingredient starts with the letter P.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT03588091 among the more effective regime ingredients, identify which ingredient starts with the letter D.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT02288247 among the more effective regime ingredients, identify which ingredient starts with the letter E.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.","Nov 17, 2026","The clinical trial NCT02288247, also known as the PRESIDE trial, involved the use of enzalutamide.
+
+Among the more effective regime ingredients, enzalutamide starts with the letter E.
+
+Based on the search results, Emtricitabine/Tenofovir disoproxil Mylan, used for HIV infections, has a data exclusivity expiration date of **12-16-2024** in Europe. Descovy (emtricitabine and tenofovir alafenamide) has an exclusivity end date of **09-28-2024** for a specific indication in pediatric patients.
+",,False,
+"For clinical trial NCT03009981 among the more effective regime ingredients, identify which ingredient starts with the letter A.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT01639001 among the more effective regime ingredients, identify which ingredient starts with the letter C.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.","Jul 14, 2025","Based on the search results, here's the information you requested:
+
+*   **Ingredient starting with the letter C:** In clinical trial NCT01639001, considering more effective regime ingredients, an ingredient that starts with the letter ""C"" is **Cyclophosphamide.**
+
+*   **Exclusivity date:** Cyclophosphamide has been approved by the FDA. Based on the information available, the generic launch date is estimated to be **December 01, 2035.**
+",,False,
+"For clinical trial NCT00002870 among the more effective regime ingredients, identify which ingredient starts with the letter T.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT02898077 among the more effective regime ingredients, identify which ingredient starts with the letter P.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT00651261 among the more effective regime ingredients, identify which ingredient starts with the letter M.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT00090051 among the more effective regime ingredients, identify which ingredient starts with the letter C.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT01122472 among the more effective regime ingredients, identify which ingredient starts with the letter L.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.","May 28, 2026","For clinical trial NCT01122472, the ingredients used in the more effective regime include Lenalidomide, Rituximab and Tazemetostat. Among these, the ingredient starting with the letter 'L' is **Lenalidomide**.
+
+Based on my current knowledge, I cannot confirm the exclusivity date for Lenalidomide as of December 2024. However, I can provide some general information regarding regulatory exclusivities. Regulatory exclusivities can range from 180 days to 7 years, depending on the specific circumstances.
+",December 2024,False,
+"For clinical trial NCT01168973 among the more effective regime ingredients, identify which ingredient starts with the letter D.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT00052936 among the more effective regime ingredients, identify which ingredient starts with the letter P.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT00703326 among the more effective regime ingredients, identify which ingredient starts with the letter D.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT00084318 among the more effective regime ingredients, identify which ingredient starts with the letter D.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT01307605 among the more effective regime ingredients, identify which ingredient starts with the letter L.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.","May 28, 2026","The ingredient starting with the letter ""L"" among more effective regime ingredients in clinical trial NCT01307605 is **Levonorgestrel**.
+
+Based on the search results, Plan B (levonorgestrel) was first approved in 1999. The marketing exclusivity held by Duramed for the nonprescription use expired on **08-24-2009**.
+",,False,
+"For clinical trial NCT02340221 among the more effective regime ingredients, identify which ingredient starts with the letter F.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT02048371 among the more effective regime ingredients, identify which ingredient starts with the letter R.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT01776840 among the more effective regime ingredients, identify which ingredient starts with the letter I.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.","Aug 24, 2029","Based on the provided information regarding clinical trial NCT01776840, the ingredients used in the more effective regime include bendamustine, rituximab and **ibrutinib**.
+
+The ingredient starting with the letter ""I"" is **Ibrutinib**. Ibrutinib was approved by the US Food and Drug Administration in February 2013.
+
+Determining the exact exclusivity date for ibrutinib is complex. Here's why:
+
+*   **Multiple Exclusivities**: Pharmaceutical products can have different types of exclusivity (e.g., New Chemical Entity exclusivity, Orphan Drug exclusivity, Pediatric exclusivity) that may run concurrently or consecutively. Each type provides a different period of market protection.
+*   **Patent Extensions**: Patent Term Extensions (PTEs) can extend a drug's patent life, but the maximum extension is limited.
+*   **Data vs. Market Exclusivity**: Data exclusivity protects clinical trial data, while market exclusivity prevents the approval of generic versions.
+
+Given that ibrutinib was approved in February 2013, any New Chemical Entity (NCE) exclusivity (typically 5 years) would have expired in February 2018. It is difficult to provide an exact exclusivity date without knowing all applicable patents, extensions, and exclusivities granted for Ibrutinib.
+",February 2013,False,
+"For clinical trial NCT00376792 among the more effective regime ingredients, identify which ingredient starts with the letter D.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT00445601 among the more effective regime ingredients, identify which ingredient starts with the letter G.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT00004001 among the more effective regime ingredients, identify which ingredient starts with the letter P.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT02672527 among the more effective regime ingredients, identify which ingredient starts with the letter T.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT01298713 among the more effective regime ingredients, identify which ingredient starts with the letter E.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT03117049 among the more effective regime ingredients, identify which ingredient starts with the letter P.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT00002662 among the more effective regime ingredients, identify which ingredient starts with the letter P.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT01038661 among the more effective regime ingredients, identify which ingredient starts with the letter D.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT01564537 among the more effective regime ingredients, identify which ingredient starts with the letter D.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.","Oct 3, 2026","The ingredients in clinical trial NCT01564537 include ixazomib, lenalidomide, and dexamethasone. Among these, **dexamethasone** is the ingredient that starts with the letter ""D.""
+
+Dexamethasone is a component of the NRD combination therapy, approved by the U.S. FDA in 2015. Determining the exclusivity date for dexamethasone is complex because it's an older drug and its exclusivity may have already expired. However, newer formulations or uses might have different exclusivity periods.
+
+Therefore, based on available information, I am unable to provide a specific exclusivity date for dexamethasone that is valid up to December 2024.
+",December 2024,False,
+"For clinical trial NCT01850524 among the more effective regime ingredients, identify which ingredient starts with the letter D.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.","Oct 3, 2026","For clinical trial NCT01850524, the more effective regime includes ixazomib, lenalidomide, and **dexamethasone**. Thus, the ingredient starting with the letter ""D"" is **dexamethasone**.
+
+Based on the provided information, I cannot determine the exclusivity date for dexamethasone.
+
+",,False,
+"For clinical trial NCT00115700 among the more effective regime ingredients, identify which ingredient starts with the letter C.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT02993523 among the more effective regime ingredients, identify which ingredient starts with the letter V.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.","May 15, 2026","For clinical trial NCT02993523, the more effective regime ingredients include venetoclax and azacitidine. The ingredient that starts with the letter V is **venetoclax**.
+
+I am unable to determine the exclusivity date for venetoclax that was last approved up till Dec, 2024.
+",,False,
+"For clinical trial NCT00222677 among the more effective regime ingredients, identify which ingredient starts with the letter A.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,
+"For clinical trial NCT00006232 among the more effective regime ingredients, identify which ingredient starts with the letter D.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.","Oct 3, 2026","I do not have enough information to answer this question accurately. I cannot identify the more effective regime ingredients for clinical trial NCT00006232, nor can I identify if any start with the letter D. If I had this information I could look up the exclusivity date of a drug.
+",,False,
+"For clinical trial NCT00685646 among the more effective regime ingredients, identify which ingredient starts with the letter Z.
+
+Then, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?
+Return only the date in MM-DD-YYYY format of date: MM-DD-YYYY.",,ERROR: 'float' object has no attribute 'strip',,False,

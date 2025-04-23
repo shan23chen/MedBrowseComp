@@ -1,3 +1,6 @@
 {
-  "response": "The clinical trial that best describes the efficacy of CMF (Cyclophosphamide, Methotrexate, and Fluorouracil) compared to the combination of Goserelin and Tamoxifen in treating breast cancer is the Austrian Breast and Colorectal Cancer Study Group Trial 5. This trial demonstrated that the combination of Goserelin and Tamoxifen was significantly more effective than CMF in the adjuvant treatment of premenopausal patients with hormone-responsive breast cancer. ([ascopubs.org](https://ascopubs.org/doi/10.1200/JCO.2002.09.112?utm_source=openai))\n\nHowever, this study does not have a ClinicalTrials.gov identifier (NCT number) as it was conducted before the widespread adoption of the ClinicalTrials.gov registry. Therefore, there is no NCT number associated with this trial. "
+  "response": {
+    "text": "Based on the clinical trial NCT03800134, one of the more effective regime ingredients that starts with the letter \"P\" is **platinum-containing chemotherapy.** In this trial, durvalumab was used in combination with platinum-containing chemotherapy.\n\nI am unable to find when the exclusivity date is for platinum-containing chemotherapy.\n",
+    "citations": []
+  }
 }

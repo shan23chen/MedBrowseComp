@@ -1,3 +1,6 @@
 {
-  "response": "The clinical trial that best describes the efficacy of gemcitabine monotherapy compared to the combination of cisplatin and gemcitabine in treating cholangiocarcinoma is identified by the ClinicalTrials.gov identifier NCT00262769. This study demonstrated that the combination therapy significantly improved overall survival compared to gemcitabine alone. ([nejm.org](https://www.nejm.org/doi/full/10.1056/NEJMoa0908721?utm_source=openai)) "
+  "response": {
+    "text": "The clinical trial NCT02257736 investigates the effectiveness of apalutamide in combination with abiraterone acetate and prednisone for metastatic, castration-resistant prostate cancer.\n\nTherefore, the ingredient starting with the letter 'A' is **apalutamide** and **abiraterone acetate**.\n\nBased on the search results, Akeega, a combination drug containing niraparib and abiraterone acetate, was approved for use in mCRPC. However, the exclusivity date for apalutamide and abiraterone acetate individually could not be determined from the search results.\n",
+    "citations": []
+  }
 }
