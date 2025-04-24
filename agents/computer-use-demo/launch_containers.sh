@@ -3,17 +3,16 @@
 # --- Configuration ---
 IMAGE_NAME="computer-use-demo"
 DEFAULT_NUM_INSTANCES=2 # Default number of instances if not provided
-SHARED_VOLUME_HOST_PATH="$(pwd)/shared_docker_volume" # Host path for the shared volume (created in the script's directory)
-SHARED_VOLUME_CONTAINER_PATH="/data" # Mount point inside the container
+SHARED_VOLUME_HOST_PATH="$(pwd)/shared_docker_volume" # Host path for the shared volume
+SHARED_VOLUME_CONTAINER_PATH="/home/computeruse/shared_data" # Mount point inside the container
 CSV_FILENAME="shared_data.csv"       # Name of the shared CSV file
-STREAMLIT_INTERNAL_PORT=8501         # Define the internal Streamlit port
+
+# Default display settings
+DEFAULT_WIDTH=1024
+DEFAULT_HEIGHT=768
 
 # Ports required by the container internally that need to be published
-# Ensure STREAMLIT_INTERNAL_PORT is included here if it needs mapping
-CONTAINER_PORTS=(5900 ${STREAMLIT_INTERNAL_PORT} 6080 8080)
-# Remove potential duplicates if STREAMLIT_INTERNAL_PORT was already in the list
-CONTAINER_PORTS=($(printf "%s\n" "${CONTAINER_PORTS[@]}" | sort -u))
-
+CONTAINER_PORTS=(6080 8000)   # VNC and HTTP ports from your entrypoint.sh
 
 # --- Helper Functions ---
 
@@ -28,8 +27,47 @@ error_exit() {
     exit 1
 }
 
+# Function to check if a port is available
+check_port_available() {
+    local port=$1
+    if command_exists netstat; then
+        if netstat -tuln | grep -q ":$port "; then
+            return 1  # Port is in use
+        else
+            return 0  # Port is available
+        fi
+    elif command_exists ss; then
+        if ss -tuln | grep -q ":$port "; then
+            return 1  # Port is in use
+        else
+            return 0  # Port is available
+        fi
+    else
+        echo "Warning: Neither netstat nor ss found. Port availability check might not be reliable."
+        return 0  # Assume port is available
+    fi
+}
+
+# Function to find an available port starting from a base port
+find_available_port() {
+    local base_port=$1
+    local port=$base_port
+    local max_attempts=100
+    local attempt=0
+    
+    while ! check_port_available $port && [ $attempt -lt $max_attempts ]; do
+        port=$((port + 1))
+        attempt=$((attempt + 1))
+    done
+    
+    if [ $attempt -eq $max_attempts ]; then
+        error_exit "Could not find an available port after $max_attempts attempts."
+    fi
+    
+    echo $port
+}
+
 # Function to get the assigned host port for a container port
-# Uses `docker port` and extracts the numeric port after the last colon
 get_host_port() {
     local container_id_or_name="$1"
     local container_port="$2"
@@ -38,7 +76,7 @@ get_host_port() {
 
     # Retry mechanism in case the port info isn't immediately available
     for _ in {1..5}; do
-        port_info=$(docker port "$container_id_or_name" "$container_port/tcp" 2>/dev/null) # Specify TCP
+        port_info=$(docker port "$container_id_or_name" "$container_port/tcp" 2>/dev/null)
         if [ -n "$port_info" ]; then
             # Extract the port number after the last colon (handles IPv4/IPv6)
             host_port=$(echo "$port_info" | awk -F: '{print $NF}' | head -n 1)
@@ -54,6 +92,42 @@ get_host_port() {
     return 1
 }
 
+# Function to show usage information
+show_usage() {
+    echo "Usage: $0 [OPTIONS]"
+    echo "Launch multiple containers using the same image with automatic port mapping."
+    echo
+    echo "Options:"
+    echo "  -i IMAGE_NAME    Specify the Docker image name (default: $IMAGE_NAME)"
+    echo "  -w WIDTH         Set the display width (default: $DEFAULT_WIDTH)"
+    echo "  -h HEIGHT        Set the display height (default: $DEFAULT_HEIGHT)"
+    echo "  -n NUM           Set the number of containers to launch (default: prompt user)"
+    echo "  -s SHARED_PATH   Set the host path for shared volume (default: $SHARED_VOLUME_HOST_PATH)"
+    echo "  -b               Build the Docker image before launching containers"
+    echo "  -f DOCKERFILE    Path to Dockerfile (default: ./Dockerfile)"
+    echo "  -?               Show this help message"
+    echo
+    exit 0
+}
+
+# --- Parse command-line options ---
+BUILD_IMAGE=false
+DOCKERFILE_PATH="./Dockerfile"
+NUM_INSTANCES=""
+
+while getopts "i:w:h:n:s:bf:?" opt; do
+    case $opt in
+        i) IMAGE_NAME="$OPTARG" ;;
+        w) DEFAULT_WIDTH="$OPTARG" ;;
+        h) DEFAULT_HEIGHT="$OPTARG" ;;
+        n) NUM_INSTANCES="$OPTARG" ;;
+        s) SHARED_VOLUME_HOST_PATH="$OPTARG" ;;
+        b) BUILD_IMAGE=true ;;
+        f) DOCKERFILE_PATH="$OPTARG" ;;
+        ?) show_usage ;;
+        \?) echo "Invalid option: -$OPTARG" >&2; exit 1 ;;
+    esac
+done
 
 # --- Sanity Checks ---
 
@@ -70,18 +144,18 @@ if ! docker info > /dev/null 2>&1; then
 fi
 echo "[OK] Docker is installed and running."
 
-# Check if gcloud is installed (needed for credentials path)
-if ! command_exists gcloud; then
-    error_exit "gcloud command not found. Please install Google Cloud SDK."
+# Build the image if requested
+if [ "$BUILD_IMAGE" = true ]; then
+    if [ ! -f "$DOCKERFILE_PATH" ]; then
+        error_exit "Dockerfile not found at $DOCKERFILE_PATH"
+    fi
+    
+    echo "Building Docker image: $IMAGE_NAME"
+    if ! docker build -t "$IMAGE_NAME" -f "$DOCKERFILE_PATH" .; then
+        error_exit "Failed to build Docker image."
+    fi
+    echo "[OK] Docker image built successfully."
 fi
-echo "[OK] gcloud command found."
-
-# Check for gcloud application default credentials
-GCLOUD_CRED_PATH="$HOME/.config/gcloud/application_default_credentials.json"
-if [ ! -f "$GCLOUD_CRED_PATH" ]; then
-    error_exit "gcloud application default credentials not found at '$GCLOUD_CRED_PATH'. Run 'gcloud auth application-default login'."
-fi
-echo "[OK] Found gcloud credentials at '$GCLOUD_CRED_PATH'."
 
 # Check if the Docker image exists
 if ! docker image inspect "$IMAGE_NAME" > /dev/null 2>&1; then
@@ -94,39 +168,20 @@ if ! docker image inspect "$IMAGE_NAME" > /dev/null 2>&1; then
         fi
         echo "[OK] Docker image '$IMAGE_NAME' built successfully."
     else
-        error_exit "Docker image '$IMAGE_NAME' not found. Please build it first (e.g., 'docker build . -t $IMAGE_NAME')."
+        error_exit "Docker image '$IMAGE_NAME' not found. Please build it first."
     fi
 else
     echo "[OK] Docker image '$IMAGE_NAME' found locally."
 fi
 
-
-# Check for required environment variables
-if [ -z "$VERTEX_REGION" ]; then
-    read -p "Enter VERTEX_REGION (e.g., us-east5): " VERTEX_REGION
-    if [ -z "$VERTEX_REGION" ]; then
-        error_exit "VERTEX_REGION environment variable is not set."
-    fi
-    export VERTEX_REGION # Export it for the 'docker run' commands
-fi
-echo "[OK] VERTEX_REGION is set to '$VERTEX_REGION'."
-
-if [ -z "$VERTEX_PROJECT_ID" ]; then
-    read -p "Enter VERTEX_PROJECT_ID: " VERTEX_PROJECT_ID
-    if [ -z "$VERTEX_PROJECT_ID" ]; then
-        error_exit "VERTEX_PROJECT_ID environment variable is not set."
-    fi
-    export VERTEX_PROJECT_ID # Export it for the 'docker run' commands
-fi
-echo "[OK] VERTEX_PROJECT_ID is set to '$VERTEX_PROJECT_ID'."
-
 echo "--- Pre-flight Checks Passed ---"
 echo
 
-# --- Get Number of Instances ---
-
-read -p "How many container instances do you want to launch? [Default: $DEFAULT_NUM_INSTANCES]: " num_instances_input
-NUM_INSTANCES=${num_instances_input:-$DEFAULT_NUM_INSTANCES}
+# --- Get Number of Instances if not provided via command line ---
+if [ -z "$NUM_INSTANCES" ]; then
+    read -p "How many container instances do you want to launch? [Default: $DEFAULT_NUM_INSTANCES]: " num_instances_input
+    NUM_INSTANCES=${num_instances_input:-$DEFAULT_NUM_INSTANCES}
+fi
 
 # Validate input is a positive integer
 if ! [[ "$NUM_INSTANCES" =~ ^[1-9][0-9]*$ ]]; then
@@ -161,104 +216,91 @@ echo
 # --- Launch Containers ---
 
 echo "--- Launching Containers ---"
-# Array to store the streamlit URLs for the final summary
-declare -a streamlit_urls=()
+# Arrays to store container information and access URLs
+declare -a container_info=()
+declare -a vnc_urls=()
+
+# Base ports for services
+BASE_VNC_PORT=6080
+BASE_HTTP_PORT=8000
 
 for (( i=1; i<=NUM_INSTANCES; i++ ))
 do
     echo "Launching instance $i of $NUM_INSTANCES..."
-    instance_name="${IMAGE_NAME}-instance-${i}"
-    port_mappings="" # String to build port flags
-
-    # Add a -p flag for each container port, letting Docker assign the host port
-    for container_port in "${CONTAINER_PORTS[@]}"; do
-        port_mappings+="-p ${container_port} "
-    done
-
-    # Construct the docker run command
-    docker_run_cmd="docker run -d --name $instance_name \
+    
+    # Find available ports
+    vnc_port=$(find_available_port $BASE_VNC_PORT)
+    http_port=$(find_available_port $BASE_HTTP_PORT)
+    
+    # Create a unique container name
+    container_name="${IMAGE_NAME}-instance-${i}"
+    
+    # This is the key change: We set a custom hostname that matches the CSV naming pattern
+    container_hostname="$container_name"
+    
+    echo "  Container Name: $container_name"
+    echo "  Container Hostname: $container_hostname"
+    echo "  VNC Port: $vnc_port (mapped from 6080)"
+    echo "  HTTP Port: $http_port (mapped from 8000)"
+    
+    # Launch the container with explicit hostname set
+    container_id=$(docker run -d \
+        --name "$container_name" \
+        --hostname "$container_hostname" \
         -e API_PROVIDER=vertex \
         -e CLOUD_ML_REGION=$VERTEX_REGION \
         -e ANTHROPIC_VERTEX_PROJECT_ID=$VERTEX_PROJECT_ID \
-        -v \"$GCLOUD_CRED_PATH:/home/computeruse/.config/gcloud/application_default_credentials.json:ro\" \
-        -v \"$SHARED_VOLUME_HOST_PATH:$SHARED_VOLUME_CONTAINER_PATH\" \
-        $port_mappings \
-        $IMAGE_NAME"
-
-    echo "Executing: $docker_run_cmd"
-
-    # Execute the command
-    container_id=$(eval $docker_run_cmd) # Use eval to handle spaces/quotes correctly
-
+        -p "$vnc_port:6080" \
+        -p "$http_port:8000" \
+        -e DISPLAY_NUM="$i" \
+        -e HEIGHT="$DEFAULT_HEIGHT" \
+        -e WIDTH="$DEFAULT_WIDTH" \
+        -v $HOME/.config/gcloud/application_default_credentials.json:/home/computeruse/.config/gcloud/application_default_credentials.json \
+        -v "$SHARED_VOLUME_HOST_PATH:$SHARED_VOLUME_CONTAINER_PATH" \
+        "$IMAGE_NAME")
+    
     if [ $? -ne 0 ]; then
-        echo "ERROR: Failed to start container instance $i ($instance_name)." >&2
-        streamlit_urls+=("Instance $i ($instance_name): FAILED_TO_START") # Add failure notice
+        echo "ERROR: Failed to start container instance $i ($container_name)." >&2
+        vnc_urls+=("Instance $i ($container_name): FAILED_TO_START")
     else
-        echo "Successfully launched instance $i:"
-        echo "  Container Name: $instance_name"
         echo "  Container ID: $container_id"
-        echo "  Fetching assigned ports..."
-
-        # Retrieve and display the dynamically assigned ports
-        echo "  Mapped Ports (Host:Container):"
-        all_ports_found=true
-        streamlit_port_found_for_instance=false
-        current_instance_streamlit_url="" # Store URL for this instance
-
-        for container_port in "${CONTAINER_PORTS[@]}"; do
-            host_port=$(get_host_port "$container_id" "$container_port")
-            if [ "$host_port" == "N/A" ]; then
-                echo "    ?:$container_port (Failed to retrieve host port)"
-                all_ports_found=false
-                # If Streamlit port retrieval failed
-                if [ "$container_port" -eq "$STREAMLIT_INTERNAL_PORT" ]; then
-                     current_instance_streamlit_url="Instance $i ($instance_name): Streamlit port $STREAMLIT_INTERNAL_PORT mapping retrieval failed"
-                     streamlit_port_found_for_instance="failed" # Mark as failed retrieval
-                fi
-            else
-                echo "    $host_port:$container_port"
-                # Check if this is the Streamlit port
-                if [ "$container_port" -eq "$STREAMLIT_INTERNAL_PORT" ]; then
-                    current_instance_streamlit_url="Instance $i ($instance_name): http://localhost:$host_port"
-                    streamlit_port_found_for_instance=true # Mark as found
-                fi
-            fi
-        done
-
-        # Add the determined Streamlit URL (or failure message) to the summary array
-        if [ "$streamlit_port_found_for_instance" = true ]; then
-             streamlit_urls+=("$current_instance_streamlit_url")
-        elif [ "$streamlit_port_found_for_instance" = "failed" ]; then
-             streamlit_urls+=("$current_instance_streamlit_url")
-        else
-             # This case should ideally not happen if STREAMLIT_INTERNAL_PORT is in CONTAINER_PORTS
-             # but added for robustness
-             streamlit_urls+=("Instance $i ($instance_name): Streamlit port $STREAMLIT_INTERNAL_PORT mapping not found in output.")
-        fi
-
-
-        if ! $all_ports_found; then
-             echo "  Warning: Could not retrieve all assigned host ports. Check with 'docker port $instance_name'."
-        fi
-
         echo "  Shared Volume: '$SHARED_VOLUME_HOST_PATH' (Host) -> '$SHARED_VOLUME_CONTAINER_PATH' (Container)"
-        echo "---"
+        
+        # Store container information
+        container_info+=("Container: $container_name | VNC Port: $vnc_port | HTTP Port: $http_port")
+        vnc_urls+=("Instance $i ($container_name): http://localhost:$vnc_port/vnc.html")
+        
+        # Increment base ports for next iteration to reduce search time
+        BASE_VNC_PORT=$((vnc_port + 1))
+        BASE_HTTP_PORT=$((http_port + 1))
     fi
-    # No sleep needed here usually
+    
+    echo "---"
 done
 
 echo "--- Container Launch Process Complete ---"
 echo
 
-# --- Output Streamlit Summary ---
-echo "--- Streamlit Access URLs ---"
-if [ ${#streamlit_urls[@]} -eq 0 ]; then
-    echo "No container instances were attempted or launched."
+# --- Output VNC Access URLs ---
+echo "--- VNC Access URLs ---"
+if [ ${#vnc_urls[@]} -eq 0 ]; then
+    echo "No container instances were successfully launched."
 else
-    printf "%s\n" "${streamlit_urls[@]}" # Print each URL/message on a new line
+    printf "%s\n" "${vnc_urls[@]}" # Print each URL on a new line
 fi
 echo "-----------------------------"
 echo
+
+# --- Container Launch Summary ---
+if [ ${#container_info[@]} -gt 0 ]; then
+    echo "Container Launch Summary:"
+    echo "========================="
+    for info in "${container_info[@]}"; do
+        echo "$info"
+    done
+    echo "========================="
+    echo
+fi
 
 # --- Final Instructions ---
 echo "You can list running containers using: docker ps"
@@ -269,4 +311,3 @@ echo "  docker stop \$(docker ps -q --filter name=${IMAGE_NAME}-instance-)"
 echo "To remove stopped containers:"
 echo "  docker rm \$(docker ps -aq --filter status=exited --filter name=${IMAGE_NAME}-instance-)"
 echo "Shared data is available in: $SHARED_VOLUME_HOST_PATH"
-

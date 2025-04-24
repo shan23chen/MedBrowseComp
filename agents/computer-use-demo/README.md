@@ -114,7 +114,7 @@ docker run \
     -e CLOUD_ML_REGION=$VERTEX_REGION \
     -e ANTHROPIC_VERTEX_PROJECT_ID=$VERTEX_PROJECT_ID \
     -v $HOME/.config/gcloud/application_default_credentials.json:/home/computeruse/.config/gcloud/application_default_credentials.json \
-    -p 5900:5900 \
+    -p 5901:5900 \
     -p 8501:8501 \
     -p 6080:6080 \
     -p 8080:8080 \
