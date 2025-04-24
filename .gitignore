@@ -1,5 +1,6 @@
 .env
 .venv
+venv
 .out
 .json
 .DS_Store
