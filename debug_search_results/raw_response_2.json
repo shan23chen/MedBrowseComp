@@ -1,6 +1,6 @@
 {
   "response": {
-    "text": "The clinical trial NCT02257736 investigates the effectiveness of apalutamide in combination with abiraterone acetate and prednisone for metastatic, castration-resistant prostate cancer.\n\nTherefore, the ingredient starting with the letter 'A' is **apalutamide** and **abiraterone acetate**.\n\nBased on the search results, Akeega, a combination drug containing niraparib and abiraterone acetate, was approved for use in mCRPC. However, the exclusivity date for apalutamide and abiraterone acetate individually could not be determined from the search results.\n",
+    "text": "Janssen Biotech, Inc. is a subsidiary of Johnson & Johnson (J&J). Johnson & Johnson is traded on the New York Stock Exchange (NYSE) under the ticker symbol \"JNJ\". Therefore, the answer is:\n\nSTOCK_TICKER: JNJ\n",
     "citations": []
   }
 }

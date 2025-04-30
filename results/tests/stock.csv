@@ -1,0 +1,408 @@
+question,correct_answer,model_output,extracted_info,correct,urls,ticker,date_of_interest
+please only return the US stock ticker (or OTC ticker if applicable) of ASTELLAS PHARMA US INC in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,ASTELLAS,"ALPMY: ALPMY
+",,False,,ALPMY,"Aug 4, 2020"
+please only return the US stock ticker (or OTC ticker if applicable) of SUN PHARMACEUTICAL INDUSTRIES LTD in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,SUN PHARM,"SMPQY: SMPQY
+",,False,,SMPQY,"Jul 16, 2018"
+please only return the US stock ticker (or OTC ticker if applicable) of JANSSEN BIOTECH INC in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,JANSSEN BIOTECH,"Janssen Biotech, Inc. is a subsidiary of Johnson & Johnson (J&J). Johnson & Johnson is traded on the New York Stock Exchange (NYSE) under the ticker symbol ""JNJ"". Therefore, the answer is:
+
+STOCK_TICKER: JNJ
+",,False,,STOCK_TICKER,"Feb 17, 2023"
+please only return the US stock ticker (or OTC ticker if applicable) of SHILPA MEDICARE LTD in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,SHILPA,"Based on the search results, SHILPA MEDICARE LTD is listed on the NSE (National Stock Exchange of India) under the ticker SHILPAMED and on the BSE (Bombay Stock Exchange) under the ticker 530549. It does not appear to be listed on any US stock exchange or OTC market.
+
+Therefore, the answer is: NOT_LISTED
+",,False,,NOT_LISTED,"May 22, 2023"
+please only return the US stock ticker (or OTC ticker if applicable) of ASTELLAS PHARMA US INC in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,ASTELLAS,"Based on the search results, Astellas Pharma Inc. has an over-the-counter (OTC) ticker symbol:
+
+STOCK_TICKER: ALPMY
+",,False,,STOCK_TICKER,"Aug 4, 2020"
+please only return the US stock ticker (or OTC ticker if applicable) of PF PRISM CV in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,PF PRISM CV,"Based on the search results, PF PRISM CV appears to be associated with Prism Resources Inc., which has a stock ticker of CV on the Venture Exchange.
+
+STOCK_TICKER: CV
+",,False,,CV,"Sep 7, 2023"
+please only return the US stock ticker (or OTC ticker if applicable) of NOVARTIS PHARMACEUTICALS CORP in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,NOVARTIS,"NOVARTIS PHARMACEUTICALS CORP can be found with the following tickers:
+
+*   **NVS:** Listed on the NYSE (New York Stock Exchange).
+*   **NVSEF:** Listed on the OTCMKTS (Over-the-Counter Market).
+
+STOCK_TICKER: NVS
+STOCK_TICKER: NVSEF
+",,False,,*   **NVS,"Mar 30, 2012"
+please only return the US stock ticker (or OTC ticker if applicable) of AMRING PHARMACEUTICALS INC in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,AMRING PHARMS,"Based on the search results, AMRING PHARMACEUTICALS INC is not listed. However, there appears to be a similar company named Amneal Pharmaceuticals, Inc. with the stock ticker AMRX.
+
+Therefore, the answer is: NOT_LISTED
+",,False,,NOT_LISTED,"Nov 13, 2009"
+please only return the US stock ticker (or OTC ticker if applicable) of BRISTOL MYERS SQUIBB in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,BRISTOL MYERS SQUIBB,"BMY: BMY
+",,False,,BMY,"Jun 5, 2013"
+please only return the US stock ticker (or OTC ticker if applicable) of ZHUHAI BEIHAI BIOTECH CO LTD in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,ZHUHAI,"NOT_LISTED
+",,False,,,"Oct 23, 2024"
+please only return the US stock ticker (or OTC ticker if applicable) of ZHUHAI BEIHAI BIOTECH CO LTD in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,ZHUHAI,"Based on my search, I cannot find a US stock ticker or OTC ticker for ZHUHAI BEIHAI BIOTECH CO LTD. However, I did find information indicating that pre-IPO shares may be available through EquityZen.
+
+Therefore, my answer is: NOT_LISTED
+",,False,,NOT_LISTED,"Oct 23, 2024"
+please only return the US stock ticker (or OTC ticker if applicable) of BRISTOL MYERS SQUIBB CO in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,BRISTOL,"BMY: BMY
+BMYMP: BMYMP
+",,False,,"BMY
+BMYMP","Sep 1, 2020"
+please only return the US stock ticker (or OTC ticker if applicable) of ASTELLAS PHARMA US INC in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,ASTELLAS,"ALPMY
+",,False,,,"Aug 4, 2020"
+please only return the US stock ticker (or OTC ticker if applicable) of ZHUHAI BEIHAI BIOTECH CO LTD in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,ZHUHAI,"Based on my search, ZHUHAI BEIHAI BIOTECH CO LTD does not appear to be listed on a U.S. stock exchange or OTC market. Therefore, the answer is:
+
+NOT_LISTED
+",,False,,NOT_LISTED,"Oct 23, 2024"
+please only return the US stock ticker (or OTC ticker if applicable) of IPSEN BIOPHARMACEUTICALS INC in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,IPSEN,"NOT_LISTED
+",,False,,,"Oct 22, 2015"
+please only return the US stock ticker (or OTC ticker if applicable) of ABBVIE INC in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,ABBVIE,"STOCK_TICKER: ABBV
+",,False,,ABBV,"Apr 11, 2016"
+please only return the US stock ticker (or OTC ticker if applicable) of KARYOPHARM THERAPEUTICS INC in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,KARYOPHARM THERAPS,"KPTI: KPTI
+",,False,,KPTI,"Mar 10, 2025"
+please only return the US stock ticker (or OTC ticker if applicable) of HOFFMANN LA ROCHE INC in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,HOFFMANN LA ROCHE,"RHHBY
+",,False,,,"Aug 17, 2011"
+please only return the US stock ticker (or OTC ticker if applicable) of OTTER PHARMACEUTICALS LLC in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,OTTER PHARMS,"NOT_LISTED
+",,False,,,"Oct 11, 2013"
+please only return the US stock ticker (or OTC ticker if applicable) of FRESENIUS KABI USA LLC in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,FRESENIUS KABI USA,"FSNUY: FSNUY
+",,False,,FSNUY,"Nov 6, 2017"
+please only return the US stock ticker (or OTC ticker if applicable) of BRISTOL MYERS SQUIBB in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,BRISTOL MYERS SQUIBB,"STOCK_TICKER: BMY
+",,False,,BMY,"Jun 5, 2013"
+please only return the US stock ticker (or OTC ticker if applicable) of DEXCEL PHARMA TECHNOLOGIES LTD in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,DEXCEL,"Based on the search results, Dexcel Pharma Technologies Ltd. is a privately-held company based in Israel. It does not appear to have its own US stock ticker. However, it has been an investor in several publicly traded companies, including:
+
+*   **Protalix BioTherapeutics, Inc. (PLX)**
+*   **Roivant Sciences Ltd. (ROIV)**
+
+Therefore, the answer is: NOT_LISTED
+",,False,,"*   **Protalix BioTherapeutics, Inc. (PLX)**
+*   **Roivant Sciences Ltd. (ROIV)**
+
+Therefore, the answer is","Oct 3, 2019"
+please only return the US stock ticker (or OTC ticker if applicable) of OTTER PHARMACEUTICALS LLC in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,OTTER PHARMS,"Based on the search results, I cannot find a stock ticker for OTTER PHARMACEUTICALS LLC. There is an Otter Tail Corporation that trades under the ticker OTTR, and a Zentalis Pharmaceuticals LLC that trades under the ticker ZNTL, but neither of those is OTTER PHARMACEUTICALS LLC.
+
+Therefore, my answer is:
+
+NOT_LISTED
+",,False,,NOT_LISTED,"Oct 11, 2013"
+please only return the US stock ticker (or OTC ticker if applicable) of ZHUHAI BEIHAI BIOTECH CO LTD in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,ZHUHAI,"Based on my search, ZHUHAI BEIHAI BIOTECH CO LTD does not appear to have a US stock ticker or an OTC ticker.
+
+Therefore, the answer is: NOT_LISTED
+",,False,,NOT_LISTED,"Oct 23, 2024"
+please only return the US stock ticker (or OTC ticker if applicable) of PHARMACYCLICS LLC in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,PHARMACYCLICS LLC,"PCYC: PCYC
+",,False,,PCYC,"Nov 13, 2013"
+please only return the US stock ticker (or OTC ticker if applicable) of SUN PHARMACEUTICAL INDUSTRIES LTD in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,SUN PHARM,"SMPQY: OTC
+",,False,,OTC,"Jul 16, 2018"
+please only return the US stock ticker (or OTC ticker if applicable) of SHILPA MEDICARE LTD in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,SHILPA,"Based on the search results, SHILPA MEDICARE LTD is not listed on any US stock exchange. It is primarily listed on the Indian স্টক exchanges.
+
+Therefore, the answer is: NOT_LISTED
+",,False,,NOT_LISTED,"May 22, 2023"
+please only return the US stock ticker (or OTC ticker if applicable) of BRISTOL MYERS SQUIBB in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,BRISTOL MYERS SQUIBB,"STOCK_TICKER: BMY
+",,False,,BMY,"Jun 5, 2013"
+please only return the US stock ticker (or OTC ticker if applicable) of ZHUHAI BEIHAI BIOTECH CO LTD in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,ZHUHAI,"Based on my search, ZHUHAI BEIHAI BIOTECH CO LTD is NOT_LISTED on a US stock exchange.
+",,False,,,"Oct 23, 2024"
+please only return the US stock ticker (or OTC ticker if applicable) of DEXCEL PHARMA TECHNOLOGIES LTD in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,DEXCEL,"Based on the search results, Dexcel Pharma Technologies Ltd. is not directly listed on a US stock exchange. However, they were an investor in Protalix BioTherapeutics, Inc. which is listed as PLX. Dexcel also has holdings in Roivant Sciences Ltd. (ROIV).
+
+Therefore, the answer is:
+
+NOT_LISTED
+",,False,,NOT_LISTED,"Oct 3, 2019"
+please only return the US stock ticker (or OTC ticker if applicable) of BRISTOL MYERS SQUIBB in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,BRISTOL MYERS SQUIBB,"BMY: BMY
+",,False,,BMY,"Jun 5, 2013"
+please only return the US stock ticker (or OTC ticker if applicable) of OTTER PHARMACEUTICALS LLC in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,OTTER PHARMS,"Based on my search, OTTER PHARMACEUTICALS LLC does not appear to have a publicly listed stock ticker on major exchanges like NASDAQ or NYSE, nor on the OTC Markets. While there are mentions of ""Otter Tail Corporation"" (OTTR) which is listed on the NASDAQ, and Zentalis Pharmaceuticals Llc (ZNTL), OTTER PHARMACEUTICALS LLC is a private company.
+
+Therefore, the answer is:
+
+NOT_LISTED
+",,False,,NOT_LISTED,"Oct 11, 2013"
+please only return the US stock ticker (or OTC ticker if applicable) of IPSEN BIOPHARMACEUTICALS INC in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,IPSEN,"Based on the search results, here are the possible US stock tickers for IPSEN BIOPHARMACEUTICALS INC:
+
+*   **IPSEF:PK** (OTC Pink - Limited Information)
+*   **IPSEY:PK** (OTC Pink - Limited Information)
+
+Therefore, the answer is:
+
+STOCK\_TICKER: IPSEF:PK
+STOCK\_TICKER: IPSEY:PK
+",,False,,*   **IPSEF,"Oct 22, 2015"
+please only return the US stock ticker (or OTC ticker if applicable) of HORIZON THERAPEUTICS USA INC in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,HORIZON,"HZNP: HZNP
+",,False,,HZNP,"Jul 26, 2012"
+please only return the US stock ticker (or OTC ticker if applicable) of BRISTOL-MYERS SQUIBB CO in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,BRISTOL-MYERS,"BMY: BMY
+",,False,,BMY,"Jan 7, 2005"
+please only return the US stock ticker (or OTC ticker if applicable) of SUN PHARMACEUTICAL INDUSTRIES LTD in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,SUN PHARM,"NOT_LISTED
+",,False,,,"Jul 16, 2018"
+please only return the US stock ticker (or OTC ticker if applicable) of HELSINN BIREX PHARMACEUTICALS LTD in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,HELSINN,"Based on the search results, Helsinn Birex Pharmaceuticals Ltd. is a privately-owned company and a subsidiary of the Helsinn Group. It does not appear to be directly listed on any US stock exchange.
+
+Therefore, the answer is:
+
+NOT_LISTED
+",,False,,NOT_LISTED,"Aug 23, 2013"
+please only return the US stock ticker (or OTC ticker if applicable) of ZHUHAI BEIHAI BIOTECH CO LTD in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,ZHUHAI,"Based on my search, ZHUHAI BEIHAI BIOTECH CO LTD does not appear to be listed on a US stock exchange.
+
+Therefore, the answer is: NOT_LISTED
+",,False,,NOT_LISTED,"Oct 23, 2024"
+please only return the US stock ticker (or OTC ticker if applicable) of SUN PHARMACEUTICAL INDUSTRIES LTD in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,SUN PHARM,"SMPQY: SMPQY
+",,False,,SMPQY,"Jul 16, 2018"
+please only return the US stock ticker (or OTC ticker if applicable) of AADI SUBSIDIARY INC in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,AADI SUB,"AADI_SUBSIDIARY_INC is not publicly traded. However, its parent company, Aadi Bioscience Inc., was traded on NASDAQ under the ticker AADI until March 19, 2025. On March 19, 2025, Aadi Bioscience Inc. changed its name to Whitehawk Therapeutics Inc., and its stock ticker changed to WHWK.
+",,False,,,"Nov 22, 2021"
+please only return the US stock ticker (or OTC ticker if applicable) of ONYX PHARMACEUTICALS INC A WHOLLY OWNED SUB OF AMGEN INC in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,ONYX PHARMS AMGEN,"ONYX PHARMACEUTICALS INC was acquired by Amgen in 2013. Before the acquisition, it was listed on NASDAQ with the ticker ONXX. As it is now a wholly-owned subsidiary of Amgen and no longer a publicly traded entity, the response is:
+
+NOT_LISTED
+",,False,,NOT_LISTED,"Jun 7, 2018"
+please only return the US stock ticker (or OTC ticker if applicable) of ABBVIE INC in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,ABBVIE,"STOCK_TICKER: ABBV
+",,False,,ABBV,"Apr 11, 2016"
+please only return the US stock ticker (or OTC ticker if applicable) of DEXCEL PHARMA TECHNOLOGIES LTD in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,DEXCEL,"Dexcel Pharma Technologies Ltd. is a privately held company based in Israel [1, 6]. It appears that Dexcel Pharma Technologies Ltd. does not have a direct US stock ticker or OTC ticker. However, they have involvement with companies that do have tickers [2, 4, 5, 7, 10].
+
+Therefore, the answer is: NOT_LISTED
+",,False,,NOT_LISTED,"Oct 3, 2019"
+please only return the US stock ticker (or OTC ticker if applicable) of BRISTOL MYERS SQUIBB in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,BRISTOL MYERS SQUIBB,"STOCK_TICKER: BMY
+",,False,,BMY,"Jun 5, 2013"
+please only return the US stock ticker (or OTC ticker if applicable) of ZHUHAI BEIHAI BIOTECH CO LTD in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,ZHUHAI,"Based on my search, ZHUHAI BEIHAI BIOTECH CO LTD does not appear to be publicly listed on a US stock exchange or OTC market. EquityZen indicates that Beihai Biotech stock (BEIB) is available for investment in pre-IPO shares, but this is not the same as a publicly traded ticker symbol.
+
+Therefore, the answer is: NOT_LISTED
+",,False,,NOT_LISTED,"Oct 23, 2024"
+please only return the US stock ticker (or OTC ticker if applicable) of PHARMACYCLICS LLC in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,PHARMACYCLICS LLC,"PCYC
+",,False,,,"Nov 13, 2013"
+please only return the US stock ticker (or OTC ticker if applicable) of BRISTOL MYERS SQUIBB in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,BRISTOL MYERS SQUIBB,"STOCK_TICKER: BMY
+",,False,,BMY,"Jun 5, 2013"
+please only return the US stock ticker (or OTC ticker if applicable) of OTTER PHARMACEUTICALS LLC in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,OTTER PHARMS,"Based on my search, OTTER PHARMACEUTICALS LLC does not appear to have a publicly listed stock ticker. Therefore, the answer is:
+
+NOT_LISTED
+",,False,,NOT_LISTED,"Oct 11, 2013"
+please only return the US stock ticker (or OTC ticker if applicable) of BRISTOL-MYERS SQUIBB CO in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,BRISTOL-MYERS,"STOCK_TICKER: BMY
+",,False,,BMY,"Jan 7, 2005"
+please only return the US stock ticker (or OTC ticker if applicable) of BRISTOL-MYERS SQUIBB CO in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,BRISTOL-MYERS,"STOCK_TICKER: BMY
+",,False,,BMY,"Jan 7, 2005"
+please only return the US stock ticker (or OTC ticker if applicable) of BRISTOL-MYERS SQUIBB CO in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,BRISTOL-MYERS,"STOCK_TICKER: BMY
+",,False,,BMY,"Jan 7, 2005"
+please only return the US stock ticker (or OTC ticker if applicable) of ASTRAZENECA PHARMACEUTICALS LP in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,ASTRAZENECA,"AZN
+",,False,,,"Dec 19, 2014"
+please only return the US stock ticker (or OTC ticker if applicable) of HORIZON THERAPEUTICS USA INC in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,HORIZON,"HZNP: HZNP
+",,False,,HZNP,"Jul 26, 2012"
+please only return the US stock ticker (or OTC ticker if applicable) of ZHUHAI BEIHAI BIOTECH CO LTD in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,ZHUHAI,"Based on my search, I did not find a US stock ticker or OTC ticker for ZHUHAI BEIHAI BIOTECH CO LTD.
+
+Therefore, my answer is: NOT_LISTED
+",,False,,NOT_LISTED,"Oct 23, 2024"
+please only return the US stock ticker (or OTC ticker if applicable) of ZHUHAI BEIHAI BIOTECH CO LTD in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,ZHUHAI,"Based on the search results, ZHUHAI BEIHAI BIOTECH CO LTD is NOT_LISTED on any US stock exchange. However, EquityZen may offer pre-IPO shares for accredited investors under the ticker BEIB.
+",,False,,,"Oct 23, 2024"
+please only return the US stock ticker (or OTC ticker if applicable) of DEXCEL PHARMA TECHNOLOGIES LTD in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,DEXCEL,"Based on the search results, Dexcel Pharma Technologies Ltd. is a privately held company. While it has holdings in publicly traded companies like Roivant Sciences Ltd (ROIV) and was involved with Protalix BioTherapeutics, Inc. (PLX), it does not appear to have its own publicly listed stock ticker.
+
+Therefore, the answer is: NOT_LISTED
+",,False,,NOT_LISTED,"Oct 3, 2019"
+please only return the US stock ticker (or OTC ticker if applicable) of DEXCEL PHARMA TECHNOLOGIES LTD in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,DEXCEL,"Based on the search results, Dexcel Pharma Technologies Ltd. is a privately-held company headquartered in Or Akiva, Israel. I was unable to find a US stock ticker or OTC ticker for the company.
+
+Therefore, my answer is:
+
+STOCK_TICKER: NOT_LISTED
+",,False,,STOCK_TICKER,"Oct 3, 2019"
+please only return the US stock ticker (or OTC ticker if applicable) of BRISTOL MYERS SQUIBB in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,BRISTOL MYERS SQUIBB,"BMY: BMY
+",,False,,BMY,"Jun 5, 2013"
+please only return the US stock ticker (or OTC ticker if applicable) of ZHUHAI BEIHAI BIOTECH CO LTD in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,ZHUHAI,"Based on my search, I could not find a US stock ticker or OTC ticker for ZHUHAI BEIHAI BIOTECH CO LTD.
+
+Therefore, my answer is: NOT_LISTED
+",,False,,NOT_LISTED,"Oct 23, 2024"
+please only return the US stock ticker (or OTC ticker if applicable) of DEXCEL PHARMA TECHNOLOGIES LTD in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,DEXCEL,"Based on the search results, Dexcel Pharma Technologies Ltd. is a privately held company. I could not find a US stock ticker or OTC ticker for Dexcel Pharma Technologies Ltd.
+
+Therefore, my answer is: NOT_LISTED
+",,False,,NOT_LISTED,"Oct 3, 2019"
+please only return the US stock ticker (or OTC ticker if applicable) of ZHUHAI BEIHAI BIOTECH CO LTD in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,ZHUHAI,"Based on the search results, ZHUHAI BEIHAI BIOTECH CO LTD is a private company and is therefore NOT_LISTED on any US stock exchange.
+",,False,,,"Oct 23, 2024"
+please only return the US stock ticker (or OTC ticker if applicable) of SHILPA MEDICARE LTD in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,SHILPA,"SHILPAMED: NOT_LISTED
+",,False,,NOT_LISTED,"May 22, 2023"
+please only return the US stock ticker (or OTC ticker if applicable) of SHILPA MEDICARE LTD in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,SHILPA,"NOT_LISTED
+",,False,,,"May 22, 2023"
+please only return the US stock ticker (or OTC ticker if applicable) of SHILPA MEDICARE LTD in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,SHILPA,"NOT_LISTED
+",,False,,,"May 22, 2023"
+please only return the US stock ticker (or OTC ticker if applicable) of BRISTOL-MYERS SQUIBB CO in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,BRISTOL-MYERS,"BMY
+",,False,,,"Jan 7, 2005"
+please only return the US stock ticker (or OTC ticker if applicable) of SHILPA MEDICARE LTD in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,SHILPA,"NOT_LISTED
+",,False,,,"May 22, 2023"
+please only return the US stock ticker (or OTC ticker if applicable) of DEXCEL PHARMA TECHNOLOGIES LTD in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,DEXCEL,"Based on the search results, Dexcel Pharma Technologies Ltd. does not appear to have a direct US stock ticker or OTC ticker. However, Dexcel Pharma Technologies Ltd. is mentioned in connection with other publicly traded companies such as Perrigo (PRGO), Protalix BioTherapeutics, Inc. (PLX) and Elite Pharmaceuticals, Inc. (ELTP).
+
+Therefore, the answer is: NOT_LISTED
+",,False,,NOT_LISTED,"Oct 3, 2019"
+please only return the US stock ticker (or OTC ticker if applicable) of BRISTOL-MYERS SQUIBB CO in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,BRISTOL-MYERS,"STOCK_TICKER: BMY
+STOCK_TICKER: BMYMP (OTC)
+",,False,,"BMY
+STOCK_TICKER","Jan 7, 2005"
+please only return the US stock ticker (or OTC ticker if applicable) of SHILPA MEDICARE LTD in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,SHILPA,"NOT_LISTED
+",,False,,,"May 22, 2023"
+please only return the US stock ticker (or OTC ticker if applicable) of OTTER PHARMACEUTICALS LLC in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,OTTER PHARMS,"Based on my search, OTTER PHARMACEUTICALS LLC does not appear to have its own publicly listed stock ticker. However, it has been involved in acquisitions and licensing agreements with publicly traded companies such as Aquestive Therapeutics (AQST) and Antares Pharma (ATRS). There is a company called Otter Tail Corporation that is listed on the NASDAQ as OTTR.
+
+Therefore, the answer is: NOT_LISTED
+",,False,,NOT_LISTED,"Oct 11, 2013"
+please only return the US stock ticker (or OTC ticker if applicable) of OTTER PHARMACEUTICALS LLC in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,OTTER PHARMS,"Based on my search, I cannot find a direct stock ticker for OTTER PHARMACEUTICALS LLC. There is an Otter Tail Corporation that trades on the NASDAQ under the ticker OTTR, but this is a different company.
+
+Therefore, my answer is: NOT_LISTED
+",,False,,NOT_LISTED,"Oct 11, 2013"
+please only return the US stock ticker (or OTC ticker if applicable) of SHILPA MEDICARE LTD in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,SHILPA,"NOT_LISTED
+",,False,,,"May 22, 2023"
+please only return the US stock ticker (or OTC ticker if applicable) of BRISTOL MYERS SQUIBB CO in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,BRISTOL,"STOCK_TICKER: BMY
+",,False,,BMY,"Sep 1, 2020"
+please only return the US stock ticker (or OTC ticker if applicable) of BRISTOL MYERS SQUIBB in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,BRISTOL MYERS SQUIBB,"BMY: BMY
+",,False,,BMY,"Jun 5, 2013"
+please only return the US stock ticker (or OTC ticker if applicable) of DEXCEL PHARMA TECHNOLOGIES LTD in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,DEXCEL,"Based on the search results, Dexcel Pharma Technologies Ltd. is a privately owned company and it does not appear to be directly listed on a US stock exchange. However, Dexcel Pharma Technologies Ltd. owns shares of Roivant Sciences Ltd (ROIV), Protalix BioTherapeutics Inc (PLX), and Intec Parent Inc (NTEC).
+
+Therefore, the answer is: NOT_LISTED
+",,False,,NOT_LISTED,"Oct 3, 2019"
+please only return the US stock ticker (or OTC ticker if applicable) of IPSEN BIOPHARMACEUTICALS INC in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,IPSEN,"IPSEY
+",,False,,,"Oct 22, 2015"
+please only return the US stock ticker (or OTC ticker if applicable) of BRISTOL-MYERS SQUIBB CO in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,BRISTOL-MYERS,"STOCK_TICKER: BMY
+",,False,,BMY,"Jan 7, 2005"
+please only return the US stock ticker (or OTC ticker if applicable) of SUN PHARMACEUTICAL INDUSTRIES LTD in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,SUN PHARM,"SUN_TICKER: SMPQY
+",,False,,SMPQY,"Jul 16, 2018"
+please only return the US stock ticker (or OTC ticker if applicable) of SUN PHARMACEUTICAL INDUSTRIES LTD in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,SUN PHARM,"SMPQY: SUN PHARMACEUTICAL INDUSTRIES LTD is listed on the OTC market under the ticker SMPQY.
+",,False,,SUN PHARMACEUTICAL INDUSTRIES LTD is listed on the OTC market under the ticker SMPQY.,"Jul 16, 2018"
+please only return the US stock ticker (or OTC ticker if applicable) of EUGIA PHARMA SPECIALITIES LTD in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,EUGIA PHARMA SPECLTS,"Based on the search results, EUGIA PHARMA SPECIALITIES LTD is a subsidiary of Aurobindo Pharma Limited. Aurobindo Pharma Limited is listed on the Indian stock exchanges. However, EUGIA PHARMA SPECIALITIES LTD itself does not appear to be directly listed on any US stock exchange or OTC market.
+
+Therefore, the answer is:
+
+STOCK_TICKER: NOT_LISTED
+",,False,,STOCK_TICKER,"Nov 20, 2023"
+please only return the US stock ticker (or OTC ticker if applicable) of FRESENIUS KABI USA LLC in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,FRESENIUS KABI USA,"FSNUY: FSNUY
+",,False,,FSNUY,"Nov 6, 2017"
+please only return the US stock ticker (or OTC ticker if applicable) of ABBVIE INC in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,ABBVIE,"STOCK_TICKER: ABBV
+",,False,,ABBV,"Oct 27, 2016"
+please only return the US stock ticker (or OTC ticker if applicable) of FRESENIUS KABI USA LLC in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,FRESENIUS KABI USA,"FRESENIUS KABI USA LLC is a private company [2]. It is a wholly-owned subsidiary of Fresenius Kabi AG, which in turn is wholly owned by Fresenius SE & Co. KGaA [6, 9]. Fresenius SE & Co. KGaA is a publicly traded company in Germany [6]. Its ADR (American Depositary Receipt) trades on the over-the-counter market under the ticker symbol FSNUY [1, 3]. Therefore, the answer is:
+
+STOCK_TICKER: FSNUY
+",,False,,STOCK_TICKER,"Nov 6, 2017"
+please only return the US stock ticker (or OTC ticker if applicable) of FRESENIUS KABI USA LLC in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,FRESENIUS KABI USA,"FRESENIUS KABI USA LLC is a wholly-owned subsidiary of Fresenius SE & Co. KGaA. Fresenius SE & Co. KGaA is a publicly traded company on the Frankfurt Stock Exchange under the ticker symbol FRE. It also has an American Depositary Receipt (ADR) traded over-the-counter in the U.S. under the ticker symbol FSNUY.
+
+Therefore, the answer is FSNUY.
+",,False,,,"Nov 6, 2017"
+please only return the US stock ticker (or OTC ticker if applicable) of ZHUHAI BEIHAI BIOTECH CO LTD in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,ZHUHAI,"Based on my search results, ZHUHAI BEIHAI BIOTECH CO LTD is a private company and its stock is NOT_LISTED on any US stock exchange.
+",,False,,,"Oct 23, 2024"
+please only return the US stock ticker (or OTC ticker if applicable) of ZHUHAI BEIHAI BIOTECH CO LTD in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,ZHUHAI,"Based on the search results, ZHUHAI BEIHAI BIOTECH CO LTD does not appear to be publicly listed on a US stock exchange or OTC market. However, EquityZen mentions ""Beihai Biotech Stock (BEIB)"". It is important to note that EquityZen offers pre-IPO shares, which are not the same as publicly traded stocks.
+
+Therefore, the answer is: NOT_LISTED
+",,False,,NOT_LISTED,"Oct 23, 2024"
+please only return the US stock ticker (or OTC ticker if applicable) of ZHUHAI BEIHAI BIOTECH CO LTD in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,ZHUHAI,"Based on my search, I cannot find a US stock ticker or OTC ticker for ZHUHAI BEIHAI BIOTECH CO LTD.
+
+Therefore, my answer is: NOT_LISTED
+",,False,,NOT_LISTED,"Oct 23, 2024"
+please only return the US stock ticker (or OTC ticker if applicable) of EMD SERONO INC in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,EMD SERONO INC,"EMD Serono is a brand and division of Merck KGaA. Merck KGaA has a public stock listing on the Frankfurt Stock Exchange. In the U.S. the ticker symbol for the OTC (over-the-counter) is MKKGY.
+
+Therefore, the answer is:
+
+STOCK_TICKER: MKKGY
+",,False,,STOCK_TICKER,"Mar 29, 2019"
+please only return the US stock ticker (or OTC ticker if applicable) of SHILPA MEDICARE LTD in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,SHILPA,"Based on the search results, SHILPA MEDICARE LTD is primarily listed on the National Stock Exchange of India (NSE) and the Bombay Stock Exchange (BSE). It does not appear to have a direct listing on a US stock exchange or OTC market.
+
+Therefore, the answer is: NOT_LISTED
+",,False,,NOT_LISTED,"May 22, 2023"
+please only return the US stock ticker (or OTC ticker if applicable) of ZHUHAI BEIHAI BIOTECH CO LTD in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,ZHUHAI,"NOT_LISTED
+",,False,,,"Oct 23, 2024"
+please only return the US stock ticker (or OTC ticker if applicable) of ASTELLAS PHARMA US INC in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,ASTELLAS,"Based on the search results, here are the possible US stock tickers for Astellas Pharma Inc.:
+
+*   **ALPMY**: This is the OTC ticker for Astellas Pharma Inc. and is traded on the PINK (Pink Sheets).
+*   **ALPMF**: This is another OTC ticker for Astellas Pharma Inc.
+
+STOCK_TICKER: ALPMY
+STOCK_TICKER: ALPMF
+",,False,,*   **ALPMY**,"Aug 4, 2020"
+please only return the US stock ticker (or OTC ticker if applicable) of JANSSEN BIOTECH INC in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,JANSSEN BIOTECH,"Janssen Biotech, Inc. is a subsidiary of Johnson & Johnson (J&J). Johnson & Johnson's stock ticker is **JNJ**.
+",,False,,,"Feb 17, 2023"
+please only return the US stock ticker (or OTC ticker if applicable) of PF PRISM CV in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,PF PRISM CV,"Based on the search results, here's the likely stock ticker information for PF PRISM CV:
+
+*   **CV: Venture Exchange (TSX Venture Exchange)** (Source: BNN Bloomberg)
+
+It is important to note that the search results also mention:
+
+*   **PF PRISM CV** as a supplier of pharmaceutical products and services (Source: PharmaCompass)
+*   **PSWR** as the ticker for Prism Software Corp, which trades on the OTC market (Source: TradingView)
+
+Therefore, the answer depends on which entity the user is referring to. If the user is referring to Prism Resources Inc., then:
+
+STOCK_TICKER: CV
+
+If the user is referring to Prism Software Corp., then:
+
+STOCK_TICKER: PSWR
+
+If the user is referring to ""PF PRISM CV"" as a pharmaceutical supplier, then it is:
+
+NOT_LISTED
+",,False,,*   **CV,"Sep 7, 2023"
+please only return the US stock ticker (or OTC ticker if applicable) of SHORLA PHARMA LTD in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,SHORLA,"Based on my search, Shorla Pharma Ltd. does not appear to be publicly listed on any major US stock exchange or OTC market. While EquityZen mentions the ticker SHPH, this appears to be an internal designation for pre-IPO stock and not a publicly traded ticker symbol.
+
+Therefore, the answer is:
+
+STOCK_TICKER: NOT_LISTED
+",,False,,STOCK_TICKER,"Jun 25, 2024"
+please only return the US stock ticker (or OTC ticker if applicable) of BRISTOL-MYERS SQUIBB CO in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,BRISTOL-MYERS,"STOCK_TICKER: BMY
+",,False,,BMY,"Jan 7, 2005"
+please only return the US stock ticker (or OTC ticker if applicable) of NOVARTIS PHARMACEUTICALS CORP in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,NOVARTIS,"NOVARTIS PHARMACEUTICALS CORP is a subsidiary of Novartis AG. Novartis AG is a Swiss multinational pharmaceutical corporation. Its stock ticker is NVS and it is listed on the NYSE.
+
+Therefore, the answer is STOCK_TICKER: NVS
+",,False,,NVS,"Apr 28, 2017"
+please only return the US stock ticker (or OTC ticker if applicable) of EUGIA PHARMA SPECIALITIES LTD in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,EUGIA PHARMA SPECLTS,"Based on the search results, EUGIA PHARMA SPECIALITIES LTD is a wholly-owned subsidiary of Aurobindo Pharma Limited. Aurobindo Pharma Limited is listed on the following exchanges:
+
+*   **NSE:** AUROPHARMA
+*   **BSE:** 524804
+
+Therefore, EUGIA PHARMA SPECIALITIES LTD is **NOT_LISTED** as a separate entity on any US stock exchange.
+",,False,,*   **NSE,"Nov 20, 2023"
+please only return the US stock ticker (or OTC ticker if applicable) of BRISTOL MYERS SQUIBB in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,BRISTOL MYERS SQUIBB,"STOCK_TICKER: BMY
+",,False,,BMY,"Jun 5, 2013"
+please only return the US stock ticker (or OTC ticker if applicable) of ZHUHAI BEIHAI BIOTECH CO LTD in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,ZHUHAI,"Based on the search results, ZHUHAI BEIHAI BIOTECH CO LTD is a private company. Therefore, it is NOT_LISTED on any major US stock exchange or OTC market.
+",,False,,,"Oct 23, 2024"
+please only return the US stock ticker (or OTC ticker if applicable) of HORIZON THERAPEUTICS USA INC in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,HORIZON,"HZNP: HZNP
+",,False,,HZNP,"Jul 26, 2012"
+please only return the US stock ticker (or OTC ticker if applicable) of ZHUHAI BEIHAI BIOTECH CO LTD in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,ZHUHAI,"Based on the search results, ZHUHAI BEIHAI BIOTECH CO LTD does not appear to be listed on a US stock exchange or OTC market. While some articles mention the company's partnerships and activities, none provide a stock ticker. Therefore, the answer is:
+
+STOCK_TICKER: NOT_LISTED
+",,False,,STOCK_TICKER,"Oct 23, 2024"
+please only return the US stock ticker (or OTC ticker if applicable) of ZHUHAI BEIHAI BIOTECH CO LTD in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,ZHUHAI,"Based on my search, I cannot definitively confirm that ZHUHAI BEIHAI BIOTECH CO LTD has a US stock ticker or an OTC ticker. Therefore, my answer is:
+
+NOT_LISTED
+",,False,,NOT_LISTED,"Oct 23, 2024"
+please only return the US stock ticker (or OTC ticker if applicable) of BRISTOL MYERS SQUIBB in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,BRISTOL MYERS SQUIBB,"BMY: BMY
+BMYMP: BMYMP
+",,False,,"BMY
+BMYMP","Jun 5, 2013"
+please only return the US stock ticker (or OTC ticker if applicable) of FRESENIUS KABI USA LLC in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,FRESENIUS KABI USA,"FRESENIUS KABI USA LLC is a subsidiary of Fresenius Kabi AG, which is wholly owned by Fresenius SE & Co. KGaA. Fresenius SE & Co. KGaA is publicly traded in Germany. In the US, it has a sponsored Level 1 American Depositary Receipt (ADR) program. The ADRs are traded on the over-the-counter market under the ticker symbol:
+
+FSNUY: US_OTC
+",,False,,FSNUY,"May 20, 2019"
+please only return the US stock ticker (or OTC ticker if applicable) of BAYER HEALTHCARE PHARMACEUTICALS INC in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,BAYER HLTHCARE,"BAYRY: BAYRY
+",,False,,BAYRY,"Sep 27, 2012"
+please only return the US stock ticker (or OTC ticker if applicable) of PHARMACYCLICS LLC in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,PHARMACYCLICS LLC,"Pharmacyclics, Inc. was acquired by AbbVie in March 2015. Before the acquisition, it was traded on the NASDAQ stock exchange under the ticker symbol PCYC. As of May 22, 2015, shares of Pharmacyclics common stock ceased to be traded on NASDAQ.
+
+Therefore, the answer is NOT_LISTED.
+",,False,,,"Nov 13, 2013"
+please only return the US stock ticker (or OTC ticker if applicable) of ZHUHAI BEIHAI BIOTECH CO LTD in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,ZHUHAI,"Based on my search, I cannot find a US stock ticker or OTC ticker for ZHUHAI BEIHAI BIOTECH CO LTD.
+
+Therefore, my answer is: NOT_LISTED
+",,False,,NOT_LISTED,"Oct 23, 2024"
+please only return the US stock ticker (or OTC ticker if applicable) of SUN PHARMACEUTICAL INDUSTRIES LTD in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,SUN PHARM,"STOCK_TICKER: SMPQY
+",,False,,SMPQY,"Jul 16, 2018"
+please only return the US stock ticker (or OTC ticker if applicable) of HORIZON THERAPEUTICS USA INC in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,HORIZON,"HZNP: HZNP
+",,False,,HZNP,"Jul 26, 2012"
+please only return the US stock ticker (or OTC ticker if applicable) of JANSSEN PRODUCTS LP in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,JANSSEN PRODS,"JANSSEN PRODUCTS LP is a subsidiary of Johnson & Johnson, which is traded on the New York Stock Exchange under the ticker symbol:
+
+STOCK_TICKER: JNJ
+",,False,,STOCK_TICKER,"Oct 23, 2015"
+please only return the US stock ticker (or OTC ticker if applicable) of NOVARTIS PHARMACEUTICALS CORP in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,NOVARTIS,"NVS
+",,False,,,"Mar 30, 2012"
+please only return the US stock ticker (or OTC ticker if applicable) of BRISTOL-MYERS SQUIBB CO in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,BRISTOL-MYERS,"STOCK_TICKER: BMY
+",,False,,BMY,"Jan 7, 2005"
+please only return the US stock ticker (or OTC ticker if applicable) of BRISTOL-MYERS SQUIBB CO in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,BRISTOL-MYERS,"STOCK_TICKER: BMY
+",,False,,BMY,"Jan 7, 2005"
+please only return the US stock ticker (or OTC ticker if applicable) of ZHUHAI BEIHAI BIOTECH CO LTD in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,ZHUHAI,"Based on the search results, ZHUHAI BEIHAI BIOTECH CO LTD is a private company and its stock is NOT_LISTED on any major US stock exchange or OTC market.
+",,False,,,"Oct 23, 2024"
+please only return the US stock ticker (or OTC ticker if applicable) of DEXCEL PHARMA TECHNOLOGIES LTD in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,DEXCEL,"Based on the information provided in the search results, Dexcel Pharma Technologies Ltd. is a privately held company. Therefore, it is NOT_LISTED on any public stock exchange in the United States.
+",,False,,,"Oct 3, 2019"
+please only return the US stock ticker (or OTC ticker if applicable) of DEXCEL PHARMA TECHNOLOGIES LTD in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,DEXCEL,"Based on my search results, Dexcel Pharma Technologies Ltd. is a privately held company headquartered in Israel. I was unable to find a US stock ticker or OTC ticker for the company.
+
+Therefore, my answer is: NOT_LISTED
+",,False,,NOT_LISTED,"Oct 3, 2019"
+please only return the US stock ticker (or OTC ticker if applicable) of EUGIA PHARMA SPECIALITIES LTD in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,EUGIA PHARMA SPECLTS,"Error generating response: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'The model is overloaded. Please try again later.', 'status': 'UNAVAILABLE'}}",,False,,503 UNAVAILABLE. {'error',"Nov 20, 2023"
+please only return the US stock ticker (or OTC ticker if applicable) of ABBVIE INC in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,ABBVIE,"Error generating response: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'The model is overloaded. Please try again later.', 'status': 'UNAVAILABLE'}}",,False,,503 UNAVAILABLE. {'error',"Apr 11, 2016"
+please only return the US stock ticker (or OTC ticker if applicable) of GENUS LIFE SCIENCES INC in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,GENUS LIFESCIENCES,"Based on the search results, here's the information regarding the stock ticker for companies named ""Genus"":
+
+*   **Genus PLC:** Trades on the London Stock Exchange (LON) under the ticker **GNS**. It may also be available on the Pink Current Information tier of the OTC market under the ticker **GENSF**.
+*   **GENUS, Inc.** A company with this name was listed on the OTC market in 1998, but it's unclear if it is still listed or if it is the same as Genus Life Sciences Inc.
+*   **Genus LifeSciences:** This company focuses on pharmaceutical operations. The search results do not list a stock ticker for this company.
+
+Given the above information and that you are looking for a US stock ticker, it is most likely that **GENUS LIFE SCIENCES INC** is **NOT_LISTED**.",,False,,*   **Genus PLC,"Sep 14, 2016"
+please only return the US stock ticker (or OTC ticker if applicable) of DEXCEL PHARMA TECHNOLOGIES LTD in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,DEXCEL,"Based on the search results, Dexcel Pharma Technologies Ltd. is a privately-held company headquartered in Or Akiva, Israel [1, 6]. It does not appear to be directly listed on any US stock exchange or OTC market. However, it has been involved with companies that are publicly traded, such as Protalix BioTherapeutics, Inc. (PLX) [2].
+
+Therefore, the answer is: NOT_LISTED
+",,False,,NOT_LISTED,"Oct 3, 2019"
+please only return the US stock ticker (or OTC ticker if applicable) of NOVARTIS PHARMACEUTICALS CORP in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED,NOVARTIS,"NVS
+",,False,,,"Mar 7, 2003"

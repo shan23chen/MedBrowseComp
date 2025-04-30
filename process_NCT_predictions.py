@@ -54,15 +54,47 @@ def extract_from_response(response: str, task: str = "track_trial_ids") -> str:
         if match:
             return match.group(1).strip()
         return ""
-    elif task == "regime_drug_class":
+    elif task == "regime_drug_class" or task == "Ingredient":
         match = re.search(r'(?i)INGREDIENT:([^>]+)', response)
         if match:
             return match.group(1).strip()
         return ""
-    elif task == "latest_company_approval":
+    elif task == "latest_company_approval" or task == "Applicant_Full_Name":
         match = re.search(r'(?i)COMPANY:([^>]+)', response)
         if match:
             return match.group(1).strip()
+        return ""
+    elif task == "Patent_Expire_Date_Text":
+        match = re.search(r'(?i)DATE:?\s*(\d{4})', response)
+        if match:
+            return match.group(1).strip()
+        return ""
+    elif task == "Exclusivity_Date":
+        # Check for NA, N/A or empty responses first
+        if re.search(r'(?i)(?:N/?A|no\s+date|not\s+available|no\s+exclusivity\s+date)', response):
+            return "NA"
+        
+        match = re.search(r'(?i)DATE:?\s*(\d{2}-\d{2}-\d{4})', response)
+        if match:
+            return match.group(1).strip()
+        
+        # If no date found, return NA
+        return "NA"
+    elif task == "Open_on_Approval":
+        # Check if not listed first
+        if re.search(r'(?i)NOT\s+LISTED', response):
+            return "NOT LISTED"
+        # Look for ticker and price
+        match = re.search(r'(?i)((?:[A-Z]{1,5}|\$[A-Z]{1,4}))\s+.*?(\$?\d+\.\d+)', response)
+        if match:
+            ticker = match.group(1).replace('$', '')
+            # Round price to 2 decimal places
+            try:
+                price = match.group(2).replace('$', '')
+                price = f"${float(price):.2f}"
+            except ValueError:
+                price = match.group(2)  # Keep original if conversion fails
+            return f"{ticker}: {price}"
         return ""
     elif task == "track_pmids":
         # Look for the pattern pmid followed by any text
@@ -418,30 +450,36 @@ def process_nct_csv(
                 correct_answer = row['drug_classes']
             elif task == "track_second_authors_multiple_pmids":
                 # Format: model needs to determine both PMID and second author
-                question = "return the stock opening price of " + row['Applicant_Full_Name'] + " on the date of " + row['Approval_Date']
+                question = "please only return the US stock ticker (or OTC ticker if applicable) of " + row['Applicant_Full_Name'] + " in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED" 
                 correct_answer = row['Applicant']
-            elif task == "regime_drug_class":
+
+            elif task == "Ingredient":
                 if row['Ingredient'] == 'APALUTAMIDE':
-                    question = "For clinical trial " + row['NCT'] + ". Among the " + row['effecacy_group'] + 'effective regime ingredients; find which is the ingredient with the first letter start with ' + 'AP' + "\n return only the name of the ingredient or unknown in all CAPS in the format of INGREDIENT: name"
-                    correct_answer = row['Ingredient']
-                else:
-                    question = "For clinical trial " + row['NCT'] + ". Among the " + row['effecacy_group'] + 'effective regime ingredients; find which is the ingredient with the first letter start with ' + row['Ingredient'][0] + "\n return only the name of the ingredient or unknown in all CAPS in the format of INGREDIENT: name"
-                    correct_answer = row['Ingredient']
-            elif task == "latest_company_approval":
-                question = "First, for clinical trial " + row['NCT'] + " among the " + row['effecacy_group'] + " effective regime ingredients, identify which ingredient starts with the letter " + row['Ingredient'][0] + ".\n\nThen, find which company has the latest FDA approval date up till Dec, 2024 for this identified ingredient.\nReturn only the company name in format of COMPANY: name."
+                    question = "For clinical trial " + row['NCT'] + ". Among the " + row['effecacy_group'] + 'effective regimen ingredients; find which is the ingredient with the first letter start with ' + 'AP' + "\n return only the name of the ingredient or unknown in all CAPS in the format of INGREDIENT: name"
+                question = "For clinical trial " + row['NCT'] + ". Among the " + row['effecacy_group'] + 'effective regimen ingredients; find which is the ingredient with the first letter start with ' + row['Ingredient'][0]  + "\n return only the name of the ingredient or unknown in all CAPS in the format of INGREDIENT: name"
+                correct_answer = row['Ingredient']
+            elif task == "Applicant_Full_Name":
+                if row['Ingredient'] == 'APALUTAMIDE':
+                    question = "For clinical trial " + row['NCT'] + ". Among the " + row['effecacy_group'] + 'effective regimen ingredients; find which is the ingredient with the first letter start with ' + 'AP' + ".\n\nThen, find which company has the latest FDA approval date up till Dec, 2024 for this identified ingredient. Note that we are only look for overall FDA drug approval, not new indidcation, not supplemental approvals. \nReturn only the company name in format of COMPANY: name."
+                question = "First, for clinical trial " + row['NCT'] + " among the " + row['effecacy_group'] + " effective regimen ingredients, identify which ingredient starts with the letter " + row['Ingredient'][0] + ".\n\nThen, find which company has the latest FDA approval date up till Dec, 2024 for this identified ingredient. Note that we are only look for overall FDA drug approval, not new indidcation, not supplemental approvals. \nReturn only the company name in format of COMPANY: name."
                 correct_answer = row['Applicant_Full_Name']
-            elif task == "ceo_name":
-                question = "First, for clinical trial " + row['NCT'] + " among the " + row['effecacy_group'] + " effective regime ingredients, identify which ingredient starts with the letter " + row['Ingredient'][0] + ".\n\nSecond, find which company has the latest FDA approval date up till Dec, 2024 for this identified ingredient.\n\nFinally, determine the CEO of this company.\nReturn only the name of the CEO."
-                correct_answer = row['Applicant']
-            elif task == "patent_expiration_date":
-                question = "First, for clinical trial " + row['NCT'] + " among the " + row['effecacy_group'] + " effective regime ingredients, identify which ingredient starts with the letter " + row['Ingredient'][0] + ".\n\nThen, for this identified ingredient that was last approved up till Dec, 2024, when is its patent expiration date?\nReturn only the date in YYYY-MM-DD format of date: YYYY-MM-DD."
+            elif task == "Patent_Expire_Date_Text":
+                if row['Ingredient'] == 'APALUTAMIDE':
+                    question = "For clinical trial " + row['NCT'] + ". Among the " + row['effecacy_group'] + 'effective regimen ingredients; find which is the ingredient with the first letter start with ' + 'AP' + ".\n\nThen, for this identified ingredient that was last approved up till Dec, 2024, when is its patent expiration date?\nNote that we are only look for overall FDA drug approval, not new indidcation, not supplemental approvals.\nReturn only the date only the year YYYY format of date: YYYY."
+                question = "First, for clinical trial " + row['NCT'] + " among the " + row['effecacy_group'] + " effective regimen ingredients, identify which ingredient starts with the letter " + row['Ingredient'][0] + ".\n\nThen, for this identified ingredient that was last approved up till Dec, 2024, when is its patent expiration date?\nNote that we are only look for overall FDA drug approval, not new indidcation, not supplemental approvals.\nReturn only the date only the year YYYY format of date: YYYY."
                 correct_answer = row['Patent_Expire_Date_Text']
-            elif task == "exclusivity_Date":
-                if row['Exclusivity_Date'] is not None:
-                    question = "For clinical trial " + row['NCT'] + " among the " + row['effecacy_group'] + " effective regime ingredients, identify which ingredient starts with the letter " + row['Ingredient'][0] + ".\n\nThen, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date?\nReturn only the date in MM-DD-YYYY format of date: MM-DD-YYYY."
-                    correct_answer = row['Exclusivity_Date']
+            elif task == "Exclusivity_Date":
+                if pd.isna(row['Exclusivity_Date']) or row['Exclusivity_Date'] is None or str(row['Exclusivity_Date']).strip() == '':
+                    question = "For clinical trial " + row['NCT'] + " among the " + row['effecacy_group'] + " effective regimen ingredients, identify which ingredient starts with the letter " + row['Ingredient'][0] + ".\n\nThen, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date according to the FDA?\nNote that we are only look for overall FDA drug approval, not new indidcation, not supplemental approvals.\nIf no exclusivity date exists or if it's not available, respond with 'DATE: NA'. Otherwise, return only the date in MM-DD-YYYY format of date: MM-DD-YYYY."
+                    correct_answer = "NA"
                 else:
-                    continue
+                    question = "For clinical trial " + row['NCT'] + " among the " + row['effecacy_group'] + " effective regimen ingredients, identify which ingredient starts with the letter " + row['Ingredient'][0] + ".\n\nThen, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date according to the FDA?\nNote that we are only look for overall FDA drug approval, not new indidcation, not supplemental approvals.\nIf no exclusivity date exists or if it's not available, respond with 'DATE: NA'. Otherwise, return only the date in MM-DD-YYYY format of date: MM-DD-YYYY."
+                    correct_answer = row['Exclusivity_Date']
+            elif task == "Open_on_Approval":
+                if row['Ingredient'] == 'APALUTAMIDE':
+                    question = "For clinical trial " + row['NCT'] + ". Among the " + row['effecacy_group'] + 'effective regimen ingredients; find which is the ingredient with the first letter start with ' + 'AP' + ".\n\nThen, determine which pharmaceutical company received the most recent FDA approval (up until December 2024) for this identified ingredient.\nNote that we are only look for overall FDA drug approval, not new indidcation, not supplemental approvals.\n\nIf this company is listed on any US stock market (including over-the-counter markets), provide:\n1. The stock ticker symbol\n2. The opening stock price on the FDA approval date\n\nIf the company is not listed on any US stock market, please indicate \"NOT LISTED\"."
+                question = "For clinical trial " + row['NCT'] + ", review the " + row['effecacy_group'] + " effective regimen ingredients and identify which ingredient starts with the letter " + row['Ingredient'][0] + ".\n\nThen, determine which pharmaceutical company received the most recent FDA approval (up until December 2024) for this identified ingredient.\nNote that we are only look for overall FDA drug approval, not new indidcation, not supplemental approvals.\n\nIf this company is listed on any US stock market (including over-the-counter markets), provide:\n1. The stock ticker symbol\n2. The opening stock price on the FDA approval date\n\nIf the company is not listed on any US stock market, please indicate \"NOT LISTED\"."
+                correct_answer = row['Applicant'] if 'Applicant' in row else ""
             elif task == "track_second_authors_multiple_pmids_any":
                 # Format: find any second author from any of the PMIDs
                 question = "Find/search the second author of any of the papers referenced in " + row['question 1'].split('Choose an option')[1] + '\nOutput it in the format SA<Second Author>'
@@ -750,7 +788,10 @@ def main():
                                 "track_second_authors_multiple_pmids_any",
                                 "track_start_date",
                                 "track_primary_outcomes", "track_secondary_outcomes", 
-                                "track_drug_route", "track_drug_class", "regime_drug_class", "latest_company_approval", "ceo_name", "patent_expiration_date", "exclusivity_Date"], 
+                                "track_drug_route", "track_drug_class", "regime_drug_class", 
+                                "latest_company_approval", "ceo_name", "patent_expiration_date", 
+                                "exclusivity_Date", "Ingredient", "Applicant_Full_Name", 
+                                "Patent_Expire_Date_Text", "Exclusivity_Date", "Open_on_Approval"], 
                         default="track_trial_ids",
                         help="Task to perform",
                         )   
