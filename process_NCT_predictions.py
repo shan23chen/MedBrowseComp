@@ -416,6 +416,8 @@ def process_nct_csv(
 
         logger.info("Preparing input data...")
         for _, row in tqdm(df.iterrows(), total=len(df), desc="Preparing inputs"):
+            
+            ### for computer use agent fill in the prompt
             if task == "track_trial_ids":
                 # track trial ids
                 question = "Find/search the clinical trial id" + row['question 1'].split('Choose an option')[1] + '\nOutput it in the format NCT<Number>'
@@ -452,7 +454,8 @@ def process_nct_csv(
                 # Format: model needs to determine both PMID and second author
                 question = "please only return the US stock ticker (or OTC ticker if applicable) of " + row['Applicant_Full_Name'] + " in all CAPS in the format of STOCK_TICKER: ticker else return NOT_LISTED" 
                 correct_answer = row['Applicant']
-
+            
+            #### final 5 questions for deepresearch
             elif task == "Ingredient":
                 if row['Ingredient'] == 'APALUTAMIDE':
                     question = "For clinical trial " + row['NCT'] + ". Among the " + row['effecacy_group'] + 'effective regimen ingredients; find which is the ingredient with the first letter start with ' + 'AP' + "\n return only the name of the ingredient or unknown in all CAPS in the format of INGREDIENT: name"
@@ -480,6 +483,13 @@ def process_nct_csv(
                     question = "For clinical trial " + row['NCT'] + ". Among the " + row['effecacy_group'] + 'effective regimen ingredients; find which is the ingredient with the first letter start with ' + 'AP' + ".\n\nThen, determine which pharmaceutical company received the most recent FDA approval (up until December 2024) for this identified ingredient.\nNote that we are only look for overall FDA drug approval, not new indidcation, not supplemental approvals.\n\nIf this company is listed on any US stock market (including over-the-counter markets), provide:\n1. The stock ticker symbol\n2. The opening stock price on the FDA approval date\n\nIf the company is not listed on any US stock market, please indicate \"NOT LISTED\"."
                 question = "For clinical trial " + row['NCT'] + ", review the " + row['effecacy_group'] + " effective regimen ingredients and identify which ingredient starts with the letter " + row['Ingredient'][0] + ".\n\nThen, determine which pharmaceutical company received the most recent FDA approval (up until December 2024) for this identified ingredient.\nNote that we are only look for overall FDA drug approval, not new indidcation, not supplemental approvals.\n\nIf this company is listed on any US stock market (including over-the-counter markets), provide:\n1. The stock ticker symbol\n2. The opening stock price on the FDA approval date\n\nIf the company is not listed on any US stock market, please indicate \"NOT LISTED\"."
                 correct_answer = row['Applicant'] if 'Applicant' in row else ""
+            
+            ### for filled prompt already
+            elif task =="filled50" or task == "filled121":
+                question = row['prompt']
+                correct_answer = row['gold']
+                
+
             elif task == "track_second_authors_multiple_pmids_any":
                 # Format: find any second author from any of the PMIDs
                 question = "Find/search the second author of any of the papers referenced in " + row['question 1'].split('Choose an option')[1] + '\nOutput it in the format SA<Second Author>'
