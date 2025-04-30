@@ -54,38 +54,103 @@ def extract_from_response(response: str, task: str = "track_trial_ids") -> str:
         if match:
             return match.group(1).strip()
         return ""
-    elif task == "regime_drug_class" or task == "Ingredient":
-        match = re.search(r'(?i)INGREDIENT:([^>]+)', response)
+    elif task == "regime_drug_class" or task == "Ingredient" or task == "filled50" or task == "filled121":
+        # Look for INGREDIENT: format first (most common in responses)
+        match = re.search(r'(?i)INGREDIENT:\s*([A-Z0-9\s\-]+)', response)
         if match:
             return match.group(1).strip()
-        return ""
-    elif task == "latest_company_approval" or task == "Applicant_Full_Name":
-        match = re.search(r'(?i)COMPANY:([^>]+)', response)
+            
+        # Alternate formats that might appear in responses
+        match = re.search(r'(?i)ingredient(?:\s+is|\s+name)?:\s*([A-Z0-9\s\-]+)', response)
         if match:
             return match.group(1).strip()
+            
+        # Search for all-caps words that might be the ingredient
+        match = re.search(r'(?<!\w)([A-Z]{3,}(?:\s+[A-Z]+)*(?:\s+HYDROCHLORIDE)?)', response)
+        if match:
+            return match.group(1).strip()
+            
         return ""
-    elif task == "Patent_Expire_Date_Text":
+        
+    elif task == "latest_company_approval" or task == "Applicant_Full_Name" or task == "filled50" or task == "filled121":
+        # Look for COMPANY: format first
+        match = re.search(r'(?i)COMPANY:\s*([A-Z0-9\s\-]+)', response)
+        if match:
+            return match.group(1).strip()
+            
+        # Alternative formats that might appear
+        match = re.search(r'(?i)company(?:\s+name)?:\s*([A-Z0-9\s\-]+)', response)
+        if match:
+            return match.group(1).strip()
+            
+        # Look for company names in all caps
+        match = re.search(r'(?<!\w)([A-Z][A-Z\s]+(?:\s+[A-Z]+)*(?:\s+LLC|\s+SUB|\s+CV)?)', response)
+        if match:
+            return match.group(1).strip()
+            
+        return ""
+        
+    elif task == "Patent_Expire_Date_Text" or task == "filled50" or task == "filled121":
+        # Match date: YYYY format
         match = re.search(r'(?i)DATE:?\s*(\d{4})', response)
         if match:
             return match.group(1).strip()
+            
+        # Match just the year after mention of patent expiration
+        match = re.search(r'(?i)patent\s+expir(?:ation|es?|y)(?:\s+date)?(?:\s+is)?(?:\s+on)?:?\s*(?:[A-Za-z]+\s+\d{1,2},?\s+)?(\d{4})', response)
+        if match:
+            return match.group(1).strip()
+            
+        # Try to extract a date in the format Month DD, YYYY
+        match = re.search(r'(?i)(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\s+\d{1,2},?\s+(\d{4})', response)
+        if match:
+            return match.group(1).strip()
+            
         return ""
-    elif task == "Exclusivity_Date":
+        
+    elif task == "Exclusivity_Date" or task == "filled50" or task == "filled121":
         # Check for NA, N/A or empty responses first
         if re.search(r'(?i)(?:N/?A|no\s+date|not\s+available|no\s+exclusivity\s+date)', response):
             return "NA"
         
+        # Look for MM-DD-YYYY format
         match = re.search(r'(?i)DATE:?\s*(\d{2}-\d{2}-\d{4})', response)
         if match:
             return match.group(1).strip()
+            
+        # Look for M/D/YYYY format and convert to MM-DD-YYYY
+        match = re.search(r'(?i)DATE:?\s*(\d{1,2})[/-](\d{1,2})[/-](\d{4})', response)
+        if match:
+            month = match.group(1).zfill(2)
+            day = match.group(2).zfill(2)
+            year = match.group(3)
+            return f"{month}-{day}-{year}"
+            
+        # Look for Month DD, YYYY format and convert
+        match = re.search(r'(?i)(?:exclusivity|date)(?:\s+date)?:?\s*(?:([A-Za-z]+)\s+(\d{1,2})(?:st|nd|rd|th)?,?\s+(\d{4}))', response)
+        if match:
+            month_map = {
+                'january': '01', 'jan': '01', 'february': '02', 'feb': '02', 'march': '03', 'mar': '03',
+                'april': '04', 'apr': '04', 'may': '05', 'june': '06', 'jun': '06', 'july': '07', 'jul': '07',
+                'august': '08', 'aug': '08', 'september': '09', 'sep': '09', 'october': '10', 'oct': '10',
+                'november': '11', 'nov': '11', 'december': '12', 'dec': '12'
+            }
+            month_name = match.group(1).lower()
+            month = month_map.get(month_name, '01')  # Default to 01 if not found
+            day = match.group(2).zfill(2)
+            year = match.group(3)
+            return f"{month}-{day}-{year}"
         
         # If no date found, return NA
         return "NA"
-    elif task == "Open_on_Approval":
+        
+    elif task == "Open_on_Approval" or task == "filled50" or task == "filled121":
         # Check if not listed first
         if re.search(r'(?i)NOT\s+LISTED', response):
             return "NOT LISTED"
-        # Look for ticker and price
-        match = re.search(r'(?i)((?:[A-Z]{1,5}|\$[A-Z]{1,4}))\s+.*?(\$?\d+\.\d+)', response)
+            
+        # Look for stock ticker format: TICKER: $XX.XX or similar patterns
+        match = re.search(r'(?i)((?:[A-Z]{1,5}|\$[A-Z]{1,4}))\s*[:\.]\s*\$?(\d+\.\d+)', response)
         if match:
             ticker = match.group(1).replace('$', '')
             # Round price to 2 decimal places
@@ -95,6 +160,28 @@ def extract_from_response(response: str, task: str = "track_trial_ids") -> str:
             except ValueError:
                 price = match.group(2)  # Keep original if conversion fails
             return f"{ticker}: {price}"
+            
+        # Alternative format: look for "ticker symbol: XXX" and "opening price: $XX.XX"
+        ticker_match = re.search(r'(?i)(?:ticker|symbol|stock)(?:\s+symbol)?(?:\s+is)?:?\s*([A-Z]{1,5})', response)
+        price_match = re.search(r'(?i)(?:opening|stock|share)(?:\s+price)?(?:\s+was)?(?:\s+is)?:?\s*\$?(\d+\.\d+)', response)
+        
+        if ticker_match and price_match:
+            ticker = ticker_match.group(1)
+            try:
+                price = price_match.group(1)
+                price = f"${float(price):.2f}"
+            except ValueError:
+                price = price_match.group(1)  # Keep original if conversion fails
+            return f"{ticker}: {price}"
+            
+        # Try to extract just a float value for stock price
+        price_match = re.search(r'(?i)(\d+\.\d+)', response)
+        if price_match:
+            try:
+                return float(price_match.group(1))
+            except ValueError:
+                pass
+        
         return ""
     elif task == "track_pmids":
         # Look for the pattern pmid followed by any text
@@ -801,7 +888,7 @@ def main():
                                 "track_drug_route", "track_drug_class", "regime_drug_class", 
                                 "latest_company_approval", "ceo_name", "patent_expiration_date", 
                                 "exclusivity_Date", "Ingredient", "Applicant_Full_Name", 
-                                "Patent_Expire_Date_Text", "Exclusivity_Date", "Open_on_Approval"], 
+                                "Patent_Expire_Date_Text", "Exclusivity_Date", "Open_on_Approval", "filled50", "filled121"], 
                         default="track_trial_ids",
                         help="Task to perform",
                         )   
