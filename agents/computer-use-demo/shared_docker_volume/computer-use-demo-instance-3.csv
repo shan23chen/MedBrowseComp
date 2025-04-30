@@ -1,0 +1,4 @@
+prompt,result
+Open a terminal and use the 'ps' command to list running processes. Explain what you see.,Now I'll press Enter to execute:
+Create a file called 'test.sh' with a simple shell script that echoes 'Testing 1-2-3'. Make it executable and run it.,No response extracted
+Check the system information using 'uname -a' and explain the output.,No response extracted
