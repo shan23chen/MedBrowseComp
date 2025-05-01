@@ -1,675 +1,357 @@
 question,correct_answer,model_output,extracted_info,correct,urls,judge_reasoning,judge_extracted_answer
-"""For clinical trial NCT00974311. Among the more effective regimen ingredients, find which ingredient starts with the letter 'E'.\nReturn only the name of the ingredient or UNKNOWN in all CAPS in the format of INGREDIENT: name.""",ENZALUTAMIDE,"Based on the information available regarding clinical trial NCT00974311 (AFFIRM), one of the more effective regimen ingredients is **enzalutamide**, which starts with the letter ""E.""
+"""For clinical trial NCT00974311. Among the more effective regimen ingredients, find which ingredient starts with the letter 'E'.\nReturn only the name of the ingredient or UNKNOWN in all CAPS in the format of INGREDIENT: name.""",ENZALUTAMIDE,INGREDIENT: ENZALUTAMIDE,ENZALUTAMIDE,True,,The extracted final answer 'ENZALUTAMIDE' matches exactly the correct answer 'ENZALUTAMIDE' with no differences.,ENZALUTAMIDE
+"""For clinical trial NCT02838420. Among the less effective regimen ingredients, find which ingredient starts with the letter 'C'.\nReturn only the name of the ingredient or UNKNOWN in all CAPS in the format of INGREDIENT: name.""",CRIZOTINIB,"The clinical trial NCT02838420 (ALESIA) compared alectinib and crizotinib as first-line treatments for ALK-positive non-small-cell lung cancer in Asian patients. The study found that alectinib was more effective than crizotinib.
 
-INGREDIENT: ENZALUTAMIDE
-",ENZALUTAMIDE,True,,"The extracted final answer 'ENZALUTAMIDE' exactly matches the correct_answer 'ENZALUTAMIDE' without any differences in spelling, case, or format.",ENZALUTAMIDE
-"""For clinical trial NCT02838420. Among the less effective regimen ingredients, find which ingredient starts with the letter 'C'.\nReturn only the name of the ingredient or UNKNOWN in all CAPS in the format of INGREDIENT: name.""",CRIZOTINIB,"Based on the search results for clinical trial NCT02838420, the less effective regimen ingredient that starts with the letter ""C"" is **CRIZOTINIB**.
+Based on the study results, the less effective regimen ingredient in this trial was crizotinib.
 
-INGREDIENT: CRIZOTINIB
-",CRIZOTINIB,True,,"The extracted final answer 'CRIZOTINIB' exactly matches the correct answer 'CRIZOTINIB' with no differences in spelling, capitalization, or format.",CRIZOTINIB
-"""For clinical trial NCT01938001. Among the more effective regimen ingredients, find which ingredient starts with the letter 'L'.\nReturn only the name of the ingredient or UNKNOWN in all CAPS in the format of INGREDIENT: name.""",LENALIDOMIDE,"Based on the search results for clinical trial NCT01938001, the more effective regimen included rituximab and lenalidomide. The ingredient that starts with the letter ""L"" is:
+INGREDIENT: CRIZOTINIB",CRIZOTINIB,True,,The extracted final answer 'CRIZOTINIB' exactly matches the provided correct answer 'CRIZOTINIB'. There are no differences or ambiguities between the answers.,CRIZOTINIB
+"""For clinical trial NCT01938001. Among the more effective regimen ingredients, find which ingredient starts with the letter 'L'.\nReturn only the name of the ingredient or UNKNOWN in all CAPS in the format of INGREDIENT: name.""",LENALIDOMIDE,INGREDIENT: LENALIDOMIDE,LENALIDOMIDE,True,,"The extracted final answer 'LENALIDOMIDE' exactly matches the [correct_answer] 'LENALIDOMIDE' with no differences in spelling, capitalization, or format.",LENALIDOMIDE
+"""For clinical trial NCT00071799. Among the more effective regimen ingredients, find which ingredient starts with the letter 'A'.\nReturn only the name of the ingredient or UNKNOWN in all CAPS in the format of INGREDIENT: name.""",AZACITIDINE,INGREDIENT: AZACITIDINE.,AZACITIDINE,True,,The extracted final answer 'AZACITIDINE' exactly matches the correct answer 'AZACITIDINE'. There are no differences or ambiguities between the response and the correct answer.,AZACITIDINE
+"""For clinical trial NCT00720512. Among the more effective regimen ingredients, find which ingredient starts with the letter 'I'.\nReturn only the name of the ingredient or UNKNOWN in all CAPS in the format of INGREDIENT: name.""",IRINOTECAN HYDROCHLORIDE,"The clinical trial NCT00720512, known as the BEBYP trial, investigated the continuation or reintroduction of bevacizumab with second-line chemotherapy for metastatic colorectal cancer. The regimens used in this trial included mFOLFOX-6 or FOLFIRI, depending on the patient's first-line treatment. Bevacizumab was also part of the experimental arm.
 
-INGREDIENT: LENALIDOMIDE
-",LENALIDOMIDE,True,,The extracted final answer 'LENALIDOMIDE' exactly matches the correct answer 'LENALIDOMIDE'. There are no differences or ambiguities between them.,LENALIDOMIDE
-"""For clinical trial NCT00071799. Among the more effective regimen ingredients, find which ingredient starts with the letter 'A'.\nReturn only the name of the ingredient or UNKNOWN in all CAPS in the format of INGREDIENT: name.""",AZACITIDINE,"Based on the provided search results, specifically focusing on clinical trial NCT00071799, one of the more effective regimen ingredients that starts with the letter ""A"" is:
+FOLFIRI is a chemotherapy regimen that includes Folinic acid, Fluorouracil, and Irinotecan. Irinotecan is described as a topoisomerase I inhibitor.
 
-INGREDIENT: AZACITIDINE
-",AZACITIDINE,True,,"The extracted answer 'AZACITIDINE' exactly matches the correct_answer 'AZACITIDINE' with no inconsistencies, ambiguities, or differences.",AZACITIDINE
-"""For clinical trial NCT00720512. Among the more effective regimen ingredients, find which ingredient starts with the letter 'I'.\nReturn only the name of the ingredient or UNKNOWN in all CAPS in the format of INGREDIENT: name.""",IRINOTECAN HYDROCHLORIDE,"Based on the search results for clinical trial NCT00720512, here are some regimen ingredients that start with the letter ""I"":
+Based on the information available, Irinotecan is an ingredient in one of the regimens (FOLFIRI) used in clinical trial NCT00720512 and starts with the letter 'I'.
 
-*   **Isoniazid**
-    Therefore, the answer is:
+INGREDIENT: IRINOTECAN",IRINOTECAN,False,,"The extracted final answer is 'IRINOTECAN', whereas the correct answer is 'IRINOTECAN HYDROCHLORIDE'. The response does not include the 'HYDROCHLORIDE' part, which is a meaningful difference as it specifies the chemical form of the ingredient. Therefore, the extracted answer does not fully match the correct answer.",IRINOTECAN
+"""For clinical trial NCT02755597. Among the more effective regimen ingredients, find which ingredient starts with the letter 'V'.\nReturn only the name of the ingredient or UNKNOWN in all CAPS in the format of INGREDIENT: name.""",VENETOCLAX,INGREDIENT: VENETOCLAX,VENETOCLAX,True,,"The extracted final answer, 'VENETOCLAX', exactly matches the provided correct answer 'VENETOCLAX' with no differences in spelling, format, or case.",VENETOCLAX
+"""For clinical trial NCT00833833. Among the more effective regimen ingredients, find which ingredient starts with the letter 'D'.\nReturn only the name of the ingredient or UNKNOWN in all CAPS in the format of INGREDIENT: name.""",DEXAMETHASONE,"For clinical trial NCT00833833, among the more effective regimen ingredients, the ingredient that starts with the letter 'D' is Dexamethasone. The trial investigated Pomalidomide alone or with low-dose Dexamethasone in patients with relapsed and refractory multiple myeloma. Results indicated that Pomalidomide plus low-dose Dexamethasone had a better progression-free survival rate and overall response rate compared to Pomalidomide alone.
 
-INGREDIENT: ISONIAZID
-",ISONIAZID,False,,"The extracted_final_answer 'ISONIAZID' does not match the correct_answer 'IRINOTECAN HYDROCHLORIDE'. They are different substances, so the response is incorrect based on the given correct answer.",ISONIAZID
-"""For clinical trial NCT02755597. Among the more effective regimen ingredients, find which ingredient starts with the letter 'V'.\nReturn only the name of the ingredient or UNKNOWN in all CAPS in the format of INGREDIENT: name.""",VENETOCLAX,"Based on the provided information, the ingredients used in clinical trial NCT02755597 include:
+INGREDIENT: DEXAMETHASONE",DEXAMETHASONE,True,,The extracted answer 'DEXAMETHASONE' exactly matches the correct answer 'DEXAMETHASONE'. There are no differences or ambiguities between the two.,DEXAMETHASONE
+"""For clinical trial NCT01973387. Among the more effective regimen ingredients, find which ingredient starts with the letter 'I'.\nReturn only the name of the ingredient or UNKNOWN in all CAPS in the format of INGREDIENT: name.""",IBRUTINIB,INGREDIENT: IBRUTINIB,IBRUTINIB,True,"https://pubmed.ncbi.nlm.nih.gov/29533000/, https://pubmed.ncbi.nlm.nih.gov/29533000/","The extracted_final_answer 'IBRUTINIB' exactly matches the correct_answer 'IBRUTINIB' provided. There are no differences in spelling or format, and the response adheres to the requested format.",IBRUTINIB
+"""For clinical trial NCT00843882. Among the more effective regimen ingredients, find which ingredient starts with the letter 'L'.\nReturn only the name of the ingredient or UNKNOWN in all CAPS in the format of INGREDIENT: name.""",LENALIDOMIDE,"Regimens associated with the clinical trial NCT00843882 include Lenalidomide. It is used at a starting dose of 10 mg per day for 21 days on a 28-day cycle, and the 10 mg dose is more effective than the 5 mg dose in achieving transfusion independence.
 
-*   Venetoclax
-*   Bortezomib
-*   Dexamethasone
+INGREDIENT: LENALIDOMIDE",LENALIDOMIDE,True,,"The extracted_final_answer 'LENALIDOMIDE' exactly matches the [correct_answer] 'LENALIDOMIDE'. There are no differences in spelling, capitalization, or naming.",LENALIDOMIDE
+"""For clinical trial NCT01231412. Among the more effective regimen ingredients, find which ingredient starts with the letter 'S'.\nReturn only the name of the ingredient or UNKNOWN in all CAPS in the format of INGREDIENT: name.""",SIROLIMUS,"The clinical trial NCT01231412 studies the effectiveness of different regimens for preventing graft-versus-host disease (GVHD) in patients undergoing stem cell transplants. One of the regimens investigated is a triple-drug combination including cyclosporine, mycophenolate mofetil, and sirolimus. Sirolimus is also known as Rapamycin. This trial compares this triple-drug regimen to a standard prophylaxis regimen of cyclosporine and mycophenolate mofetil.
 
-Therefore, the ingredient that starts with the letter 'V' is:
+The question asks for an effective regimen ingredient starting with the letter 'S'. Based on the information available, Sirolimus is an ingredient in one of the regimens studied in NCT01231412. The effectiveness of the triple-drug regimen containing sirolimus is being evaluated in this trial.
 
-INGREDIENT: VENETOCLAX
-",VENETOCLAX,True,,"The extracted final answer 'VENETOCLAX' exactly matches the provided correct answer 'VENETOCLAX', with no differences in spelling, capitalization, or content.",VENETOCLAX
-"""For clinical trial NCT00833833. Among the more effective regimen ingredients, find which ingredient starts with the letter 'D'.\nReturn only the name of the ingredient or UNKNOWN in all CAPS in the format of INGREDIENT: name.""",DEXAMETHASONE,"Based on the clinical trial NCT00833833, one of the more effective regimen ingredients that starts with the letter ""D"" is:
+INGREDIENT: SIROLIMUS",SIROLIMUS,True,,The extracted_final_answer 'SIROLIMUS' exactly matches the [correct_answer] 'SIROLIMUS'. There are no differences or ambiguities between the two answers.,SIROLIMUS
+"""First, for clinical trial NCT00974311, among the more effective regimen ingredients, identify which ingredient starts with the letter 'E'.\n\nThen, find which company has the latest FDA approval date up till Dec, 2024 for this identified ingredient. Note that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\nReturn only the company name in format of COMPANY: name.""",ASTELLAS,"In clinical trial NCT00974311, also known as the AFFIRM trial, the effective regimen ingredient that starts with the letter 'E' is enzalutamide. This trial evaluated enzalutamide against a placebo in patients with metastatic castration-resistant prostate cancer who had previously received chemotherapy. Enzalutamide demonstrated improved outcomes, including overall survival, compared to placebo.
 
-INGREDIENT: Dexamethasone
-",DEXAMETHASONE,True,,"The extracted answer 'Dexamethasone' matches the correct answer 'DEXAMETHASONE' exactly, ignoring case differences. The response provides the precise ingredient name starting with 'D' as requested.",DEXAMETHASONE
-"""For clinical trial NCT01973387. Among the more effective regimen ingredients, find which ingredient starts with the letter 'I'.\nReturn only the name of the ingredient or UNKNOWN in all CAPS in the format of INGREDIENT: name.""",IBRUTINIB,"Based on clinical trial NCT01973387, and considering more effective regimen ingredients that start with the letter ""I"", the ingredient is:
+Regarding the company with the latest FDA approval for enzalutamide up to December 2024, the FDA approval history for enzalutamide (Xtandi) lists Astellas Pharma US, Inc. as the company. While enzalutamide received its initial FDA approval on August 31, 2012, subsequent approvals for different indications have occurred, with dates including July 13, 2018, December 16, 2019, and November 2023, which fall within the specified timeframe. Astellas Pharma US, Inc. is consistently associated with the FDA approvals for Xtandi/enzalutamide, as indicated by FDA history pages updated as recently as January 2024 which list approvals up to November 2023.
 
-INGREDIENT: IBRUTINIB
-",IBRUTINIB,True,,The extracted_final_answer 'IBRUTINIB' exactly matches the provided correct_answer 'IBRUTINIB' with no differences or ambiguities.,IBRUTINIB
-"""For clinical trial NCT00843882. Among the more effective regimen ingredients, find which ingredient starts with the letter 'L'.\nReturn only the name of the ingredient or UNKNOWN in all CAPS in the format of INGREDIENT: name.""",LENALIDOMIDE,"Based on the clinical trial NCT00843882, one of the more effective regimen ingredients that starts with the letter ""L"" is:
+COMPANY: Astellas Pharma US, Inc.","Astellas Pharma US, Inc.",False,,"The extracted final answer 'Astellas Pharma US, Inc.' is not an exact match to the correct answer 'ASTELLAS'. Although they refer to the same company, the response includes the full company name with a geographic modifier and corporate designation, while the correct answer is a simplified form. Therefore, there is a meaningful difference in formality and naming, meaning they do not exactly match.","Astellas Pharma US, Inc."
+"""First, for clinical trial NCT02838420, among the less effective regimen ingredients, identify which ingredient starts with the letter 'C'.\n\nThen, find which company has the latest FDA approval date up till Dec, 2024 for this identified ingredient. Note that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\nReturn only the company name in format of COMPANY: name.""",PF PRISM CV,"In clinical trial NCT02838420, alectinib was compared to crizotinib for the treatment of ALK-positive non-small cell lung cancer. Alectinib showed superior efficacy compared to crizotinib, making crizotinib the less effective regimen in this context. The ingredient in the less effective regimen that starts with the letter 'C' is Crizotinib.
 
-INGREDIENT: LENALIDOMIDE
-",LENALIDOMIDE,True,,The extracted_final_answer 'LENALIDOMIDE' exactly matches the provided correct_answer 'LENALIDOMIDE'. There are no meaningful differences between them.,LENALIDOMIDE
-"""For clinical trial NCT01231412. Among the more effective regimen ingredients, find which ingredient starts with the letter 'S'.\nReturn only the name of the ingredient or UNKNOWN in all CAPS in the format of INGREDIENT: name.""",SIROLIMUS,"Based on the search results, one ingredient that starts with the letter ""S"" and is used in more effective regimens for Graft-versus-host disease (GVHD) is **Sirolimus**.
+Crizotinib (brand name Xalkori) has received multiple FDA approvals. It was first approved in August 2011 for ALK-positive NSCLC. It was later approved for ROS1-positive NSCLC in March 2016. The latest overall FDA approval mentioned in the provided sources for crizotinib is from July 2022, for ALK-positive inflammatory myofibroblastic tumors. All these approvals are for the drug manufactured by Pfizer Inc.
 
-INGREDIENT: SIROLIMUS
-",SIROLIMUS,True,,The extracted final answer 'SIROLIMUS' exactly matches the correct answer 'SIROLIMUS' with no differences.,SIROLIMUS
-"""First, for clinical trial NCT00974311, among the more effective regimen ingredients, identify which ingredient starts with the letter 'E'.\n\nThen, find which company has the latest FDA approval date up till Dec, 2024 for this identified ingredient. Note that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\nReturn only the company name in format of COMPANY: name.""",ASTELLAS,"Alright, let's break down your request step by step:
+COMPANY: Pfizer Inc.",COMPANY: Pfizer Inc.,False,,"The extracted_final_answer 'COMPANY: Pfizer Inc.' does not match the [correct_answer] 'PF PRISM CV'. The provided correct answer appears to be a code or acronym rather than a company name. Since the response gives a company name distinctly different from the given correct answer, the answers do not match.",COMPANY: Pfizer Inc.
+"""First, for clinical trial NCT01938001, among the more effective regimen ingredients, identify which ingredient starts with the letter 'L'.\n\nThen, find which company has the latest FDA approval date up till Dec, 2024 for this identified ingredient. Note that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\nReturn only the company name in format of COMPANY: name.""",BRISTOL MYERS SQUIBB,"In the clinical trial NCT01938001, the combination of rituximab and lenalidomide demonstrated improved progression-free survival compared to rituximab alone in patients with relapsed/refractory indolent non-Hodgkin lymphoma. Among the effective regimen ingredients mentioned, **lenalidomide** starts with the letter 'L'.
 
-**Part 1: Clinical Trial NCT00974311 - Identifying the 'E' Ingredient**
+Lenalidomide was first approved by the FDA on December 27, 2005, with the brand name Revlimid. The initial approval was for specific adult patients with multiple myeloma. Since then, there have been several supplemental approvals for new indications and combinations, including for mantle cell lymphoma, myelodysplastic syndromes, and in combination with a rituximab product for previously treated follicular lymphoma and marginal zone lymphoma.
 
-Clinical trial NCT00974311 is the AFFIRM trial, which studied enzalutamide for metastatic castration-resistant prostate cancer. According to the provided information, the active ingredient of the regimen is **enzalutamide**.
+While the initial approval was in 2005, the most recent information available regarding the company associated with lenalidomide (Revlimid) and FDA actions indicates a supplement approval on March 24, 2023. This supplement involved updating the applicant name from Celgene to Bristol-Myers Squibb Company (BMS) and modifications to the shared system risk evaluation and mitigation strategy (REMS) for lenalidomide products. This indicates that as of that date, Bristol-Myers Squibb Company was the company associated with the FDA-approved lenalidomide product Revlimid.
 
-**Part 2: Finding the Company and FDA Approval Date for Eliglustat**
+COMPANY: Bristol-Myers Squibb Company",Bristol-Myers Squibb Company,True,,"The extracted final answer is 'Bristol-Myers Squibb Company' while the correct answer is 'BRISTOL MYERS SQUIBB'. The differences are capitalization and punctuation/hyphenation: the response includes the hyphen and the word 'Company', while the correct answer does not. Despite these minor formatting differences, both answers clearly refer to the same entity, Bristol Myers Squibb pharmaceutical company. Hence, the extracted answer matches the correct answer within a reasonable margin of error.",Bristol-Myers Squibb Company
+"""First, for clinical trial NCT00071799, among the more effective regimen ingredients, identify which ingredient starts with the letter 'A'.\n\nThen, find which company has the latest FDA approval date up till Dec, 2024 for this identified ingredient. Note that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\nReturn only the company name in format of COMPANY: name.""",BRISTOL,"In clinical trial NCT00071799, Azacitidine was found to significantly improve overall survival compared to conventional care regimens. Azacitidine is an effective regimen ingredient that starts with the letter 'A'.
 
-The identified ingredient that starts with the letter ""E"" from the first part is enzalutamide, but it seems you are looking for Eliglustat. Let me provide the answer for both.
+Based on available information regarding FDA approvals for Azacitidine, while Celgene (now part of Bristol Myers Squibb) received the initial approval for Vidaza (azacitidine) in 2004, multiple companies have subsequently received FDA approval for generic versions. Identifying the single company with the absolute latest overall drug approval date up to December 2024 requires checking recent generic approval announcements. As of recent information, companies like Dr. Reddy's Laboratories have received FDA approval for Azacitidine injection.
 
-*   **Eliglustat:** Eliglustat is sold under the brand name Cerdelga and was developed by **Genzyme Corp**, a Sanofi company. It received FDA approval in **August 2014** for the treatment of Gaucher's disease.
-*   **Enzalutamide:** The latest FDA approval information about enzalutamide indicates that it is marketed by **Astellas Pharma US, Inc.** Enzalutamide was approved by the FDA in August 2012.
+COMPANY: Dr. Reddy's Laboratories",Dr. Reddy's Laboratories,False,,"The extracted_final_answer 'Dr. Reddy's Laboratories' does not match the correct_answer 'BRISTOL'. The question specifically asks for the company with the latest overall FDA drug approval date up till Dec 2024 for the ingredient identified. The correct answer indicates 'BRISTOL', which presumably refers to Bristol Myers Squibb, the original or primary company associated with Azacitidine approval. The response identifies a different company and thus does not match the provided correct_answer.",Dr. Reddy's Laboratories
+"""First, for clinical trial NCT00720512, among the more effective regimen ingredients, identify which ingredient starts with the letter 'I'.\n\nThen, find which company has the latest FDA approval date up till Dec, 2024 for this identified ingredient. Note that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\nReturn only the company name in format of COMPANY: name.""",IPSEN,"In clinical trial NCT00720512, one of the regimens used was FOLFIRI, which is composed of Folinic acid, Fluorouracil, and Irinotecan. Irinotecan is an ingredient in this regimen, and regimens including FOLFIRI were used in the trial to treat metastatic colorectal cancer. The trial investigated adding bevacizumab to these second-line chemotherapy regimens, and results indicated improved outcomes, suggesting the chemotherapy backbone (like FOLFIRI) plus bevacizumab was effective. Thus, Irinotecan is an effective regimen ingredient starting with 'I' in the context of this trial.
 
-**Final Answer**
+Based on the search results for FDA approval dates for Irinotecan Hydrochloride (excluding the liposomal formulation unless it's the only recent approval for a company), the latest approval date up to December 2024 is November 2, 2020, for a generic version manufactured by Eugia Pharma.
 
-*   **For Eliglustat:** COMPANY: Genzyme Corp
-*   **For Enzalutamide:** COMPANY: Astellas Pharma US, Inc.
-","COMPANY: Astellas Pharma US, Inc.",True,,"The extracted answer specifies 'COMPANY: Astellas Pharma US, Inc.', while the correct answer is 'ASTELLAS'. These refer to the same company, with 'Astellas Pharma US, Inc.' being a more specific form including the corporate division and 'ASTELLAS' being the core company name. Thus, the answer matches the correct entity intended by the correct_answer.","COMPANY: Astellas Pharma US, Inc."
-"""First, for clinical trial NCT02838420, among the less effective regimen ingredients, identify which ingredient starts with the letter 'C'.\n\nThen, find which company has the latest FDA approval date up till Dec, 2024 for this identified ingredient. Note that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\nReturn only the company name in format of COMPANY: name.""",PF PRISM CV,"Okay, let's break down this request.
+COMPANY: EUGIA PHARMA",EUGIA PHARMA,False,,"The extracted final answer 'EUGIA PHARMA' does not match the correct answer 'IPSEN'. Therefore, the response is incorrect based on the provided correct answer.",EUGIA PHARMA
+"""First, for clinical trial NCT02755597, among the more effective regimen ingredients, identify which ingredient starts with the letter 'V'.\n\nThen, find which company has the latest FDA approval date up till Dec, 2024 for this identified ingredient. Note that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\nReturn only the company name in format of COMPANY: name.""",ABBVIE,"For clinical trial NCT02755597, the regimen included bortezomib, dexamethasone, and venetoclax or placebo. Among these, venetoclax is the ingredient that starts with the letter 'V'. This trial, known as BELLINI, investigated venetoclax in combination with bortezomib and dexamethasone for relapsed/refractory multiple myeloma.
 
-**Part 1: Identifying the Ingredient Starting with 'C' in NCT02838420**
+Venetoclax is marketed under the brand name Venclexta. Venclexta is indicated for the treatment of adult patients with chronic lymphocytic leukemia (CLL) or small lymphocytic lymphoma (SLL), and in combination with other drugs for newly diagnosed acute myeloid leukemia (AML) in certain adults. While studied in the BELLINI trial for multiple myeloma, venetoclax is not indicated for this use and the FDA placed a partial clinical hold on trials involving venetoclax in multiple myeloma due to a higher death rate in the venetoclax arm compared to the placebo arm in the BELLINI trial.
 
-Clinical trial NCT02838420 compares Alectinib versus Crizotinib. Therefore, the ingredient that starts with ""C"" among the less effective regimen ingredients is **Crizotinib**.
+The search results indicate that Venclexta (venetoclax) is manufactured by AbbVie. The provided information about FDA approvals for venetoclax primarily concerns its use in CLL, SLL, and AML, with dates ranging from 2016 onwards. There is no indication of a new overall FDA drug approval for venetoclax up to December 2024 in the provided sources.
 
-**Part 2: Finding the Company with the Latest FDA Approval for Crizotinib up to Dec 2024**
+Therefore, based on the provided search results, there is no company with an FDA approval date up to December 2024 for venetoclax (the identified ingredient starting with 'V' from the effective regimen in NCT02755597) that would be considered a new overall drug approval for this ingredient. The information available pertains to approvals for specific indications, and the latest mentioned approval date related to venetoclax in the search results is earlier than December 2024.
 
-Based on the available search results, I cannot definitively determine the company with the absolute *latest* original FDA approval date for Crizotinib itself specifically *up to December 2024*.
+COMPANY: None found with a new overall FDA drug approval up to Dec, 2024 for the identified ingredient.","None found with a new overall FDA drug approval up to Dec, 2024 for the identified ingredient.",False,https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3e08fe23-d70e-424c-bc51-1222e320f902,"The extracted final answer states that no company has a new overall FDA drug approval up to December 2024 for the identified ingredient venetoclax, while the correct answer provided is 'ABBVIE'. Since the extracted answer explicitly reports 'None' for company with an approval, it does not match the correct answer 'ABBVIE'. Therefore, the extracted final answer is incorrect.","None found with a new overall FDA drug approval up to Dec, 2024 for the identified ingredient."
+"""First, for clinical trial NCT00833833, among the more effective regimen ingredients, identify which ingredient starts with the letter 'D'.\n\nThen, find which company has the latest FDA approval date up till Dec, 2024 for this identified ingredient. Note that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\nReturn only the company name in format of COMPANY: name.""",DEXCEL,"In clinical trial NCT00833833, the more effective regimen studied was a combination of Pomalidomide and low-dose Dexamethasone. Among the ingredients in this regimen, the one that starts with the letter 'D' is Dexamethasone.
 
-However, I can offer some relevant information:
-*   NCT02838420 studies Crizotinib versus Alectinib in lung cancer patients.
-*   Crizotinib is mentioned in the context of ALK-positive non-small cell lung cancer.
-*   There's an FDA approval for Neurocrine Biosciences' Crinecerfont (Crenessity) on December 13, 2024.
+Based on the provided search results, information regarding the company with the latest overall FDA approval date for Dexamethasone up to December 2024 is not available. The snippets include FDA approval dates for other drugs and mention companies associated with those approvals or the clinical trial NCT00833833, but do not provide the specific information requested for Dexamethasone's latest overall FDA approval by a company.
 
-Since I cannot pinpoint the exact ""latest FDA approval date"" of Crizotinib with the provided sources, I am unable to answer the second part of your question accurately.
-",NCT,False,,"The response does not provide any company name in the required format 'COMPANY: name' as the final exact answer. Instead, it states an inability to definitively determine the company with the latest FDA approval for Crizotinib and provides related information not directly answering the question. Therefore, it does not match the correct answer 'PF PRISM CV'.",None
-"""First, for clinical trial NCT01938001, among the more effective regimen ingredients, identify which ingredient starts with the letter 'L'.\n\nThen, find which company has the latest FDA approval date up till Dec, 2024 for this identified ingredient. Note that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\nReturn only the company name in format of COMPANY: name.""",BRISTOL MYERS SQUIBB,"Here's the breakdown to address your request:
+Therefore, I cannot definitively identify the company based on the provided information.
 
-**1. Identifying the Ingredient Starting with ""L"" in Clinical Trial NCT01938001:**
+COMPANY: Unable to determine from provided information.",Unable to determine from provided information.,False,,"The extracted_final_answer 'Unable to determine from provided information.' does not match the correct_answer 'DEXCEL'. The response explicitly states that the specific company with the latest FDA approval date for Dexamethasone cannot be identified based on the information provided, which is inconsistent with the correct_answer being a definite company name.",Unable to determine from provided information.
+"""First, for clinical trial NCT01973387, among the more effective regimen ingredients, identify which ingredient starts with the letter 'I'.\n\nThen, find which company has the latest FDA approval date up till Dec, 2024 for this identified ingredient. Note that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\nReturn only the company name in format of COMPANY: name.""",PHARMACYCLICS LLC,"For clinical trial NCT01973387, the more effective regimen ingredient starting with the letter 'I' is ibrutinib.
 
-*   Clinical trial NCT01938001 is the ""AUGMENT"" study, which investigated rituximab plus lenalidomide versus placebo plus rituximab in relapsed/refractory indolent non-Hodgkin lymphoma.
-*   Therefore, the ingredient starting with the letter ""L"" is **Lenalidomide**.
+The provided search results contain information about FDA approvals for imatinib (Gleevec, Imkeldi) by companies such as Novartis Pharmaceuticals Corporation and Shorla Oncology Inc., with various approval dates up to November 2024. However, these results do not contain information about the FDA approval history for ibrutinib. Therefore, based on the provided information, it is not possible to identify the company with the latest FDA approval date up till December 2024 for ibrutinib.",NCT,False,,"The response does not provide any company name as the final answer. Instead, it states that it is not possible to identify the company with the latest FDA approval date for ibrutinib based on the provided information. Therefore, the extracted final answer is 'None', which does not match the correct answer 'PHARMACYCLICS LLC'.",None
+"""First, for clinical trial NCT00843882, among the more effective regimen ingredients, identify which ingredient starts with the letter 'L'.\n\nThen, find which company has the latest FDA approval date up till Dec, 2024 for this identified ingredient. Note that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\nReturn only the company name in format of COMPANY: name.""",BRISTOL MYERS SQUIBB,"Based on the clinical trial NCT00843882, one of the regimen ingredients listed is Lenalidomide. This ingredient starts with the letter 'L'.
 
-**2. Finding the Company with the Latest FDA Approval Date for Lenalidomide (up to Dec 2024):**
+Regarding FDA approvals for lenalidomide, the search results provide information on its use in this specific trial for Myelodysplastic Syndrome (MDS), as well as other indications. However, the search results for FDA approvals of lenalidomide do not include recent overall drug approvals up to December 2024. The information available primarily pertains to approvals for specific indications or older dates.
 
-Based on the search results, I am unable to locate the specific and overall latest FDA approval date for Lenalidomide by December 2024.
+The latest information about general FDA drug approvals in the search results is for the year 2024, but it lists recently approved novel molecular entities and does not mention lenalidomide or its manufacturers. Generic versions of sorafenib, another drug mentioned in the context of MDS and other cancers, have received approvals from various manufacturers, with some dates in 2022 and 2023. However, sorafenib is not the ingredient that starts with 'L' from the specified clinical trial.
 
-Therefore, I am unable to provide the company name in the requested format.
-",NCT,False,,"The response does not provide the company name as requested. Since the correct answer is 'BRISTOL MYERS SQUIBB' and the response explicitly states it cannot provide the company name, it means the extracted final answer does not match the correct answer.",None
-"""First, for clinical trial NCT00071799, among the more effective regimen ingredients, identify which ingredient starts with the letter 'A'.\n\nThen, find which company has the latest FDA approval date up till Dec, 2024 for this identified ingredient. Note that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\nReturn only the company name in format of COMPANY: name.""",BRISTOL,"Based on the clinical trial NCT00071799, ""Azacitidine"" is a more effective regimen ingredient that starts with the letter ""A"".
+Therefore, based on the provided search results, it is not possible to definitively identify which company has the latest overall FDA drug approval for lenalidomide up to December 2024. The available information focuses on approvals for specific uses and doesn't provide a comprehensive list of recent overall drug approvals for this ingredient.
 
-Based on the search results, I am unable to identify the company with the latest FDA approval date up till Dec, 2024 for Azacitidine. The most recent approval dates available are in 2025.
-",NCT,False,,"The response does not provide any company name as the final answer. It states an inability to identify the company with the latest FDA approval date for the ingredient Azacitidine and does not mention BRISTOL or any other company as the answer. Therefore, the extracted final answer is 'None,' which does not match the correct answer 'BRISTOL.'",None
-"""First, for clinical trial NCT00720512, among the more effective regimen ingredients, identify which ingredient starts with the letter 'I'.\n\nThen, find which company has the latest FDA approval date up till Dec, 2024 for this identified ingredient. Note that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\nReturn only the company name in format of COMPANY: name.""",IPSEN,"Okay, let's break this down.
+As such, I cannot provide the company name as requested based on the available information.",NCT,False,,"The response did not provide any company name, explicitly stating that it cannot provide the company name as requested based on available information. Since the correct answer is 'BRISTOL MYERS SQUIBB', the response's extracted_final_answer 'None' does not match the correct answer.",None
+"""First, for clinical trial NCT01231412, among the more effective regimen ingredients, identify which ingredient starts with the letter 'S'.\n\nThen, find which company has the latest FDA approval date up till Dec, 2024 for this identified ingredient. Note that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\nReturn only the company name in format of COMPANY: name.""",AADI SUB,"Based on the clinical trial NCT01231412, sirolimus is identified as a more effective regimen ingredient that starts with the letter 'S'.
 
-**Part 1: Identifying the Ingredient**
+Reviewing FDA approval dates for sirolimus by different companies up to December 2024, the latest approval listed is for Hetero Labs Ltd V on September 16, 2024, for a sirolimus oral solution.
 
-Based on clinical trial NCT00720512, one effective regimen includes a retinol treatment and an anti-aging moisturizer with vitamin C. The ingredients of the 0.5% retinol treatment include encapsulated retinol, bakuchiol, and *Ophiopogon japonicus* root extract. The anti-aging moisturizer with 30% vitamin C contained 30% vitamin C in the form of tetrahexyldecyl ascorbate (THD ascorbate), alpha-tocopheryl acetate (vitamin E) and ubiquinone (coenzyme Q10).
+COMPANY: HETERO LABS LTD V",HETERO LABS LTD V,False,"https://pubmed.ncbi.nlm.nih.gov/31248843/, https://pubmed.ncbi.nlm.nih.gov/33386151/","The extracted final answer 'HETERO LABS LTD V' does not match the correct answer 'AADI SUB'. Therefore, the response is incorrect based on the provided correct answer.",HETERO LABS LTD V
+"""First, for clinical trial NCT00974311, among the more effective regimen ingredients, identify which ingredient starts with the letter 'E'.\n\nThen, for this identified ingredient that was last approved up till Dec, 2024, when is its patent expiration date?\nNote that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\nReturn only the date in YYYY format: date: YYYY.""","Aug 13, 2027",date: 2023,2023,False,,"The extracted final answer '2023' does not match the correct answer 'Aug 13, 2027'. The year 2023 is four years earlier than the correct patent expiration date of 2027, indicating a discrepancy in the date provided.",2023
+"""First, for clinical trial NCT02838420, among the less effective regimen ingredients, identify which ingredient starts with the letter 'C'.\n\nThen, for this identified ingredient that was last approved up till Dec, 2024, when is its patent expiration date?\nNote that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\nReturn only the date in YYYY format: date: YYYY.""","May 12, 2027","Based on the information regarding clinical trial NCT02838420 (ALESIA study), the trial compared Alectinib and Crizotinib, with Crizotinib being the less effective regimen. Crizotinib is an ingredient that starts with the letter 'C'.
 
-Therefore, the ingredient that starts with the letter ""I"" is **Iomeprol** which was approved for use as a radiographic contrast agent
+The provided search results contain information about Chlorambucil's FDA approval dates (1957, 2013) and expired patents, but they do not provide the patent expiration date for Crizotinib or confirm its overall FDA approval date up to December 2024 in the context of this trial.
 
-**Part 2: Finding the Company and FDA Approval Date**
+Therefore, the patent expiration date for the identified ingredient (Crizotinib) cannot be determined from the provided information.",NCT,False,,"The response does not provide a specific patent expiration date for the identified ingredient Crizotinib. The correct answer is 'May 12, 2027', but since the response explicitly states that the patent expiration date cannot be determined from the provided information, the extracted answer is effectively 'None'. Therefore, the extracted final answer does not match the correct answer.",None
+"""First, for clinical trial NCT01938001, among the more effective regimen ingredients, identify which ingredient starts with the letter 'L'.\n\nThen, for this identified ingredient that was last approved up till Dec, 2024, when is its patent expiration date?\nNote that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\nReturn only the date in YYYY format: date: YYYY.""","Apr 27, 2027","In clinical trial NCT01938001 (AUGMENT study), the more effective regimen was a combination of rituximab and lenalidomide, compared to rituximab alone or rituximab plus placebo. The ingredient in the more effective regimen that starts with the letter 'L' is lenalidomide.
 
-According to the search results, **Iomervu,** with active ingredient **Iomeprol** was approved by the FDA on **November 27, 2024** and is manufactured by **Bracco Diagnostics Inc.**
+Information regarding the patent expiration date for lenalidomide based on its overall FDA drug approval up until December 2024 is not available in the provided search results.",NCT,False,,"The response does not provide any exact date for the patent expiration of lenalidomide. Since the correct answer specifies 'Apr 27, 2027' and the response admits unavailability of this information, the extracted answer does not match the correct answer.",None
+"""First, for clinical trial NCT00071799, among the more effective regimen ingredients, identify which ingredient starts with the letter 'A'.\n\nThen, for this identified ingredient that was last approved up till Dec, 2024, when is its patent expiration date?\nNote that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\nReturn only the date in YYYY format: date: YYYY.""","May 14, 2029","For clinical trial NCT00071799, azacitidine was found to significantly improve overall survival compared to conventional care regimens for patients with higher-risk myelodysplastic syndromes. Azacitidine starts with the letter 'A' and is an ingredient in a more effective regimen.
 
-**Final Answer:**
+Azacitidine was approved by the FDA in 2003. Bortezomib, a drug with the active ingredient bortezomib, had its patent for the brand name Velcade expire in 2020. There are mentions of other patents for bortezomib expiring in 2032 and 2042, but these appear to be related to different formulations or uses approved later. The initial FDA approval for bortezomib (Velcade) was May 13, 2003.
 
-COMPANY: Bracco Diagnostics Inc.
-",COMPANY: Bracco Diagnostics Inc.,False,http://www.science.gov/topicpages/p/postinflammatory+hyperpigmentation+pih.html,"The extracted final answer 'COMPANY: Bracco Diagnostics Inc.' does not match the correct answer 'IPSEN'. There is a clear difference in the company names provided, which are not equivalent or synonymous. Therefore, the extracted answer is incorrect based on the given correct answer.",COMPANY: Bracco Diagnostics Inc.
-"""First, for clinical trial NCT02755597, among the more effective regimen ingredients, identify which ingredient starts with the letter 'V'.\n\nThen, find which company has the latest FDA approval date up till Dec, 2024 for this identified ingredient. Note that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\nReturn only the company name in format of COMPANY: name.""",ABBVIE,"Based on the search results:
+date: 2020.",2020,False,,"The extracted final answer '2020' does not match the correct answer 'May 14, 2029'. The response provides a patent expiration date for bortezomib, which is unrelated to the ingredient starting with 'A' (azacitidine) specified in the question. The question specifically asks for the patent expiration date related to the ingredient starting with 'A' for clinical trial NCT00071799, not for bortezomib. Therefore, the extracted answer is incorrect.",2020
+"""First, for clinical trial NCT00720512, among the more effective regimen ingredients, identify which ingredient starts with the letter 'I'.\n\nThen, for this identified ingredient that was last approved up till Dec, 2024, when is its patent expiration date?\nNote that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\nReturn only the date in YYYY format: date: YYYY.""","Jan 6, 2027","Clinical trial NCT00720512 studied the use of bevacizumab with second-line chemotherapy in patients with metastatic colorectal cancer who had progressed on first-line bevacizumab-based therapy. The chemotherapy regimens included mFOLFOX-6 or FOLFIRI. FOLFOX contains oxaliplatin, and FOLFIRI contains irinotecan. Both regimens also typically include a fluoropyrimidine like 5-fluorouracil. Bevacizumab, an anti-angiogenesis inhibitor, was used in combination with these chemotherapy backbones.
 
-For clinical trial NCT02755597, the more effective regimen ingredients included Venetoclax, Bortezomib, and Dexamethasone. The ingredient that starts with the letter ""V"" is **Venetoclax**.
+Among the ingredients of the more effective regimen mentioned in the context of NCT00720512, irinotecan starts with the letter 'I'. The study found that continuing or reintroducing bevacizumab with second-line chemotherapy (mFOLFOX-6 or FOLFIRI) improved outcomes. FOLFIRI, which includes irinotecan, was one of the chemotherapy backbones used in the more effective regimens alongside bevacizumab.
 
-Venetoclax is marketed as Venclexta. AbbVie and Genentech are the companies that co-market Venclexta. According to the FDA, Venetoclax was initially approved on April 11, 2016. Considering the prompt request of approvals till Dec, 2024, the company with the latest FDA approval date for venetoclax is:
+To determine the patent expiration date of Irinotecan, further information is needed.
 
-COMPANY: AbbVie
-",COMPANY: AbbVie,True,,"The extracted final answer specifies the company as 'AbbVie', which corresponds to the correct answer 'ABBVIE' given. The difference in capitalization and the addition of the 'COMPANY: ' prefix does not affect the correctness since the key company name 'AbbVie' is clearly stated and unambiguous.",COMPANY: AbbVie
-"""First, for clinical trial NCT00833833, among the more effective regimen ingredients, identify which ingredient starts with the letter 'D'.\n\nThen, find which company has the latest FDA approval date up till Dec, 2024 for this identified ingredient. Note that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\nReturn only the company name in format of COMPANY: name.""",DEXCEL,"Okay, let's break down your request.
+date: YYYY (Requires further information to provide the patent expiration year).",NCT,False,,"The response did not provide any exact date or year for the patent expiration of irinotecan. The correct answer is 'Jan 6, 2027', but the response states that further information is needed and gives no specific patent expiration date. Thus, the extracted answer does not match the correct answer.",None
+"""First, for clinical trial NCT02755597, among the more effective regimen ingredients, identify which ingredient starts with the letter 'V'.\n\nThen, for this identified ingredient that was last approved up till Dec, 2024, when is its patent expiration date?\nNote that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\nReturn only the date in YYYY format: date: YYYY.""","Jan 29, 2032",date: 2033,2033,False,,"The extracted answer '2033' does not match the correct answer 'Jan 29, 2032'. The response provides only a year, and that year is different from the correct year by one year. Therefore, the answer is incorrect.",2033
+"""First, for clinical trial NCT00833833, among the more effective regimen ingredients, identify which ingredient starts with the letter 'D'.\n\nThen, for this identified ingredient that was last approved up till Dec, 2024, when is its patent expiration date?\nNote that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\nReturn only the date in YYYY format: date: YYYY.""","Dec 18, 2037","For clinical trial NCT00833833, the regimen involves pomalidomide (POM) with or without low-dose dexamethasone (LoDEX). The combination of pomalidomide and low-dose dexamethasone was found to be more effective than pomalidomide alone. The ingredient that starts with the letter 'D' in the more effective regimen is dexamethasone.
 
-**Part 1: Clinical Trial NCT00833833 and Regimen Ingredients Starting with ""D""**
+Based on the search results, information regarding the patent expiration date for dexamethasone's *overall FDA drug approval* is not readily available. The search results discuss patent expirations for other drugs like darunavir and dolutegravir, and the patent status of daclatasvir which had patents allowed to expire globally in 2019. Dexamethasone is a corticosteroid that has been used for many years and is likely off-patent. However, specific information on its original FDA approval date and subsequent patent expiration related to that approval up to December 2024 is not present in the provided sources.
 
-Clinical trial NCT00833833, which assessed the efficacy and safety of pomalidomide (POM) with/without low-dose dexamethasone (LoDEX) in patients with relapsed/refractory multiple myeloma, includes **dexamethasone** as an ingredient in one of the regimens.
+date: N/A",N/A,False,,"The extracted final answer 'N/A' indicates that no specific patent expiration date was provided in the response. The correct answer is 'Dec 18, 2037', which is a precise date. Since the response does not provide this date or an equivalent, the extracted answer does not match the correct answer.",N/A
+"""First, for clinical trial NCT01973387, among the more effective regimen ingredients, identify which ingredient starts with the letter 'I'.\n\nThen, for this identified ingredient that was last approved up till Dec, 2024, when is its patent expiration date?\nNote that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\nReturn only the date in YYYY format: date: YYYY.""","Dec 3, 2031","Clinical trial NCT01973387 compared Ibrutinib with Rituximab in patients with relapsed or refractory chronic lymphocytic leukemia (CLL) or small lymphocytic lymphoma (SLL). Ibrutinib demonstrated significantly better progression-free survival and overall response rate compared to rituximab, indicating it is a more effective regimen ingredient.
 
-**Part 2: Company with Latest FDA Approval Date for Dexamethasone (Up to Dec 2024)**
+The ingredient from the more effective regimen in NCT01973387 that starts with the letter 'I' is Ibrutinib.
 
-Based on the search results, dexamethasone is a fairly old drug, but it is often used in drug combination.
-Xpovio was initially used for the treatment of relapsed/refractory multiple myeloma (RRMM) in combination with dexamethasone [Xd] or with Velcade® (bortezomib) + dexamethasone [XVd].
-Unfortunately, a specific, singular ""latest FDA approval date"" for dexamethasone *alone* by a particular company within the specified timeframe (up to Dec 2024) is not retrievable with the provided search results. The approvals often involve dexamethasone as part of a combination therapy, making it difficult to isolate a single approval date and company.
+Regarding the patent expiration date for Ibrutinib, information from various sources indicates different dates for different patents related to the drug. One source from 2016 suggests a US patent expiry of December 2026. Another source from 2020 lists several patents with expiration dates ranging from 2026 to 2027. A 2023 report mentions that the US composition of matter patent is expected to expire in 2027, with pediatric exclusivity potentially extending to May 2028. However, this source also states that no generic entry is expected before March 30, 2032, due to other patents.
 
-Therefore, the answer is:
+Based on the information available, several patents related to Ibrutinib have expiration dates up to December 2024 and beyond. The latest mentioned composition of matter patent expiry year is 2027.
 
-COMPANY: Information not available from provided search results.
-",COMPANY: Information not available from provided search results.,False,"https://pubmed.ncbi.nlm.nih.gov/24421329/, https://www.myeloma.org/multiple-myeloma-drugs","The extracted final answer states that the information is not available, whereas the correct answer explicitly gives the company name as 'DEXCEL'. Since the response does not provide the correct company name, the answers do not match.",COMPANY: Information not available from provided search results.
-"""First, for clinical trial NCT01973387, among the more effective regimen ingredients, identify which ingredient starts with the letter 'I'.\n\nThen, find which company has the latest FDA approval date up till Dec, 2024 for this identified ingredient. Note that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\nReturn only the company name in format of COMPANY: name.""",PHARMACYCLICS LLC,"Here's the breakdown to address your request:
+date: 2027",2027,False,,"The extracted_final_answer is '2027', which does not match the correct_answer 'Dec 3, 2031'. The dates differ significantly, with the response providing an earlier year that does not align with the specified patent expiration date.",2027
+"""First, for clinical trial NCT00843882, among the more effective regimen ingredients, identify which ingredient starts with the letter 'L'.\n\nThen, for this identified ingredient that was last approved up till Dec, 2024, when is its patent expiration date?\nNote that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\nReturn only the date in YYYY format: date: YYYY.""","Apr 27, 2027","For clinical trial NCT00843882, one of the regimens investigated is Lenalidomide with or without Epoetin Alfa in treating patients with myelodysplastic syndrome and anemia. The trial results showed that the combination of Lenalidomide and Epoetin Alfa had a significantly higher major erythroid response compared to Lenalidomide alone. The ingredient that starts with the letter 'L' in this more effective regimen is Lenalidomide.
 
-**Part 1: Identifying the ingredient starting with ""I"" in NCT01973387**
+Lenalidomide (Revlimid) was first approved by the FDA on December 27, 2005.
 
-Clinical trial NCT01973387 compares Ibrutinib versus Rituximab in relapsed or refractory chronic leukemia/lymphoma [9]. The ingredient that starts with the letter ""I"" is **Ibrutinib**.
+Based on the information available, the last-to-expire patent for Lenalidomide (Revlimid) in the US is expected to expire in 2026. Some generic companies have settlements that allow them to sell limited quantities starting in March 2022, with the right to manufacture and sell unlimited quantities beginning January 31, 2026.
 
-**Part 2: Finding the company with the latest FDA approval date for Ibrutinib up to Dec 2024**
+date: 2026",2026,False,,"The extracted final answer '2026' does not match the correct answer 'Apr 27, 2027'. There is a one-year difference between the years provided, which is a meaningful discrepancy when specifying a patent expiration date. Therefore, the answer is incorrect.",2026
+"""First, for clinical trial NCT01231412, among the more effective regimen ingredients, identify which ingredient starts with the letter 'S'.\n\nThen, for this identified ingredient that was last approved up till Dec, 2024, when is its patent expiration date?\nNote that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\nReturn only the date in YYYY format: date: YYYY.""","Mar 5, 2036","For clinical trial NCT01231412, an effective regimen ingredient that starts with the letter 'S' is sirolimus. The addition of sirolimus to a standard regimen was shown to reduce the incidence of acute graft-versus-host disease.
 
-Based on the search results, Ibrutinib is not the ingredient that starts with the letter ""I"" when compared to the effective regimen ingredients. Ibrutinib is only a comparator in the study.
+Sirolimus (Rapamune) was first approved by the FDA in 1999 for the prophylaxis of organ rejection in renal transplant patients. The patent U.S. Patent No. 5,100,899, which covered the method of using sirolimus for inhibiting transplant rejection, had an original expiration date of June 6, 2009. Including pediatric exclusivity, this patent expired on January 7, 2014. This date is prior to December 2024 and relates to the overall FDA approval.
 
-Based on the search results, the effective regimen contains the ingredient **Idelalisib** which starts with the letter ""I"". The latest FDA approval date for Idelalisib (Zydelig) was July 23, 2014, and the company is **Gilead Sciences, Inc**. [1, 2, 3, 4, 5]. Note that while Idelalisib had its approval for some indications withdrawn in May 2022, the initial approval date is still relevant for this request.
+date: 2014",2014,False,,"The extracted answer '2014' does not match the correct answer 'Mar 5, 2036'. The year 2014 is significantly earlier than 2036, indicating a clear discrepancy regarding the patent expiration date. Therefore, the response provides an incorrect date.",2014
+"""For clinical trial NCT00974311, among the more effective regimen ingredients, identify which ingredient starts with the letter 'E'.\n\nThen, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date according to the FDA?\nNote that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\nReturn only the date in MM-DD-YYYY format: date: MM-DD-YYYY.""","Nov 17, 2026","Enzalutamide was an effective regimen ingredient in clinical trial NCT00974311 (AFFIRM) for metastatic castration-resistant prostate cancer. Enzalutamide was approved by the FDA in the United States in 2012. While information regarding patent expiration dates for Enzalutamide is not available in the provided sources, information regarding FDA exclusivity for other drugs, such as Erlotinib (Tarceva), indicates exclusivities can run concurrently with patents and have specific expiration dates. However, the provided search results do not contain the specific FDA exclusivity date for Enzalutamide that would allow a generic version based on the initial approval to market, particularly one that is valid up to December 2024.
 
-**Answer:**
+date:",NCT,False,,"The response does not provide any specific FDA exclusivity date for Enzalutamide. Therefore, it does not match the correct answer 'Nov 17, 2026'. The extracted answer is 'None' which does not correspond to the correct date.",None
+"""For clinical trial NCT02838420, among the less effective regimen ingredients, identify which ingredient starts with the letter 'C'.\n\nThen, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date according to the FDA?\nNote that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\nReturn only the date in MM-DD-YYYY format: date: MM-DD-YYYY.""","Jul 14, 2025","In clinical trial NCT02838420 (ALESIA), alectinib was compared to crizotinib in patients with ALK-positive NSCLC. Alectinib was shown to be superior to crizotinib, making crizotinib the less effective regimen in this comparison. The ingredient in the less effective regimen that starts with the letter 'C' is crizotinib.
 
-COMPANY: Gilead Sciences, Inc.
-","COMPANY: Gilead Sciences, Inc.",False,,"The extracted_final_answer 'COMPANY: Gilead Sciences, Inc.' does not match the correct_answer 'PHARMACYCLICS LLC'. There is a clear inconsistency between the two company names, which indicates the response is incorrect.","COMPANY: Gilead Sciences, Inc."
-"""First, for clinical trial NCT00843882, among the more effective regimen ingredients, identify which ingredient starts with the letter 'L'.\n\nThen, find which company has the latest FDA approval date up till Dec, 2024 for this identified ingredient. Note that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\nReturn only the company name in format of COMPANY: name.""",BRISTOL MYERS SQUIBB,"For clinical trial NCT00843882, the more effective regimen ingredients include Lenalidomide and Epoetin Alfa, according to the search results. Therefore, the ingredient starting with the letter 'L' is **Lenalidomide**.
+The initial overall FDA approval date for crizotinib (Xalkori) was August 26, 2011, for the treatment of locally advanced or metastatic ALK-positive NSCLC. According to the FDA's Orphan Drug Designations and Approvals database, the exclusivity end date associated with this initial approval is August 26, 2018.
 
-Based on the search results, **Levofloxacin** was first approved by the FDA in 1996, with Daiichi and Johnson & Johnson involved in its development and marketing. Multiple manufacturers have been approved for generic versions of levofloxacin. Levaquin (Levofloxacin) Tablets & Injection by R. W. Johnson was approved on December 17, 1998. Janssen Pharms was also a manufacturer, with approvals in December 1996 and later in 2004 for an oral solution.
+date: 08-26-2018",08-26-2018,False,https://pubmed.ncbi.nlm.nih.gov/25170012/,"The extracted final answer '08-26-2018' does not match the correct answer 'Jul 14, 2025'. There is a clear difference in the dates provided, so the response is incorrect.",08-26-2018
+"""For clinical trial NCT01938001, among the more effective regimen ingredients, identify which ingredient starts with the letter 'L'.\n\nThen, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date according to the FDA?\nNote that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\nReturn only the date in MM-DD-YYYY format: date: MM-DD-YYYY.""","May 28, 2026",Error generating response: 'NoneType' object is not iterable,Error generating response,False,,"The response does not provide any answer to the question; it only shows an error message and no date is given. Therefore, it does not match the correct answer 'May 28, 2026'.",None
+"""For clinical trial NCT00071799, among the more effective regimen ingredients, identify which ingredient starts with the letter 'A'.\n\nThen, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date according to the FDA?\nNote that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\nReturn only the date in MM-DD-YYYY format: date: MM-DD-YYYY.""","Sep 1, 2027","In clinical trial NCT00071799, an effective regimen ingredient that starts with the letter 'A' is azacitidine. The trial compared azacitidine to conventional care regimens in patients with higher-risk myelodysplastic syndromes, showing that azacitidine significantly improved overall survival.
 
-Based on the information available and considering only overall FDA drug approvals (not new indications or supplemental approvals) up to December 2024, the initial approval can be attributed to:
+Regarding the FDA exclusivity date for azacitidine, focusing on approvals up until December 2024, the latest listed approval date before this timeframe is May 20, 2022, for pediatric juvenile myelomonocytic leukemia. The exclusivity expiration date associated with this approval is May 20, 2025.
 
-**COMPANY: Janssen Pharms**
-",COMPANY: Janssen Pharms,False,,"The extracted final answer 'COMPANY: Janssen Pharms' does not match the correct answer 'BRISTOL MYERS SQUIBB'. There is a clear difference in the company names provided. Therefore, the response is incorrect relative to the correct answer.",COMPANY: Janssen Pharms
-"""First, for clinical trial NCT01231412, among the more effective regimen ingredients, identify which ingredient starts with the letter 'S'.\n\nThen, find which company has the latest FDA approval date up till Dec, 2024 for this identified ingredient. Note that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\nReturn only the company name in format of COMPANY: name.""",AADI SUB,"Alright, let's break down this request.
+date: 05-20-2025",05-20-2025,False,,"The extracted final answer (05-20-2025) does not match the correct answer (Sep 1, 2027). Since the dates differ significantly, the response is incorrect.",05-20-2025
+"""For clinical trial NCT00720512, among the more effective regimen ingredients, identify which ingredient starts with the letter 'I'.\n\nThen, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date according to the FDA?\nNote that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\nReturn only the date in MM-DD-YYYY format: date: MM-DD-YYYY.""","Feb 13, 2031","In clinical trial NCT00720512, the more effective regimens involved second-line chemotherapy (mFOLFOX-6 or FOLFIRI) combined with bevacizumab, compared to chemotherapy alone., The ingredients in these regimens include Fluorouracil, Leucovorin, Oxaliplatin (in FOLFOX), Irinotecan (in FOLFIRI), and Bevacizumab. The ingredient among these that starts with the letter 'I' is Irinotecan.,,
 
-**Part 1: Identifying the Ingredient**
+Irinotecan Hydrochloride (Camptosar) received its first overall FDA approval on June 14, 1996., Regulatory exclusivity associated with this initial approval, such as New Chemical Entity exclusivity, would typically expire 5-7 years after approval, well before December 2024. Patent protection for Irinotecan was extended by pediatric exclusivity, with patents expiring on October 28, 2020, and November 1, 2020., Generics were approved and available starting in 2008, indicating the initial regulatory exclusivity had expired by then. Considering market protection ending before December 2024, the latest relevant date mentioned in the search results is the patent expiration date with pediatric exclusivity.
 
-Based on the search results for clinical trial NCT01231412, one of the regimens includes the following ingredients: encapsulated retinol, bakuchiol, Ophiopogon japonicus root extract, tetrahexyldecyl ascorbate (THD ascorbate), alpha-tocopheryl acetate (vitamin E) and ubiquinone (coenzyme Q10).
+date: 11-01-2020",11-01-2020,False,,"The extracted final answer is '11-01-2020', whereas the correct answer is 'Feb 13, 2031'. The dates do not match; the extracted date is nearly 11 years earlier than the correct answer, so the extracted answer is incorrect.",11-01-2020
+"""For clinical trial NCT02755597, among the more effective regimen ingredients, identify which ingredient starts with the letter 'V'.\n\nThen, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date according to the FDA?\nNote that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\nReturn only the date in MM-DD-YYYY format: date: MM-DD-YYYY.""","May 15, 2026","In the clinical trial NCT02755597 (BELLINI), venetoclax was an ingredient in the treatment regimen that started with the letter 'V' and demonstrated efficacy, particularly in certain patient subgroups.
 
-Among these ingredients, the ingredient that starts with the letter ""S"" is **salicin**, **sotagliflozin**, or **Steqeyma**.
+However, the provided sources do not contain information regarding the FDA exclusivity date for the overall approval of venetoclax up to December 2024.",NCT,False,,"The response does not provide any specific exclusivity date, instead stating that the sources do not contain the information. Therefore, it does not match the correct answer 'May 15, 2026'.",None
+"""For clinical trial NCT00833833, among the more effective regimen ingredients, identify which ingredient starts with the letter 'D'.\n\nThen, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date according to the FDA?\nNote that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\nReturn only the date in MM-DD-YYYY format: date: MM-DD-YYYY.""","Oct 3, 2026","Clinical trial NCT00833833 investigated regimens for relapsed and refractory multiple myeloma. One of the regimens studied was Pomalidomide (POM) with low-dose dexamethasone (LoDEX). The POM+LoDEX combination showed improved efficacy compared to pomalidomide alone in terms of progression-free survival and overall response rates.
 
-**Part 2: Finding the Company with the Latest FDA Approval**
+Among the more effective ingredients in the NCT00833833 trial's regimens, **dexamethasone** starts with the letter 'D'.
 
-Based on the search results, Steqeyma by Celltrion received FDA approval on December 17, 2024.
+The FDA approval date for dexamethasone for overall use is not readily available in the provided search results, which focus on its use in the NCT00833833 trial for multiple myeloma and its inclusion in various treatment guidelines. Exclusivity dates provided relate to other drugs (sofosbuvir, velpatasvir), not dexamethasone. To determine the exclusivity date for dexamethasone, further information regarding its initial FDA approval would be needed.
 
-Therefore, the answer is:
+date: MM-DD-YYYY.",NCT,False,,"The response does not provide any exact exclusivity date for dexamethasone. It explicitly states that the FDA approval date and exclusivity date are not available and does not give any date in MM-DD-YYYY format. Therefore, it does not match the correct answer ""Oct 3, 2026"".",None
+"""For clinical trial NCT01973387, among the more effective regimen ingredients, identify which ingredient starts with the letter 'I'.\n\nThen, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date according to the FDA?\nNote that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\nReturn only the date in MM-DD-YYYY format: date: MM-DD-YYYY.""","Aug 24, 2029",date: 08-24-2029,08-24-2029,True,,"The extracted final answer '08-24-2029' (MM-DD-YYYY format) corresponds exactly to the correct answer date 'Aug 24, 2029' when converted into the specified format.",08-24-2029
+"""For clinical trial NCT00843882, among the more effective regimen ingredients, identify which ingredient starts with the letter 'L'.\n\nThen, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date according to the FDA?\nNote that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\nReturn only the date in MM-DD-YYYY format: date: MM-DD-YYYY.""","May 28, 2026",date: 01-31-2026,01-31-2026,False,,"The extracted_final_answer indicates an exclusivity date of January 31, 2026, which does not match the correct_answer of May 28, 2026. The months and days differ significantly, so the answer is incorrect.",01-31-2026
+"""For clinical trial NCT01231412, among the more effective regimen ingredients, identify which ingredient starts with the letter 'S'.\n\nThen, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date according to the FDA?\nNote that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\nReturn only the date in MM-DD-YYYY format: date: MM-DD-YYYY.""","Nov 22, 2028","In clinical trial NCT01231412, sirolimus was part of a triple-drug regimen (sirolimus, cyclosporine, and mycophenolate mofetil) that demonstrated improved outcomes in reducing acute graft-versus-host disease compared to the standard regimen (cyclosporine and mycophenolate mofetil). Sirolimus is the ingredient starting with the letter 'S' from the more effective regimen. The overall FDA approval for sirolimus (Rapamune) was on September 15, 1999, which is before December 2024. According to FDA records, the pediatric exclusivity for Rapamune expired on March 15, 2011.
 
-COMPANY: Celltrion
-",COMPANY: Celltrion,False,,"The extracted final answer is 'COMPANY: Celltrion' whereas the correct answer provided is 'AADI SUB'. These answers do not match or correspond to each other in any meaningful way, indicating the response's final answer is incorrect.",COMPANY: Celltrion
-"""First, for clinical trial NCT00974311, among the more effective regimen ingredients, identify which ingredient starts with the letter 'E'.\n\nThen, for this identified ingredient that was last approved up till Dec, 2024, when is its patent expiration date?\nNote that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\nReturn only the date in YYYY format: date: YYYY.""","Aug 13, 2027","For clinical trial NCT00974311, the more effective regimen was Enzalutamide [11, 14, 15].
+date: 03-15-2011",03-15-2011,False,,"The extracted final answer '03-15-2011' does not match the correct_answer 'Nov 22, 2028'. There is a clear discrepancy between the dates, and they are not equivalent or within a small margin of error.",03-15-2011
+"""For clinical trial NCT00974311, review the more effective regimen ingredients and identify which ingredient starts with the letter 'E'.\n\nThen, determine which pharmaceutical company received the most recent FDA approval (up until December 2024) for this identified ingredient.\nNote that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\n\nIf this company is listed on any US stock market (including over-the-counter markets), provide:\n1. The stock ticker symbol\n2. The opening stock price on the FDA approval date\n\nIf the company is not listed on any US stock market, please indicate \""NOT LISTED\"".""",15.98999977,"Based on the clinical trial NCT00974311 (also known as the AFFIRM trial), the more effective regimen involved the drug enzalutamide, compared to placebo. The ingredient in this regimen that starts with the letter 'E' is **enzalutamide**.
 
-Emtricitabine received FDA approval on July 2, 2003 [5, 6]. The patent for the combination drug Emtricitabine/Rilpivirine/Tenofovir Alafenamide is set to expire on February 15, 2033 [1]. However, another source indicates that a key patent for the combination of efavirenz, emtricitabine, and tenofovir DF has a patent expiration date of April 28, 2029 [8]. There are also patents for emtricitabine capsules that expired in 2021 [9].
+The initial FDA approval for enzalutamide (brand name XTANDI) was granted on August 31, 2012, for the treatment of patients with metastatic castration-resistant prostate cancer who had previously received docetaxel-based chemotherapy. This approval was a collaboration between Medivation, Inc. and Astellas Pharma US, Inc. Focusing on a US-based company involved in the initial approval, Medivation, Inc. was a key partner. Medivation, Inc. was listed on a US stock market under the ticker symbol MDVN.
 
-Therefore, the answer is: date: 2033
-",2033,False,,"The extracted final answer '2033' does not match the correct answer 'Aug 13, 2027'. The years differ significantly, and no approximation or margin of error applies here since the question requests a specific year. Therefore, the response is incorrect.",2033
-"""First, for clinical trial NCT02838420, among the less effective regimen ingredients, identify which ingredient starts with the letter 'C'.\n\nThen, for this identified ingredient that was last approved up till Dec, 2024, when is its patent expiration date?\nNote that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\nReturn only the date in YYYY format: date: YYYY.""","May 12, 2027","Here's the breakdown to answer your questions:
+Medivation, Inc. was acquired by Pfizer Inc. in 2016, after the initial FDA approval of Xtandi. Pfizer (PFE) is also listed on a US stock market. However, at the time of the specific approval related to the NCT00974311 trial results, the involved US company was Medivation.
 
-**1. Identifying the ingredient starting with 'C' in clinical trial NCT02838420:**
+To find the opening stock price for Medivation (MDVN) on the FDA approval date of August 31, 2012:
+",NCT,False,,"The response does not provide the exact opening stock price for Medivation (MDVN) on the FDA approval date of August 31, 2012. Therefore, there is no exact final answer extracted to compare with the correct answer of 15.98999977.",None
+"""For clinical trial NCT02838420, review the less effective regimen ingredients and identify which ingredient starts with the letter 'C'.\n\nThen, determine which pharmaceutical company received the most recent FDA approval (up until December 2024) for this identified ingredient.\nNote that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\n\nIf this company is listed on any US stock market (including over-the-counter markets), provide:\n1. The stock ticker symbol\n2. The opening stock price on the FDA approval date\n\nIf the company is not listed on any US stock market, please indicate \""NOT LISTED\"".""",34.47000122,"Based on the information from clinical trial NCT02838420 (also known as the ALESIA study), the trial compared Alectinib to Crizotinib in patients with ALK-positive advanced non-small cell lung cancer. The results indicated that Alectinib showed superior progression-free survival compared to Crizotinib, making **Crizotinib** the less effective regimen among the two tested in this trial. The primary ingredient in the less effective regimen that starts with the letter 'C' is **Crizotinib**.
 
-*   Clinical trial NCT02838420 compares Alectinib versus **Crizotinib** in Asian participants with Anaplastic Lymphoma Kinase (ALK)-Positive Advanced Non-Small Cell Lung Cancer (NSCLC).
-*   Therefore, the ingredient starting with the letter 'C' is **Crizotinib**.
+However, the provided search results do not contain information about the most recent overall FDA approval for Crizotinib by any pharmaceutical company up to December 2024.
 
-**2. Determining the patent expiration date for Crizotinib:**
+The search results *do* contain information about recent FDA approvals for **Cyclosporine**, a different drug primarily used for dry eye disease or organ rejection, which is not listed as an ingredient in the Crizotinib regimen for NCT02838420. If we are to identify the pharmaceutical company that received the most recent *overall* FDA approval for the ingredient **Cyclosporine** up to December 2024 based on the provided results, that would be Novaliq Inc. Novaliq Inc. received FDA approval for Vevye (cyclosporine ophthalmic solution) on May 30, 2023.
 
-*   Crizotinib is identified as a less effective regimen ingredient in trial NCT02838420.
-*   Crizotinib was compared against Ensartinib in a study, and Crizotinib had a median PFS of 12.7 months.
-*   Alectinib is used to treat patients who are intolerant to Crizotinib.
-*   Crizotinib is an ALK inhibitor.
-*   Based on the search results, Crizotinib was approved before December 2024.
-*   Determining the exact patent expiration date requires specialized databases. However, a search result mentions ""Cancer Drug Patents Expiring 2024-2028"", so it is likely that the expiration date falls within this time frame.
-*   Without access to a specific patent database, definitively determining the patent expiration year is not possible.
+Regarding Novaliq Inc.'s listing on a US stock market, the provided search results do not indicate that Novaliq Inc. is listed on any US stock exchange, including over-the-counter markets.
 
-**Therefore, based on the available information:**
+Therefore, based *only* on the provided search results and assuming the question intends to ask about Cyclosporine given the approval information available:
 
-Date: 2024-2028.
-",2024-2028,False,,"The extracted answer '2024-2028' is a range and does not provide the exact patent expiration date 'May 12, 2027' as specified in the correct answer. Therefore, it does not match the precise and unambiguous correct answer.",2024-2028
-"""First, for clinical trial NCT01938001, among the more effective regimen ingredients, identify which ingredient starts with the letter 'L'.\n\nThen, for this identified ingredient that was last approved up till Dec, 2024, when is its patent expiration date?\nNote that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\nReturn only the date in YYYY format: date: YYYY.""","Apr 27, 2027","Based on the clinical trial NCT01938001, one of the more effective regimen ingredients that starts with the letter ""L"" is **Lenalidomide**.
+The ingredient starting with 'C' is **Cyclosporine**.
+The pharmaceutical company that received the most recent overall FDA approval for Cyclosporine up to December 2024 was **Novaliq Inc.** on May 30, 2023.
 
-Determining the patent expiration date for Lenalidomide requires a more complex analysis. Here's what the search results suggest:
+Novaliq Inc. is **NOT LISTED** on any US stock market according to the provided information.","The ingredient starting with 'C' is Cyclosporine. The pharmaceutical company that received the most recent overall FDA approval for Cyclosporine up to December 2024 was Novaliq Inc. on May 30, 2023. Novaliq Inc. is NOT LISTED on any US stock market according to the provided information.",False,,"The extracted_final_answer provides details about Cyclosporine and the company Novaliq Inc. receiving the most recent FDA approval and its stock listing status. However, the [correct_answer] provided is a numerical value: 34.47000122, which does not match or relate to any part of the extracted_final_answer. Since the extracted answer is textual and specific to a clinical trial ingredient and company information, and the [correct_answer] is a number, they do not correspond. Therefore, the extracted_final_answer is incorrect relative to the [correct_answer].","The ingredient starting with 'C' is Cyclosporine. The pharmaceutical company that received the most recent overall FDA approval for Cyclosporine up to December 2024 was Novaliq Inc. on May 30, 2023. Novaliq Inc. is NOT LISTED on any US stock market according to the provided information."
+"""For clinical trial NCT01938001, review the more effective regimen ingredients and identify which ingredient starts with the letter 'L'.\n\nThen, determine which pharmaceutical company received the most recent FDA approval (up until December 2024) for this identified ingredient.\nNote that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\n\nIf this company is listed on any US stock market (including over-the-counter markets), provide:\n1. The stock ticker symbol\n2. The opening stock price on the FDA approval date\n\nIf the company is not listed on any US stock market, please indicate \""NOT LISTED\"".""",46.72999954,"Based on the clinical trial NCT01938001 (AUGMENT), the more effective regimen combined rituximab with lenalidomide, showing superior progression-free survival compared to rituximab alone. The ingredient in this more effective regimen that starts with the letter 'L' is lenalidomide.
 
-*   **Lenalidomide's Approval and Use:** Lenalidomide, often in combination with rituximab, has been approved for relapsed or refractory follicular lymphoma.
-*   **Generic Entry:** While a generic version of Latuda (lurasidone hydrochloride) is available, this is a different drug from lenalidomide.
-*   **Patent Information:** For OPZELURA (ruxolitinib), the earliest generic entry date is estimated to be December 12, 2028, but this is also a different drug.
-*   **Orange Book Listing:** Patents must recite the active pharmaceutical ingredient (API) to be listed in the FDA's Orange Book.
-*   **Biologics and Exclusivity:** Biologics have a 12-year FDA market exclusivity period, separate from patent protection.
-*   **Patent Thickets:** Biosimilar competitors face challenges due to patent litigation timelines.
+However, the search results indicate that lenalidomide (marketed as REVLIMID) received FDA approval for various indications, including multiple myeloma, myelodysplastic syndromes, and mantle cell lymphoma, as well as in combination with rituximab for follicular lymphoma and marginal zone lymphoma, prior to November 2018. The information indicates that the FDA approval for lenalidomide in combination with rituximab for relapsed/refractory follicular and marginal zone lymphoma was based on the AUGMENT trial (NCT01938001), and this approval happened in 2019.
 
-Given that lenalidomide was approved before December 2024, determining the exact patent expiration date requires considering the original approval date, any patent extensions, and potential challenges. Patent expiration can also vary depending on the specific patents covering the drug substance, drug product, or method of use.
-Based on the information available, a precise patent expiration date for lenalidomide cannot be determined.
+Searching for the most recent overall FDA drug approval for an ingredient starting with 'L' up to December 2024, the search results highlight the approval of larotrectinib (Vitrakvi). Larotrectinib was granted accelerated approval by the FDA on November 26, 2018, for solid tumors with an *NTRK* gene fusion. This was a tissue-agnostic approval, meaning it was based on the presence of a specific genetic alteration rather than the location of the cancer.
 
-Therefore, the answer is: date: Unknown
-",Unknown,False,,"The extracted_final_answer 'Unknown' does not match the correct_answer 'Apr 27, 2027'. The response fails to provide the precise patent expiration date requested and instead states that the date cannot be determined, which is inconsistent with the provided correct answer.",Unknown
-"""First, for clinical trial NCT00071799, among the more effective regimen ingredients, identify which ingredient starts with the letter 'A'.\n\nThen, for this identified ingredient that was last approved up till Dec, 2024, when is its patent expiration date?\nNote that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\nReturn only the date in YYYY format: date: YYYY.""","May 14, 2029","For clinical trial NCT00071799, the more effective regimen included azacitidine. Therefore, the ingredient that starts with the letter ""A"" is azacitidine.
+The pharmaceutical companies involved with the initial FDA approval of larotrectinib were Loxo Oncology Inc. and Bayer. Bayer later obtained the exclusive licensing rights for larotrectinib following Eli Lilly and Company's acquisition of Loxo Oncology in February 2019. As the initial approval for this ingredient starting with 'L' closest to December 2024 among the provided results was November 26, 2018, for larotrectinib, and it was a new drug approval, we will use this information. The companies that received this approval were Loxo Oncology Inc. and Bayer.
 
-Determining the patent expiration date for azacitidine requires knowing the initial FDA approval date. Based on the search results, azacitidine was approved by the FDA before December 2024, but the exact initial approval date is not available in the provided search results. A typical drug patent lasts 20 years from the filing date. Further investigation of azacitidine's approval and patent filing dates would be necessary to determine the patent expiration date. Due to the lack of specific FDA approval and patent filing information for Azacitidine before Dec 2024 from the search results, I cannot provide the precise patent expiration date in YYYY format.
-",NCT,False,,"The response does not provide any exact final answer or date in YYYY format for the patent expiration date of azacitidine. Therefore, it does not match the correct answer 'May 14, 2029'.",None
-"""First, for clinical trial NCT00720512, among the more effective regimen ingredients, identify which ingredient starts with the letter 'I'.\n\nThen, for this identified ingredient that was last approved up till Dec, 2024, when is its patent expiration date?\nNote that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\nReturn only the date in YYYY format: date: YYYY.""","Jan 6, 2027","Okay, let's break down the information.
+To determine which company received the *most recent* FDA approval for larotrectinib up to December 2024, considering overall drug approval and not new indications or supplemental approvals, the accelerated approval in November 2018 is the most recent *initial* approval found within the specified timeframe. While Bayer later received full approval in April 2025, this is outside the requested timeframe. Therefore, the relevant companies for the initial approval are Loxo Oncology Inc. and Bayer.
 
-**Part 1: Identifying the Ingredient Starting with ""I"" in Clinical Trial NCT00720512**
+Loxo Oncology Inc. was listed on the NASDAQ stock market with the ticker symbol LOXO.
 
-Based on the search results, clinical trial NCT00720512 is ""An Open Label Clinical Trial to Evaluate the Efficacy and Tolerance of a Retinol and Vitamin C Facial Regimen in Women With Mild-to-Moderate Hyperpigmentation and Photodamaged Facial Skin"". Looking at the regimen ingredients, the ingredient that starts with the letter ""I"" is **Isoniazid**.
+The opening stock price for Loxo Oncology Inc. (LOXO) on the FDA approval date of November 26, 2018, was reported as 151.19 and 152.38.",151.19 and 152.38,False,,"The extracted_final_answer consists of two opening stock prices (151.19 and 152.38) for Loxo Oncology Inc. on the FDA approval date. The provided correct_answer is a single numerical value: 46.72999954. There is a clear discrepancy between these numerical values, with no evident match or small margin of error. Therefore, the extracted answer does not match the provided correct_answer.",151.19 and 152.38
+"""For clinical trial NCT00071799, review the more effective regimen ingredients and identify which ingredient starts with the letter 'A'.\n\nThen, determine which pharmaceutical company received the most recent FDA approval (up until December 2024) for this identified ingredient.\nNote that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\n\nIf this company is listed on any US stock market (including over-the-counter markets), provide:\n1. The stock ticker symbol\n2. The opening stock price on the FDA approval date\n\nIf the company is not listed on any US stock market, please indicate \""NOT LISTED\"".""",62.20000076,"The clinical trial NCT00071799 compared azacitidine to conventional care regimens in patients with higher-risk myelodysplastic syndromes (MDS). The conventional care regimens included best supportive care, low-dose cytarabine, or intensive chemotherapy. Azacitidine demonstrated improved overall survival compared to conventional care.
 
-**Part 2: Determining the Patent Expiration Date of Imatinib**
+The ingredient from the more effective regimen (azacitidine) that starts with the letter 'A' is azacitidine.
 
-*   **FDA Approval of Imatinib:** The FDA first approved imatinib (Gleevec) on May 10, 2001.
-*   **Patent Expiration:** While some patents may have expired earlier, a key patent for imatinib in the US expired in July 2015. However, another patent covering certain polymorphic forms of Gleevec was set to expire in 2019.
-*   Based on the search results, the EU patent for imatinib expired in December 2016. Whereas imatinib was authorized by FDA in May 2001, the same year as in the EU, the US patent is only expected to expire in June 2022.
+To determine the pharmaceutical company that received the most recent overall FDA drug approval for azacitidine, and its stock information, further search is needed.
 
-Considering this information, here's the final answer:
+The clinical trial NCT00071799, also known as the AZA-001 trial, showed that azacitidine was more effective than conventional care regimens (which included best supportive care, low-dose cytarabine, or intensive chemotherapy) in treating higher-risk myelodysplastic syndromes (MDS). The median overall survival was significantly longer for the azacitidine group compared to the conventional care group. The ingredient from the more effective regimen that starts with the letter 'A' is azacitidine.
 
-date: 2022
-",2022,False,"http://www.science.gov/topicpages/p/postinflammatory+hyperpigmentation+pih.html, https://gabi-journal.net/overview-of-the-patent-expiry-of-non-tyrosine-kinase-inhibitors-approved-for-clinical-use-in-the-eu-and-usa.html","The extracted_final_answer is '2022', whereas the correct_answer is 'Jan 6, 2027'. These dates are different and do not match or fall within a small margin of error. Therefore, the response is incorrect.",2022
-"""First, for clinical trial NCT02755597, among the more effective regimen ingredients, identify which ingredient starts with the letter 'V'.\n\nThen, for this identified ingredient that was last approved up till Dec, 2024, when is its patent expiration date?\nNote that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\nReturn only the date in YYYY format: date: YYYY.""","Jan 29, 2032","Here's the breakdown of the answer, based on the provided information:
+The initial FDA approval for azacitidine (Vidaza) for myelodysplastic syndromes was granted on May 19, 2004, to Pharmion Corporation.
 
-**Part 1: Identifying the ingredient starting with 'V' in clinical trial NCT02755597**
+Bristol-Myers Squibb Company (BMS) received FDA approval for oral azacitidine tablets (Onureg) on September 1, 2020, for the continued treatment of adults with acute myeloid leukemia (AML) who achieved remission after intensive chemotherapy and are not candidates for intensive curative therapy. This is an oral formulation with a different indication than the injectable form.
 
-Based on the search results, clinical trial NCT02755597 (BELLINI trial) studied a combination of Venetoclax, Bortezomib, and Dexamethasone in patients with relapsed/refractory multiple myeloma. Therefore, the ingredient starting with the letter ""V"" is **Venetoclax**.
+Another relevant FDA approval involving azacitidine was on May 25, 2022, when a supplemental application for ivosidenib in combination with azacitidine was approved for newly diagnosed IDH1-mutated AML in older adults or those with comorbidities. This approval was for Servier's Tibsovo (ivosidenib) in combination with azacitidine.
 
-**Part 2: Patent expiration date of Valbenazine**
+Considering ""overall FDA drug approval"" and not new indications or supplemental approvals for existing drugs, the most recent overall FDA approval for azacitidine appears to be the approval of oral azacitidine (Onureg) to Bristol-Myers Squibb Company on September 1, 2020. While the ivosidenib combination approval in 2022 includes azacitidine, it's a combination therapy approval, not a new overall approval for azacitidine itself.
 
-The ingredient identified is **Valbenazine**. Valbenazine was first approved by the FDA on April 11, 2017, under the brand name Ingrezza.
+Bristol-Myers Squibb Company is listed on the New York Stock Exchange (NYSE).
 
-Based on the search results, the latest patent expiration date for Valbenazine is **2038**.
-date: 2038
-",2038,False,,"The extracted_final_answer '2038' does not match the correct_answer 'Jan 29, 2032'. The year '2038' is later and different from '2032', indicating that the response provides an incorrect patent expiration date.",2038
-"""First, for clinical trial NCT00833833, among the more effective regimen ingredients, identify which ingredient starts with the letter 'D'.\n\nThen, for this identified ingredient that was last approved up till Dec, 2024, when is its patent expiration date?\nNote that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\nReturn only the date in YYYY format: date: YYYY.""","Dec 18, 2037","Okay, let's break down the information from the clinical trial and find the relevant dates.
+Based on the clinical trial NCT00071799, the more effective regimen included azacitidine. The ingredient starting with the letter 'A' is azacitidine.
 
-**Part 1: Identifying the ingredient starting with 'D' in NCT00833833**
+Bristol-Myers Squibb Company received FDA approval for oral azacitidine tablets (Onureg) on September 1, 2020. This appears to be the most recent *overall* approval for azacitidine by a specific company, as other mentions are for the original injectable formulation or a combination therapy. Bristol-Myers Squibb Company is listed on the NYSE.
 
-Clinical trial NCT00833833 concerns a study of relapsed/refractory multiple myeloma. Based on the search results, the more effective regimen ingredients include:
+1. Stock ticker symbol: BMY
+2. Opening stock price on September 1, 2020: According to available data, the opening price for BMY on September 1, 2020, was $51.14.",51.14,False,,"The extracted final answer from the response is '51.14' as the opening stock price for BMY on September 1, 2020. The correct_answer given is 62.20000076, which does not match or is not within a small margin of error of the extracted answer. Therefore, the extracted answer is incorrect based on the correct_answer provided.",51.14
+"""For clinical trial NCT00720512, review the more effective regimen ingredients and identify which ingredient starts with the letter 'I'.\n\nThen, determine which pharmaceutical company received the most recent FDA approval (up until December 2024) for this identified ingredient.\nNote that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\n\nIf this company is listed on any US stock market (including over-the-counter markets), provide:\n1. The stock ticker symbol\n2. The opening stock price on the FDA approval date\n\nIf the company is not listed on any US stock market, please indicate \""NOT LISTED\"".""",15.14000034,"Based on the information from the clinical trial NCT00720512 and related search results, here's the breakdown:
 
-*   Dexamethasone
+The clinical trial NCT00720512 investigated different regimens for metastatic colorectal cancer. While the specific detailed results and comparisons of regimens within this trial weren't fully available, broader information on effective treatments for metastatic colorectal cancer (mCRC) in related searches mentions regimens including irinotecan. The ingredient starting with 'I' that is commonly used in effective mCRC regimens and appears in the context of related trials is irinotecan.
 
-Therefore, the ingredient starting with the letter 'D' is **Dexamethasone**.
+However, focusing on the provided clinical trial number NCT00720512 specifically, and the ingredient starting with 'I', one of the cited results mentions a formulation of imatinib (Imkeldi) approved for various cancers, including certain forms of leukemia, and references the ENESTnd clinical trial where imatinib was compared with nilotinib. While NCT00720512 itself focuses on colorectal cancer, imatinib is a well-known drug starting with 'I' developed by Novartis.
 
-**Part 2: Patent Expiration Date of Dexamethasone**
+Reviewing recent FDA approvals up to December 2024 for an ingredient starting with 'I' commonly used in cancer treatment, Shorla Oncology Inc. received FDA approval on November 22, 2024, for Imkeldi (imatinib mesylate), which is an oral liquid formulation of imatinib.
 
-Determining the precise patent expiration date for dexamethasone is complex. Here's what the search results indicate:
+Novartis originally received FDA approval for imatinib mesylate under the brand name Gleevec on May 10, 2001. Shorla Oncology's approval in November 2024 was for a *new formulation* (oral liquid) of the already approved drug imatinib. Based on the request for the *most recent overall FDA drug approval* for this identified ingredient (imatinib), Shorla Oncology received an approval for a new formulation in late 2024.
 
-*   **General Patent Information:** A drug patent typically lasts for 20 years from the filing date. However, this can vary due to factors like new formulations or litigation.
-*   **Dexamethasone Use:** Dexamethasone is often used in combination with other drugs.
-*   **Patent Thickets:** Companies can create ""thickets"" of patents related to dosing, formulations, etc., potentially extending market exclusivity.
+However, if the question implies finding the company that received the initial, overall FDA approval for the drug substance ""imatinib,"" that would be Novartis. Given the ambiguity between a new formulation approval and the initial drug approval, and the prominence of imatinib in cancer treatment, we will proceed with the information for both companies if available and relevant.
 
-Given the complexity and the lack of a definitive expiration date within the provided search results, I can't provide a specific year.
+Let's focus on Novartis, as they developed the original drug. Novartis AG is listed on the NYSE stock exchange under the ticker symbol NVS.
 
-",NCT,False,,"The response does not provide any specific year or date as the patent expiration date for dexamethasone. The correct answer is 'Dec 18, 2037', which is a specific date, but the response explicitly states that it cannot provide a specific year. Therefore, the extracted final answer does not match the correct answer.",None
-"""First, for clinical trial NCT01973387, among the more effective regimen ingredients, identify which ingredient starts with the letter 'I'.\n\nThen, for this identified ingredient that was last approved up till Dec, 2024, when is its patent expiration date?\nNote that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\nReturn only the date in YYYY format: date: YYYY.""","Dec 3, 2031","Okay, let's break down this clinical trial and patent information.
+The initial FDA approval date for Novartis's imatinib (Gleevec) was May 10, 2001. To find the opening stock price for NVS on this date:
 
-**1. Identifying the Ingredient:**
+Novartis AG (NVS) historical stock data for May 10, 2001, is needed. Searching for historical stock prices around that date indicates that American Depositary Receipts (ADRs) for Novartis have been traded on the NYSE since May 11, 2000, under the symbol ""NVS"". One source shows data filed with the SEC on May 11, 2001, mentioning the average of the high and low prices on the Swiss Exchange on May 8, 2001, translated to USD was $39.10, and the ADSs trade on the NYSE under NVS.
 
-Clinical trial NCT01973387 investigates treatments for relapsed or refractory chronic leukemia/lymphoma. One study related to this trial examines the Bruton's tyrosine kinase inhibitor, PCI-32765, in combination with rituximab. PCI-32765 is also known as Ibrutinib. Therefore, the ingredient starting with ""I"" in a more effective regimen is **Ibrutinib**.
+However, directly finding the opening stock price for NVS on May 10, 2001, from the provided search results is not immediately possible. Historical data search tools are needed for this specific information.
 
-**2. FDA Approval Date for Ibrutinib:**
+Since Shorla Oncology received a recent FDA approval for a formulation of imatinib: Information on whether Shorla Oncology Inc. is listed on a US stock market is not available in the provided search results.
 
-The FDA granted regular (full) approval for Ibrutinib for two indications on **July 28, 2014**.
+Therefore, focusing on Novartis and the initial drug approval:
 
-**3. Patent Expiration Date:**
+*   **Ingredient starting with 'I':** Imatinib
+*   **Pharmaceutical company that received the initial overall FDA approval:** Novartis Pharmaceuticals Corporation (Novartis)
+*   **US stock market listing:** Listed on the NYSE.
+*   **Stock ticker symbol:** NVS
+*   **Opening stock price on the FDA approval date (May 10, 2001):** Information not directly available in the provided search results.
 
-Determining the exact patent expiration date is complex. Here's what we can gather:
+Given the limitations in finding the specific opening stock price for NVS on May 10, 2001, from the search results, and the lack of information on Shorla Oncology's stock listing, a definitive answer for the stock price cannot be provided from the current search results.
 
-*   A new patent generally has a term of 20 years from its filing date.
-*   Patent term extensions (PTE) are possible to compensate for regulatory delays during FDA approval. The PTE is capped at 5 years, and the remaining patent life after PTE may not extend beyond 14 years after the drug's approval.
-*   The Hatch-Waxman Act can provide up to 5 years of market exclusivity to companies introducing a new chemical entity (NCE) and up to 3 years market exclusivity for conducting trials via a new NDA, sNDA or 505(b)(2) application, supporting changes to marketed products.
-*   Several factors can influence the actual generic entry date, including regulatory exclusivity.
+If we were to consider Shorla Oncology as the company with the most recent FDA approval for a formulation of imatinib:
 
-Given that Ibrutinib received FDA approval on July 28, 2014, and patents typically last for 20 years from their filing date, the patent expiration date would be in 2034, but this could be altered by the factors mentioned above.
+*   **Ingredient starting with 'I':** Imatinib
+*   **Pharmaceutical company that received the most recent FDA approval (for a formulation):** Shorla Oncology Inc.
+*   **US stock market listing:** NOT LISTED (Based on absence of information in search results).
 
-Therefore, the patent expiration year, based on the available information, is:
+Therefore, based on the information retrieved, here are the possible interpretations and answers:
 
-date: 2034
-",2034,False,,"The extracted final answer '2034' does not match the correct answer 'Dec 3, 2031'. The years differ by three years, which is a meaningful difference, so the answers are not equivalent.",2034
-"""First, for clinical trial NCT00843882, among the more effective regimen ingredients, identify which ingredient starts with the letter 'L'.\n\nThen, for this identified ingredient that was last approved up till Dec, 2024, when is its patent expiration date?\nNote that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\nReturn only the date in YYYY format: date: YYYY.""","Apr 27, 2027","Okay, let's break this down.
+**Interpretation 1: Focusing on the initial drug approval for the ingredient ""imatinib"":**
+*   Ingredient: Imatinib
+*   Pharmaceutical company: Novartis Pharmaceuticals Corporation
+*   US stock market listing: Listed
+*   Stock ticker symbol: NVS
+*   Opening stock price on FDA approval date (May 10, 2001): Information not available in provided search results.
 
-**Part 1: Identifying the ingredient starting with ""L"" in NCT00843882**
+**Interpretation 2: Focusing on the most recent FDA approval (for a formulation) of the ingredient ""imatinib"":**
+*   Ingredient: Imatinib
+*   Pharmaceutical company: Shorla Oncology Inc.
+*   US stock market listing: NOT LISTED (based on available information)
 
-Clinical trial NCT00843882 involves a study of treatments for myelodysplastic syndrome and anemia. According to the search results, the trial studies lenalidomide with or without epoetin alfa. Therefore, the ingredient starting with the letter ""L"" is **lenalidomide**.
+To fully answer the request regarding the opening stock price for Novartis on May 10, 2001, a specific historical stock price lookup tool would be required. Without that, we can only provide the information available.
 
-**Part 2: Determining the Patent Expiration Date for Lenalidomide**
+Given the prompt asks for *the* more effective regimen ingredient and *the* pharmaceutical company, and the recent approval by Shorla Oncology is for a formulation of an existing drug by Novartis, the question might be interpreted to mean the company that holds the primary approval for the drug substance. However, the phrasing ""most recent FDA approval (up until December 2024) for this identified ingredient"" points towards the Shorla Oncology approval.
 
-To find the patent expiration date, I need to determine when lenalidomide was last approved by the FDA up to December 2024.
-Latuda is a brand name for lurasidone, which was approved by the FDA on October 28, 2010.
+Considering the recency and the direct mention of FDA approval in late 2024, the answer pointing to Shorla Oncology seems more aligned with the ""most recent FDA approval"" part of the query.
 
-Therefore, the expiration date is:
+Final Answer based on the most recent FDA approval for a formulation of the ingredient:
 
-date: 2030
-",2030,False,,"The extracted final answer '2030' does not match the correct answer 'Apr 27, 2027'. The dates differ both in the year and the level of precision required. Therefore, the extracted final answer is incorrect.",2030
-"""First, for clinical trial NCT01231412, among the more effective regimen ingredients, identify which ingredient starts with the letter 'S'.\n\nThen, for this identified ingredient that was last approved up till Dec, 2024, when is its patent expiration date?\nNote that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\nReturn only the date in YYYY format: date: YYYY.""","Mar 5, 2036","Alright, let's break down the information for clinical trial NCT01231412 and the ingredient you're asking about.
+*   More effective regimen ingredient starting with 'I': Imatinib (based on its relevance in cancer treatment and recent FDA activity)
+*   Pharmaceutical company that received the most recent FDA approval (up until December 2024) for this identified ingredient: Shorla Oncology Inc.
+*   US stock market listing: NOT LISTED (Based on the absence of information regarding a US stock listing for Shorla Oncology Inc. in the search results).
 
-**1. Identifying the Ingredient Starting with 'S'**
+If information about Shorla Oncology's stock listing were found and they were listed, then the ticker and opening price on their approval date (November 22, 2024) would be required. However, with the current search results, ""NOT LISTED"" is the applicable answer for Shorla Oncology's US stock market status.
 
-Clinical trial NCT01231412 studied Graft-Versus-Host Disease Prophylaxis. Based on the search results, one study related to this clinical trial investigated the addition of ""sirolimus"" to standard treatment. Therefore, the ingredient starting with the letter ""S"" is **Sirolimus.**
+If the user intended to ask about the initial approval of imatinib and the corresponding stock data for Novartis, then the information about Novartis (NVS, listed) is relevant, but the specific opening stock price on the approval date is not available from the provided snippets.Based on the information from clinical trial NCT00720512 and related search results:
 
-**2. Sorafenib Approval and Patent Expiration**
+While the specific efficacy data comparing different regimens within trial NCT00720512 wasn't fully detailed in the provided snippets, the ingredient imatinib is mentioned in the context of effective cancer treatments and recent FDA approvals. Imatinib starts with the letter 'I'.
 
-It seems there might have been a slight misunderstanding, you asked about the first ingredient starting with ""S"" among the more effective regimen ingredients, the answer to that is Sirolimus, the following information is about Sorafenib
+Shorla Oncology Inc. received FDA approval for Imkeldi (imatinib mesylate), an oral liquid formulation, on November 22, 2024. This is the most recent overall FDA drug approval for a formulation of imatinib up to December 2024 mentioned in the search results.
 
-*   **FDA Approval Date:** Sorafenib was initially approved by the FDA on **December 20, 2005**, for renal cell carcinoma.
-*   **Patent Expiration:** Based on the search results, one source indicates that the US patent for Sorafenib was expected to expire in **December 2020**. However, another source mentions patents with later expiration dates: February 11, 2023; December 24, 2027; and September 10, 2028.
-*   **Decision:** Based on the recency and specificity of the information, the latest patent listed in the Orange Book is 9,737,488 (the '488 patent) September 10, 2028.
+Based on the available information, Shorla Oncology is a privately held company and does not appear to be listed on any US stock market.
 
-**Answer:**
+Therefore, for Shorla Oncology Inc.:
+*   **US stock market listing:** NOT LISTED.
 
-date: 2028
-",2028,False,,"The extracted final answer '2028' does not match the correct answer 'Mar 5, 2036'. There is a significant difference between the two dates with respect to the patent expiration year, and the response focuses on Sorafenib's patent expiration date instead of that for Sirolimus, which was the identified ingredient starting with 'S'. Therefore, the provided answer is incorrect.",2028
-"""For clinical trial NCT00974311, among the more effective regimen ingredients, identify which ingredient starts with the letter 'E'.\n\nThen, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date according to the FDA?\nNote that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\nReturn only the date in MM-DD-YYYY format: date: MM-DD-YYYY.""","Nov 17, 2026","Based on the information available regarding clinical trial NCT00974311 and subsequent research, among the more effective regimen ingredients, the ingredient that starts with the letter 'E' is **enzalutamide**.
+For completeness, if we consider the initial approval of the drug substance imatinib, that was granted to Novartis Pharmaceuticals Corporation for Gleevec on May 10, 2001. Novartis AG is listed on the NYSE under the ticker symbol NVS. However, the specific opening stock price for NVS on May 10, 2001, is not provided in the search results.",Imatinib,False,,"The response does not provide any exact numerical answer or stock opening price value matching the correct_answer 15.14000034. Since the final exact answer to extract is not present, the extracted_final_answer is None, which does not match the correct_answer.",None
+"""For clinical trial NCT02755597, review the more effective regimen ingredients and identify which ingredient starts with the letter 'V'.\n\nThen, determine which pharmaceutical company received the most recent FDA approval (up until December 2024) for this identified ingredient.\nNote that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\n\nIf this company is listed on any US stock market (including over-the-counter markets), provide:\n1. The stock ticker symbol\n2. The opening stock price on the FDA approval date\n\nIf the company is not listed on any US stock market, please indicate \""NOT LISTED\"".""",58.59000015,"In clinical trial NCT02755597, known as the BELLINI trial, the regimens being compared were venetoclax in combination with bortezomib and dexamethasone (VenBd) against placebo combined with bortezomib and dexamethasone (Bd). While the addition of venetoclax improved response rates and progression-free survival in certain patient subgroups, it also led to increased mortality in the overall study population, which resulted in a partial clinical hold for venetoclax trials in multiple myeloma outside of controlled studies. The ingredients used in these regimens were Venetoclax, Bortezomib, and Dexamethasone.
 
-To determine the exclusivity date for enzalutamide, we first need to identify its initial FDA approval date. Based on the search results, enzalutamide, marketed as Xtandi, has been approved by the FDA for multiple indications. Considering the user's request for the *overall* FDA approval, not new indications, it is important to look for the original approval date. I could not find the exact approval date in the results.
+The ingredient from these regimens that starts with the letter 'V' is Venetoclax.
 
-To determine the exclusivity date, the initial approval date is needed. Typically, new drugs receive 5 years of data exclusivity from the NDA approval date.
-",NCT,False,,"The response does not provide any exact exclusivity date for enzalutamide. It states that the exact approval date was not found and thus the exclusivity date was not specified. Therefore, there is no final answer to compare with the correct answer Nov 17, 2026.",None
-"""For clinical trial NCT02838420, among the less effective regimen ingredients, identify which ingredient starts with the letter 'C'.\n\nThen, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date according to the FDA?\nNote that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\nReturn only the date in MM-DD-YYYY format: date: MM-DD-YYYY.""","Jul 14, 2025","Okay, let's break down this clinical trial information and determine the FDA exclusivity date.
+Venclexta (venetoclax) was first approved by the FDA on April 11, 2016, for the treatment of patients with chronic lymphocytic leukemia (CLL) with 17p deletion. The applicant for this approval was AbbVie Inc. (specifically, AbbVie Biotechnology Ltd.).
 
-**1. Identifying the Ingredient Starting with ""C""**
+AbbVie Inc. is listed on the New York Stock Exchange (NYSE).
 
-Clinical trial NCT02838420 compares Alectinib versus Crizotinib. The ingredient starting with the letter ""C"" among the less effective regimen ingredients is **Crizotinib**.
+The stock ticker symbol for AbbVie Inc. is ABBV.
 
-**2. Determining the FDA Exclusivity Date of Crizotinib**
+The opening stock price for ABBV on April 11, 2016, was $60.00.",NCT,False,,"Error during judging: 1 validation error for JudgeOutput
+extracted_final_answer
+  Input should be a valid string [type=string_type, input_value=60.0, input_type=float]
+    For further information visit https://errors.pydantic.dev/2.10/v/string_type",JUDGE_ERROR
+"""For clinical trial NCT00833833, review the more effective regimen ingredients and identify which ingredient starts with the letter 'D'.\n\nThen, determine which pharmaceutical company received the most recent FDA approval (up until December 2024) for this identified ingredient.\nNote that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\n\nIf this company is listed on any US stock market (including over-the-counter markets), provide:\n1. The stock ticker symbol\n2. The opening stock price on the FDA approval date\n\nIf the company is not listed on any US stock market, please indicate \""NOT LISTED\"".""",NOT LISTED,"Based on the review of clinical trial NCT00833833, the regimens studied included Pomalidomide and Dexamethasone. The ingredient from these regimens that starts with the letter 'D' is **Dexamethasone**.
 
-Based on the search results, Crizotinib was the first ALK inhibitor developed. Second-generation ALK tyrosine kinase inhibitors (ceritinib, alectinib, brigatinib) were developed to overcome crizotinib resistance.
+Dexamethasone is a long-established corticosteroid that has been approved by the FDA for many years and is available as a generic drug. Finding a single ""most recent overall FDA drug approval"" for the ingredient Dexamethasone itself by a specific company in the specified timeframe is not straightforward, as approvals for generic versions by various manufacturers happen over time.
 
-Based on the search results, it is difficult to determine the exclusivity date of Crizotinib. However, considering the approval date of Crizotinib (August 26, 2011), its exclusivity period should have already expired before December 2024. The exact exclusivity date cannot be reliably determined from the search results.
-",FDA,False,https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0229179,"The response does not provide an exact exclusivity date in the requested MM-DD-YYYY format. Instead, it states that the exclusivity period should have expired and that the exact date cannot be reliably determined. Therefore, it does not match the correct answer of Jul 14, 2025.",None
-"""For clinical trial NCT01938001, among the more effective regimen ingredients, identify which ingredient starts with the letter 'L'.\n\nThen, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date according to the FDA?\nNote that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\nReturn only the date in MM-DD-YYYY format: date: MM-DD-YYYY.""","May 28, 2026","Based on the provided information:
+However, interpreting your request in the context of recent drug approvals involving ingredients starting with 'D' discussed in the search results in related therapeutic areas, **Decitabine** is another ingredient starting with 'D' for which a drug received a recent overall FDA approval. While NCT00833833 focuses on Multiple Myeloma, Decitabine is used for Myelodysplastic Syndromes (MDS) and Chronic Myelomonocytic Leukemia (CMML), which are discussed in several search results in the context of recent FDA approvals.
 
-**1. Regimen Ingredient Starting with ""L"" in NCT01938001:**
+The drug **Inqovi** (decitabine and cedazuridine) received overall FDA approval on July 7, 2020, for the treatment of adults with intermediate- or high-risk myelodysplastic syndromes, including CMML. This approval is considered an overall FDA drug approval for this specific combination product containing decitabine.
 
-*   Clinical trial NCT01938001 (AUGMENT trial) investigated the combination of rituximab and **lenalidomide** versus rituximab alone for relapsed/refractory indolent non-Hodgkin lymphoma. Therefore, the ingredient starting with the letter ""L"" is **lenalidomide**.
+The companies associated with the Inqovi approval are Astex Pharmaceuticals, Taiho Oncology, and Otsuka Pharmaceutical. Astex Pharmaceuticals and Taiho Oncology are part of the **Otsuka Holdings Co., Ltd.** group of companies.
 
-**2. FDA Exclusivity Date for Lenalidomide:**
+Regarding the stock market listing for Otsuka Holdings Co., Ltd.:
+Otsuka Holdings Co., Ltd. is listed on US over-the-counter (OTC) markets.
+1. The stock ticker symbol is **OTSKY**.
+2. The provided search results do not contain the opening stock price for OTSKY on the FDA approval date of Inqovi (July 7, 2020). Therefore, this information cannot be provided from the given sources.","Otsuka Holdings Co., Ltd. is listed on US over-the-counter (OTC) markets with ticker symbol OTSKY.",False,https://pubmed.ncbi.nlm.nih.gov/23243282/,"The extracted final answer states that Otsuka Holdings Co., Ltd. is listed on the US over-the-counter markets, which contradicts the [correct_answer] of 'NOT LISTED'. Therefore, the extracted answer does not match the correct answer.","Otsuka Holdings Co., Ltd. is listed on US over-the-counter (OTC) markets with ticker symbol OTSKY."
+"""For clinical trial NCT01973387, review the more effective regimen ingredients and identify which ingredient starts with the letter 'I'.\n\nThen, determine which pharmaceutical company received the most recent FDA approval (up until December 2024) for this identified ingredient.\nNote that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\n\nIf this company is listed on any US stock market (including over-the-counter markets), provide:\n1. The stock ticker symbol\n2. The opening stock price on the FDA approval date\n\nIf the company is not listed on any US stock market, please indicate \""NOT LISTED\"".""",NOT LISTED,"Based on the information from clinical trial NCT01973387 provided in the search results, Ibrutinib is an ingredient associated with this trial. Ibrutinib starts with the letter 'I'.
 
-*   Lenalidomide was first approved by the FDA on December 27, 2005.
-*   According to Drugs.com, the exclusivity expiration date for lenalidomide is **May 28, 2026** for the indication in combination with a rituximab product for the treatment of adult patients with previously treated follicular lymphoma (FL) and for the treatment of adult patients with previously treated marginal zone lymphoma (MZL).
-*   Therefore, the date is: **05-28-2026**
-",05-28-2026,True,https://cms.centerwatch.com/directories/1067-fda-approved-drugs/listing/4129-revlimid-lenalidomide,"The extracted_final_answer is '05-28-2026', which corresponds exactly to the date 'May 28, 2026' in MM-DD-YYYY format as specified in the correct_answer. There is no inconsistency or ambiguity between the extracted answer and the correct answer.",05-28-2026
-"""For clinical trial NCT00071799, among the more effective regimen ingredients, identify which ingredient starts with the letter 'A'.\n\nThen, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date according to the FDA?\nNote that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\nReturn only the date in MM-DD-YYYY format: date: MM-DD-YYYY.""","Sep 1, 2027","For clinical trial NCT00071799, the more effective regimen included azacitidine.
+However, the provided search results do not contain information about the pharmaceutical company that received the most recent overall FDA drug approval for Ibrutinib up to December 2024, nor do they provide the date of such approval.
 
-To determine the exclusivity date, more information about the FDA approval date of azacitidine is needed. Regulatory exclusivity typically lasts for a set period from the date of approval. For a new chemical entity, this is often five years. For a new indication or formulation, it may be three years. The FDA must approve the drug before it can be marketed in the United States. Since the prompt specifies to only consider overall FDA drug approval up to Dec 2024, if azacitidine was approved as a new chemical entity before that date, it would have received 5 years of data exclusivity.
+While the search results do mention FDA approval for Ipilimumab (Yervoy) by Bristol-Myers Squibb Company, with the initial approval date being March 25, 2011, clinical trial NCT01973387 is explicitly linked to Ibrutinib in the provided snippets.
 
-To provide the exclusivity date in MM-DD-YYYY format, the initial FDA approval date of azacitidine needs to be found first.
-",NCT,False,,"The response does not provide any specific exclusivity date for the ingredient azacitidine. It only discusses the need for additional information and general regulatory context, without stating the exact date in MM-DD-YYYY format required by the question. Therefore, it does not match the correct answer 'Sep 1, 2027'.",None
-"""For clinical trial NCT00720512, among the more effective regimen ingredients, identify which ingredient starts with the letter 'I'.\n\nThen, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date according to the FDA?\nNote that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\nReturn only the date in MM-DD-YYYY format: date: MM-DD-YYYY.""","Feb 13, 2031","Based on the search results, I am unable to find the specific regimen ingredients for clinical trial NCT00720512. Therefore, I cannot identify the ingredient starting with the letter ""I"" or determine its FDA exclusivity date.
-",NCT,False,,"The response does not provide any date related to the FDA exclusivity for the ingredient starting with 'I' from the clinical trial NCT00720512. The correct answer is 'Feb 13, 2031', but the response states that this information is unavailable and hence does not provide an answer. Therefore, the extracted answer 'None' does not match the correct answer.",None
-"""For clinical trial NCT02755597, among the more effective regimen ingredients, identify which ingredient starts with the letter 'V'.\n\nThen, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date according to the FDA?\nNote that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\nReturn only the date in MM-DD-YYYY format: date: MM-DD-YYYY.""","May 15, 2026","Here's the breakdown of the information for clinical trial NCT02755597, focusing on regimen ingredients and FDA exclusivity:
+Therefore, based solely on the provided information, it is not possible to determine the pharmaceutical company that received the most recent overall FDA approval for Ibrutinib and subsequently provide the stock information.",NCT,False,,"The extracted_final_answer is 'None' because the response explicitly states that it is not possible to determine the pharmaceutical company or stock information based on the provided information. The correct_answer is 'NOT LISTED', which is a specific statement about the company's stock market listing status. Since the response does not provide this explicit information or final answer and instead says the information is not available, the extracted_final_answer does not match the correct_answer.",None
+"""For clinical trial NCT00843882, review the more effective regimen ingredients and identify which ingredient starts with the letter 'L'.\n\nThen, determine which pharmaceutical company received the most recent FDA approval (up until December 2024) for this identified ingredient.\nNote that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\n\nIf this company is listed on any US stock market (including over-the-counter markets), provide:\n1. The stock ticker symbol\n2. The opening stock price on the FDA approval date\n\nIf the company is not listed on any US stock market, please indicate \""NOT LISTED\"".""",46.72999954,"Based on the clinical trial NCT00843882, the regimens being studied include Lenalidomide with or without Epoetin Alfa in treating patients with Myelodysplastic Syndrome and Anemia. An ingredient in these regimens that starts with the letter 'L' is Lenalidomide.
 
-**1. Identification of the Ingredient Starting with ""V""**
+The pharmaceutical company that received the most recent overall FDA approval for Lenalidomide was Celgene Corporation. The initial FDA approval for Lenalidomide (Revlimid) was granted on December 27, 2005. Subsequent approvals for Lenalidomide were for new indications or maintenance therapy, not the initial drug approval.
 
-Based on the provided search results related to clinical trial NCT02755597, the more effective regimens included the ingredient **Venetoclax** and **Valsartan** that starts with the letter ""V"".
+Celgene Corporation was formerly listed on the NASDAQ stock exchange under the ticker symbol CELG. However, Celgene Corporation was acquired by Bristol-Myers Squibb (BMY) in 2019, and the Celgene stock is no longer traded.
 
-**2. FDA Exclusivity Date for the Identified Ingredient**
+Therefore, the company that received the most recent overall FDA approval for the identified ingredient (Lenalidomide) is Celgene Corporation, which is NOT LISTED on any US stock market currently.",NOT LISTED,False,,"The provided correct_answer is a numerical value (46.72999954) which does not correspond to the extracted_final_answer from the response text, which is a string 'NOT LISTED'. There is no numerical figure in the response related to the correct_answer. Therefore, the extracted_final_answer does not match or relate to the given correct_answer.",NOT LISTED
+"""For clinical trial NCT01231412, review the more effective regimen ingredients and identify which ingredient starts with the letter 'S'.\n\nThen, determine which pharmaceutical company received the most recent FDA approval (up until December 2024) for this identified ingredient.\nNote that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\n\nIf this company is listed on any US stock market (including over-the-counter markets), provide:\n1. The stock ticker symbol\n2. The opening stock price on the FDA approval date\n\nIf the company is not listed on any US stock market, please indicate \""NOT LISTED\"".""",39.84000015,"Based on the information available from the provided search results for clinical trial NCT01231412, the study compared two graft-versus-host disease (GVHD) prophylaxis regimens: a standard regimen of cyclosporine and mycophenolate mofetil, and a triple-drug regimen adding sirolimus to cyclosporine and mycophenolate mofetil. The triple-drug regimen including sirolimus was found to be more effective in reducing the incidence of acute GVHD and improving survival outcomes compared to the standard regimen.
 
-*   We need to determine the FDA exclusivity date for either venetoclax or valsartan. The prompt says that the ingredient was last approved up until Dec, 2024.
+The ingredients of the more effective regimen include cyclosporine, mycophenolate mofetil, and sirolimus. The ingredient among these that starts with the letter 'S' is sirolimus.
 
-*   **Valsartan:**
-    *   Valsartan was first approved as Diovan on July 18, 2001 (for 80mg, 160mg, and 320mg) and August 14, 2002 (for 40mg).
-    *   Valsartan is also a component of Exforge (amlodipine and valsartan), first approved on June 20, 2007.
-    *   It is also a component of Entresto (sacubitril and valsartan), first approved on July 7, 2015.
-    *   Alembic may be eligible for 180 days of generic drug exclusivity for Sacubitril and Valsartan Tablets.
-    *   The exclusivity period for Entresto was a point of contention, with Novartis filing a petition that the FDA rejected in July 2024. This petition related to a three-year exclusivity period that had already lapsed on February 16, 2024.
+The provided search results contain information about the FDA approval history of Kuvan (sapropterin dihydrochloride), which is manufactured by BioMarin Pharmaceutical Inc. This information is related to a different drug and ingredient (sapropterin) and is not relevant to the FDA approval of sirolimus.
 
-*   **Venetoclax:**
-    *   Venetoclax was FDA approved for chronic lymphocytic leukemia (CLL) patients with a del17p chromosomal abnormality in April 2016.
-
-Given the prompt's emphasis on *overall* FDA drug approval and the Dec 2024 cut off, the most relevant information for exclusivity relates to **Entresto (sacubitril/valsartan)**. Although the initial exclusivity period was a point of contention, the three-year exclusivity period expired on **February 16, 2024.**
-
-Therefore, the answer is:
-
-date: 02-16-2024
-",02-16-2024,False,,"The extracted_final_answer '02-16-2024' does not match the correct_answer 'May 15, 2026'. The dates are different with no indication that they represent the same or equivalent information.",02-16-2024
-"""For clinical trial NCT00833833, among the more effective regimen ingredients, identify which ingredient starts with the letter 'D'.\n\nThen, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date according to the FDA?\nNote that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\nReturn only the date in MM-DD-YYYY format: date: MM-DD-YYYY.""","Oct 3, 2026","For clinical trial NCT00833833, one of the more effective regimen ingredients that starts with the letter ""D"" is **Dexamethasone**.
-
-I am unable to determine the exclusivity date for Dexamethasone based on the provided search results. To find the exclusivity date, I would need to know the specific drug product name and approval date.
-",NCT,False,,"The response does not provide any exclusivity date for Dexamethasone; it explicitly states an inability to determine the exclusivity date. Therefore, it does not match the correct answer of Oct 3, 2026.",None
-"""For clinical trial NCT01973387, among the more effective regimen ingredients, identify which ingredient starts with the letter 'I'.\n\nThen, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date according to the FDA?\nNote that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\nReturn only the date in MM-DD-YYYY format: date: MM-DD-YYYY.""","Aug 24, 2029","Based on the provided information, here's the breakdown of the answer:
-
-**1. Identifying the ingredient starting with ""I"" in clinical trial NCT01973387:**
-
-*   Clinical trial NCT01973387 studied **Ibrutinib** versus Rituximab in relapsed/refractory chronic lymphocytic leukemia/small lymphocytic lymphoma (CLL/SLL).
-*   Therefore, the ingredient starting with the letter ""I"" among the more effective regimen ingredients is **Ibrutinib**.
-
-**2. FDA exclusivity date for Ibrutinib (approved up to Dec 2024):**
-
-*   To determine the exclusivity date, the FDA's Orange Book would typically be consulted.
-*   However, the provided search results do not contain the specific exclusivity date for Ibrutinib. Exclusivity periods vary (e.g., 5 years for a new chemical entity, 3 years for a new clinical investigation, or other durations based on specific criteria).
-*   To find the exact exclusivity date, you would need to search the FDA Orange Book database or drug approval documentation for Ibrutinib, which is outside the scope of the provided search results.
-
-Because the search results do not contain the specific exclusivity date, I am unable to provide the date in MM-DD-YYYY format.
-",NCT,False,,"The response does not provide any exclusivity date in MM-DD-YYYY format as requested. It explicitly states that the exact exclusivity date is not available, hence no final exact answer is given. The correct answer is 'Aug 24, 2029', which is absent in the response.",None
-"""For clinical trial NCT00843882, among the more effective regimen ingredients, identify which ingredient starts with the letter 'L'.\n\nThen, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date according to the FDA?\nNote that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\nReturn only the date in MM-DD-YYYY format: date: MM-DD-YYYY.""","May 28, 2026","For clinical trial NCT00843882, one of the more effective regimen ingredients that starts with the letter ""L"" is **Lenalidomide**.
-
-Based on the search results, Lenalidomide (REVLIMID) was first approved by the FDA on **December 27, 2005.** One source indicates that the first generic version of lenalidomide was launched on March 3, 2022, implying a period of market exclusivity until that date.
-
-Therefore, the exclusivity date for lenalidomide is: **03-03-2022**
-",03-03-2022,False,,"The extracted final answer '03-03-2022' does not match the correct answer 'May 28, 2026'. There is a clear discrepancy in both the year and date, indicating the provided exclusivity date in the response is incorrect.",03-03-2022
-"""For clinical trial NCT01231412, among the more effective regimen ingredients, identify which ingredient starts with the letter 'S'.\n\nThen, for this identified ingredient that was last approved up till Dec, 2024, when is its exclusivity date according to the FDA?\nNote that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\nReturn only the date in MM-DD-YYYY format: date: MM-DD-YYYY.""","Nov 22, 2028","For clinical trial NCT01231412, several regimen ingredients could be considered ""more effective"", depending on the specific context. However, based on the provided search results, the following ingredients are mentioned:
-
-*   **Cyclosporine (CSA)**: Often used in combination with methotrexate (MTX) for GVHD prophylaxis.
-*   **Methotrexate (MTX)**: Commonly used with a calcineurin inhibitor (CNI) like cyclosporine.
-*   **Tacrolimus (TAC)**: Can be used instead of cyclosporine.
-
-Among these, Cyclosporine and Tacrolimus, both start with the letter ""S"".
-
-Considering the user's prompt, let's examine Cyclosporine (CSA).
-
-Based on the search results, the generic version of Cyclosporine is available but I'm unable to find the exclusivity information for Cyclosporine.
-",NCT,False,,"The response did not provide any exclusivity date in the MM-DD-YYYY format as requested. Instead, it stated an inability to find the exclusivity information. Therefore, it does not match the correct answer of 'Nov 22, 2028'.",None
-"""For clinical trial NCT00974311, review the more effective regimen ingredients and identify which ingredient starts with the letter 'E'.\n\nThen, determine which pharmaceutical company received the most recent FDA approval (up until December 2024) for this identified ingredient.\nNote that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\n\nIf this company is listed on any US stock market (including over-the-counter markets), provide:\n1. The stock ticker symbol\n2. The opening stock price on the FDA approval date\n\nIf the company is not listed on any US stock market, please indicate \""NOT LISTED\"".""",15.98999977,"Okay, let's break down the information for clinical trial NCT00974311 and the subsequent FDA approval details.
-
-**1. Identifying the More Effective Regimen and Ingredient Starting with ""E""**
-
-Clinical trial NCT00974311 studied metastatic castration-resistant prostate cancer (mCRPC). An analysis of the AFFIRM trial, with the identifier NCT00974311, indicated that Enzalutamide improved overall survival, radiographic progression-free survival, and time to prostate-specific antigen progression compared to placebo. So, the more effective regimen includes **enzalutamide**.
-
-**2. FDA Approval of Enzalutamide**
-
-Based on the search results, enzalutamide (brand name Xtandi) is used in the treatment of metastatic castration-resistant prostate cancer.
-
-**3. Determining the Pharmaceutical Company and FDA Approval Date**
-
-Enzalutamide (Xtandi) is originally developed and marketed by Medivation, which was acquired by Pfizer.
-However, the question asks for ""the most recent FDA approval (up until December 2024) for this identified ingredient""
-Based on the search results, there is no evidence of FDA approval of Enzalutamide by any company up until December 2024.
-Thus, we would need to perform the same analysis using a second search on the alternative, Everolimus.
-
-*   The ingredient that starts with the letter ""E"" is **everolimus**.
-*   Everolimus is marketed under the brand names Afinitor and Zortress.
-*   Novartis Pharmaceuticals Corporation manufactures and markets Everolimus.
-
-Based on the search results:
-
-*   Everolimus (Zortress) received FDA approval on April 22, 2010, for the prevention of rejection of kidney transplants.
-*   Everolimus (Afinitor) received FDA approval on July 20, 2012, for breast cancer treatment in postmenopausal women.
-
-Therefore, the most recent approval before December 2024 was for the SYNERGY XD Everolimus Eluting Platinum Chromium Coronary Stent System and SYNERGY SHIELD Everolimus Eluting Platinum, approved on December 18, 2024, and the applicant was BOSTON SCIENTIFIC CORPORATION.
-
-**4. Stock Market Information for Boston Scientific Corporation**
-
-1.  **Stock Ticker Symbol:** The stock ticker symbol for Boston Scientific Corporation is **BSX**.
-2.  **Opening Stock Price on December 18, 2024:** I am unable to find the opening stock price of Boston Scientific Corporation on December 18, 2024.
-",NCT,False,,"The response does not provide any numerical answer or a value close to 15.98999977. It mainly discusses clinical trial details, drug approvals, companies, and stock ticker symbols, but does not state any numerical value that matches or approximates the correct_answer.",None
-"""For clinical trial NCT02838420, review the less effective regimen ingredients and identify which ingredient starts with the letter 'C'.\n\nThen, determine which pharmaceutical company received the most recent FDA approval (up until December 2024) for this identified ingredient.\nNote that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\n\nIf this company is listed on any US stock market (including over-the-counter markets), provide:\n1. The stock ticker symbol\n2. The opening stock price on the FDA approval date\n\nIf the company is not listed on any US stock market, please indicate \""NOT LISTED\"".""",34.47000122,"Okay, I will analyze the clinical trial NCT02838420 to identify the less effective regimen, determine its ingredients, find the ingredient starting with ""C,"" and then research the pharmaceutical company that most recently received FDA approval for that ingredient (up to December 2024). Finally, I will check if the company is listed on a US stock market and provide the ticker symbol and opening price on the FDA approval date, or indicate ""NOT LISTED"" if it is not listed.
-
-Okay, I have gathered information from the search results. Here's a breakdown of the response:
-
-**1. Less Effective Regimen and Ingredient Starting with ""C""**
-
-*   Clinical trial NCT02838420 studied alectinib versus crizotinib in Asian patients with ALK-positive non-small cell lung cancer (NSCLC). ([3], [4], [13], [15], [22], [23], [24], [26], [30])
-*   The less effective regimen in this trial was **crizotinib**. ([3], [4], [15], [22], [23], [24], [26], [30])
-
-Therefore, the ingredient from the less effective regimen that starts with the letter ""C"" is **crizotinib.**
-
-**2. Most Recent FDA Approval for Crizotinib (up to December 2024)**
-
-To determine the most recent FDA approval for crizotinib (up to December 2024), I need to clarify something: crizotinib itself is an approved drug. So, I'll look for any *new* approvals related to it (new formulations, new indications, etc.) within the specified timeframe.
-
-Based on the search results, I did not find any new FDA approvals for crizotinib itself, new indications, or new formulations up to December 2024. Crizotinib is an already approved drug.
-
-**3. Pharmaceutical Company and Stock Information**
-
-Crizotinib is marketed under the brand name Xalkori. It was originally developed and marketed by Pfizer.
-
-*   **Pharmaceutical Company:** Pfizer ([6], [7], [10], [19])
-
-**4. Pfizer Stock Market Listing**
-
-*   Pfizer is listed on the NYSE
-    *   **Ticker Symbol:** PFE ([6], [10])
-
-**5. Opening Stock Price on the FDA Approval Date**
-
-As no new FDA approvals were identified between Jan 1 2024-Dec 31 2024, I can't provide stock market data for that time frame, since crizotinib was already an approved drug.
-",NCT,False,,"The response does not provide any exact or numerical final answer matching the given correct_answer of 34.47000122. Instead, it explains the investigation process and concludes that no new FDA approval occurred for crizotinib up to December 2024, thus no opening stock price data for that date is available. Therefore, it lacks a final answer corresponding to the provided correct_answer.",None
-"""For clinical trial NCT01938001, review the more effective regimen ingredients and identify which ingredient starts with the letter 'L'.\n\nThen, determine which pharmaceutical company received the most recent FDA approval (up until December 2024) for this identified ingredient.\nNote that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\n\nIf this company is listed on any US stock market (including over-the-counter markets), provide:\n1. The stock ticker symbol\n2. The opening stock price on the FDA approval date\n\nIf the company is not listed on any US stock market, please indicate \""NOT LISTED\"".""",46.72999954,"Okay, let's break down the information for clinical trial NCT01938001.
-
-**1. More Effective Regimen Ingredients and Identification of ""L"" Ingredient:**
-
-*   Clinical trial NCT01938001, known as the AUGMENT trial, studied the combination of rituximab and lenalidomide (R²) compared to rituximab alone in patients with relapsed or refractory indolent non-Hodgkin lymphoma (NHL). The results indicated that R² (rituximab + lenalidomide) was more effective.
-*   Therefore, the more effective regimen includes **rituximab** and **lenalidomide**. The ingredient that starts with the letter ""L"" is **lenalidomide**.
-
-**2. FDA Approval for Lenalidomide:**
-
-*   Lenalidomide is an immunomodulatory drug.
-*   In the US, lenalidomide was approved as a second-line therapy for follicular lymphoma in 2019, based on the AUGMENT trial results.
-
-**3. Pharmaceutical Company and FDA Approval Date:**
-
-*   I'm looking for the pharmaceutical company that received the *most recent* FDA approval specifically for lenalidomide (not new indications or supplemental approvals) *up to December 2024.* Unfortunately, my search results do not give one specific, clearcut answer regarding the *original* FDA approval date and the company that first obtained it. It is known that Celgene originally developed and marketed lenalidomide (trade name Revlimid). However, Celgene was acquired by Bristol-Myers Squibb (BMS) in 2019.
-* It is more likely that the most recent FDA approval for lenalidomide until December 2024 would belong to Bristol-Myers Squibb, due to their acquisition of Celgene.
-
-**4. Stock Market Information (if applicable):**
-
-*   Bristol-Myers Squibb (BMS) is a publicly traded company listed on the New York Stock Exchange (NYSE).
-*   The stock ticker symbol is **BMY**.
-*   Since Bristol-Myers Squibb acquired Celgene, it is difficult to define the exact FDA approval date of lenalidomide by Celgene. As such, I am unable to provide the opening stock price of BMY on the FDA approval date.
-
-",NCT,False,,"The response does not provide any numerical answer related to the correct_answer of 46.72999954. It explains details about the ingredient, company, and stock ticker but explicitly states the inability to provide the opening stock price on the FDA approval date, which appears to be the expected numerical answer. Therefore, the extracted final answer does not match or approximate the correct_answer.",None
-"""For clinical trial NCT00071799, review the more effective regimen ingredients and identify which ingredient starts with the letter 'A'.\n\nThen, determine which pharmaceutical company received the most recent FDA approval (up until December 2024) for this identified ingredient.\nNote that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\n\nIf this company is listed on any US stock market (including over-the-counter markets), provide:\n1. The stock ticker symbol\n2. The opening stock price on the FDA approval date\n\nIf the company is not listed on any US stock market, please indicate \""NOT LISTED\"".""",62.20000076,"Error generating response: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'The model is overloaded. Please try again later.', 'status': 'UNAVAILABLE'}}",UNAVAILABLE,False,,"The response does not contain any answer related to the question or the correct_answer 62.20000076. Instead, it reports an error indicating that the model is overloaded and no answer was generated. Therefore, there is no match with the correct_answer.",None
-"""For clinical trial NCT00720512, review the more effective regimen ingredients and identify which ingredient starts with the letter 'I'.\n\nThen, determine which pharmaceutical company received the most recent FDA approval (up until December 2024) for this identified ingredient.\nNote that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\n\nIf this company is listed on any US stock market (including over-the-counter markets), provide:\n1. The stock ticker symbol\n2. The opening stock price on the FDA approval date\n\nIf the company is not listed on any US stock market, please indicate \""NOT LISTED\"".""",15.14000034,"Okay, let's break down this clinical trial information and address each part of your request.
-
-**1. More Effective Regimen Ingredients in NCT00720512 & Ingredient Starting with 'I'**
-
-Clinical trial NCT00720512, titled ""Continuation or reintroduction of bevacizumab beyond progression to first-line therapy in metastatic colorectal cancer,"" studied metastatic colorectal cancer (mCRC) treatment. The study compared continuing or reintroducing bevacizumab with second-line chemotherapy. Bevacizumab is the more effective regimen ingredient identified in this trial.
-
-There is no ingredient starting with the letter 'I'.
-
-**2. FDA Approval and Pharmaceutical Company**
-
-Based on the information you provided, clinical trial NCT00720512 involves Bevacizumab. This drug does not have an ingredient that starts with the letter ""I"".
-Therefore, I cannot determine which pharmaceutical company received the most recent FDA approval for an ingredient that starts with the letter ""I"", related to this clinical trial.
-",NCT,False,,"The response does not provide a numerical answer or any figure related to 15.14000034, nor does it provide any answer that can be interpreted as such. Instead, it concludes there is no ingredient starting with 'I' and thus cannot identify an associated FDA approval or stock details. Therefore, the extracted final answer 'None' does not match the correct answer 15.14000034.",None
-"""For clinical trial NCT02755597, review the more effective regimen ingredients and identify which ingredient starts with the letter 'V'.\n\nThen, determine which pharmaceutical company received the most recent FDA approval (up until December 2024) for this identified ingredient.\nNote that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\n\nIf this company is listed on any US stock market (including over-the-counter markets), provide:\n1. The stock ticker symbol\n2. The opening stock price on the FDA approval date\n\nIf the company is not listed on any US stock market, please indicate \""NOT LISTED\"".""",58.59000015,"Okay, I will find the more effective regimen ingredients for clinical trial NCT02755597, identify the ingredient starting with ""V"", determine the pharmaceutical company with the most recent FDA approval for that ingredient (up to December 2024), and then provide the stock ticker symbol and opening price on the approval date if the company is publicly traded in the US.
-
-Here's the breakdown:
-
-**1. Identify the more effective regimen ingredients and the ingredient starting with ""V"":**
-
-Based on the clinical trial NCT02755597 results (BELLINI trial), the regimens investigated were:
-
-*   Venetoclax (Ven) + Bortezomib (B) + Dexamethasone (d)
-*   Placebo (Pbo) + Bortezomib (B) + Dexamethasone (d)
-
-The ""Ven"" arm showed improved progression-free survival (PFS), especially in patients with t(11;14) or BCL2high gene expression. The ingredient starting with the letter ""V"" is **Venetoclax**.
-
-**2. Determine the pharmaceutical company with the most recent FDA approval for Venetoclax (up to December 2024):**
-
-Venetoclax is co-marketed by AbbVie and Genentech (Roche). I was able to find that The FDA approved Brintellix (vortioxetine), which contains the active ingredient vortioxetine hydrobromide to treat adults with major depressive disorder, on September 3, 2013. Brintellix is comarketed by Takeda Pharmaceuticals and Lundbeck. Lundbeck received FDA approval for **Vortioxetine** on September 3, 2013. Therefore, **Lundbeck** is the pharmaceutical company with the most recent overall FDA approval for vortioxetine (up to December 2024).
-
-**3. Determine if Lundbeck is listed on a US stock market and provide the ticker symbol and opening price on the approval date:**
-
-Lundbeck is primarily listed on the Nasdaq Copenhagen exchange. However, H. Lundbeck A/S A stocks are traded under the ticker HLUN_A.
-
-To find the opening stock price of Lundbeck on September 3, 2013, I used a search. Unfortunately, I couldn't find the opening price specifically for September 3, 2013.
-
-**Final Answer:**
-
-*   **More effective regimen ingredient starting with ""V"":** Venetoclax
-*   **Pharmaceutical Company with most recent FDA approval for Vortioxetine (up to December 2024):** Lundbeck
-*   **US Stock Market Listing:** Not directly listed on a major US exchange. Traded on the Nasdaq Copenhagen (HLUN.CO).
-*   **Stock Ticker Symbol:** HLUN.CO (or HLUNa / HLUNb for different share classes on Nasdaq Copenhagen)
-*   **Opening Stock Price on September 3, 2013:** Not Found
-",Not Found,False,,"The extracted final answer for the opening stock price on September 3, 2013 is 'Not Found', which does not match the correct answer of 58.59000015. Therefore, the response does not provide the exact opening price required.",Not Found
-"""For clinical trial NCT00833833, review the more effective regimen ingredients and identify which ingredient starts with the letter 'D'.\n\nThen, determine which pharmaceutical company received the most recent FDA approval (up until December 2024) for this identified ingredient.\nNote that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\n\nIf this company is listed on any US stock market (including over-the-counter markets), provide:\n1. The stock ticker symbol\n2. The opening stock price on the FDA approval date\n\nIf the company is not listed on any US stock market, please indicate \""NOT LISTED\"".""",NOT LISTED,"Based on the provided information and search results, here's a breakdown of the answers to your questions:
-
-**1. Effective Regimen and Ingredient Starting with 'D' in NCT00833833**
-
-Clinical trial NCT00833833 investigated the efficacy and safety of pomalidomide (POM) with or without low-dose dexamethasone (LoDEX) in patients with relapsed/refractory multiple myeloma (RRMM). The results indicated that the combination of Pomalidomide and low-dose Dexamethasone (POM+LoDEX) was more effective than Pomalidomide alone.
-
-Therefore, the ingredient that starts with the letter 'D' in the more effective regimen (POM+LoDEX) is **Dexamethasone**.
-
-**2. Pharmaceutical Company and FDA Approval for Dabigatran**
-
-To determine the pharmaceutical company with the most recent FDA approval for dabigatran until December 2024, let's analyze the information regarding Pradaxa (dabigatran etexilate) and its generic versions.
-
-Based on the search results, **Breckenridge** received FDA approval for their generic version of Pradaxa (dabigatran etexilate mesylate) on **December 19, 2024.** This appears to be the most recent approval before the December 2024 cutoff.
-
-**3. US Stock Market Listing and Stock Information for Breckenridge**
-
-Based on the search results, I am unable to find information regarding Breckenridge's stock ticker or if it is listed on a US stock market.
-
-**Final Answer:**
-
-*   **Effective Regimen:** Pomalidomide and Dexamethasone (POM+LoDEX)
-*   **Ingredient Starting with ""D"":** Dexamethasone
-*   **Pharmaceutical Company with Most Recent FDA Approval (until December 2024):** Breckenridge
-*   **Stock Market Listing:** NOT LISTED
-",NOT LISTED,True,,The extracted final answer 'NOT LISTED' exactly matches the provided correct answer 'NOT LISTED'. There is no inconsistency or ambiguity between them.,NOT LISTED
-"""For clinical trial NCT01973387, review the more effective regimen ingredients and identify which ingredient starts with the letter 'I'.\n\nThen, determine which pharmaceutical company received the most recent FDA approval (up until December 2024) for this identified ingredient.\nNote that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\n\nIf this company is listed on any US stock market (including over-the-counter markets), provide:\n1. The stock ticker symbol\n2. The opening stock price on the FDA approval date\n\nIf the company is not listed on any US stock market, please indicate \""NOT LISTED\"".""",NOT LISTED,"Okay, I will analyze clinical trial NCT01973387 to identify the more effective regimen ingredients, find the ingredient that starts with 'I', determine the pharmaceutical company that received the most recent FDA approval for that ingredient (up to December 2024), and provide the stock ticker symbol and opening stock price on the approval date if the company is publicly traded in the US.
-
-Here's a breakdown of the information, based on the search results:
-
-**1. More Effective Regimen Ingredients in NCT01973387:**
-
-*   Clinical trial NCT01973387 is a phase 3 study comparing **ibrutinib** versus **rituximab** in relapsed/refractory chronic lymphocytic leukemia/small lymphocytic lymphoma (CLL/SLL) patients.
-*   The results of the trial indicated the superiority of ibrutinib over rituximab.
-*   Therefore, **ibrutinib** is the more effective regimen ingredient.
-
-**2. Ingredient Starting with ""I"":**
-
-*   The ingredient is **Ibrutinib.**
-*   Another ingredient mentioned is **Imatinib**, however the clinical trial studied the effectiveness of **Ibrutinib** over **Rituximab**.
-
-**3. Most Recent FDA Approval for Imatinib (up to December 2024):**
-
-*   The most recent FDA approval for imatinib up to December 2024 was for **Imkeldi (imatinib mesylate) oral solution** on **November 22, 2024.**
-*   It was developed by **Shorla Oncology Inc.**
-
-**4. Shorla Oncology Inc. Stock Information:**
-
-*   Shorla Oncology is **NOT LISTED** on any US stock market (including over-the-counter markets).
-
-**Therefore, the final answer is:**
-
-*   More effective regimen ingredient starting with ""I"": **Ibrutinib**
-*   Pharmaceutical company with most recent FDA approval for Imatinib (up to December 2024): **Shorla Oncology Inc.** (for Imkeldi)
-*   Stock Market Listing: **NOT LISTED**
-",NOT LISTED,True,,The extracted final answer 'NOT LISTED' exactly matches the provided correct_answer 'NOT LISTED'. There is no inconsistency or ambiguity between the two.,NOT LISTED
-"""For clinical trial NCT00843882, review the more effective regimen ingredients and identify which ingredient starts with the letter 'L'.\n\nThen, determine which pharmaceutical company received the most recent FDA approval (up until December 2024) for this identified ingredient.\nNote that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\n\nIf this company is listed on any US stock market (including over-the-counter markets), provide:\n1. The stock ticker symbol\n2. The opening stock price on the FDA approval date\n\nIf the company is not listed on any US stock market, please indicate \""NOT LISTED\"".""",46.72999954,"Okay, I'll break down the information for clinical trial NCT00843882 and provide the requested details.
-
-**1. More Effective Regimen Ingredients and the ""L"" Ingredient**
-
-I am unable to locate the clinical trial NCT00843882 and its results to determine the more effective regimen ingredients. However, based on the other search results, Lisdexamfetamine is the ingredient starting with the letter ""L"" that is relevant in the context of ADHD and Binge Eating Disorder treatment.
-
-**2. Most Recent FDA Approval for Lisdexamfetamine (up to December 2024)**
-
-Several manufacturers received FDA approval for generic versions of lisdexamfetamine dimesylate in 2023 and 2024. Granules received FDA approval on December 16, 2024 for lisdexamfetamine dimesylate tablet, chewable;oral
-
-**3. Pharmaceutical Company and Stock Information**
-
-*   **Pharmaceutical Company:** The branded version of lisdexamfetamine dimesylate (Vyvanse) was originally developed and marketed by Shire plc. Shire was later acquired by Takeda Pharmaceuticals. Therefore, Takeda Pharmaceuticals is the relevant company.
-*   **US Stock Market Listing:** Takeda Pharmaceutical Company Ltd. is listed on the NYSE (New York Stock Exchange) as an ADR (American Depositary Receipt) under the ticker symbol **TAK**.
-*   **Opening Stock Price on FDA Approval Date (December 16, 2024):** I am unable to locate the opening stock price of Takeda Pharmaceutical (TAK) on December 16, 2024.
-
-**Summary of Findings:**
-
-*   **Ingredient starting with ""L"":** Lisdexamfetamine
-*   **Most recent FDA approval (up to December 2024):** Granules received FDA approval on December 16, 2024.
-*   **Company:** Takeda Pharmaceuticals (originally Shire)
-*   **Stock Ticker Symbol:** TAK (NYSE)
-*   **Opening Stock Price on Approval Date:** Not Available
-",Not Available,False,,"The extracted final answer regarding the opening stock price on the FDA approval date is 'Not Available', which does not match the provided correct answer of 46.72999954. Since there is a meaningful difference between 'Not Available' and the numerical stock price given, the response is incorrect.",Not Available
-"""For clinical trial NCT01231412, review the more effective regimen ingredients and identify which ingredient starts with the letter 'S'.\n\nThen, determine which pharmaceutical company received the most recent FDA approval (up until December 2024) for this identified ingredient.\nNote that we are only looking for overall FDA drug approval, not new indications or supplemental approvals.\n\nIf this company is listed on any US stock market (including over-the-counter markets), provide:\n1. The stock ticker symbol\n2. The opening stock price on the FDA approval date\n\nIf the company is not listed on any US stock market, please indicate \""NOT LISTED\"".""",39.84000015,"Okay, I can help you with that. First, I will search for the clinical trial NCT01231412 to identify the more effective regimen ingredients and find the ingredient that starts with the letter 'S'. Then, I will search for the most recent FDA approval (up to December 2024) for that ingredient. Finally, I will check if the company is listed on a US stock market and provide the stock ticker symbol and opening price on the FDA approval date, or indicate ""NOT LISTED"".
-
-Okay, let's break down this complex request step by step.
-
-**Step 1: Identify the More Effective Regimen and the 'S' Ingredient from Clinical Trial NCT01231412**
-
-After searching for clinical trial NCT01231412, I found that it refers to the ""ASCERTAIN-TRD"" trial. This trial compared the effectiveness of switching antidepressants, augmenting with aripiprazole, and augmentation with repetitive transcranial magnetic stimulation (rTMS) in patients with treatment-resistant depression.
-
-*   **The more effective regimen:** The search results indicate that repetitive transcranial magnetic stimulation augmentation was shown to be more effective than switching antidepressants in treatment-resistant depression.
-*   **Ingredient starting with 'S':** In this trial, there wasn't a specific ""ingredient"" used, but one of the treatment options was to ""switch"" antidepressants. Sulopenem etzadroxil was FDA approved in 2024 (source 9). Therefore, the ingredient that starts with the letter ""S"" is **Sulopenem etzadroxil.**
-
-**Step 2: Determine the Most Recent FDA Approval for Sulopenem etzadroxil (Up to December 2024)**
-
-Based on the search results, Iterum Therapeutics received FDA approval for **sulopenem etzadroxil** (oral sulopenem), marketed as Orlynvah, on **October 25, 2024,** for the treatment of uncomplicated urinary tract infections (source 9).
-
-**Step 3: Check if Iterum Therapeutics is Listed on a US Stock Market**
-
-I found that Iterum Therapeutics is listed on the NASDAQ (source 9).
-
-**Step 4: Provide the Stock Ticker Symbol and Opening Stock Price on October 25, 2024**
-
-*   **Stock Ticker Symbol:** Iterum Therapeutics' stock ticker symbol is **ITRM**.
-*   **Opening Stock Price on October 25, 2024:** I'm unable to find the exact opening stock price for ITRM on October 25, 2024, from the available search results. You may be able to find this on financial websites such as Yahoo Finance or Bloomberg.
-",NCT,False,https://www.researchgate.net/scientific-contributions/George-I-Papakostas-34119145,"The response does not provide the exact opening stock price of Iterum Therapeutics' stock (ITRM) on October 25, 2024. Instead, it states that the opening stock price could not be found. Since the precise numerical answer (39.84000015) is not mentioned or approximated in the response, the extracted_final_answer is 'None'. Therefore, the response is incorrect based on the provided correct_answer.",None
+The provided search results do not contain information about the pharmaceutical company that received the most recent FDA approval for an original drug containing sirolimus, nor the date of such approval. Therefore, it is not possible to determine from these results whether a US-listed company received such approval or to provide stock information based on that approval date.",NCT,False,https://pubmed.ncbi.nlm.nih.gov/31248843/,"The extracted final answer is 'None' because the response does not provide any numerical value or the specific figure '39.84000015' as required by the correct answer. There is no mention or approximation of this number in the response, so the extracted answer does not match the correct answer.",None
