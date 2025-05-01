@@ -8,6 +8,8 @@ import logging
 import traceback
 from typing import Dict, List, Tuple, Optional, Union
 from tqdm import tqdm
+from pydantic import BaseModel, Field
+from openai import OpenAI
 from gemini_inference import GeminiInference, run_inference_multithread as gemini_run_inference_multithread, GEMINI_MODELS
 from sonar_inference import SonarInference, run_inference_multithread as sonar_run_inference_multithread, SONAR_MODELS
 from openai_search_inference import OpenAISearchInference, run_inference_multithread as openai_search_run_inference_multithread, OPENAI_SEARCH_MODELS
@@ -28,6 +30,85 @@ logging.basicConfig(
 )
 logger = logging.getLogger("NCTProcessor")
 
+# --- LLM as Judge Setup ---
+client = OpenAI() # Assumes OPENAI_API_KEY is set in environment
+
+JUDGE_PROMPT = """Judge whether the following [response] to [question] is correct or not based on the
+precise and unambiguous [correct_answer] below.
+[question]: {question}
+[response]: {response}
+Your judgement must be in the format and criteria specified below:
+extracted_final_answer: The final exact answer extracted from the [response]. Put the extracted answer
+as 'None' if there is no exact, final answer to extract from the response.
+[correct_answer]: {correct_answer}
+reasoning: Explain why the extracted_final_answer is correct or incorrect based on [correct_answer],
+focusing only on if there are meaningful differences between [correct_answer] and the
+extracted_final_answer. Do not comment on any background to the problem, do not attempt to solve
+the problem, do not argue for any answer different than [correct_answer], focus only on whether the
+answers match.
+correct: Answer 'yes' if extracted_final_answer matches the [correct_answer] given above, or is within
+a small margin of error for numerical problems. Answer 'no' otherwise, i.e. if there if there is
+any inconsistency, ambiguity, non-equivalency, or if the extracted answer is incorrect.
+"""
+
+class JudgeOutput(BaseModel):
+    extracted_final_answer: str = Field(description="The final exact answer extracted from the [response]. Put 'None' if no exact answer found.")
+    reasoning: str = Field(description="Explanation of correctness based ONLY on comparing extracted_final_answer and correct_answer.")
+    correct: str = Field(description="Must be 'yes' or 'no'.")
+
+# --- End LLM as Judge Setup ---
+
+def judge_response(question: str, response: str, correct_answer: str, judge_model: str = "gpt-4.1-mini") -> JudgeOutput:
+    """
+    Uses an LLM to judge the correctness of a response against a correct answer.
+
+    Args:
+        question: The original question asked.
+        response: The model's response to the question.
+        correct_answer: The ground truth answer.
+        judge_model: The OpenAI model to use for judging.
+
+    Returns:
+        A JudgeOutput object containing the evaluation.
+    """
+    judge_input_text = JUDGE_PROMPT.format(
+        question=question,
+        response=response,
+        correct_answer=correct_answer
+    )
+    try:
+        judge_api_response = client.chat.completions.create(
+            model=judge_model,
+            messages=[
+                {"role": "system", "content": "You are an impartial judge evaluating an AI response based on provided criteria. Respond ONLY with a valid JSON object matching the requested structure."},
+                {"role": "user", "content": judge_input_text}
+            ],
+            response_format={"type": "json_object"} # Ensure the output is a JSON object
+        )
+        # The model should return a JSON string in the message content based on the prompt instructions
+        # Need to handle potential JSON parsing errors here as well
+        try:
+            parsed_output = JudgeOutput.model_validate_json(judge_api_response.choices[0].message.content)
+        except json.JSONDecodeError as json_e:
+             logger.error(f"Judge LLM did not return valid JSON: {json_e}")
+             logger.error(f"Raw judge response: {judge_api_response.choices[0].message.content}")
+             return JudgeOutput(
+                 extracted_final_answer="JUDGE_JSON_ERROR",
+                 reasoning=f"Judge LLM failed to produce valid JSON: {json_e}",
+                 correct="no"
+             )
+        return parsed_output
+    except Exception as e:
+        logger.error(f"Error calling Judge LLM: {e}")
+        logger.error(traceback.format_exc())
+        # Return a default error object
+        return JudgeOutput(
+            extracted_final_answer="JUDGE_ERROR",
+            reasoning=f"Error during judging: {e}",
+            correct="no" # Treat errors as incorrect
+        )
+
+
 def extract_from_response(response: str, task: str = "track_trial_ids") -> str:
     """
     Extract the relevant information from model response based on task
@@ -42,7 +123,116 @@ def extract_from_response(response: str, task: str = "track_trial_ids") -> str:
     # Add debugging - log the response
     #logger.debug(f"Extracting info from response (task: {task}):\n{response[:500]}...")
     logger.info(f"Extracting info from response (task: {task}):\n{response[:800]}...")
-    if task == "track_trial_ids":
+
+    # --- Consolidated handler for filled50/filled121 FIRST ---
+    # Ensure this block is executed ONLY for these tasks and returns directly.
+    if task == "filled50" or task == "filled121":
+        
+        # 1. Ingredient (Keep existing patterns, seem to work)
+        match = re.search(r'(?i)INGREDIENT:\s*([A-Z0-9\s\-]+)', response)
+        if match: return match.group(1).strip()
+        match = re.search(r'(?i)ingredient(?:\s+is|\s+name)?:\s*([A-Z0-9\s\-]+)', response)
+        if match: return match.group(1).strip()
+        match = re.search(r'(?<!\w)([A-Z]{3,}(?:\s+[A-Z]+)*(?:\s+HYDROCHLORIDE)?)', response)
+        if match: return match.group(1).strip()
+
+        # 2. Company (More robust pattern)
+        # Look for COMPANY: Name first
+        match = re.search(r'(?i)COMPANY:\s*([A-Za-z0-9\s\.,&\-]+(?: Inc\.?| LLC\.?| Corp\.?| Ltd\.?| CV)?)', response)
+        if match: return match.group(1).strip()
+        # Look for company name after "company name is" or similar
+        match = re.search(r'(?i)company(?:\s+name)?\s*(?:is)?:?\s*([A-Za-z0-9\s\.,&\-]+(?: Inc\.?| LLC\.?| Corp\.?| Ltd\.?| CV)?)', response)
+        if match: return match.group(1).strip()
+        # Look for likely company names (e.g., capitalized words, possibly with suffixes)
+        match = re.search(r'(?<!\w)([A-Z][A-Za-z0-9\s\.,&\-]+(?: Inc\.?| LLC\.?| Corp\.?| Ltd\.?| CV)?)(?!\w)', response)
+        # Avoid matching simple ALL CAPS words unless they look like company names (e.g., contain Inc, LLC etc.)
+        if match and (re.search(r'(?i) Inc\.?| LLC\.?| Corp\.?| Ltd\.?| CV', match.group(1)) or ' ' in match.group(1).strip()):
+             return match.group(1).strip()
+
+        # 3. Patent Expiration Year (YYYY) (More robust pattern)
+        # Look for DATE: YYYY or similar first
+        match = re.search(r'(?i)(?:patent\s+expir\w*|DATE)[:\s]*(\d{4})', response)
+        if match: return match.group(1).strip()
+        # Look for YYYY after mention of patent expiration
+        match = re.search(r'(?i)patent\s+expir(?:ation|es?|y)(?:.*?)(?<!\d)(\d{4})(?!\d)', response)
+        if match: return match.group(1).strip()
+        # Look for Month DD, YYYY and extract year
+        match = re.search(r'(?i)(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\s+\d{1,2},?\s+(\d{4})', response)
+        if match: return match.group(1).strip()
+        # Look for just YYYY if other patterns fail (less specific)
+        match = re.search(r'(?<!\d)(\d{4})(?!\d)', response)
+        if match: return match.group(1).strip()
+
+
+        # 4. Exclusivity Date (MM-DD-YYYY or NA) (More robust pattern)
+        # Check for NA variations first
+        if re.search(r'(?i)\b(?:N/?A|not applicable|not available|no\s+exclusivity(?:\s+date)?|unknown)\b', response): return "NA"
+        # Look for DATE: MM-DD-YYYY or similar
+        match = re.search(r'(?i)(?:exclusivity|DATE)[:\s]*(\d{2}-\d{2}-\d{4})', response)
+        if match: return match.group(1).strip()
+        # Look for M/D/YYYY format and convert
+        match = re.search(r'(?i)(?:exclusivity|DATE)[:\s]*(\d{1,2})[/-](\d{1,2})[/-](\d{4})', response)
+        if match:
+            month, day, year = match.group(1).zfill(2), match.group(2).zfill(2), match.group(3)
+            return f"{month}-{day}-{year}"
+        # Look for Month DD, YYYY format and convert
+        match = re.search(r'(?i)(?:exclusivity\s+date\s+is)?\s*(?:([A-Za-z]+)\s+(\d{1,2})(?:st|nd|rd|th)?,?\s+(\d{4}))', response)
+        if match:
+            month_map = {'january': '01', 'jan': '01', 'february': '02', 'feb': '02', 'march': '03', 'mar': '03', 'april': '04', 'apr': '04', 'may': '05', 'june': '06', 'jun': '06', 'july': '07', 'jul': '07', 'august': '08', 'aug': '08', 'september': '09', 'sep': '09', 'october': '10', 'oct': '10', 'november': '11', 'nov': '11', 'december': '12', 'dec': '12'}
+            month_name = match.group(1).lower()
+            month = month_map.get(month_name, '01') # Default to 01 if month name invalid
+            day = match.group(2).zfill(2)
+            year = match.group(3)
+            return f"{month}-{day}-{year}"
+        # Check again for NA if no date format matched
+        if re.search(r'(?i)\b(?:N/?A|not applicable|not available|no\s+exclusivity(?:\s+date)?|unknown)\b', response): return "NA"
+
+
+        # 5. Stock Info (TICKER: $PRICE or NOT LISTED) (More robust pattern)
+        # Check for NOT LISTED variations first
+        if re.search(r'(?i)\bNOT\s+LISTED\b', response): return "NOT LISTED"
+        # Look for TICKER: $PRICE format
+        match = re.search(r'(?i)((?:[A-Z]{1,5}|\$[A-Z]{1,4}))\s*[:\s]+\$?(\d+\.\d+)', response)
+        if match:
+            ticker = match.group(1).replace('$', '').strip()
+            try: price = f"${float(match.group(2).replace('$', '')):.2f}"
+            except ValueError: price = match.group(2) # Keep original if conversion fails
+            return f"{ticker}: {price}"
+        # Look for ticker and price mentioned separately
+        ticker_match = re.search(r'(?i)(?:ticker|symbol)\s*:?\s*([A-Z]{1,5})\b', response)
+        price_match = re.search(r'(?i)(?:price|opening)\s*:?\s*\$?(\d+\.\d+)', response)
+        if ticker_match and price_match:
+            ticker = ticker_match.group(1).strip()
+            try: price = f"${float(price_match.group(1)):.2f}"
+            except ValueError: price = price_match.group(1) # Keep original if conversion fails
+            return f"{ticker}: {price}"
+        # Try to extract just a float value if other patterns fail (less specific)
+        price_match = re.search(r'\$?(\d+\.\d+)', response)
+        if price_match:
+            try:
+                # Check if it looks like a price (e.g., not part of a date or version number)
+                context = response[max(0, price_match.start()-10):min(len(response), price_match.end()+10)]
+                if not re.search(r'\d[/-]\d', context): # Avoid matching dates like 12/31/2024
+                     # Check if a ticker symbol is nearby
+                    ticker_nearby = re.search(r'\b([A-Z]{1,5})\b', response[max(0, price_match.start()-30):price_match.start()])
+                    if ticker_nearby:
+                         ticker = ticker_nearby.group(1)
+                         price_val = f"${float(price_match.group(1)):.2f}"
+                         return f"{ticker}: {price_val}"
+                    else:
+                         # Return just the price if no ticker found nearby
+                         return f"${float(price_match.group(1)):.2f}"
+            except ValueError: pass # Ignore if conversion fails
+        # Check again for NOT LISTED if no stock format matched
+        if re.search(r'(?i)\bNOT\s+LISTED\b', response): return "NOT LISTED"
+
+        # If none of the specific filled50/121 patterns matched, return empty string
+        logger.warning(f"No specific pattern matched for filled50/121 task. Response: {response[:200]}...")
+        return "" 
+
+    # --- Other Task Handlers ---
+    # IMPORTANT: These should ONLY run if task is NOT filled50/121
+    elif task == "track_trial_ids":
         # Look for the pattern NCT followed by 8 digits
         match = re.search(r'NCT\d{8}', response)
         if match:
@@ -54,135 +244,91 @@ def extract_from_response(response: str, task: str = "track_trial_ids") -> str:
         if match:
             return match.group(1).strip()
         return ""
-    elif task == "regime_drug_class" or task == "Ingredient" or task == "filled50" or task == "filled121":
-        # Look for INGREDIENT: format first (most common in responses)
+        
+    # --- Specific Task Handlers ---
+    elif task == "regime_drug_class" or task == "Ingredient":
+        # Look for INGREDIENT: format first
         match = re.search(r'(?i)INGREDIENT:\s*([A-Z0-9\s\-]+)', response)
-        if match:
-            return match.group(1).strip()
-            
-        # Alternate formats that might appear in responses
+        if match: return match.group(1).strip()
+        # Alternate formats
         match = re.search(r'(?i)ingredient(?:\s+is|\s+name)?:\s*([A-Z0-9\s\-]+)', response)
-        if match:
-            return match.group(1).strip()
-            
-        # Search for all-caps words that might be the ingredient
+        if match: return match.group(1).strip()
+        # Search for all-caps words
         match = re.search(r'(?<!\w)([A-Z]{3,}(?:\s+[A-Z]+)*(?:\s+HYDROCHLORIDE)?)', response)
-        if match:
-            return match.group(1).strip()
-            
+        if match: return match.group(1).strip()
         return ""
         
-    elif task == "latest_company_approval" or task == "Applicant_Full_Name" or task == "filled50" or task == "filled121":
+    elif task == "latest_company_approval" or task == "Applicant_Full_Name":
         # Look for COMPANY: format first
         match = re.search(r'(?i)COMPANY:\s*([A-Z0-9\s\-]+)', response)
-        if match:
-            return match.group(1).strip()
-            
-        # Alternative formats that might appear
+        if match: return match.group(1).strip()
+        # Alternative formats
         match = re.search(r'(?i)company(?:\s+name)?:\s*([A-Z0-9\s\-]+)', response)
-        if match:
-            return match.group(1).strip()
-            
+        if match: return match.group(1).strip()
         # Look for company names in all caps
         match = re.search(r'(?<!\w)([A-Z][A-Z\s]+(?:\s+[A-Z]+)*(?:\s+LLC|\s+SUB|\s+CV)?)', response)
-        if match:
-            return match.group(1).strip()
-            
+        if match: return match.group(1).strip()
         return ""
         
-    elif task == "Patent_Expire_Date_Text" or task == "filled50" or task == "filled121":
+    elif task == "Patent_Expire_Date_Text":
         # Match date: YYYY format
         match = re.search(r'(?i)DATE:?\s*(\d{4})', response)
-        if match:
-            return match.group(1).strip()
-            
+        if match: return match.group(1).strip()
         # Match just the year after mention of patent expiration
         match = re.search(r'(?i)patent\s+expir(?:ation|es?|y)(?:\s+date)?(?:\s+is)?(?:\s+on)?:?\s*(?:[A-Za-z]+\s+\d{1,2},?\s+)?(\d{4})', response)
-        if match:
-            return match.group(1).strip()
-            
-        # Try to extract a date in the format Month DD, YYYY
+        if match: return match.group(1).strip()
+        # Try to extract a date in the format Month DD, YYYY -> return only year
         match = re.search(r'(?i)(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\s+\d{1,2},?\s+(\d{4})', response)
-        if match:
-            return match.group(1).strip()
-            
+        if match: return match.group(1).strip()
         return ""
         
-    elif task == "Exclusivity_Date" or task == "filled50" or task == "filled121":
-        # Check for NA, N/A or empty responses first
-        if re.search(r'(?i)(?:N/?A|no\s+date|not\s+available|no\s+exclusivity\s+date)', response):
-            return "NA"
-        
+    elif task == "Exclusivity_Date":
+        # Check for NA, N/A first
+        if re.search(r'(?i)(?:N/?A|no\s+date|not\s+available|no\s+exclusivity\s+date)', response): return "NA"
         # Look for MM-DD-YYYY format
         match = re.search(r'(?i)DATE:?\s*(\d{2}-\d{2}-\d{4})', response)
-        if match:
-            return match.group(1).strip()
-            
+        if match: return match.group(1).strip()
         # Look for M/D/YYYY format and convert to MM-DD-YYYY
         match = re.search(r'(?i)DATE:?\s*(\d{1,2})[/-](\d{1,2})[/-](\d{4})', response)
         if match:
-            month = match.group(1).zfill(2)
-            day = match.group(2).zfill(2)
-            year = match.group(3)
+            month, day, year = match.group(1).zfill(2), match.group(2).zfill(2), match.group(3)
             return f"{month}-{day}-{year}"
-            
         # Look for Month DD, YYYY format and convert
         match = re.search(r'(?i)(?:exclusivity|date)(?:\s+date)?:?\s*(?:([A-Za-z]+)\s+(\d{1,2})(?:st|nd|rd|th)?,?\s+(\d{4}))', response)
         if match:
-            month_map = {
-                'january': '01', 'jan': '01', 'february': '02', 'feb': '02', 'march': '03', 'mar': '03',
-                'april': '04', 'apr': '04', 'may': '05', 'june': '06', 'jun': '06', 'july': '07', 'jul': '07',
-                'august': '08', 'aug': '08', 'september': '09', 'sep': '09', 'october': '10', 'oct': '10',
-                'november': '11', 'nov': '11', 'december': '12', 'dec': '12'
-            }
+            month_map = {'january': '01', 'jan': '01', 'february': '02', 'feb': '02', 'march': '03', 'mar': '03', 'april': '04', 'apr': '04', 'may': '05', 'june': '06', 'jun': '06', 'july': '07', 'jul': '07', 'august': '08', 'aug': '08', 'september': '09', 'sep': '09', 'october': '10', 'oct': '10', 'november': '11', 'nov': '11', 'december': '12', 'dec': '12'}
             month_name = match.group(1).lower()
-            month = month_map.get(month_name, '01')  # Default to 01 if not found
+            month = month_map.get(month_name, '01')
             day = match.group(2).zfill(2)
             year = match.group(3)
             return f"{month}-{day}-{year}"
+        return "NA" # Default to NA if no date found
         
-        # If no date found, return NA
-        return "NA"
-        
-    elif task == "Open_on_Approval" or task == "filled50" or task == "filled121":
+    elif task == "Open_on_Approval":
         # Check if not listed first
-        if re.search(r'(?i)NOT\s+LISTED', response):
-            return "NOT LISTED"
-            
-        # Look for stock ticker format: TICKER: $XX.XX or similar patterns
+        if re.search(r'(?i)NOT\s+LISTED', response): return "NOT LISTED"
+        # Look for stock ticker format: TICKER: $XX.XX or similar
         match = re.search(r'(?i)((?:[A-Z]{1,5}|\$[A-Z]{1,4}))\s*[:\.]\s*\$?(\d+\.\d+)', response)
         if match:
             ticker = match.group(1).replace('$', '')
-            # Round price to 2 decimal places
-            try:
-                price = match.group(2).replace('$', '')
-                price = f"${float(price):.2f}"
-            except ValueError:
-                price = match.group(2)  # Keep original if conversion fails
+            try: price = f"${float(match.group(2).replace('$', '')):.2f}"
+            except ValueError: price = match.group(2)
             return f"{ticker}: {price}"
-            
-        # Alternative format: look for "ticker symbol: XXX" and "opening price: $XX.XX"
+        # Alternative format: "ticker symbol: XXX" and "opening price: $XX.XX"
         ticker_match = re.search(r'(?i)(?:ticker|symbol|stock)(?:\s+symbol)?(?:\s+is)?:?\s*([A-Z]{1,5})', response)
         price_match = re.search(r'(?i)(?:opening|stock|share)(?:\s+price)?(?:\s+was)?(?:\s+is)?:?\s*\$?(\d+\.\d+)', response)
-        
         if ticker_match and price_match:
             ticker = ticker_match.group(1)
-            try:
-                price = price_match.group(1)
-                price = f"${float(price):.2f}"
-            except ValueError:
-                price = price_match.group(1)  # Keep original if conversion fails
+            try: price = f"${float(price_match.group(1)):.2f}"
+            except ValueError: price = price_match.group(1)
             return f"{ticker}: {price}"
-            
         # Try to extract just a float value for stock price
         price_match = re.search(r'(?i)(\d+\.\d+)', response)
         if price_match:
-            try:
-                return float(price_match.group(1))
-            except ValueError:
-                pass
-        
+            try: return float(price_match.group(1))
+            except ValueError: pass
         return ""
+        
     elif task == "track_pmids":
         # Look for the pattern pmid followed by any text
         match = re.search(r'(?i)pmid[:\s]*(\d+)', response)
@@ -461,10 +607,12 @@ def process_nct_csv(
     n: int = None,
     task: str = None,
     run_inference=None,
-    inference_kwargs=None
+    inference_kwargs=None,
+    use_judge: bool = False,
+    judge_model: str = "gpt-4.1-mini"
 ) -> List[Dict]:
     """
-    Process CSV file with NCT predictions
+    Process CSV file with NCT predictions, optionally using an LLM judge.
     
     Args:
         csv_path: Path to CSV file
@@ -475,6 +623,10 @@ def process_nct_csv(
         test_mode: Whether to run in test mode (only 8 examples)
         n: Number of rows to process (for testing)
         task: Task to perform
+        run_inference: The inference function to use.
+        inference_kwargs: Arguments for the inference function.
+        use_judge: Whether to use the LLM judge for evaluation.
+        judge_model: The model name to use for the LLM judge.
         
     Returns:
         List of result dictionaries
@@ -647,175 +799,184 @@ def process_nct_csv(
                 
                 # Check if the extracted information is correct
                 is_correct = False
-                
-                if task == "track_trial_ids":
-                    nct_list = [nct.strip() for nct in row['NCT'].split(',')]
-                    is_correct = extracted_info in nct_list
-                elif task == "track_second_authors":
-                    # Old format - direct comparison
-                    is_correct = extracted_info.strip().lower() == answer.strip().lower()
-                elif task == "track_pmids":
-                    # pmid_list = [str(int(pmid)) for pmid in row['pmids'].split(',')]
-                    # is_correct = extracted_info in pmid_list
-                    is_correct = str(extracted_info).strip() == str(answer).strip()
-                elif task == "track_second_authors_multiple_pmids":
-                    # Get all valid PMID|author pairs from the answer
-                    valid_pairs = answer.split("||")
+                judge_reasoning = "N/A (Judge not used)"
+                judge_extracted_answer = "N/A (Judge not used)"
+
+                if use_judge:
+                    logger.debug(f"Using LLM Judge ({judge_model}) for row {i}...")
+                    judge_output = judge_response(
+                        question=prompt,
+                        response=response_text, # Use the raw response text for the judge
+                        correct_answer=str(answer), # Ensure answer is string
+                        judge_model=judge_model
+                    )
+                    is_correct = judge_output.correct.lower() == 'yes'
+                    judge_reasoning = judge_output.reasoning
+                    judge_extracted_answer = judge_output.extracted_final_answer
+                    # Use the judge's extracted answer if available and not 'None' or error
+                    if judge_extracted_answer not in ["None", "JUDGE_ERROR"]:
+                         extracted_info = judge_extracted_answer
+                    else:
+                         # Fallback to regex extraction if judge fails or extracts None
+                         extracted_info = extract_from_response(response_text, task=task)
+                    logger.debug(f"Judge decision: {'Correct' if is_correct else 'Incorrect'}. Reason: {judge_reasoning}")
+
+                else:
+                    # --- Original Rule-Based Correctness Check ---
+                    extracted_info = extract_from_response(response_text, task=task) # Extract using regex
+
+                    # Special case for "NOT LISTED" responses
+                    if task == "Open_on_Approval" or task == "filled50" or task == "filled121":
+                        if str(answer).strip() == "NOT LISTED" and extracted_info.strip() == "NOT LISTED":
+                            is_correct = True
                     
-                    # Format: PMID|SecondAuthor
-                    if extracted_info and '|' in extracted_info:
-                        extracted_pmid, extracted_author = extracted_info.split('|', 1)
-                        extracted_pmid = extracted_pmid.strip()
-                        extracted_author = extracted_author.strip().lower()
+                    if task == "track_trial_ids":
+                        nct_list = [nct.strip() for nct in row['NCT'].split(',')]
+                        is_correct = extracted_info in nct_list
+                    elif task == "track_second_authors":
+                        # Old format - direct comparison
+                        is_correct = extracted_info.strip().lower() == answer.strip().lower()
+                    elif task == "track_pmids":
+                        # pmid_list = [str(int(pmid)) for pmid in row['pmids'].split(',')]
+                        # is_correct = extracted_info in pmid_list
+                        is_correct = str(extracted_info).strip() == str(answer).strip()
+                    elif task == "track_second_authors_multiple_pmids":
+                        # Get all valid PMID|author pairs from the answer
+                        valid_pairs = answer.split("||")
                         
-                        # Check if any valid pair matches the extracted pair
-                        is_correct = False
-                        for pair in valid_pairs:
-                            if '|' in pair:
-                                valid_pmid, valid_author = pair.split('|', 1)
-                                if extracted_pmid == valid_pmid.strip() and extracted_author == valid_author.strip().lower():
-                                    is_correct = True
-                                    break
-                    else:
-                        is_correct = False
-                elif task == "track_second_authors_multiple_pmids_any":
-                    # Check if extracted author matches any of the valid second authors
-                    valid_authors = [author.strip().lower() for author in answer.split('|')]
-                    is_correct = extracted_info.strip().lower() in valid_authors
-                elif task == "track_start_date" or task == "patent_expiration_date" or task == "exclusivity_Date":
-                    # Simpler date normalization
-                    extracted_date = extracted_info.strip()
-                    expected_date = answer.strip()
-                    
-                    # First try direct comparison
-                    if extracted_date.lower() == expected_date.lower():
-                        is_correct = True
-                    else:
-                        # Try to normalize formats
-                        try:
-                            # Extract year and month from both strings
-                            expected_year = re.search(r'(\d{4})', expected_date).group(1) if re.search(r'(\d{4})', expected_date) else None
-                            extracted_year = re.search(r'(\d{4})', extracted_date).group(1) if re.search(r'(\d{4})', extracted_date) else None
+                        # Format: PMID|SecondAuthor
+                        if extracted_info and '|' in extracted_info:
+                            extracted_pmid, extracted_author = extracted_info.split('|', 1)
+                            extracted_pmid = extracted_pmid.strip()
+                            extracted_author = extracted_author.strip().lower()
                             
-                            # If we can extract years from both, compare them first
-                            if expected_year and extracted_year and expected_year == extracted_year:
-                                # If only checking year, consider it correct if no month info in expected
-                                if re.match(r'^\d{4}$', expected_date):
-                                    is_correct = True
-                                else:
-                                    # Check month matching
-                                    month_map = {
-                                        '01': ['jan', 'january'],
-                                        '02': ['feb', 'february'],
-                                        '03': ['mar', 'march'],
-                                        '04': ['apr', 'april'],
-                                        '05': ['may'],
-                                        '06': ['jun', 'june'],
-                                        '07': ['jul', 'july'],
-                                        '08': ['aug', 'august'],
-                                        '09': ['sep', 'september'],
-                                        '10': ['oct', 'october'],
-                                        '11': ['nov', 'november'],
-                                        '12': ['dec', 'december']
-                                    }
-                                    
-                                    # Extract month from expected date
-                                    expected_month = None
-                                    if re.search(r'-(\d{2})', expected_date):
-                                        expected_month = re.search(r'-(\d{2})', expected_date).group(1)
-                                    else:
-                                        for num, names in month_map.items():
-                                            if any(name in expected_date.lower() for name in names):
-                                                expected_month = num
-                                                break
-                                    
-                                    # Extract month from extracted date
-                                    extracted_month = None
-                                    if re.search(r'-(\d{2})', extracted_date):
-                                        extracted_month = re.search(r'-(\d{2})', extracted_date).group(1)
-                                    else:
-                                        for num, names in month_map.items():
-                                            if any(name in extracted_date.lower() for name in names):
-                                                extracted_month = num
-                                                break
-                                    
-                                    # Compare months if both are found
-                                    is_correct = expected_month and extracted_month and expected_month == extracted_month
-                            else:
-                                is_correct = False
-                                
-                        except Exception as e:
-                            logger.error(f"Error comparing dates: {str(e)}")
-                            # Fallback to basic comparison
-                            is_correct = extracted_date.lower() == expected_date.lower()
-
-                elif task in ["track_primary_outcomes", "track_secondary_outcomes"]:
-                    # Simple yes/no comparison, case-insensitive
-                    is_correct = extracted_info.strip().lower() == answer.strip().lower()
-                elif task == "track_drug_route":
-                    # For drug route, normalize to handle variations
-                    extracted_route = extracted_info.strip().lower()
-                    expected_route = answer.strip().lower()
-                    
-                    # Direct match first
-                    if extracted_route == expected_route:
-                        is_correct = True
-                    else:
-                        # Check for variations and common abbreviations
-                        route_mapping = {
-                            "intravenous": ["iv", "i.v.", "i.v", "intra-venous"],
-                            "intramuscular": ["im", "i.m.", "i.m", "intra-muscular"],
-                            "subcutaneous": ["sc", "s.c.", "s.c", "sub-cutaneous", "subcut"],
-                            "oral": ["by mouth", "p.o.", "po", "per os"],
-                            "unknown": ["not specified", "not reported", "not stated", "unclear"]
-                        }
-                        
-                        # Check if expected route has any known variations
-                        for main_route, variations in route_mapping.items():
-                            if expected_route == main_route:
-                                # If expected is a main route, check if extracted is a variation
-                                is_correct = extracted_route in variations
-                                break
-                            elif expected_route in variations:
-                                # If expected is a variation, check if extracted is the main route or another variation
-                                is_correct = extracted_route == main_route or extracted_route in variations
-                                break
-                        else:
-                            # If no match found in mappings, fall back to direct comparison
+                            # Check if any valid pair matches the extracted pair
                             is_correct = False
+                            for pair in valid_pairs:
+                                if '|' in pair:
+                                    valid_pmid, valid_author = pair.split('|', 1)
+                                    if extracted_pmid == valid_pmid.strip() and extracted_author == valid_author.strip().lower():
+                                        is_correct = True
+                                        break
+                        else:
+                            is_correct = False
+                    elif task == "track_second_authors_multiple_pmids_any":
+                        # Check if extracted author matches any of the valid second authors
+                        valid_authors = [author.strip().lower() for author in answer.split('|')]
+                        is_correct = extracted_info.strip().lower() in valid_authors
+                    elif task == "track_start_date" or task == "patent_expiration_date" or task == "exclusivity_Date":
+                        # Simpler date normalization
+                        extracted_date = extracted_info.strip()
+                        expected_date = answer.strip()
+                        
+                        # First try direct comparison
+                        if extracted_date.lower() == expected_date.lower():
+                            is_correct = True
+                        else:
+                            # Try to normalize formats
+                            try:
+                                # Extract year and month from both strings
+                                expected_year = re.search(r'(\d{4})', expected_date).group(1) if re.search(r'(\d{4})', expected_date) else None
+                                extracted_year = re.search(r'(\d{4})', extracted_date).group(1) if re.search(r'(\d{4})', extracted_date) else None
+                                
+                                # If we can extract years from both, compare them first
+                                if expected_year and extracted_year and expected_year == extracted_year:
+                                    # If only checking year, consider it correct if no month info in expected
+                                    if re.match(r'^\d{4}$', expected_date):
+                                        is_correct = True
+                                    else:
+                                        # Check month matching
+                                        month_map = {
+                                            '01': ['jan', 'january'],
+                                            '02': ['feb', 'february'],
+                                            '03': ['mar', 'march'],
+                                            '04': ['apr', 'april'],
+                                            '05': ['may'],
+                                            '06': ['jun', 'june'],
+                                            '07': ['jul', 'july'],
+                                            '08': ['aug', 'august'],
+                                            '09': ['sep', 'september'],
+                                            '10': ['oct', 'october'],
+                                            '11': ['nov', 'november'],
+                                            '12': ['dec', 'december']
+                                        }
+                                        
+                                        # Extract month from expected date
+                                        expected_month = None
+                                        if re.search(r'-(\d{2})', expected_date):
+                                            expected_month = re.search(r'-(\d{2})', expected_date).group(1)
+                                        else:
+                                            for num, names in month_map.items():
+                                                if any(name in expected_date.lower() for name in names):
+                                                    expected_month = num
+                                                    break
+                                        
+                                        # Extract month from extracted date
+                                        extracted_month = None
+                                        if re.search(r'-(\d{2})', extracted_date):
+                                            extracted_month = re.search(r'-(\d{2})', extracted_date).group(1)
+                                        else:
+                                            for num, names in month_map.items():
+                                                if any(name in extracted_date.lower() for name in names):
+                                                    extracted_month = num
+                                                    break
+                                        
+                                        # Compare months if both are found
+                                        is_correct = expected_month and extracted_month and expected_month == extracted_month
+                                else:
+                                    is_correct = False
+                                    
+                            except Exception as e:
+                                logger.error(f"Error comparing dates: {str(e)}")
+                                # Fallback to basic comparison
+                                is_correct = extracted_date.lower() == expected_date.lower()
 
-                elif task == "track_drug_class":
-                    # For drug class, use basic case-insensitive comparison
-                    extracted_class = extracted_info.strip().lower()
-                    expected_class = answer.strip().lower()
-                    
-                    # Direct match first
-                    if extracted_class == expected_class:
-                        is_correct = True
-                    else:
-                        # Check for partial matches for compound drug classes
-                        expected_classes = [cls.strip() for cls in expected_class.split('|')]
+                    elif task in ["track_primary_outcomes", "track_secondary_outcomes"]:
+                        # Simple yes/no comparison, case-insensitive
+                        is_correct = extracted_info.strip().lower() == answer.strip().lower()
+                    elif task == "track_drug_route":
+                        # For drug route, normalize to handle variations
+                        extracted_route = extracted_info.strip().lower()
+                        expected_route = answer.strip().lower()
                         
-                        # Check if the extracted class contains any of the expected classes
-                        is_correct = any(exp_cls in extracted_class for exp_cls in expected_classes)
+                        # Direct match first
+                        if extracted_route == expected_route:
+                            is_correct = True
+                        else:
+                            # Check for variations and common abbreviations
+                            route_mapping = {
+                                "intravenous": ["iv", "i.v.", "i.v", "intra-venous"],
+                                "intramuscular": ["im", "i.m.", "i.m", "intra-muscular"],
+                                "subcutaneous": ["sc", "s.c.", "s.c", "sub-cutaneous", "subcut"],
+                                "oral": ["by mouth", "p.o.", "po", "per os"],
+                                "unknown": ["not specified", "not reported", "not stated", "unclear"]
+                            }
+                            
+                            # Check if expected route has any known variations
+                            for main_route, variations in route_mapping.items():
+                                if expected_route == main_route:
+                                    # If expected is a main route, check if extracted is a variation
+                                    is_correct = extracted_route in variations
+                                    break
+                                elif expected_route in variations:
+                                    # If expected is a variation, check if extracted is the main route or another variation
+                                    is_correct = extracted_route == main_route or extracted_route in variations
+                                    break
+                            else:
+                                # If no match found in mappings, fall back to direct comparison
+                                is_correct = False
+
+                    elif task == "track_drug_class":
+                        # For drug class, use basic case-insensitive comparison
+                        extracted_class = extracted_info.strip().lower()
+                        expected_class = answer.strip().lower()
                         
-                        # Also check if expected class contains the extracted class
-                        if not is_correct:
-                            is_correct = any(extracted_class in exp_cls for exp_cls in expected_classes)
-                elif task == "regime_drug_class" or task == "latest_company_approval":
-                    # For drug class, use basic case-insensitive comparison
-                    extracted_class = extracted_info.strip().lower()
-                    expected_class = answer.strip().lower()
-                    
-                    # Direct match first
-                    if extracted_class == "":
-                        is_correct = False
-                    else: 
+                        # Direct match first
                         if extracted_class == expected_class:
                             is_correct = True
                         else:
                             # Check for partial matches for compound drug classes
-                            expected_classes = [cls.strip() for cls in expected_class.split(' ')]
+                            expected_classes = [cls.strip() for cls in expected_class.split('|')]
                             
                             # Check if the extracted class contains any of the expected classes
                             is_correct = any(exp_cls in extracted_class for exp_cls in expected_classes)
@@ -823,6 +984,55 @@ def process_nct_csv(
                             # Also check if expected class contains the extracted class
                             if not is_correct:
                                 is_correct = any(extracted_class in exp_cls for exp_cls in expected_classes)
+                    elif task == "regime_drug_class" or task == "latest_company_approval" or task == "filled50" or task == "filled121":
+                        # For filled50/filled121 tasks, try direct string comparison first
+                        if task == "filled50" or task == "filled121":
+                            # Try direct case-sensitive match first (many gold answers are in ALL CAPS)
+                            if extracted_info.strip() == answer.strip():
+                                is_correct = True
+                            else:
+                                # Try case-insensitive match if direct match fails
+                                extracted_upper = extracted_info.strip().upper()
+                                expected_upper = answer.strip().upper()
+                                
+                                if extracted_upper == expected_upper:
+                                    is_correct = True
+                                elif answer.strip() == "NOT LISTED" and "NOT LISTED" in extracted_info.upper():
+                                    is_correct = True
+                                # For numeric values (like stock prices)
+                                elif re.match(r'^\d+\.\d+$', answer.strip()) and re.match(r'^\d+\.\d+$', extracted_info.strip()):
+                                    try:
+                                        # Allow small difference for floating point values
+                                        expected_float = float(answer.strip()) 
+                                        extracted_float = float(extracted_info.strip())
+                                        # Allow 1% tolerance for stock prices
+                                        tolerance = expected_float * 0.01
+                                        is_correct = abs(expected_float - extracted_float) <= tolerance
+                                    except ValueError:
+                                        is_correct = False
+                        else:
+                            # For other tasks, use the existing logic
+                            extracted_class = extracted_info.strip().lower()
+                            expected_class = answer.strip().lower()
+                            
+                            # Direct match first
+                            if extracted_class == "":
+                                is_correct = False
+                            else: 
+                                if extracted_class == expected_class:
+                                    is_correct = True
+                                else:
+                                    # Check for partial matches for compound drug classes
+                                    expected_classes = [cls.strip() for cls in expected_class.split(' ')]
+                                    
+                                    # Check if the extracted class contains any of the expected classes
+                                    is_correct = any(exp_cls in extracted_class for exp_cls in expected_classes)
+                                    
+                                    # Also check if expected class contains the extracted class
+                                    if not is_correct:
+                                        is_correct = any(extracted_class in exp_cls for exp_cls in expected_classes)
+                    # --- End Original Rule-Based Correctness Check ---
+
                 if is_correct:
                     correct_count += 1
                 
@@ -831,9 +1041,11 @@ def process_nct_csv(
                     'question': prompt,
                     'correct_answer': answer,
                     'model_output': response_text,
-                    'extracted_info': extracted_info,
+                    'extracted_info': extracted_info, # This might be from regex or judge
                     'correct': is_correct,
-                    'urls': ', '.join(urls) if urls else ''
+                    'urls': ', '.join(urls) if urls else '',
+                    'judge_reasoning': judge_reasoning,
+                    'judge_extracted_answer': judge_extracted_answer
                 }
                 processed_results.append(result_dict)
                 
@@ -847,7 +1059,9 @@ def process_nct_csv(
                     'model_output': f"ERROR: {str(e)}",
                     'extracted_info': '',
                     'correct': False,
-                    'urls': ''
+                    'urls': '',
+                    'judge_reasoning': f"ERROR: {str(e)}",
+                    'judge_extracted_answer': "ERROR"
                 })
 
         # Calculate accuracy
@@ -892,9 +1106,13 @@ def main():
                         default="track_trial_ids",
                         help="Task to perform",
                         )   
-    parser.add_argument("--search_context_size", choices=["low", "medium", "high"], default="medium", 
-                        help="Search context size")
-    
+    parser.add_argument("--search_context_size", choices=["low", "medium", "high"], default="medium",
+                        help="Search context size for OpenAI Search models")
+    parser.add_argument("--use_judge", action="store_true",
+                        help="Use LLM as judge for evaluating correctness instead of regex/rules.")
+    parser.add_argument("--judge_model", default="gpt-4.1-mini",
+                        help="OpenAI model to use for the LLM judge.")
+
     args = parser.parse_args()
     
     if args.model not in ALL_MODELS:
@@ -927,7 +1145,9 @@ def main():
         n=args.n,
         task=args.task,
         run_inference=run_inference,
-        inference_kwargs=inference_kwargs
+        inference_kwargs=inference_kwargs,
+        use_judge=args.use_judge,
+        judge_model=args.judge_model
     )
 
 if __name__ == "__main__":
