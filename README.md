@@ -45,21 +45,113 @@ HemOnc Bench is a Python tool designed to construct a robust DeepResearch benchm
 
 ---
 
-## Main Input File
+## Final Benchmark Data
 
-**Use this as your primary input:**
+This repository provides two main benchmark datasets (they are encode to avoid training on test set, read the next section on how to decode them!)):
 
-- `data/Hemonc_new_with_all.csv`
+- `data/final50.csv` (**MedBrowseComp50**):
+  - 50 curated clinical trial samples for rapid evaluation and demonstration.
+- `data/final121.csv` (**MedBrowseComp605**):
+  - 605 clinical trial samples for comprehensive benchmarking.
+
+Use these files as your primary input for all evaluation and processing tasks.
+
+---
+
+## Data File Encoding/Decoding
+
+To help prevent accidental data contamination during model training, you can encode the data files before sharing or uploading. Multiple encoding methods are supported:
+
+### 1. Per-Cell Combo Encoding (Recommended)
+
+Each cell is first shifted (by a configurable value), then base64 encoded. The output is a valid CSV file, but the contents are not human-readable.
+
+**Encode:**
+
+```bash
+python data/encode_decode.py cell-encode-combo data/final50.csv --shift 3
+# Produces: data/final50_cell_combo_shift3_b64.csv
+```
+
+**Decode:**
+
+```bash
+python data/encode_decode.py cell-decode-combo data/final50_cell_combo_shift3_b64.csv --shift 3
+# Produces: data/final50.csv
+```
+
+- All encoded/decoded files always end with `.csv` and use underscores for suffixes.
+- This is the recommended method for sharing, archiving, and HuggingFace upload.
+
+### 2. Per-Cell Base64 or Shift Encoding
+
+You can also encode/decode each cell using only base64 or only a shift:
+
+**Base64:**
+
+```bash
+python data/encode_decode.py cell-encode data/final50.csv --method base64
+# Produces: data/final50_cell_base64.csv
+python data/encode_decode.py cell-decode data/final50_cell_base64.csv --method base64
+# Produces: data/final50.csv
+```
+
+**Shift:**
+
+```bash
+python data/encode_decode.py cell-encode data/final50.csv --method shift --shift 3
+# Produces: data/final50_cell_shift3.csv
+python data/encode_decode.py cell-decode data/final50_cell_shift3.csv --method shift --shift 3
+# Produces: data/final50.csv
+```
+
+
+---
+
+## Setting Up API Keys
+
+Some features require API keys for Gemini, OpenAI, or Sonar (Perplexity). Copy `.env.example` to `.env` and add your keys:
+
+```bash
+cp .env.example .env
+```
+
+Edit `.env` and fill in your API keys:
+
+```
+GEMINI_API_KEY=your_gemini_api_key_here
+OPENAI_API_KEY=your_openai_api_key_here
+SONAR_API_KEY=your_sonar_api_key_here
+```
 
 ---
 
 ## Running the Main Processing Script
 
-The main script for processing NCT predictions is:
+The main script for processing predictions is:
 
 ```bash
-python process_NCT_predictions.py --csv_path data/Hemonc_new_with_all.csv --output_path <your_output.csv> [--model <model_name>] [--use_tools] [--max_workers N]
+python process_NCT_predictions.py --csv_path data/final50.csv --output_path results50.csv --model gemini-2.0-flash
 ```
+
+For the larger benchmark:
+
+```bash
+python process_NCT_predictions.py --csv_path data/final121.csv --output_path results605.csv --model gemini-2.0-flash
+```
+
+You may also specify other models (e.g., OpenAI or Sonar), and use additional flags:
+
+- `--use_tools`: Enable Google Search tool (optional)
+- `--max_workers N`: Number of parallel threads (default: 4)
+
+Example with all options:
+
+```bash
+python process_NCT_predictions.py --csv_path data/final121.csv --output_path results605.csv --model openai-gpt-4 --use_tools --max_workers 8
+```
+
+---
 
 - `--csv_path` (required): Path to your input CSV file (default: `data/Hemonc_new_with_all.csv`)
 - `--output_path`: Path to save the output CSV
@@ -88,14 +180,19 @@ You can now run a post-hoc LLM-based evaluation of model outputs to assess calib
 #### Usage Example
 
 First, run your main pipeline as usual:
+
 ```bash
 python process_NCT_predictions.py --csv_path data/Hemonc_new_with_all.csv --output_path results.csv
 ```
+
 Then, run the LLM calibration script:
+
 ```bash
 python process_NCT_llm_calibration.py --input_csv results.csv --output_csv llm_judge_results.csv --model gemini-2.0-pro
 ```
+
 Or for OpenAI:
+
 ```bash
 python process_NCT_llm_calibration.py --input_csv results.csv --output_csv llm_judge_results.csv --model gpt-4-turbo
 ```
