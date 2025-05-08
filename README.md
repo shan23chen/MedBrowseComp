@@ -105,7 +105,6 @@ python data/encode_decode.py cell-decode data/final50_cell_shift3.csv --method s
 # Produces: data/final50.csv
 ```
 
-
 ---
 
 ## Setting Up API Keys
