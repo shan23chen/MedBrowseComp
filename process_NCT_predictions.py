@@ -45,7 +45,7 @@ reasoning: Explain why the extracted_final_answer is correct or incorrect based 
 focusing only on if there are meaningful differences between [correct_answer] and the
 extracted_final_answer. Do not comment on any background to the problem, do not attempt to solve
 the problem, do not argue for any answer different than [correct_answer], focus only on whether the
-answers match.
+answers match. Ignore the case sensitivity of the answers when comparing them.
 correct: Answer 'yes' if extracted_final_answer matches the [correct_answer] given above, or is within
 a small margin of error for numerical problems. Answer 'no' otherwise, i.e. if there if there is
 any inconsistency, ambiguity, non-equivalency, or if the extracted answer is incorrect.
@@ -1106,7 +1106,7 @@ def main():
                         default="track_trial_ids",
                         help="Task to perform",
                         )   
-    parser.add_argument("--search_context_size", choices=["low", "medium", "high"], default="medium",
+    parser.add_argument("--search_context_size", choices=["low", "medium", "high"], default="high",
                         help="Search context size for OpenAI Search models")
     parser.add_argument("--use_judge", action="store_true",
                         help="Use LLM as judge for evaluating correctness instead of regex/rules.")
@@ -1130,6 +1130,8 @@ def main():
     elif args.model in OPENAI_SEARCH_MODELS:
         run_inference = openai_search_run_inference_multithread
         inference_kwargs = {"model_name": args.model, "web_search_options": {"search_context_size": args.search_context_size}}
+        # if not using search
+        # inference_kwargs = {"model_name": args.model, "web_search_options": {}}
     else:
         logger.error(f"Model {args.model} not recognized.")
         return

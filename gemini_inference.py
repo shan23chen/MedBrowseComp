@@ -18,7 +18,8 @@ GEMINI_MODELS = {
     "gemini-2.5-pro-preview-03-25": "gemini-2.5-pro-preview-03-25",
     "gemini-2.5-pro-exp-03-25": "gemini-2.5-pro-exp-03-25",
     "models/gemini-2.5-pro-preview-03-25": "models/gemini-2.5-pro-preview-03-25",
-    "gemini-2.5-flash-preview-04-17": "gemini-2.5-flash-preview-04-17"
+    "gemini-2.5-flash-preview-04-17": "gemini-2.5-flash-preview-04-17",
+    "models/gemini-2.5-flash-preview-04-17": "models/gemini-2.5-flash-preview-04-17"
 }
 
 class GeminiInference:

@@ -42,6 +42,7 @@ class OpenAISearchInference:
         # Allow user to override tool config
         if web_search_options:
             tool_config.update(web_search_options)
+            # tool_config = {}
         payload = {
             "model": self.model_name,  # Pass as given (e.g., "gpt-4o-mini")
             "input": [{
@@ -65,6 +66,8 @@ class OpenAISearchInference:
             "top_p": 1,
             "store": True
         }
+        if tool_config == {}:
+            payload.pop("tools")    
         response = self.client.responses.create(**payload)
         # Debug: print the response structure
         # print("[DEBUG] OpenAI responses.create raw response:", response)
