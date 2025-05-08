@@ -47,7 +47,7 @@ extracted_final_answer. Do not comment on any background to the problem, do not 
 the problem, do not argue for any answer different than [correct_answer], focus only on whether the
 answers match. Ignore the case sensitivity of the answers when comparing them.
 correct: Answer 'yes' if extracted_final_answer matches the [correct_answer] given above, or is within
-a small margin of error for numerical problems. Answer 'no' otherwise, i.e. if there if there is
+a small margin of error for numerical problems. Answer 'no' otherwise, i.e. if there is
 any inconsistency, ambiguity, non-equivalency, or if the extracted answer is incorrect.
 """
 
