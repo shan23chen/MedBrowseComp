@@ -6,3 +6,5 @@ venv
 .DS_Store
 .__pycache__
 .log
+data/final50.csv
+data/final121.csv
