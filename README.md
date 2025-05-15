@@ -1,35 +1,11 @@
-# HemOnc Bench
+# MedBrowseComp
 
 ![ClinicalTrials.gov and PubMed Integration](https://img.shields.io/badge/Integration-ClinicalTrials.gov%20%7C%20PubMed-blue)
 ![Python](https://img.shields.io/badge/Language-Python-green)
 ![Status](https://img.shields.io/badge/Status-Active-success)
+[![Spaces](https://img.shields.io/badge/🤗-Open%20in%20Spaces-blue)]([https://huggingface.co/spaces/hiyouga/LLaMA-Board](https://huggingface.co/collections/AIM-Harvard/medbrowsecomp-6822637df90521b5d8b8b23f))
 
-> **Extract, enrich, and analyze clinical trial data with ease**
-
-HemOnc Bench is a Python tool designed to construct a robust DeepResearch benchmark for clinical trial data extraction and enrichment. It automatically fetches detailed information from ClinicalTrials.gov and PubMed, transforming basic trial identifiers into rich, research-ready tables. The tool is designed for resilience, accuracy, and ease of use, making it ideal for clinicians, researchers, and data scientists.
-
----
-
-## Features
-
-- **Automated data enrichment**: Add author lists, study timelines, outcome measures, drug routes, and drug classes to your datasets.
-- **Robust extraction logic**: Multi-layered approach ensures maximum data recovery, even for older or incomplete records.
-- **User-friendly**: Simple installation and operation, with clear output formats.
-
----
-
-## Table of Extracted Data
-
-| Column                    | Description                                      |
-| ------------------------- | ------------------------------------------------ |
-| `authors`               | JSON mapping PubMed IDs to author lists          |
-| `start_date`            | Clinical trial start date from registry          |
-| `has_primary_outcome`   | Whether the trial has primary outcome measures   |
-| `has_secondary_outcome` | Whether the trial has secondary outcome measures |
-| `drug_routes`           | Administration routes of drugs used in the trial |
-| `drug_classes`          | Classification of drugs used in the trial        |
-
----
+Large language models (LLMs) are increasingly envisioned as decision-support tools in clinical practice, yet safe clinical reasoning demands the integration of heterogeneous knowledge bases—trials, primary studies, regulatory documents, and cost data— under strict accuracy constraints. Existing evaluations typically rely on synthetic prompts, reduce the task to single-hop factoid queries, or conflate reasoning with open-ended text generation, leaving their real-world utility unclear. To close this gap, we present \textbf{MedBrowseComp}, the first benchmark that systematically tests an agent’s ability to reliably retrieve and synthesize multi-hop medical facts from live, domain-specific knowledge bases. MedBrowseComp holds 1,000+ human-curated questions that mirror clinical scenarios in which practitioners must reconcile fragmented or conflicting information to reach an up-to-date conclusion. Applying MedBrowseComp to frontier agentic systems reveals \textbf{marked performance shortfalls as low as 10\%}. These findings expose a critical gap between current LLM capabilities and the rigor demanded in clinical settings. MedBrowseComp exposes the strengths and weaknesses of current agentic systems, offering a testbed for reliable medical information seeking and clear goals for future model and toolchain upgrades.
 
 ## Installation
 
@@ -56,7 +32,6 @@ This repository provides two main benchmark datasets (they are encode to avoid t
 
 Use these files as your primary input for all evaluation and processing tasks.
 
-👉 ![MedBrowseComp on Hugging Face](https://huggingface.co/datasets/AIM-Harvard/MedBrowseComp)
 ---
 
 ## Data File Encoding/Decoding
