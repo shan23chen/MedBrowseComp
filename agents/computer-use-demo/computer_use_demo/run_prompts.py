@@ -1,6 +1,6 @@
 """
 Script to run prompts from a CSV file with Claude Computer Use model via Vertex AI
-and save results back to the CSV
+and save results back to the CSV, with added retry logic for handling errors
 """
 
 import asyncio
@@ -16,6 +16,8 @@ import socket
 import re
 import tempfile
 import shutil
+import time
+import random
 from pathlib import Path, PosixPath
 from typing import cast, get_args, List, Dict, Any, Optional, Callable, Tuple
 from dataclasses import dataclass
@@ -74,6 +76,24 @@ API_KEY_FILE = CONFIG_DIR / "api_key"
 # Default shared volume path in container
 SHARED_VOLUME_CONTAINER_PATH = "/home/computeruse/shared_data"
 CONTAINER_PREFIX = "computer-use-demo-instance-"
+
+# Add global variable to track API errors
+last_api_error = None
+MAX_RETRIES = 5  # Maximum number of retry attempts
+INITIAL_BACKOFF = 2  # Initial backoff time in seconds
+MAX_BACKOFF = 60  # Maximum backoff time in seconds
+JITTER_FACTOR = 0.25  # Randomization factor for backoff times
+RETRYABLE_ERRORS = [
+    "429",  # Rate limiting
+    "quota exceeded",
+    "No response extracted",
+    "connection error",
+    "timeout",
+    "internal server error",
+    "Service Unavailable",
+    "Bad Gateway",
+    "Gateway Timeout"
+]
 
 class Sender(StrEnum):
     USER = "user"
@@ -191,14 +211,23 @@ def tool_output_callback(
     tool_state[tool_id] = tool_output
     print_message(Sender.TOOL, tool_output)
 
-def api_response_callback(
+async def api_response_callback(
     request: httpx.Request,
     response: httpx.Response | object | None,
     error: Exception | None,
 ):
-    """Handle API responses"""
+    """Handle API responses and track errors for retry logic"""
+    global last_api_error
+    
     if error:
-        print(f"ERROR: {error}")
+        error_str = str(error)
+        print(f"ERROR: {error_str}")
+        # Save the error for retry logic
+        last_api_error = error_str
+        
+        # Check if this is a rate limit or quota error
+        if "429" in error_str or "quota exceeded" in error_str.lower():
+            raise Exception(f"Rate limit or quota error: {error_str}")
 
 def extract_assistant_response(messages):
     """Extract the final text response from the assistant's message"""
@@ -208,6 +237,29 @@ def extract_assistant_response(messages):
             if message.get("role") == "assistant":
                 # Extract the text content
                 content = message.get("content", [])
+                
+                # First, check if this is the final answer (no tool uses at the end)
+                # Identify messages with tool_use
+                has_tool_use = False
+                has_text = False
+                last_text = ""
+                
+                # Go through content items in reverse to find the last text without subsequent tool_use
+                if isinstance(content, list):
+                    for item in reversed(content):
+                        if isinstance(item, dict):
+                            if item.get("type") == "tool_use":
+                                has_tool_use = True
+                                break  # If we find a tool_use, we're not at the final answer yet
+                            elif item.get("type") == "text" and not has_text:
+                                has_text = True
+                                last_text = item.get("text", "")
+                
+                # If we have text and there are no more tool_use requests after it, return it
+                if has_text and not has_tool_use:
+                    return last_text
+                
+                # If we got here but didn't find the final text, try standard extraction
                 for item in content:
                     if isinstance(item, dict) and item.get("type") == "text":
                         return item.get("text", "")
@@ -224,7 +276,22 @@ def extract_assistant_response(messages):
     
     return "No response extracted"
 
-async def run_prompt(
+def calculate_backoff(retry_count):
+    """Calculate backoff time with exponential backoff and jitter"""
+    backoff = min(MAX_BACKOFF, INITIAL_BACKOFF * (2 ** retry_count))
+    # Add jitter - random variation between +/- JITTER_FACTOR percent of the backoff
+    jitter = backoff * JITTER_FACTOR
+    return backoff + random.uniform(-jitter, jitter)
+
+def is_retryable_error(error_message):
+    """Check if an error is retryable based on its message"""
+    if not error_message:
+        return False
+        
+    error_lower = error_message.lower()
+    return any(err.lower() in error_lower for err in RETRYABLE_ERRORS)
+
+async def run_prompt_with_retry(
     prompt_text: str,
     messages: List[Dict[str, Any]],
     model: str,
@@ -234,60 +301,101 @@ async def run_prompt(
     tool_state: Dict[str, ToolResult],
     custom_system_prompt: str = "",
     track_processes: bool = False
-) -> Tuple[List[Dict[str, Any]], str]:
-    """Run a specific prompt and return the updated messages and final response"""
+) -> Tuple:
+    """Run a prompt with retry logic for transient errors"""
+    global last_api_error
+    retry_count = 0
+    last_error = None
     
     # Track processes before prompt execution if requested
-    if track_processes:
-        initial_processes = track_new_processes()
+    initial_processes = track_new_processes() if track_processes else None
     
-    # Add the new prompt to messages
+    # Add the new prompt to messages (only once)
     messages.append({
         "role": Sender.USER,
         "content": [BetaTextBlockParam(type="text", text=prompt_text)],
     })
     
-    # Print the user's message
+    # Print the user's message (only once)
     print_message(Sender.USER, prompt_text)
     
-    # Run the sampling loop
-    try:
-        updated_messages = await sampling_loop(
-            system_prompt_suffix=custom_system_prompt,
-            model=model,
-            provider=provider,
-            messages=messages,
-            output_callback=lambda msg: print_message(Sender.BOT, msg),
-            tool_output_callback=lambda tool_output, tool_id: tool_output_callback(tool_output, tool_id, tool_state),
-            api_response_callback=api_response_callback,
-            api_key=api_key,
-            only_n_most_recent_images=3,
-            tool_version=tool_version,
-            max_tokens=SONNET_3_7.default_output_tokens,
-        )
-        
-        # Extract the assistant's final response
-        assistant_response = extract_assistant_response(updated_messages)
-        
-        # If we're tracking processes, get the new set and return both
-        if track_processes:
-            final_processes = track_new_processes()
-            return updated_messages, assistant_response, initial_processes, final_processes
-        
-        return updated_messages, assistant_response
-    except Exception as e:
-        print(f"ERROR during sampling loop: {e}")
-        import traceback
-        traceback.print_exc()
-        
-        error_response = f"Error: {str(e)}"
-        
-        # If we're tracking processes, still return the process sets
-        if track_processes:
-            final_processes = track_new_processes()
-            return messages, error_response, initial_processes, final_processes
-        
-        return messages, error_response
+    while retry_count <= MAX_RETRIES:
+        try:
+            # Reset the global error tracker before each attempt
+            last_api_error = None
+            
+            # Run the sampling loop
+            updated_messages = await sampling_loop(
+                system_prompt_suffix=custom_system_prompt,
+                model=model,
+                provider=provider,
+                messages=messages[:-1] + [messages[-1]],  # Keep the same prompt structure
+                output_callback=lambda msg: print_message(Sender.BOT, msg),
+                tool_output_callback=lambda tool_output, tool_id: tool_output_callback(tool_output, tool_id, tool_state),
+                api_response_callback=api_response_callback,
+                api_key=api_key,
+                only_n_most_recent_images=3,
+                tool_version=tool_version,
+                max_tokens=SONNET_3_7.default_output_tokens,
+            )
+            
+            # Check if we had an API error during execution
+            if last_api_error and is_retryable_error(last_api_error):
+                raise Exception(f"API error during execution: {last_api_error}")
+            
+            # Extract the assistant's final response
+            assistant_response = extract_assistant_response(updated_messages)
+            
+            # Check if we got a valid response or a retryable error
+            if assistant_response == "No response extracted" or is_retryable_error(assistant_response):
+                raise Exception(f"Retryable error: {assistant_response}")
+                
+            # Look for error patterns in the response text
+            if "ERROR:" in assistant_response and any(err.lower() in assistant_response.lower() for err in RETRYABLE_ERRORS):
+                error_line = next((line for line in assistant_response.split('\n') if "ERROR:" in line), "")
+                raise Exception(f"Error in response: {error_line}")
+            
+            # If we're tracking processes, get the new set and return both
+            if track_processes:
+                final_processes = track_new_processes()
+                return updated_messages, assistant_response, initial_processes, final_processes
+            
+            return updated_messages, assistant_response
+            
+        except Exception as e:
+            last_error = str(e)
+            
+            # Check if error is retryable
+            if retry_count < MAX_RETRIES and (is_retryable_error(last_error) or last_api_error):
+                retry_count += 1
+                backoff_time = calculate_backoff(retry_count)
+                
+                print(f"\n=== RETRY {retry_count}/{MAX_RETRIES} ===")
+                print(f"Encountered retryable error: {last_error}")
+                print(f"Waiting {backoff_time:.2f} seconds before retrying...")
+                
+                await asyncio.sleep(backoff_time)
+                print(f"Retrying prompt execution...")
+            else:
+                # Either not retryable or we've used up all retries
+                error_response = f"Error after {retry_count} retries: {last_error}"
+                
+                # If we're tracking processes, still return the process sets
+                if track_processes:
+                    final_processes = track_new_processes()
+                    return messages, error_response, initial_processes, final_processes
+                
+                return messages, error_response
+    
+    # Should never get here but just in case
+    error_response = f"Maximum retries ({MAX_RETRIES}) exceeded with error: {last_error}"
+    
+    # Return with process tracking if enabled
+    if track_processes:
+        final_processes = track_new_processes()
+        return messages, error_response, initial_processes, final_processes
+    
+    return messages, error_response
 
 def get_container_name():
     """Try to get the container name"""
@@ -454,7 +562,8 @@ def save_result_to_csv(csv_path, row_index, prompt, result, has_header):
 
 async def main():
     """Main function to run prompts from a CSV file and save results back"""
-    global CONTAINER_PREFIX
+    global CONTAINER_PREFIX, MAX_RETRIES, INITIAL_BACKOFF, MAX_BACKOFF
+    
     # Parse command line arguments
     parser = argparse.ArgumentParser(description='Run Claude prompts from a CSV file')
     parser.add_argument('--csv', type=str, help='Path to CSV file containing prompts')
@@ -465,12 +574,27 @@ async def main():
     parser.add_argument('--instance-num', type=str, help='Container instance number')
     parser.add_argument('--mark-completed', action='store_true', 
                       help='Create a .completed file when done to signal completion')
+    parser.add_argument('--max-retries', type=int, default=MAX_RETRIES, 
+                      help=f'Maximum number of retries for transient errors (default: {MAX_RETRIES})')
+    parser.add_argument('--initial-backoff', type=float, default=INITIAL_BACKOFF, 
+                      help=f'Initial backoff time in seconds (default: {INITIAL_BACKOFF})')
+    parser.add_argument('--max-backoff', type=float, default=MAX_BACKOFF, 
+                      help=f'Maximum backoff time in seconds (default: {MAX_BACKOFF})')
     args = parser.parse_args()
     
     # Override globals if provided
     
     if args.container_prefix:
         CONTAINER_PREFIX = args.container_prefix
+    
+    if args.max_retries is not None:
+        MAX_RETRIES = args.max_retries
+    
+    if args.initial_backoff is not None:
+        INITIAL_BACKOFF = args.initial_backoff
+    
+    if args.max_backoff is not None:
+        MAX_BACKOFF = args.max_backoff
     
     # Set instance number environment variable if provided
     if args.instance_num:
@@ -552,7 +676,7 @@ async def main():
         
         try:
             if track_processes_for_this_prompt:
-                result = await run_prompt(
+                result = await run_prompt_with_retry(
                     prompt, 
                     messages, 
                     model, 
@@ -569,7 +693,7 @@ async def main():
                 print("\n\n======= CLEANING UP PROMPT PROCESSES =======")
                 cleanup_processes(initial_processes, final_processes)
             else:
-                messages, assistant_response = await run_prompt(
+                messages, assistant_response = await run_prompt_with_retry(
                     prompt, 
                     messages, 
                     model, 

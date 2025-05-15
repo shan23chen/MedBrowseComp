@@ -56,6 +56,7 @@ This repository provides two main benchmark datasets (they are encode to avoid t
 
 Use these files as your primary input for all evaluation and processing tasks.
 
+👉 ![MedBrowseComp on Hugging Face](https://huggingface.co/datasets/AIM-Harvard/MedBrowseComp)
 ---
 
 ## Data File Encoding/Decoding

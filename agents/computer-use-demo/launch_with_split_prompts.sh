@@ -3,13 +3,13 @@ set -e
 
 # --- Configuration ---
 IMAGE_NAME="computer-use-demo"
-NUM_INSTANCES=4  # Number of containers to launch
+NUM_INSTANCES=2  # Number of containers to launch
 SHARED_VOLUME_HOST_PATH="$(pwd)/shared_docker_volume" # Host path for the shared volume
 MASTER_CSV="prompts_master.csv"  # Master CSV file with all prompts
 RESULTS_CSV="results_complete.csv"  # Final merged results CSV file
 
 # Wait for container completion configuration
-WAIT_TIMEOUT=3600  # Maximum time to wait for containers (in seconds)
+WAIT_TIMEOUT=36000  # Maximum time to wait for containers (in seconds)
 CHECK_INTERVAL=30  # Time between checks (in seconds)
 
 # Default display settings
@@ -118,7 +118,7 @@ echo "--- Processing Summary ---"
 echo "Complete merged results file: $SHARED_VOLUME_HOST_PATH/$RESULTS_CSV"
 echo
 echo "You can stop all containers launched by this script with:"
-echo "  docker stop \$(docker ps -q --filter name=${IMAGE_NAME}-instance-)"
+echo "  docker stop \$(docker ps -q --filter name=computer-use-demo-instance-)"
 echo
 echo "To remove the stopped containers:"
-echo "  docker rm \$(docker ps -aq --filter status=exited --filter name=${IMAGE_NAME}-instance-)"
+echo "  docker rm \$(docker ps -aq --filter status=exited --filter name=computer-use-demo-instance-)"

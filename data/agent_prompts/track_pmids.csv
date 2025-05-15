@@ -1,0 +1,243 @@
+prompt
+"Find/search the pubmed id of the paper that best describes the efficacy of Enzalutamide monotherapy compared to Placebo when used to treat Prostate cancer.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Gemcitabine monotherapy compared to Cisplatin and Gemcitabine (GC) when used to treat Cholangiocarcinoma.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Abiraterone and Apalutamide compared to Abiraterone monotherapy when used to treat Prostate cancer.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Carboplatin and Pemetrexed|Cisplatin and Pemetrexed compared to Cisplatin, Pemetrexed, Durvalumab when used to treat Non-small cell lung cancer nonsquamous.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Enzalutamide monotherapy compared to Placebo when used to treat Prostate cancer (Metastatic).
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Alectinib monotherapy compared to Crizotinib monotherapy when used to treat Non-small cell lung cancer.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Sunitinib monotherapy compared to Everolimus monotherapy when used to treat Non-clear cell renal cell carcinoma.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Tranexamic acid monotherapy compared to Placebo when used to treat Hereditary hemorrhagic telangiectasia.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Lenalidomide and Rituximab (R2) compared to Rituximab monotherapy when used to treat Follicular lymphoma.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Docetaxel monotherapy compared to Docetaxel and Bevacizumab when used to treat Breast cancer (Not Applicable).
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Docetaxel and Trastuzumab (TH) compared to BTH (Docetaxel) when used to treat Breast cancer.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Low-dose Cytarabine monotherapy (LoDAC) compared to Azacitidine monotherapy when used to treat Acute myeloid leukemia.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Enzalutamide monotherapy compared to Abiraterone and Enzalutamide when used to treat Prostate cancer.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of AC-TH (Docetaxel) compared to AC-D when used to treat Breast cancer (Node Positive).
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of FOLFIRI and Bevacizumab compared to FOLFIRI when used to treat Colorectal cancer.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Bortezomib and Dexamethasone (Vd) compared to Bortezomib and Dexamethasone (Vd) and Venetoclax when used to treat Multiple myeloma.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Bortezomib and Dexamethasone (Vd) compared to SVd when used to treat Multiple myeloma.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Placebo compared to Vemurafenib monotherapy when used to treat Melanoma.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of ATRA, Mercaptopurine, Methotrexate compared to ATRA monotherapy when used to treat Acute promyelocytic leukemia.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Elo-Vd compared to Bortezomib and Dexamethasone (Vd) when used to treat Multiple myeloma.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Lenalidomide monotherapy compared to Lenalidomide and Rituximab (R2) when used to treat Follicular lymphoma.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Pomalidomide and Dexamethasone (Pd) compared to Pomalidomide monotherapy when used to treat Multiple myeloma.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Mercaptopurine, Methotrexate, Vincristine, Dexamethasone compared to Methotrexate and Vincristine when used to treat B-cell acute lymphoblastic leukemia pediatric.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Best supportive care compared to Docetaxel monotherapy when used to treat Esophageal adenocarcinoma.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Rituximab monotherapy compared to Ibrutinib monotherapy when used to treat Chronic lymphocytic leukemia.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Capecitabine and Gemcitabine compared to Gemcitabine monotherapy when used to treat Pancreatic cancer.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Cisplatin and Pemetrexed compared to Carboplatin, Pemetrexed, Nivolumab|Cisplatin, Pemetrexed, Nivolumab when used to treat Non-small cell lung cancer.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Etoposide monotherapy compared to Lenalidomide monotherapy when used to treat Diffuse large B-cell lymphoma.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Docetaxel and Pegylated liposomal doxorubicin compared to Docetaxel monotherapy when used to treat Breast cancer.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Dexamethasone monotherapy compared to Thalidomide and Dexamethasone (TD) when used to treat Multiple myeloma.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Lenalidomide monotherapy compared to Erythropoetin beta and Lenalidomide when used to treat Myelodysplastic syndrome.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of AT-CMF compared to A-CMF when used to treat Breast cancer.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Irinotecan monotherapy compared to IROX when used to treat Colorectal cancer.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Prednisone monotherapy compared to Orteronel and Prednisone when used to treat Prostate cancer.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of BEP compared to T-BEP when used to treat Testicular cancer.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of PGC compared to Cisplatin and Gemcitabine (GC) when used to treat Urothelial carcinoma.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of MOPP-ABV, then Radiation therapy compared to Radiation therapy when used to treat Classical Hodgkin lymphoma.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Erlotinib monotherapy compared to Cisplatin and Docetaxel (DC) when used to treat Non-small cell lung cancer (Metastatic).
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Gemcitabine monotherapy compared to Cisplatin and Fluorouracil (CF), then Gemcitabine monotherapy when used to treat Pancreatic cancer.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Cyclosporine and Mycophenolate mofetil compared to Cyclosporine, Mycophenolate mofetil, Sirolimus when used to treat Graft versus host disease.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Lenalidomide monotherapy compared to Carfilzomib and Lenalidomide (KR) when used to treat Multiple myeloma.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Venetoclax and Obinutuzumab compared to Bendamustine and Rituximab (BR) when used to treat Chronic lymphocytic leukemia.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Dexamethasone monotherapy compared to Thalidomide and Dexamethasone (TD) when used to treat Multiple myeloma.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Observation compared to Lenalidomide monotherapy when used to treat Chronic lymphocytic leukemia.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of TAC (Docetaxel) compared to FAC when used to treat Breast cancer.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Ibrutinib monotherapy compared to Ibrutinib and Ublituximab when used to treat Chronic lymphocytic leukemia.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Lenalidomide monotherapy compared to Erythropoetin beta and Lenalidomide when used to treat Myelodysplastic syndrome.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Methotrexate monotherapy compared to Dactinomycin monotherapy when used to treat Gestational trophoblastic neoplasia.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Ifosfamide and Paclitaxel compared to Ifosfamide monotherapy when used to treat Endometrial cancer.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Cisplatin, Doxorubicin, Paclitaxel compared to Cisplatin and Doxorubicin when used to treat Endometrial cancer.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Cisplatin and Paclitaxel compared to Cisplatin and Gemcitabine (GC) when used to treat Cervical cancer.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Paclitaxel monotherapy compared to Olaparib and Paclitaxel when used to treat Gastric cancer.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of ABVD compared to eBEACOPP-BEACOPP when used to treat Classical Hodgkin lymphoma.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Docetaxel and Epirubicin compared to E-D when used to treat Breast cancer.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Docetaxel monotherapy compared to Vinorelbine monotherapy when used to treat Non-small cell lung cancer.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of R-DHAP/R-VIM compared to DHAP/VIM when used to treat Diffuse large B-cell lymphoma.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Melphalan monotherapy compared to Melphalan and Dexamethasone when used to treat Light-chain (AL) amyloidosis.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Placebo compared to Lenalidomide monotherapy when used to treat Multiple myeloma.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Docetaxel monotherapy compared to Gefitinib monotherapy when used to treat Non-small cell lung cancer.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Prednisone monotherapy compared to Dexamethasone monotherapy when used to treat Immune thrombocytopenia.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Docetaxel monotherapy compared to Docetaxel and Ramucirumab when used to treat Urothelial carcinoma.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Pemetrexed monotherapy compared to Best supportive care when used to treat Malignant pleural mesothelioma.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Carboplatin and Etoposide (CE) compared to Carboplatin and Pemetrexed when used to treat Small cell lung cancer.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Gefitinib and Pemetrexed compared to Gefitinib monotherapy when used to treat Non-small cell lung cancer.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Pembrolizumab monotherapy compared to Paclitaxel monotherapy when used to treat Gastric cancer.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Cisplatin and Pemetrexed compared to Cisplatin, Pemetrexed, Pembrolizumab when used to treat Non-small cell lung cancer nonsquamous.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Dara-Vd compared to Bortezomib and Dexamethasone (Vd) when used to treat Multiple myeloma.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Ipatasertib and Paclitaxel compared to Paclitaxel monotherapy when used to treat Breast cancer.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Nintedanib and Pemetrexed compared to Pemetrexed monotherapy when used to treat Non-small cell lung cancer nonsquamous.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Methotrexate monotherapy compared to Afatinib monotherapy when used to treat Head and neck cancer.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Methotrexate monotherapy compared to Afatinib monotherapy when used to treat Head and neck cancer.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Carboplatin and Pemetrexed compared to Carboplatin, Pemetrexed, Amivantamab when used to treat Non-small cell lung cancer.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Azacitidine monotherapy compared to Decitabine monotherapy when used to treat Myelodysplastic syndrome.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Placebo compared to Lenalidomide monotherapy when used to treat Myelodysplastic syndrome.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Thalidomide and Dexamethasone (TD) compared to VTD when used to treat Multiple myeloma.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of mFOLFOX6 and Cetuximab compared to mFOLFOX6 when used to treat Colon cancer.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Carboplatin and Paclitaxel (CP) and Nivolumab compared to Carboplatin and Paclitaxel (CP) when used to treat Non-small cell lung cancer.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Gemcitabine and Vinorelbine compared to Cisplatin and Vinorelbine (CVb) when used to treat Non-small cell lung cancer.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Gemcitabine monotherapy compared to Erlotinib and Gemcitabine when used to treat Pancreatic cancer (Locally Advanced or Unresectable or Metastatic).
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of CMF compared to Observation when used to treat Breast cancer.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of CHOP (Prednisolone) compared to BCHOP when used to treat Mantle cell lymphoma.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of ATG (Horse) and Cyclosporine compared to ATG (Rabbit) and Cyclosporine when used to treat Aplastic anemia.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of No induction compared to Bortezomib and Dexamethasone (Vd) when used to treat Light-chain (AL) amyloidosis.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Bortezomib monotherapy compared to Observation when used to treat Multiple myeloma.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of TAC (Docetaxel) compared to AC-D when used to treat Breast cancer.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Docetaxel and Erlotinib compared to Docetaxel monotherapy when used to treat Non-small cell lung cancer nonsquamous.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Docetaxel monotherapy compared to Sintilimab monotherapy when used to treat Non-small cell lung cancer squamous.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Rituximab monotherapy compared to Observation when used to treat Chronic lymphocytic leukemia.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Carboplatin, Pemetrexed, Amivantamab compared to Carboplatin and Pemetrexed when used to treat Non-small cell lung cancer (Locally Advanced or Metastatic).
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Docetaxel and Trastuzumab (TH) and Pyrotinib compared to Docetaxel and Trastuzumab (TH) when used to treat Breast cancer.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Docetaxel, Enzalutamide, Prednisolone compared to Docetaxel and Prednisolone when used to treat Prostate cancer.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of ADT compared to ADT, Abiraterone, Apalutamide when used to treat Prostate cancer.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Crizotinib monotherapy compared to Carboplatin and Pemetrexed when used to treat Non-small cell lung cancer.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of CHUT compared to Observation when used to treat Breast cancer.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Paclitaxel and Ramucirumab compared to Paclitaxel monotherapy when used to treat Gastric cancer.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of 7 plus 3d and Midostaurin compared to 7 plus 3d when used to treat Acute myeloid leukemia.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of FCR compared to Cyclophosphamide and Fludarabine (FC) when used to treat Chronic lymphocytic leukemia.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Placebo compared to Lenalidomide monotherapy when used to treat Diffuse large B-cell lymphoma.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Docetaxel monotherapy compared to Docetaxel and Ramucirumab when used to treat Non-small cell lung cancer (Metastatic).
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of R-CHOP-14 compared to CHOP-14 when used to treat Diffuse large B-cell lymphoma.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Docetaxel monotherapy compared to Docetaxel and Ramucirumab when used to treat Breast cancer.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Cisplatin, Cetuximab, RT compared to Cisplatin and RT when used to treat Head and neck cancer.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Lenalidomide and Rituximab (R2) compared to Rituximab monotherapy when used to treat Follicular lymphoma.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Fulvestrant monotherapy compared to Taselisib and Fulvestrant when used to treat Breast cancer.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Placebo compared to Regorafenib monotherapy when used to treat Osteosarcoma.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Bendamustine and Rituximab (BR) compared to Bendamustine and Rituximab (BR) and Ibrutinib when used to treat Chronic lymphocytic leukemia.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Docetaxel monotherapy compared to Observation when used to treat Prostate cancer.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Placebo compared to Gemcitabine monotherapy when used to treat Bladder cancer.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Docetaxel and Estramustine compared to Mitoxantrone and Prednisone when used to treat Prostate cancer.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Best supportive care compared to Trabectedin monotherapy when used to treat Soft tissue sarcoma.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Everolimus and Tamoxifen compared to Tamoxifen monotherapy when used to treat Breast cancer.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Carboplatin and Paclitaxel (CP), Bevacizumab, Nivolumab compared to Carboplatin and Paclitaxel (CP) and Bevacizumab when used to treat Non-small cell lung cancer nonsquamous.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Docetaxel monotherapy compared to Paclitaxel monotherapy when used to treat Breast cancer.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Observation compared to Docetaxel monotherapy when used to treat Non-small cell lung cancer.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Lenalidomide and Dexamethasone (Rd) compared to IRd when used to treat Multiple myeloma.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Lenalidomide and Dexamethasone (Rd) compared to IRd when used to treat Multiple myeloma.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Observation compared to CVP when used to treat Follicular lymphoma.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Azacitidine monotherapy compared to Azacitidine and Venetoclax when used to treat Acute myeloid leukemia.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of Placebo compared to Aspirin monotherapy when used to treat Venous thromboembolism.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of VAD compared to Z-Dex when used to treat Multiple myeloma.
+Output it in the format pmid<pubmed id>"
+"Find/search the pubmed id of the paper that best describes the efficacy of ADT and Zoledronic acid compared to ADT when used to treat Prostate cancer.
+Output it in the format pmid<pubmed id>"
