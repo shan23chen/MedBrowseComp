@@ -5,8 +5,6 @@
 ![Status](https://img.shields.io/badge/Status-Active-success)
 [![Spaces](https://img.shields.io/badge/🤗-Open%20in%20HF-blue)](https://huggingface.co/collections/AIM-Harvard/medbrowsecomp-6822637df90521b5d8b8b23f)
 
-![Dataset Composition](data/medcomp.png)
-
 Large language models are increasingly envisioned as decision-support tools in clinical practice, yet safe clinical reasoning demands the integration of heterogeneous knowledge bases—trials, primary studies, regulatory documents, and cost data— under strict accuracy constraints. Existing evaluations typically rely on synthetic prompts, reduce the task to single-hop factoid queries, or conflate reasoning with open-ended text generation, leaving their real-world utility unclear. To close this gap, we present MedBrowseComp, the first benchmark that systematically tests an agent’s ability to reliably retrieve and synthesize multi-hop medical facts from live, domain-specific knowledge bases. MedBrowseComp holds 1,000+ human-curated questions that mirror clinical scenarios in which practitioners must reconcile fragmented or conflicting information to reach an up-to-date conclusion. Applying MedBrowseComp to frontier agentic systems reveals marked performance shortfalls as low as 10. These findings expose a critical gap between current LLM capabilities and the rigor demanded in clinical settings. MedBrowseComp exposes the strengths and weaknesses of current agentic systems, offering a testbed for reliable medical information seeking and clear goals for future model and toolchain upgrades.
 
 ## Performance Results
