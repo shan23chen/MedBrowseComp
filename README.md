@@ -180,6 +180,23 @@ python process_NCT_llm_calibration.py --input_csv results.csv --output_csv llm_j
 
 ---
 
+## Citation
+
+If you use this dataset in your research, please cite: https://arxiv.org/abs/2505.14963
+
+```
+@misc{chen2025medbrowsecompbenchmarkingmedicaldeep,
+      title={MedBrowseComp: Benchmarking Medical Deep Research and Computer Use}, 
+      author={Shan Chen and Pedro Moreira and Yuxin Xiao and Sam Schmidgall and Jeremy Warner and Hugo Aerts and Thomas Hartvigsen and Jack Gallifant and Danielle S. Bitterman},
+      year={2025},
+      eprint={2505.14963},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2505.14963}, 
+}
+```
+---
+
 ## Helper Functions (`random_helper`)
 
 The `random_helper` directory contains reusable utilities and scripts for:
