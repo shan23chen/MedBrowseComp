@@ -145,41 +145,6 @@ python process_NCT_predictions.py --csv_path data/Hemonc_new_with_all.csv --outp
 
 ---
 
-## LLM-Based Calibration Evaluation (Optional)
-
-You can now run a post-hoc LLM-based evaluation of model outputs to assess calibration and correctness using state-of-the-art language models (Gemini or OpenAI). This is entirely optional and does not affect the main regex/extraction-based pipeline.
-
-### Script: `process_NCT_llm_calibration.py`
-
-- **Purpose**: For each prediction, uses an LLM to judge correctness and extract a confidence score, following the RMS calibration error metric from Hendrycks et al.
-- **Supported Models**: All Gemini models, all OpenAI models ("-search-preview" suffix handled automatically). Sonar models are NOT supported for LLM judge evaluation.
-- **Output**: A new CSV with columns for question, correct_answer, model_output, LLM-extracted answer, LLM judgment (correct/incorrect), LLM confidence, LLM reasoning, and the original regex correctness. Also computes and logs RMS calibration error.
-
-#### Usage Example
-
-First, run your main pipeline as usual:
-
-```bash
-python process_NCT_predictions.py --csv_path data/Hemonc_new_with_all.csv --output_path results.csv
-```
-
-Then, run the LLM calibration script:
-
-```bash
-python process_NCT_llm_calibration.py --input_csv results.csv --output_csv llm_judge_results.csv --model gemini-2.0-pro
-```
-
-Or for OpenAI:
-
-```bash
-python process_NCT_llm_calibration.py --input_csv results.csv --output_csv llm_judge_results.csv --model gpt-4-turbo
-```
-
-- The script will log the RMS calibration error and save detailed LLM judgments to the output CSV.
-- The main regex/extraction logic is NOT affected—this is a supplemental evaluation.
-
----
-
 ## Citation
 
 If you use this dataset in your research, please cite: https://arxiv.org/abs/2505.14963
@@ -196,6 +161,8 @@ If you use this dataset in your research, please cite: https://arxiv.org/abs/250
 }
 ```
 ---
+
+You prob do not need to read the details below....
 
 ## Helper Functions (`random_helper`)
 
